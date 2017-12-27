@@ -139,8 +139,12 @@
   </section>
 
   <section id="introduction">
+<!--
     <h2>Introduction</h2>
+-->
+    <h2>概要</h2>
     <p>
+<!--
       In the most basic sense, an "Activity" is a semantic description of
       an action. It is the goal of this specification to provide a JSON-based
       syntax that is sufficient to express metadata about activities in a rich,
@@ -149,28 +153,61 @@
       representations about the activity, associating actionable information
       with various types of objects, communicating or recording activity logs,
       or delegation of potential actions to other applications.
+-->
+最も基本的な感覚では 「アクティビティ」(Activity) は行動の意味論的な
+記述である。
+この仕様のゴールは、アクティビティについて、
+リッチで人間に優しいけれども、機械で処理可能かつ拡張可能な形で
+メタデータを記述するのに十分な JSON ベースの文法を提供することである。
+これには、アクティビティに関する自然言語記述やビジュアル表現の構築、
+様々な型のオブジェクトと行動可能な情報の関連付け、
+アクティビティログの通信や記録、
+可能性のある行動の他のアプリケーションへの委譲を含む。
     </p>
 
     <p>
+<!--
       The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
       "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
       document are to be interpreted as described in [[!RFC2119]].
+-->
+この文書における次の各キーワード「しなければならない(MUST)」、
+「してはならない(MUST NOT)」、
+「要求されている(REQUIRED)」、
+「することになる(SHALL)」、
+「することはない(SHALL NOT)」、
+「する必要がある(SHOULD)」、
+「しないほうがよい(SHOULD NOT)」、
+「推奨される(RECOMMENDED)」、
+「してもよい(MAY)」、
+「選択できる(OPTIONAL)」は、
+[[!RFC2119]] で述べられているように解釈されるべきものである。 
     </p>
 
     <section id="swp" class="informative">
 
+<!--
       <h2>Relationship to Other Social Standards</h2>
+-->
+      <h2>他のソーシャル標準との関係</h2>
 
       <p>
+<!--
         Activity Streams 2.0 is suitable as a social data syntax. It forms
         part of the [[SWP]] suite of related standards.
+-->
+Activity Streams 2.0 はソーシャルデータ文法に適している。
+これは [[SWP]] スイートの一部を形成する。
       </p>
 
     </section>
 
     <section id="activitystreams-1.0" class="informative">
 
+<!--
       <h2>Relationship to JSON Activity Streams 1.0</h2>
+-->
+      <h2>JSON Activity Streams 1.0 との関係</h2>
 
       <p>
         The JSON Activity Streams 1.0 [[AS1]] specification was
@@ -182,8 +219,12 @@
       </p>
 
       <p>
+<!--
         Some of the issues that specifically motivated the evolution of
         Activity Streams 2.0 from Activity Streams 1.0 include:
+-->
+特に Activity Streams 1.0 から Activity Streams 2.0 への進化の動機となった
+問題は次のようなものである:
       </p>
 
       <ul>
@@ -222,12 +263,21 @@
       </ul>
 
       <p>
+<!--
         The terms <code>displayName</code>, <code>verb</code>,
         <code>title</code> and <code>objectType</code> should be treated as
         reserved terms that SHOULD NOT be used within Activity Streams 2.0
         documents. When encountered in an Activity Streams 2.0 document, they
         SHOULD be processed in accordance to the guidelines listed in
         <a href="#activitystreams-1.0a"></a>
+-->
+<code>displayName</code>, <code>verb</code>,
+<code>title</code>, <code>objectType</code> という用語は
+予約語として扱われるべきであり、
+Activity Streams 2.0 文書の中で使われるべきではない(SHOULD NOT)。
+Activity Streams 2.0 文書でこれらに遭遇した場合、
+<a href="#activitystreams-1.0a"></a> に上げられているガイドラインに従って
+処理されるべきである(SHOULD)。
       </p>
 
     </section>
@@ -235,18 +285,28 @@
   </section>
     <section id="syntaxconventions">
 
+<!--
       <h2>Serialization</h2>
+-->
+      <h2>直列化</h2>
 
       <p>
+<!--
         This specification describes a JSON-based [[!RFC7159]] serialization
         syntax for the <a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity
         Vocabulary</a> that conforms to a subset of [[!JSON-LD]] syntax
         constraints but does not require JSON-LD processing. While other
         serialization forms are possible, such alternatives are not discussed
         by this document.
+-->
+この仕様は、[[!JSON-LD]] 制限の部分集合に準拠するが JSON-LD 処理を要求しない
+<a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity Vocabulary</a> のための
+JSON [[!RFC7159]] ベースの直列化を記述する。
+他の直列化形式も可能であるが、そのような選択肢はこの文書では議論しない。
       </p>
 
       <p>
+<!--
         When serialized, absent properties are represented by either (a)
         setting the property value to null, or (b) by omitting the property
         declaration altogether at the option of the publisher. These
@@ -256,19 +316,40 @@
         to null. The appropriate interpretation of an omitted or explicitly
         null value is that no value has been assigned as opposed to the view
         that the given value is empty or nil.
+-->
+直列化されるとき、値の無い属性は、
+(a) 属性の値を null に設定するか、
+(b) 属性宣言自体を省略するかで表現され、
+これは出版者の選択である。
+これらの表現は意味論的に等価である。
+属性が配列を持つ場合、その配列に値が無い場合は、
+属性全体を省略するか値に null を設定することで表現しなければならない(MUST)。
+省略されたか明示的な null 値の適切な解釈は、
+値が設定されなかったか、与えられた値が空または nil であったかということである。
       </p>
 
       <p>
+<!--
         An <dfn>Activity Streams
         Document</dfn> is a JSON document whose root value is an
         Activity Streams <a>Object</a> of any type, including a
         <a>Collection</a>, and whose MIME media type is
         "<code>application/activity+json</code>".
+-->
+<dfn>Activity Streams 文書</dfn> とは、
+ルート値が(<a>Collection</a> を含む)任意の型の
+Activity Streams <a>Object</a> で、
+MIME メディアタイプが "<code>application/activity+json</code>" である
+JSON 文書である。
       </p>
 
       <p>
+<!--
         Activity Streams 2.0 documents MUST be serialized using the UTF-8
         character encoding.
+-->
+Activity Streams 2.0 文書は UTF-8 文字エンコーディングを使って
+直列化されなければならない(MUST)。
       </p>
 
       <section id="jsonld">
@@ -306,7 +387,10 @@
         </p>
 
         <section id="example-1context">
+<!--
           <h2>Context with a string</h2>
+-->
+          <h2>文字列のコンテキスト</h2>
 
           <figure>
             <figcaption>
@@ -326,7 +410,10 @@
         </section>
 
         <section id="example-2context">
+<!--
           <h2>Context with an object</h2>
+-->
+          <h2>オブジェクトのコンテキスト</h2>
 
           <figure>
             <figcaption>
@@ -352,7 +439,10 @@
         </section>
 
         <section id="example-3context">
+<!--
           <h2>Context with an array</h2>
+-->
+          <h2>配列のコンテキスト</h2>
 
           <figure>
             <figcaption>
@@ -378,6 +468,7 @@
         </section>
 
         <p>
+<!--
           When a JSON-LD enabled Activity Streams 2.0 implementation encounters
           a JSON document identified using the
           "<code>application/activity+json</code>" MIME media type, and
@@ -386,44 +477,87 @@
           <a href="https://www.w3.org/ns/activitystreams">Activity Streams 2.0 JSON-LD
           @context definition</a>, the implementation MUST assume that the
           normative @context definition still applies.
+-->
+JSON-LD を有効にした Activity Streams 2.0 実装が
+"<code>application/activity+json</code>" MIME メディアタイプを使って
+識別された JSON ドキュメントに遭遇し、
+そのドキュメントに標準的な
+<a href="https://www.w3.org/ns/activitystreams">Activity Streams 2.0 JSON-LD
+@context definition</a>
+を参照する値を持つ <code>@context</code> 属性がない場合、
+実装はそれでも標準的な @context 定義があるものと仮定しなければならない(MUST)。
         </p>
       </section>
 
       <section id="urls">
+<!--
         <h3>IRIs and URLs</h3>
+-->
+        <h3>IRI と URL</h3>
 
         <p>
+<!--
           This specification uses IRIs [[!RFC3987]].  Every URI [[!RFC3986]] is
           also an IRI, so a URI may be used wherever an IRI is named.  There are
           two special considerations: (1) when an IRI that is not also a URI is
           given for dereferencing, it MUST be mapped to a URI using the steps in
           Section 3.1 of [[!RFC3987]] and (2) when an IRI is serving as an "id"
           value, it MUST NOT be so mapped.
+-->
+この仕様は IRI [[!RFC3987]] を使っている。
+全ての URI [[!RFC3986]] は IRI でもあるので、
+IRI という名前が付いているところでは URL を使うことが出来る。
+特別に考慮することが二つある:
+(1) URI ではない IRI が逆参照として与えられた場合、[[!RFC3987]] の 3.1 節の
+ステップを使って URI にマッピングしなければならず(MUST)、
+(2) IRI が "id" 値として提供された場合、
+そのようにマッピングしてはならない(MUST NOT)。
         </p>
 
         <p>
+<!--
           Relative IRI (and URL) references SHOULD NOT be used within an
           Activity Streams 2.0 document due to the fact that many JSON
           parser implementations are not capable of reliably preserving the base
           context necessary to properly resolve relative references.
+-->
+相対 IRI (及び URL) 参照は Activity Streams 2.0 文書の中で
+使うべきではない(SHOULD NOT);
+多くの JSON パーサ実装は、相対参照を適切に解決するために必要な
+基底コンテキストを確実に保存する能力を持たないからである。
         </p>
       </section>
 
       <section id="dates">
+<!--
         <h3>Date and Times</h3>
+-->
+        <h3>日付と時刻</h3>
         <p>
+<!--
           All properties with date and time values MUST conform to the
           "date-time" production in [[!RFC3339]] with the one exception
           that seconds MAY be omitted. An uppercase "T"
           character MUST be used to separate date and time, and an
           uppercase "Z" character MUST be used in the absence of a numeric time
           zone offset.
+-->
+全ての日付と時刻の属性は [[!RFC3339]] の "date-time" 生成に
+従わなければならない(MUST); 但し例外として秒は省略しても良い(MAY)。
+日付と時刻を分けるために大文字の "T" を使わなければならず(MUST)、
+タイムゾーンオフセット値がない場合は大文字の "Z" を
+使わなければならない(MUST)。
         </p>
         <p>
+<!--
           This is specified using the following [[ABNF]] syntax description.
           The "time-hour", "time-minute", "time-second", "time-secfrac",
           "time-offset" and "full-date" constructs are as defined in
           [[RFC3339]].
+-->
+これは以下の [[ABNF]] 文法記述を使って指定される。
+"time-hour", "time-minute", "time-second", "time-secfrac", "time-offset",
+"full-date" 構造は [[RFC3339]] で定義される。
         </p>
 <pre>
 as2-partial-time = time-hour ":" time-minute [":" time-second]
@@ -433,11 +567,17 @@ as2-date-time    = full-date "T" as2-full-time
 </pre>
 
         <p>
+<!--
           It is important to note that the `time-offset` component does not
           correlate to time-zones, and while times that include the
           `time-offset` component work well for timestamps, they cannot be
           reliably converted to and from local "wall times" without additional
           information and processing.
+-->
+`time-offset` 要素はタイムゾーンとは関係なく、
+`time-offset` 要素を含む時刻はタイムスタンプとして上手く動作するが、
+追加の情報と処理なしにこれとローカルの「壁時計時間」とを確実に変換することは
+できないということに注意することは重要である。
         </p>
 
       </section>
@@ -445,19 +585,31 @@ as2-date-time    = full-date "T" as2-full-time
     </section>
 
   <section id="examples" class="informative">
+<!--
     <h2>Examples</h2>
+-->
+    <h2>例</h2>
 
     <p>
+<!--
       Following are three examples of activities with varying degrees of detail.
+-->
+次に、様々な詳細度を持つ三つのアクティビティの例を挙げる。
     </p>
 
     <p>
+<!--
       Each example is shown using the normative JSON serialization defined
       by this specification.
+-->
+それぞれの例は、この仕様で定義されてい標準 JSON 直列化を使って示している。
     </p>
 
     <section id="example-1">
+<!--
       <h2>Minimal Activity</h2>
+-->
+      <h2>最小限のアクティビティ</h2>
 
   <figure>
   <figcaption>
@@ -477,7 +629,10 @@ as2-date-time    = full-date "T" as2-full-time
     </section>
 
     <section id="example-2">
+<!--
       <h2>Basic activity with some additional detail</h2>
+-->
+      <h2>追加の詳細付きの基本的なアクティビティ</h2>
 
       <figure>
       <figcaption>
@@ -524,7 +679,10 @@ as2-date-time    = full-date "T" as2-full-time
 
     <section id="example-3">
 
+<!--
       <h2>An extended activity</h2>
+-->
+      <h2>拡張したアクティビティ</h2>
 
       <figure>
       <figcaption>
@@ -603,18 +761,31 @@ as2-date-time    = full-date "T" as2-full-time
   </section>
 
   <section id="model">
+<!--
     <h2>Model</h2>
+-->
+    <h2>モデル</h2>
 
     <p>
+<!--
       The <a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity Vocabulary</a>
       normatively defines the core object types and properties for Activity
       Streams 2.0.
+-->
+<a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity Vocabulary</a> は
+Activity Streams 2.0 のためのコアオブジェクトと属性を形式的に定義している。
     </p>
 
     <p>
+<!--
       The object types defined by the vocabulary are segmented into a set of
       eight core types and an extended set of Activity and Object types common
       to many social Web applications. The core types include:
+-->
+語彙によって定義されたオブジェクト型は、八つのコア型と、
+おおくのソーシャル Web アプリケーションで共通に使われる
+Activity と Object 型の拡張集合に分けられる。
+コア型は以下のものである:
       <ul>
         <li><a>Object</a>,</li>
         <li><a>Link</a>,</li>
@@ -628,13 +799,20 @@ as2-date-time    = full-date "T" as2-full-time
     </p>
 
     <p>
+<!--
       Every JSON object in an Activity Streams 2.0 document is either an
       <code><a>Object</a></code> or a <code><a>Link</a></code>. All other types
       defined in the Activity Vocabulary, as well as all extension types, are
       derived from these two base types.
+-->
+Activity Streams 2.0 で定義されている全ての JSON オブジェクトは、
+<code><a>Object</a></code> か <code><a>Link</a></code> である。
+Activity Vocabulary に定義されているそれ以外の型は、全ての拡張型を含めて、
+これら二つの基底型の派生である。
     </p>
 
     <p>
+<!--
       A JSON object in the Activity Streams 2.0 document is a
       <code><a>Link</a></code> if either: (a) the object contains a
       <code>type</code> property whose value includes "<code>Link</code>" or
@@ -643,14 +821,28 @@ as2-date-time    = full-date "T" as2-full-time
       <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-mention">Mention</a> for
       instance); otherwise the JSON object is considered an instance
       or extension of <code><a>Object</a></code>.
+-->
+Activity Streams 2.0 文書の中の JSON オブジェクトは、次のどちらかの場合に
+<code><a>Link</a></code> である:
+(a) 値 "<code>Link</code>" を持つ <code>type</code> 属性を持つオブジェクト、
+または
+(b) <code>type</code> 属性の値が、<a>Link</a> の拡張として定義されている型
+(例えば、
+<a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-mention">Mention</a>
+を参照のこと);
+さもなければこの JSON オブジェクトは <code><a>Object</a></code> の実体または
+拡張である。
     </p>
 
     <section id="object">
       <h2><dfn id="asobject">Object</dfn></h2>
 
       <p>
+<!--
         The <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object">Object</a></code>
         is the primary base type for the Activity Streams vocabulary.
+-->
+<code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object">Object</a></code>は Activity Streams vocabulary の基本基底クラスである。
       </p>
 
       <p>
@@ -695,8 +887,12 @@ as2-date-time    = full-date "T" as2-full-time
       </p>
 
       <p>
+<!--
         All properties are optional (including the <code>id</code> and
         <code>type</code>).
+-->
+(<code>id</code> と <code>type</code> を含めて) 全ての属性は
+オプションである。
       </p>
 
 <figure>
@@ -776,25 +972,45 @@ as2-date-time    = full-date "T" as2-full-time
      </p>
 
      <section id="text-representations">
+<!--
        <h3>Text representations of Object types</h3>
+-->
+       <h3>オブジェクト型のテキスト表現</h3>
 
        <p>
+<!--
          Activity Streams consumers often need a text representation of an
          Activity Streams object, e.g. for display in a Web browser or console
          interface.
+-->
+Activity Streams 消費者はしばしば、
+例えば Web ブラウザやコンソールインターフェースに表示するために、
+Activity Streams オブジェクトのテキスト表現を必要とする。
        </p>
 
        <p>
+<!--
          The <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-name">name</a></code>
          property SHOULD be derived from input by the creator or another user.
+-->
+<code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-name">name</a></code> 属性は作成者または他のユーザーによる入力から生成されるべきである(SHOULD)。
        </p>
 
        <p>
+<!--
          The <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-summary">summary</a></code>
          property SHOULD be used as a fallback text representation, possibly
          automatically generated by the publisher. If there is no <code>name</code> property,
          the <code>summary</code> property SHOULD NOT include markup, and SHOULD be short
          enough to be used as a reasonable text representation of the object.
+-->
+<code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-summary">summary</a></code>
+属性は、おそらく発行者によって自動的に生成され、
+フォールバックテキスト表現として使われるべきである(SHOULD)。
+<code>name</code> 属性がない場合、
+<code>summary</code> 属性はマークアップを含むべきではなく(SHOULD NOT)、
+オブジェクトの妥当なテキスト表現として使われるのに
+十分短いものであるべきである(SHOULD)。
        </p>
 
        <figure>
@@ -828,12 +1044,20 @@ as2-date-time    = full-date "T" as2-full-time
            </figure>
 
        <p>
+<!--
          The <code>name</code> and <code>summary</code> MAY be absent,
          MAY lack explicit values in the end user&apos;s current language,
          and MAY be longer than appropriate for use as a text representation of
          the Object in the current language context. Consumer implementations
          SHOULD have fallback strategies for text representation of Objects in
          these cases.
+-->
+<code>name</code> と <code>summary</code> はなくてもよく(MAY)、
+エンドユーザーの現在の言語での明示的な値がなくてもよく(MAY)、
+現在の言語コンテキストでの Object のテキスト表現として使うのに
+適切でないぐらい長くてもよい(MAY)。
+消費者実装はこれらの場合の Object のテキスト表現に対する
+フォールバック戦略を持つべきである(SHOULD)。
        </p>
 
      </section>
@@ -844,6 +1068,7 @@ as2-date-time    = full-date "T" as2-full-time
       <h2><dfn>Link</dfn></h2>
 
       <p>
+<!--
         A <code>Link</code> describes a qualified, indirect reference to another
         resource that is closely related to the conceptual model of Links as
         established in [[!RFC5988]]. The properties of the Link object are not
@@ -852,14 +1077,32 @@ as2-date-time    = full-date "T" as2-full-time
         example, <code>height</code> and <code>width</code> might represent the
         desired rendered size of a referenced image, rather than the actual
         pixel dimensions of the referenced image.
+-->
+<code>Link</code> は、修飾された、他のリソースへの間接参照であり、
+[[!RFC5988]] で設定された Links の概念モデルと深く関係している。
+Link オブジェクトの属性は参照されたリソースの属性ではなく、
+表示するエージェントがそのリソースをどのように使うかを理解するための
+ヒントとして提供される。
+例えば、<code>height</code> と <code>width</code> は参照されたイメージの
+実際のピクセル数ではなく、参照されたイメージが要求した
+表示サイズかもしれない。
       </p>
 
       <p>
+<!--
         The target URI of the Link is expressed using the required
         <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-href">href</a></code>
         property. In addition, all <code>Link</code> instances share the
+        In addition, all <code>Link</code> instances share the
         following common set of optional properties as normatively defined by
         the <a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity Vocabulary</a>:
+-->
+Link のターゲット URI は必須の
+<code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-href">href</a></code>
+属性を使って表現される。
+さらに、全ての <code>Link</code> 実体は、
+<a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity Vocabulary</a>
+で規準的に定義されている、次のオプションの属性の一般的な集合を共有する:
           <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-id">id</a></code> |
           <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-name">name</a></code> |
           <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-hreflang">hreflang</a></code> |
@@ -1016,11 +1259,18 @@ as2-date-time    = full-date "T" as2-full-time
       <h2><dfn id="actor">Actor</dfn></h2>
 
       <p>
+<!--
         Actor objects are specializations of the base <a>Object</a>
         type that represent entities capable of carrying out an
         Activity. The <a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity
         Vocabulary</a> provides the normative definition of five specific
         types of Actors:
+-->
+Actor オブジェクトは、
+Activity を実行する能力を持つ実態を表現する、基底
+<a>Object</a> 型の特化である。
+<a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity
+        Vocabulary</a> は Actor の 5 種類の特定の型の規定定義を提供する:
         <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-application">Application</a>
         </code> |
         <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-group">Group</a></code> |
@@ -1030,6 +1280,7 @@ as2-date-time    = full-date "T" as2-full-time
       </p>
 
       <p>
+<!--
         This specification intentionally defines Actors in only the most
         generalized way, stopping short of defining semantically specific
         properties for each. All Actor objects are specializations of
@@ -1040,6 +1291,18 @@ as2-date-time    = full-date "T" as2-full-time
         <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-person">Person</a>,
         <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-group">Group</a>,
         and <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-organization">Organization</a> instances.
+-->
+この仕様書は意図的に Actor を最も一般的な形でのみ定義し、
+stopping short of defining semantically specific properties for each.
+全ての Actor オブジェクトは
+<code><a>Object</a></code> の特化であり、
+全ての Object に共通の全てのコア属性を継承する。
+Activity Vocabulary でカバーされない追加の詳細を記述するために
+外部語彙を使用できる。
+<a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-person">Person</a>,
+<a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-group">Group</a>,
+<a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-organization">Organization</a> 実体の
+追加メタデータとして提供するために VCard [[vcard-rdf]]  が使われるべきである(SHOULD)。
       </p>
 
       <figure><figcaption>An Activity with a Person actor extended with VCard properties:</figcaption>
@@ -1089,10 +1352,15 @@ as2-date-time    = full-date "T" as2-full-time
       <h2><dfn id="activity">Activity</dfn></h2>
 
       <p>
+<!--
         Activity objects are specializations of the base <a>Object</a>
         type that provide information about actions that have either
         already occurred, are in the process of occurring, or may occur
         in the future.
+-->
+Activity オブジェクトは、既に起きた、今起きている途中、
+将来起きるかもしれないアクションに関する情報を提供する、
+基底 <a>Object</a> 型の特化である。
       </p>
 
       <p>
@@ -1109,8 +1377,12 @@ as2-date-time    = full-date "T" as2-full-time
       </p>
 
       <p>
+<!--
         The <code>type</code> property is used to identify the type
         of action the Activity Statement represents.
+-->
+<code>type</code> 属性は  Activity Statement が表現するアクションの型を
+識別するために使われる。
       </p>
 
       <figure><figcaption>The following example illustrates a simple Activity:</figcaption>
@@ -1190,9 +1462,14 @@ as2-date-time    = full-date "T" as2-full-time
       <h2><dfn id="intransitiveactivity">IntransitiveActivity</dfn></h2>
 
       <p>
+<!--
         IntransitiveActivity objects are specializations of the <a>Activity</a>
         type that represent intransitive actions. IntransitiveActivity objects
         do not have an <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object-term">object</a></code> property.
+-->
+IntransitiveActivity オブジェクトは、自動的なアクションを表現する
+<a>Activity</a> 型の特化である。
+IntransitiveActivity オブジェクトは <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object-term">object</a></code> 特性を持たない。
       </p>
     </section>
 
@@ -1200,9 +1477,14 @@ as2-date-time    = full-date "T" as2-full-time
       <h2><dfn id="collection">Collection</dfn></h2>
 
       <p>
+<!--
         <code>Collection</code> objects are a specialization of the
         base <code><a>Object</a></code> that serve as a container for other
         <a data-lt="Object">Objects</a> or <a data-lt="Link">Links</a>.
+-->
+<code>Collection</code> オブジェクトは、
+他の <a data-lt="Object">Objects</a> や <a data-lt="Link">Links</a> の
+コンテナとして動作する基底 <code><a>Object</a></code> の特化である。
       </p>
 
       <p>
@@ -1219,12 +1501,20 @@ as2-date-time    = full-date "T" as2-full-time
       </p>
 
       <p>
+<!--
         The items within a <code><a>Collection</a></code> can be ordered or
         unordered. The <code><dfn>OrderedCollection</dfn></code> type MAY be
         used to identify a Collection whose items are always ordered. In the
         JSON serialization, the unordered items of a Collection are
         represented using the <code>items</code> property while ordered items
         are represented using the <code>orderedItems</code> property.
+-->
+<code><a>Collection</a></code> の中のアイテムは順序が
+ある場合とない場合がある。
+<code><dfn>OrderedCollection</dfn></code> 型は、
+アイテムに常に順序がある Collection であることを識別するために使っても良い
+(MAY)。
+JSON シリアル化において、the unordered items of a Collection are represented using the <code>items</code> property while ordered items are represented using the <code>orderedItems</code> property.
       </p>
 
       <figure>
@@ -1285,6 +1575,7 @@ as2-date-time    = full-date "T" as2-full-time
         <h2>Collection Paging</h2>
 
         <p>
+<!--
           A Collection can contain a large number of items. Often, it becomes
           impractical for an implementation to serialize every item contained
           by a Collection using the <code>items</code> (or
@@ -1292,13 +1583,28 @@ as2-date-time    = full-date "T" as2-full-time
           within a Collection can be divided into distinct subsets or "pages".
           A page is identified using the <code><dfn>CollectionPage</dfn></code>
           type.
+-->
+Collection は大量のアイテムを含むことができる。
+しばしば、
+<code>items</code> (または <code>orderedItems</code>) 属性だけを使って
+Collection に含まれている全てのアイテムをシリアル化するのは
+実装上非実用的になる。
+このような場合、Collection に含まれているアイテムは
+相異なる部分集合、つまり「ページ」に分割できる。
+ページは <code><dfn>CollectionPage</dfn></code> 型を使って識別される。
         </p>
 
         <p>
+<!--
           The <code><a>CollectionPage</a></code> type extends from the base
           <code><a>Collection</a></code> type and inherits all of it's
           properties. The following additional properties can also be
           specified:
+-->
+<code><a>CollectionPage</a></code> 型は基底
+<code><a>Collection</a></code> 型から拡張され、
+その全ての属性を継承する。
+以下の追加の属性も定義されている:
           <code>
             <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-partof">partOf</a> |
             <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-next">next</a> |
@@ -1307,26 +1613,44 @@ as2-date-time    = full-date "T" as2-full-time
         </p>
 
         <p>
+<!--
           The <code>partOf</code> property identifies the
           <code><a>Collection</a></code> to which the items contained by the
           <code>CollectionPage</code> belong.
+-->
+<code>partOf</code> 属性は、
+<code>CollectionPage</code> に含まれているアイテムが属する
+<code><a>Collection</a></code> を識別する。
         </p>
 
         <p>
+<!--
           The <code>first</code>, <code>next</code>, <code>prev</code>,
           <code>last</code>, and <code>current</code> properties are used
           to reference other <code><a>CollectionPage</a></code> instances
           that contain additional subsets of items from the parent collection.
+-->
+<code>first</code>, <code>next</code>, <code>prev</code>,
+<code>last</code>, <code>current</code> 属性は、
+親コレクションからのアイテムの追加の部分集合を含む、他の
+<code><a>CollectionPage</a></code> 実体を参照するために使われる。
         </p>
 
         <p>
+<!--
           As with <code>Collection</code> objects, the items within a
           <code>CollectionPage</code> might be ordered or unordered.
           The <code><dfn>OrderedCollectionPage</dfn></code> type MAY be used
           to identify a page whose items are strictly ordered.
+-->
+<code>Collection</code> オブジェクトと同様、
+<code>CollectionPage</code> の中のアイテムは順序ありと順序なしの場合がある。
+<code><dfn>OrderedCollectionPage</dfn></code> 型は
+アイテムが順序ありのもののページを識別するために使われる。
         </p>
 
         <p>
+<!--
           The <code><a>OrderedCollectionPage</a></code> type extends from
           both <code><a>CollectionPage</a></code> and
           <code><a>OrderedCollection</a></code>. In addition to the properties
@@ -1335,6 +1659,16 @@ as2-date-time    = full-date "T" as2-full-time
           <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-startindex">startIndex</a></code> property whose value indicates the relative index position
           of the first item contained by the page within the
           <code>OrderedCollection</code> to which the page belongs.
+-->
+<code><a>OrderedCollectionPage</a></code> 型は
+<code><a>CollectionPage</a></code> と
+<code><a>OrderedCollection</a></code> の両方を拡張する。
+これらから継承した属性に加えて、
+<code>OrderedCollectionPage</code> は追加の
+<code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-startindex">startIndex</a></code> 属性を持つ;
+この値は、このページが示す
+<code>OrderedCollection</code>
+の中で、ページに含まれている最初のアイテムの相対インデックス位置を示す。
         </p>
 
         <figure>
@@ -1347,6 +1681,7 @@ as2-date-time    = full-date "T" as2-full-time
         </figure>
 
         <p>
+<!--
           Whether ordered or not, the pages of a <code>Collection</code> are
           typically arranged in a sequence (either a singly or doubly-linked
           list). The <code>first</code> property is used to identify the first
@@ -1354,6 +1689,14 @@ as2-date-time    = full-date "T" as2-full-time
           to identify the final page in the sequence. The <code>prev</code> and
           <code>next</code> properties identify the pages immediately before
           and immediately following, respectively.
+-->
+順序付きでも順序なしでも、
+<code>Collection</code> のページは
+並びに配置される (シングルリンクリストかダブルリンクリスト)。
+<code>first</code> 属性はこの並びの最初のページを識別するために使われ、
+一方 <code>last</code> 属性は並びの最後のページを識別するのに使われる。
+<code>prev</code> と <code>next</code> 属性はそれぞれ直前と直後のページを
+識別する。
         </p>
 
         <figure>
@@ -1364,17 +1707,28 @@ as2-date-time    = full-date "T" as2-full-time
         </figure>
 
         <p>
+<!--
           The <code>current</code> property identifies a page
           containing the subset of items in the <code>Collection</code> that
           have been created or updated most recently.
+-->
+<code>current</code> 属性は、<code>Collection</code> の中で、
+最も最近に作成または更新されたアイテムの部分集合を含むページを識別する。
         </p>
 
         <p>
+<!--
           The values for the <code>first</code>, <code>last</code>,
           <code>next</code>, <code>prev</code>, and <code>current</code>
           properties can be either a single <code><a>CollectionPage</a></code>
           or a <code><a>Link</a></code> referencing a separate resource
           containing a <code><a>CollectionPage</a></code>.
+-->
+<code>first</code>, <code>last</code>, <code>next</code>,
+<code>prev</code>, <code>current</code> 属性は
+単一の <code><a>CollectionPage</a></code>、または
+<code><a>CollectionPage</a></code> を含む別のリソースを参照する
+<code><a>Link</a></code> である。
         </p>
 
       <figure>
@@ -1406,6 +1760,7 @@ as2-date-time    = full-date "T" as2-full-time
 </figure>
 
       <p>
+<!--
         Using paging with an <code>OrderedCollection</code> can be tricky
         because there are no guarantees that implementations will process the
         sequence of pages in any predictable order. Implementations that wish
@@ -1418,6 +1773,19 @@ as2-date-time    = full-date "T" as2-full-time
         <code>OrderedCollection</code> are not instances
         of <code>OrderedCollectionPage</code>, a consumer will have
         no reliable means of reconstructing the appropriate ordering of items.
+-->
+<code>OrderedCollection</code> のページングはトリッキーな場合がある;
+実装がページの並びを何らかの推測可能な順序で処理することが
+保証されないからである。
+論理的なコレクションのメンバアイテムを適切で完全な順序に再構築したい実装は、
+並びの最初(または最後)のページに移動して、それから全てのページを処理するまで
+<code>next</code> (または <code>prev</code>) リンクを再帰的に
+辿るべきである。
+ある <code>OrderedCollection</code> のページは
+<code>OrderedCollectionPage</code> の実体であるべきである(SHOULD)。
+<code>OrderedCollection</code> のページが
+<code>OrderedCollectionPage</code> の実体でない場合、
+消費者はアイテムの適切な順序を再構築するために信頼性のある手段はない。
       </p>
 
       </section>
@@ -1426,9 +1794,13 @@ as2-date-time    = full-date "T" as2-full-time
 
     <section id="naturalLanguageValues">
 
+<!--
       <h2>Natural Language Values</h2>
+-->
+      <h2>自然言語値</h2>
 
       <p>
+<!--
         Several properties defined by the
         <a href="https://www.w3.org/TR/activitystreams-vocabulary/">Vocabulary</a> are defined
         as having natural language values. These are human-readable strings using one or more languages. Within the JSON serialization, they are
@@ -1439,10 +1811,25 @@ as2-date-time    = full-date "T" as2-full-time
         for instance: "<code>name</code>" identifies the JSON string
         form for the <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-name">name</a></code>
         property while "<code>nameMap</code>" represents the object form.
+-->
+<a href="https://www.w3.org/TR/activitystreams-vocabulary/">Vocabulary</a>
+で定義されている属性のいくつかは自然言語値を持つと定義されている。
+これは、複数の言語を使った人間可読の文字列である。
+JSON シリアル化の中で、これらは以下のどちらかで表現される:
+(1) 単一の JSON 文字列、または
+(2) 同じ文字列値の地域化された等価な翻訳への整形された
+[[!BCP47]] Language-Tags にマッピングされたJSONオブジェクト。
+シリアル化された JSON において、これら二つの型式は単純な属性命名規則によって
+区別される; 例えば:
+"<code>name</code>" は <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-name">name</a></code> 属性の JSON 文字列形式を識別し、
+一方 "<code>nameMap</code>" はオブジェクト形式を表現する。
       </p>
 
       <figure>
+<!--
         <figcaption>A single name String value without language information:</figcaption>
+-->
+        <figcaption>言語情報のない単一の name String 値:</figcaption>
 <div id="ex7-jsonld" style="display: block;">
 <pre class="example highlight json">{
   "@context": "https://www.w3.org/ns/activitystreams",
@@ -1453,7 +1840,10 @@ as2-date-time    = full-date "T" as2-full-time
 </figure>
 
       <figure>
+<!--
         <figcaption>Multiple, language-specific values:</figcaption>
+-->
+        <figcaption>複数の、言語指定された値:</figcaption>
 <div id="ex8-jsonld" style="display: block;">
 <pre class="example highlight json">{
   "@context": "https://www.w3.org/ns/activitystreams",
@@ -1468,27 +1858,51 @@ as2-date-time    = full-date "T" as2-full-time
 </figure>
 
       <p>
+<!--
         Every key in the object form MUST be a well-formed [[!BCP47]]
         Language-Tag. The associated values MUST be strings.
+-->
+オブジェクト形式の全てのキーは整形された
+[[!BCP47]] Language-Tag でなければならない(MUST)。
+関連付けられた値は文字列でなければならない(MUST)。
       </p>
 
       <p>
+<!--
         The <a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity Vocabulary</a>
         defines three properties that use natural language values:
+-->
+<a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity Vocabulary</a> は
+自然言語値を使う三つの属性を定義している:
         <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-name">name</a></code>,
+<!--
         <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-summary">summary</a></code>, and
+-->
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-summary">summary</a></code>, 
         <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-content">content</a></code>.
+<!--
         Accordingly, in the JSON serialization, the terms
         "<code>name</code>", "<code>summary</code>", and "<code>content</code>"
         represent the JSON string forms; and the terms
         "<code>nameMap</code>", "<code>summaryMap</code>", and
         "<code>contentMap</code>" for represent the object forms.
+-->
+それぞれ、JSON シリアル化では "
+        <code>name</code>", "<code>summary</code>", and "<code>content</code>" は
+JSON 文字列形式を表現する; "
+         <code>nameMap</code>", "<code>summaryMap</code>", and "
+        <code>contentMap</code>" はオブジェクト形式を表現する。
       </p>
 
       <p>
+<!--
         The special language tag <code>"und"</code> can be used within the
         object form to explicitly identify a value whose
         language is unknown or undetermined.
+-->
+特別な言語タグ <code>"und"</code> は、
+言語が不明または未定義の値を明示的に識別するために
+オブジェクト形式の中で使用できる。
       </p>
 
       <figure>
@@ -1510,11 +1924,19 @@ as2-date-time    = full-date "T" as2-full-time
         <h3>Default Language Context</h3>
 
         <p>
+<!--
           When using [[JSON-LD]] mechanisms to produce or consume Activity
           Streams 2.0 documents, the <code>@language</code> property MAY be used
           within a <code>@context</code> to identify the default language. This
           mechanism may not be understood by implementations that do not choose
           to process Activity Streams 2.0 documents using JSON-LD.
+-->
+
+Activity Streams 2.0 文書を生成または処理するのに [[JSON-LD]] 機構を使う場合、
+デフォルト言語を識別するために <code>@context</code> の中で
+<code>@language</code> 属性を使っても良い(MAY)。
+この機構は、JSON-LD を使って Activity Streams 2.0 文書を処理することを
+選ばなかった実装によっては理解されないかもしれない。
         </p>
 
         <figure>
@@ -1633,11 +2055,19 @@ as2-date-time    = full-date "T" as2-full-time
     </section>
 
     <section>
+<!--
       <h3>Marking up language</h3>
+-->
+      <h3>言語のマークアップ</h3>
       <p>
+<!--
         Activity Streams 2.0 publishers SHOULD explicitly mark the language of
         natural language properties if they are known, using either map properties
         or a default language tag.
+-->
+Activity Streams 2.0 発行者は、分かっている場合には、map 属性か
+デフォルト言語タグを使って、自然言語属性の言語を明示的に
+マークアップするべきである(SHOULD)。
       </p>
       <p class="note" title="Examples">
         Not all examples in this specification explicitly mark the language of
@@ -1651,7 +2081,10 @@ as2-date-time    = full-date "T" as2-full-time
 
   <section id="extensibility">
 
+<!--
     <h2>Extensibility</h2>
+-->
+    <h2>拡張性</h2>
 
       <p>
         In Activity Streams 2.0, an "extension" is any property, activity,
@@ -1997,11 +2430,19 @@ as2-date-time    = full-date "T" as2-full-time
     <h2>IANA Considerations</h2>
 
     <section id="media-type">
+<!--
       <h2>The <code>application/activity+json</code> Media Type</h2>
+-->
+      <h2><code>application/activity+json</code>メディアタイプ</h2>
 
       <p>
+<!--
         This specification registers the <code><dfn>application/activity+json</dfn></code> MIME Media Type specifically for identifying documents
         conforming to the Activity Streams 2.0 format.
+-->
+この仕様は、Activity Streams 2.0 型式に準拠した文書を識別するために
+<code><dfn>application/activity+json</dfn></code> MIME Media Type を
+登録する。
       </p>
 
       <table>
@@ -2020,16 +2461,28 @@ as2-date-time    = full-date "T" as2-full-time
         <tr>
           <td>Optional parameters: </td>
           <td>
+<!--
             profile: The profile parameter for the application/activity+json
             media type allows one or more profile URIs to be specified.  These
             profile URIs have the identifier semantics defined in [[!RFC6906]].
             The "profile" media type parameter MUST be quoted. It contains a
             non-empty list of space-separated URIs (the profile URIs).
+-->
+profile: application/activity+json メディアタイプの profile 引数は
+一つ以上のプロファイル URI を指定できる。
+これらのプロファイル URI は [[!RFC6906]] で定義された意味論を持つ。
+"profile" メディアタイプ引数はクォートされなければならない(MUST)。
+これは空白で区切られた URI (プロファイル URI) の空でないリストである。
    <pre>profile-param = "profile=" profile-value
 profile-value = <"> profile-URI 0*( 1*SP profile-URI ) <">
 profile-URI   = URI</"></"></pre>
+<!--
             The "URI" in the above grammar refers to the "URI" as defined in
             Section 3 of [[!RFC3986]].
+-->
+上述の文法での "URI" は [[!RFC3986]] の Section 3 で定義される
+"URI" を参照する。
+
           </td>
         </tr>
         <tr>
@@ -2055,17 +2508,30 @@ profile-URI   = URI</"></"></pre>
         </table>
 
         <p>
+<!--
           Note that while the Activity Streams 2.0 format uses JSON-LD
           conventions, there are a number of constraints and additional
           requirements for Activity Streams 2.0 implementations that justify
           the use of a specific media type.
+-->
+Activity Streams 2.0 型式は JSON-LD 仕様を使う一方、
+この特定のメディアタイプの使用を正当化する
+Activity Streams 2.0 実装のためには、多くの制限と追加の要求があることに
+注意すること。
         </p>
 
         <p>
+<!--
           Because Activity Streams 2.0 can be considered a restricted profile
           of JSON-LD, Implementations SHOULD consider the
           `application/ld+json; profile="https://www.w3.org/ns/activitystreams"`
           media type as being equivalent to `application/activity+json`.
+-->
+Activity Streams 2.0 は JSON-LD の制限されたプロファイルと考えることも
+出来るため、実装は
+`application/ld+json; profile="https://www.w3.org/ns/activitystreams"`
+メディアタイプを `application/activity+json` と等価なものとして
+扱うべきである(SHOULD)。
         </p>
 
     </section>

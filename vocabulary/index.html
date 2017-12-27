@@ -172,15 +172,26 @@
       <h2>Conventions</h2>
 
       <p>
+<!--
         Unless otherwise specified, all properties defined as
         <code>xsd:dateTime</code> values MUST conform to the rules
         defined in Activity Streams 2.0 Core,
         <a href="https://www.w3.org/TR/activitystreams-core/#dates">Section 2.3</a>.
+-->
+特に指定がない限り、
+<code>xsd:dateTime</code> 値として定義されている全ての属性は
+Activity Streams 2.0 Core,
+<a href="https://www.w3.org/TR/activitystreams-core/#dates">Section 2.3</a> で
+定義されている規則に従わなければならない(MUST)。
       </p>
 
       <p>
+<!--
         The examples included in this document use the normative JSON
         serialization defined by this specification.
+-->
+この文書に含まれている例は、この使用で定義されている標準 JSON 直列化を
+使用している。
       </p>
 
     </section>
@@ -188,16 +199,22 @@
   </section>
 
   <section id="types">
+<!--
     <h2>Core Types</h2>
+-->
+    <h2>コア型</h2>
 
     <p>
+<!--
       The Activity Vocabulary Core Types provide the basis for the rest of
       the vocabulary.
+-->
+Activity Vocabulary コア型は他の語彙の基礎を提供する。
     </p>
 
     <p>Base URI: <code>https://www.w3.org/ns/activitystreams#</code>.</p>
 
-    <p>The Activity Streams 2.0 Core Types include:
+    <p>The Activity Streams 2.0 コア型は次のものからなる:
       <ul>
         <li><code><a>Object</a></code></li>
         <li><code><a>Link</a></code></li>
@@ -239,6 +256,7 @@
         <tr>
           <td>Notes:</td>
           <td>
+<!--
             Describes an object of any kind. The Object type serves as the
             base type for most of the other kinds of objects defined in the
             Activity Vocabulary, including other Core types such as
@@ -246,6 +264,16 @@
             <code><a>IntransitiveActivity</a></code>,
             <code><a>Collection</a></code> and
             <code><a>OrderedCollection</a></code>.
+-->
+任意の型のオブジェクトを記述する。
+Object 型は、
+<code><a>Activity</a></code>,
+<code><a>IntransitiveActivity</a></code>,
+<code><a>Collection</a></code>,
+<code><a>OrderedCollection</a></code>
+のような他のコア型を含む、
+Activity Vocabulary で定義されるその他の種類のオブジェクトの基底型を
+提供する。
           </td>
         </tr>
         <tr>
@@ -308,6 +336,7 @@
         <tr>
           <td>Notes:</td>
           <td>
+<!--
             A Link is an indirect, qualified reference to a resource identified
             by a URL. The fundamental model for links is established by
             [[!RFC5988]]. Many of the properties defined by the Activity
@@ -319,6 +348,18 @@
             identified by the <code><a>href</a></code>.
             Properties of the <code><a>Link</a></code> are properties of the
             reference as opposed to properties of the resource.
+-->
+Link は、URL で識別される、リソースへの間接的な修飾された参照である。
+リンクの基本的なモデルは [[!RFC5988]] で確立されている。
+Many of the properties defined by the Activity
+            Vocabulary allow values that are either instances of
+            <code><a>Object</a></code> or <code><a>Link</a></code>. When
+            a <code><a>Link</a></code> is used, it establishes a
+            <a href="http://patterns.dataincubator.org/book/qualified-relation.html">qualified relation</a>
+            connecting the subject (the containing object) to the resource
+            identified by the <code><a>href</a></code>.
+<code><a>Link</a></code> の属性は、このリソースの属性ではなく
+参照先の属性である。
           </td>
         </tr>
         <tr>
@@ -368,6 +409,7 @@
         <tr>
           <td>Notes:</td>
           <td>
+<!--
             An Activity is a subtype of <code><a>Object</a></code> that
             describes some form of action that may happen, is currently
             happening, or has already happened. The <code>Activity</code>
@@ -375,6 +417,13 @@
             activities. It is important to note that the <code>Activity</code>
             type itself does not carry any specific semantics about the kind
             of action being taken.
+-->
+Activity は、起こる予定、今起こっている、既に起こったある種の型式の
+アクションを記述する、<code><a>Object</a></code> の派生型である。
+<code>Activity</code> 型自身は全てのアクティビティのための
+抽象基底クラスである。
+<code>Activity</code> 型自身は取られるアクションの種類について
+何の特定の意味も持たないことに注意することは重要である。
           </td>
         </tr>
         <tr>
@@ -428,10 +477,18 @@
         <tr>
           <td>Notes:</td>
           <td>
+<!--
             Instances of <code>IntransitiveActivity</code> are a subtype of
             <code>Activity</code> representing intransitive actions. The
             <code><a data-lt="object-term">object</a></code> property is
             therefore inappropriate for these activities.
+-->
+<code>IntransitiveActivity</code> の実体は、
+自動詞的なアクションを表現するための、
+<code>Activity</code> の派生型である。
+従って
+<code><a data-lt="object-term">object</a></code> 属性は
+これらのアクティビティにとっては不適切である。
           </td>
         </tr>
         <tr>
@@ -479,9 +536,15 @@
           <td>Notes:</td>
           <td>
             <p>
+<!--
               A <code>Collection</code> is a subtype of
               <code><a>Object</a></code> that represents ordered or unordered
               sets of <code><a>Object</a> or <a>Link</a></code> instances.
+-->
+<code>Collection</code> は、
+<code><a>Object</a> または <a>Link</a></code> 実体の、
+順序付きまたは順序なしの集合を表現する、
+<code><a>Object</a></code> の派生型である。
             </p>
             <p>
               Refer to the
@@ -541,9 +604,13 @@
             <td>Notes:</td>
             <td>
               <p>
+<!--
                 A subtype of <code><a>Collection</a></code> in which members
                 of the logical collection are assumed to always be strictly
                 ordered.
+-->
+論理的なコレクションのメンバーが常に厳密に順序づけされていることが
+仮定されている、<code><a>Collection</a></code> の派生型。
               </p>
             </td>
           </tr>
@@ -680,14 +747,23 @@
   </section>
 
   <section id="extendedtypes">
+<!--
     <h2>Extended Types</h2>
+-->
+    <h2>拡張型</h2>
 
     <p>Base URI: <code>https://www.w3.org/ns/activitystreams#</code>.</p>
 
     <p>
+<!--
       The Activity Streams 2.0 Extended Types include Activity and Object
       subtypes that are common to many social Web applications. They are
       divided into three sets:
+-->
+Activity Streams 2.0 Extended Types は、
+多くのソーシャル Web アプリケーションで一般的な
+Activity と Object の派生型を含む。
+これらは三つの集合に分類される:
       <ul>
         <li><a href="#activity-types">Activity Types</a></li>
         <li><a href="#actor-types">Actor Types</a></li>
@@ -706,7 +782,10 @@
 
     <section id="activity-types">
 
+<!--
       <h2>Activity Types</h2>
+-->
+      <h2>アクティビティ型</h2>
 
       <p>
         All Activity Types inherit the properties of the base <a>Activity</a>
@@ -807,10 +886,15 @@
           <tr>
             <td>Notes:</td>
             <td>
+<!--
               Indicates that the <code>actor</code> accepts the
               <code>object</code>. The <code>target</code> property can be used
               in certain circumstances to indicate the context into which the
               <code>object</code> has been accepted.
+-->
+<code>actor</code> が <code>object</code> を受け入れたことを示す。
+<code>target</code> 属性は、特定の状況では
+<code>object</code> が受け入れられたコンテキストを示すために使われる。
             </td>
           </tr>
           <tr>
@@ -852,8 +936,11 @@
           <tr>
             <td>Notes:</td>
             <td>
+<!--
               A specialization of <code><a>Accept</a></code> indicating that the
               acceptance is tentative.
+-->
+<code><a>Accept</a></code> の特化で、受け入れが一時的であることを示す。
             </td>
           </tr>
           <tr>
@@ -913,10 +1000,17 @@
           <tr>
             <td>Notes:</td>
             <td>
+<!--
               Indicates that the <code>actor</code> has added the
               <code>object</code> to the <code>target</code>. If the
               <code>target</code> property is not explicitly specified, the
               target would need to be determined implicitly by context. The
+-->
+<code>actor</code> が <code>object</code> を <code>target</code> に
+追加したことを示す。
+<code>target</code> 属性が明示的に指定されない場合、
+ターゲットはコンテキストによって暗黙的に決定される必要がある。
+The
               <code>origin</code> can be used to identify the context from
               which the <code>object</code> originated.
             </td>
@@ -960,11 +1054,17 @@
           <tr>
             <td>Notes:</td>
             <td>
+<!--
               An <code><a>IntransitiveActivity</a></code> that indicates that
               the <code>actor</code> has arrived at the <code>location</code>.
               The <code>origin</code> can be used to identify the context from
               which the <code>actor</code> originated. The <code>target</code>
               typically has no defined meaning.
+-->
+<code>actor</code> が <code>location</code> に到着したことを示す
+<code><a>IntransitiveActivity</a></code>。
+The <code>origin</code> can be used to identify the context from which the <code>actor</code> originated.
+<code>target</code> は特に定義された意味は無い。
             </td>
           </tr>
           <tr>
@@ -1006,8 +1106,13 @@
           <tr>
             <td>Notes:</td>
             <td>
+<!--
               <p>Indicates that the <code>actor</code> has created the
               <code>object</code>.</p>
+-->
+              <p>
+<code>actor</code> が <code>object</code> を作成したことを示す。
+              </p>
             </td>
           </tr>
           <tr>
@@ -1046,10 +1151,15 @@
           <tr>
             <td>Notes:</td>
             <td>
+<!--
               Indicates that the <code>actor</code> has deleted the
               <code>object</code>. If specified, the <code>origin</code>
               indicates the context from which the <code>object</code> was
               deleted.
+-->
+<code>actor</code> が <code>object</code> を削除したことを示す。
+指定された場合、<code>origin</code> は <code>object</code> が削除した
+コンテキストを示す。
             </td>
           </tr>
           <tr>
@@ -2064,15 +2174,24 @@
 
     <section id="actor-types">
 
+<!--
       <h2>Actor Types</h2>
+-->
+      <h2>アクター型</h2>
 
       <p>
+<!--
         Actor types are <a>Object</a> types that are capable of performing
         activities.
+-->
+アクター型はアクティビティを実行する能力を持つ <a>Object</a> 型である。
       </p>
 
       <p>
+<!--
         The core Actor Types include:
+-->
+コアアクター型は次のものからなる:
         <ul>
           <li><code><a>Application</a></code></li>
           <li><code><a>Group</a></code></li>
@@ -2320,13 +2439,22 @@
             <td>Notes:</td>
             <td>
               <p>
+<!--
                 Describes a relationship between two individuals.
                 The <code><a>subject</a></code> and
                 <code><a data-lt="object-term">object</a></code> properties are
                 used to identify the connected individuals.
+-->
+二人の個人の間の関係を記述する。
+<code><a>subject</a></code> と
+<code><a data-lt="object-term">object</a></code> 属性が
+つながった個人を識別するために使われる。
               </p>
               <p>
+<!--
                 See <a href="#connections"></a> for additional information.
+-->
+追加情報については <a href="#connections"></a> を参照のこと。
               </p>
             </td>
           </tr>
@@ -2364,7 +2492,10 @@
           <tr>
             <td>Notes:</td>
             <td>
+<!--
               Represents any kind of multi-paragraph written work.
+-->
+複数段落からなるようなあらゆる種類の文章を表現する。
             </td>
           </tr>
           <tr>
@@ -2395,7 +2526,10 @@
           <tr>
             <td>Notes:</td>
             <td>
+<!--
               Represents a document of any kind.
+-->
+あらゆる種類の文書を表現する。
             </td>
           </tr>
           <tr>
@@ -2430,7 +2564,10 @@
           <tr>
             <td>Notes:</td>
             <td>
+<!--
               Represents an audio document of any kind.
+-->
+あらゆる種類の音声を表現する。
             </td>
           </tr>
           <tr>
@@ -2472,7 +2609,10 @@
           <tr>
             <td>Notes:</td>
             <td>
+<!--
               An image document of any kind
+-->
+あらゆる種類の画像
             </td>
           </tr>
           <tr>
@@ -2504,7 +2644,10 @@
           <tr>
             <td>Notes:</td>
             <td>
+<!--
               Represents a video document of any kind.
+-->
+あらゆる種類の映像を表現する。
             </td>
           </tr>
           <tr>
@@ -2535,7 +2678,10 @@
           <tr>
             <td>Notes:</td>
             <td>
+<!--
               Represents a short written work typically less than a single paragraph in length.
+-->
+典型的には 1 段落未満の短い文章を表現する。
             </td>
           </tr>
           <tr>
@@ -2566,7 +2712,10 @@
           <tr>
             <td>Notes:</td>
             <td>
+<!--
               Represents a Web Page.
+-->
+Web ページを表現する。
             </td>
           </tr>
           <tr>
@@ -2598,7 +2747,10 @@
           <tr>
             <td>Notes:</td>
             <td>
+<!--
               Represents any kind of event.
+-->
+あらゆる種類のイベントを表現する。
             </td>
           </tr>
           <tr>
@@ -2640,8 +2792,12 @@
           <tr>
             <td>Notes:</td>
             <td>
+<!--
               Represents a logical or physical location. See
               <a href="#places"></a> for additional information.
+-->
+論理的または物理的な場所を表現する。
+追加の情報については <a href="#places"></a> を参照のこと。
             </td>
           </tr>
           <tr>
@@ -2686,7 +2842,10 @@
           <tr>
             <td>Notes:</td>
             <td>
+<!--
               A specialized <code><a>Link</a></code> that represents an @mention.
+-->
+@mention を表現する <code><a>Link</a></code> の特化。
             </td>
           </tr>
           <tr>
@@ -2777,9 +2936,14 @@
           <tr>
             <td>Notes:</td>
             <td>
+<!--
               A Tombstone represents a content object that has been deleted. It
               can be used in <a>Collection</a>s to signify that there used to be
               an object at this position, but it has been deleted.
+-->
+Tombstone は、削除された content object を表現する。
+これは、<a>Collection</a> 内で、以前この位置にオブジェクトがあったが
+削除されたということを示すために使われる。
             </td>
           </tr>
           <tr>
@@ -2805,7 +2969,10 @@
   </section>
 
   <section id="properties">
+<!--
     <h2>Properties</h2>
+-->
+    <h2>属性</h2>
 
     <p>Base URI: <code>https://www.w3.org/ns/activitystreams#</code>.</p>
 
@@ -4676,14 +4843,23 @@
           <td>Notes:</td>
           <td>
             <p>
+<!--
               The content or textual representation of the Object encoded as a
               JSON string. By default, the value of <code>content</code> is
               HTML. The <code><a>mediaType</a></code> property can be used in
               the object to indicate a different content type.
+-->
+JSON string としてエンコードされた、Object の内容やテキスト表現。
+デフォルトでは、<code>content</code> の値は HTML である。
+異なるコンテントタイプを示すためにこのオブジェクトに
+<code><a>mediaType</a></code> 属性を指定できる。
             </p>
             <p>
+<!--
               The content MAY be expressed using multiple language-tagged
               values.
+-->
+content は複数の言語タグ付きの値を使って表現しても良い(MAY)。
             </p>
           </td>
         </tr>
@@ -4727,9 +4903,14 @@
         <tr>
           <td>Notes:</td>
           <td>
+<!--
             A simple, human-readable, plain-text name for the object. HTML
             markup MUST NOT be included. The name MAY be expressed
             using multiple language-tagged values.
+-->
+このオブジェクトの、単純で、人間可読な、プレーンテキスト名。
+HTML マークアップを含んでいてはならない(MUST NOT)。
+content は複数の言語タグ付きの値を使って表現しても良い(MAY)。
           </td>
         </tr>
         <tr>
@@ -6474,28 +6655,45 @@
   </p>
 
   <p>
+#ifdef X
+このようなマイクロ文法は 
+値の中で使われても良い(MAY)が、
+
+
     While such microsyntaxes MAY be used within the values of the
     <code><a data-lt="content-term">content</a></code>,
     <code><a>name</a></code>, and <code><a>summary</a></code>
     properties on an Activity Streams <code><a>Object</a></code>,
     implementations SHOULD NOT be required to parse the values of those
     properties in order to determine the appropriate routing of
+<!--
     notifications, categorization or linking between objects. Instead,
     publishers SHOULD make appropriate use of the vocabulary
     terms provided specifically for these purposes.
+-->
+    notifications, categorization or linking between objects.
+代わりに、発行者は
+それぞれの具体的にそれらの目的のために提供されている
+vocabulary terms を適切に使用するべきである(SHOULD)。
   </p>
 
   <p>
+<!--
     For example, suppose that an author wishes to send a note of thanks to
     another user named "@sally" with a hashtag of "#givingthanks". A typical
     way this message would appear within the content of a note is shown
     below:
+-->
+例えば、作者が "@sally" という名前の他のユーザーに "#givingthanks" という
+タグ付きで感謝のメッセージを送りたいとする。
+このメッセージがメモの内容の中に現れる典型的な方法を以下に示す:
   </p>
 
   <figure><figcaption>A simple note with a mention an a hashtag:</figcaption>
 <pre> "Thank you @sally for all your hard work! #givingthanks" </pre></figure>
 
   <p>
+<!--
     A typical social software implementation would typically render such a
     content such that "<code>@sally</code>" is replaced with a hyperlink to
     "@sally"'s social profile page and "<code>#givingthanks</code>" is
@@ -6503,11 +6701,22 @@
     "tagged" with the same topic. Most implementations would also send a
     special notification to sally letting her know that a note mentioning her
     has been created.
+-->
+典型的なソーシャルソフトウェア実装は典型的にはこのようなコンテンツを、
+"<code>@sally</code>" を "@sally" のソーシャルプロフィールページへの
+ハイパーリンクに置き換え、"<code>#givingthanks</code>" を
+同じトピックに「タグ付け」された他のメッセージの一覧への
+ハイパーリンクに置き換える。
+ほとんどの実装はまた、自分が作ったメッセージが言及されたことを知らせるために、
+sally に特別な通知を送信する。
   </p>
 
   <p>
+<!--
     The following illustrates an equivalent Activity Streams
     <code><a>Note</a></code> object:
+-->
+以下に等価な Activity Streams <code><a>Note</a></code> オブジェクトを示す:
   </p>
 
 <div id="ex196-jsonld" style="display: block;">
@@ -6572,12 +6781,22 @@
   <h3>Origin and Target</h3>
 
   <p>
+<!--
     The <code><a>origin</a></code> and <code><a>target</a></code> properties
     of an Activity respectively identify the entities <em>from</em> which and
     <em>to</em> which the action is directed. For instance, in the English
     statement, "Sally moved the file from Folder A to Folder B", the
     <code>origin</code> is "Folder A" and the <code>target</code> is
     "Folder B". This activity is illustrated in the example below:
+-->
+Activity の <code><a>origin</a></code> と <code><a>target</a></code> 属性は、
+respectively identify the entities <em>from</em> which and
+    <em>to</em> which the action is directed.
+例えば、英語の文での
+"Sally moved the file from Folder A to Folder B" では、
+<code>origin</code> は "Folder A" で
+<code>target</code> は "Folder B" である。
+このアクティビティを以下に例示する:
   </p>
 
   <div id="ex198-jsonld" style="display: block;">
