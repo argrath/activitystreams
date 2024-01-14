@@ -1,0 +1,4 @@
+# Glossary in tab-separated format -*- coding: utf-8 -*-
+External Vocabularies	外部語彙
+Primary audience	主要関係者
+Secondary audience	補助関係者

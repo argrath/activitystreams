@@ -1,0 +1,1954 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx11.dtd">
+<tmx version="1.1">
+  <header creationtool="OmegaT" o-tmf="OmegaT TMX" adminlang="EN-US" datatype="plaintext" creationtoolversion="6.0.0_0_1bf1729c" segtype="sentence" srclang="en"/>
+  <body>
+<!-- Default translations -->
+    <tu>
+      <tuv lang="en">
+        <seg>(a) the object contains a &lt;g3&gt;type&lt;/g3&gt; property whose value includes "&lt;g4&gt;Link&lt;/g4&gt;"</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T202002Z" creationid="shira" creationdate="20240114T202002Z">
+        <seg>(a) 値が "&lt;g4&gt;Link&lt;/g4&gt;" である &lt;g3&gt;type&lt;/g3&gt; 属性を持つオブジェクト、</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>(a) the object contains a &lt;g3&gt;type&lt;/g3&gt; property whose value includes "&lt;g4&gt;Link&lt;/g4&gt;" or (b) any of the types included in the value of the &lt;g5&gt;type&lt;/g5&gt; property are defined as extensions of &lt;g6&gt;Link&lt;/g6&gt; (see &lt;g7&gt;Mention&lt;/g7&gt; for instance); otherwise the JSON object is considered an instance or extension of &lt;g8&gt;&lt;g9&gt;Object&lt;/g9&gt;&lt;/g8&gt;.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240115T051911Z" creationid="shira" creationdate="20240115T051911Z">
+        <seg>(a) 値が "&lt;g3&gt;Link&lt;/g3&gt;" である &lt;g4&gt;type&lt;/g4&gt; 属性を持つオブジェクト、 または (b) &lt;g5&gt;type&lt;/g5&gt; 属性の値が、&lt;g6&gt;Link&lt;/g6&gt; の拡張として定義されている型 (例えば、 &lt;g7&gt;Mention&lt;/g7&gt; を参照のこと); さもなければこの JSON オブジェクトは &lt;g8&gt;&lt;g9&gt;Object&lt;/g9&gt;&lt;/g8&gt; の実体または 拡張である。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>23</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240111T202947Z" creationid="shira" creationdate="20240111T202947Z">
+        <seg>23</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240111T202638Z" creationid="shira" creationdate="20240111T202638Z">
+        <seg>&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g11&gt;W3C&lt;/g11&gt; &lt;g12&gt;liability&lt;/g12&gt;, &lt;g13&gt;trademark&lt;/g13&gt; and &lt;g14&gt;permissive document license&lt;/g14&gt; rules apply.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240111T203043Z" creationid="shira" creationdate="20240111T203043Z">
+        <seg>&lt;g11&gt;W3C&lt;/g11&gt; &lt;g12&gt;liability&lt;/g12&gt;, &lt;g13&gt;trademark&lt;/g13&gt; and &lt;g14&gt;permissive document license&lt;/g14&gt; rules apply.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt; Commits &lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240111T203013Z" creationid="shira" creationdate="20240111T203013Z">
+        <seg>&lt;g1&gt; Commits &lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt; Issues &lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240111T203010Z" creationid="shira" creationdate="20240111T203010Z">
+        <seg>&lt;g1&gt; Issues &lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;&lt;g2&gt;1. &lt;/g2&gt;Introduction&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T194623Z" creationid="shira" creationdate="20240114T194623Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;1. &lt;/g2&gt;概要&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;&lt;g2&gt;1.1 &lt;/g2&gt;Relationship to Other Social Standards&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T193513Z" creationid="shira" creationdate="20240114T193513Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;1.1 &lt;/g2&gt;他のソーシャル標準との関係&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;&lt;g2&gt;1.2 &lt;/g2&gt;Relationship to JSON Activity Streams 1.0&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T194106Z" creationid="shira" creationdate="20240114T194106Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;1.2 &lt;/g2&gt;JSON Activity Streams 1.0 との関係&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;&lt;g2&gt;2. &lt;/g2&gt;Serialization&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T195042Z" creationid="shira" creationdate="20240114T194625Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;2. &lt;/g2&gt;直列化&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;&lt;g2&gt;2.1 &lt;/g2&gt;JSON-LD&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T193659Z" creationid="shira" creationdate="20240114T193659Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;2.1 &lt;/g2&gt;JSON-LD&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;&lt;g2&gt;2.1.1 &lt;/g2&gt;Context with a string&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T194133Z" creationid="shira" creationdate="20240114T194133Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;2.1.1 &lt;/g2&gt;文字列のコンテキスト&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;&lt;g2&gt;2.1.2 &lt;/g2&gt;Context with an object&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T194152Z" creationid="shira" creationdate="20240114T194152Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;2.1.2 &lt;/g2&gt;オブジェクトのコンテキスト&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;&lt;g2&gt;2.1.3 &lt;/g2&gt;Context with an array&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T194209Z" creationid="shira" creationdate="20240114T194209Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;2.1.3 &lt;/g2&gt;配列のコンテキスト&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;&lt;g2&gt;2.2 &lt;/g2&gt;IRIs and URLs&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T194645Z" creationid="shira" creationdate="20240114T194645Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;2.2 &lt;/g2&gt;IRI と URL&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;&lt;g2&gt;2.3 &lt;/g2&gt;Date and Times&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T194246Z" creationid="shira" creationdate="20240114T194246Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;2.3 &lt;/g2&gt;日付と時刻&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;&lt;g2&gt;3. &lt;/g2&gt;Examples&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T193756Z" creationid="shira" creationdate="20240114T193756Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;3. &lt;/g2&gt;例&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;&lt;g2&gt;3.1 &lt;/g2&gt;Minimal Activity&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T193824Z" creationid="shira" creationdate="20240114T193713Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;3.1 &lt;/g2&gt;最小限のアクティビティ&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;&lt;g2&gt;3.2 &lt;/g2&gt;Basic activity with some additional detail&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T194703Z" creationid="shira" creationdate="20240114T194703Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;3.2 &lt;/g2&gt;追加の詳細付きの基本的なアクティビティ&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;&lt;g2&gt;3.3 &lt;/g2&gt;An extended activity&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T194322Z" creationid="shira" creationdate="20240114T194322Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;3.3 &lt;/g2&gt;拡張したアクティビティ&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;&lt;g2&gt;4. &lt;/g2&gt;Model&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T194445Z" creationid="shira" creationdate="20240114T193858Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;4. &lt;/g2&gt;モデル&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;&lt;g2&gt;4.1 &lt;/g2&gt;&lt;g3&gt;Object&lt;/g3&gt;&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T203022Z" creationid="shira" creationdate="20240114T194724Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;4.1 &lt;/g2&gt;&lt;g3&gt;Object&lt;/g3&gt;&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;&lt;g2&gt;4.1.1 &lt;/g2&gt;Text representations of Object types&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T204450Z" creationid="shira" creationdate="20240114T204450Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;4.1.1 &lt;/g2&gt;オブジェクト型のテキスト表現&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;&lt;g2&gt;4.2 &lt;/g2&gt;&lt;g3&gt;Link&lt;/g3&gt;&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T203031Z" creationid="shira" creationdate="20240114T203031Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;4.2 &lt;/g2&gt;&lt;g3&gt;Link&lt;/g3&gt;&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;&lt;g2&gt;4.3 &lt;/g2&gt;&lt;g3&gt;Actor&lt;/g3&gt;&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T203035Z" creationid="shira" creationdate="20240114T194754Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;4.3 &lt;/g2&gt;&lt;g3&gt;Actor&lt;/g3&gt;&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;&lt;g2&gt;4.4 &lt;/g2&gt;&lt;g3&gt;Activity&lt;/g3&gt;&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T203039Z" creationid="shira" creationdate="20240114T203039Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;4.4 &lt;/g2&gt;&lt;g3&gt;Activity&lt;/g3&gt;&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;&lt;g2&gt;4.5 &lt;/g2&gt;&lt;g3&gt;IntransitiveActivity&lt;/g3&gt;&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T203042Z" creationid="shira" creationdate="20240114T203042Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;4.5 &lt;/g2&gt;&lt;g3&gt;IntransitiveActivity&lt;/g3&gt;&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;&lt;g2&gt;4.6 &lt;/g2&gt;&lt;g3&gt;Collection&lt;/g3&gt;&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T202257Z" creationid="shira" creationdate="20240114T194800Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;4.6 &lt;/g2&gt;&lt;g3&gt;Collection&lt;/g3&gt;&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;&lt;g2&gt;4.7 &lt;/g2&gt;Natural Language Values&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T194820Z" creationid="shira" creationdate="20240114T194820Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;4.7 &lt;/g2&gt;自然言語値&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;&lt;g2&gt;4.8 &lt;/g2&gt;Marking up language&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T194837Z" creationid="shira" creationdate="20240114T194837Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;4.8 &lt;/g2&gt;言語のマークアップ&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;&lt;g2&gt;5. &lt;/g2&gt;Extensibility&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T212700Z" creationid="shira" creationdate="20240114T212700Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;5  &lt;/g2&gt;拡張性&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;&lt;g2&gt;7. &lt;/g2&gt;Security Considerations&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T212733Z" creationid="shira" creationdate="20240114T212733Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;7  &lt;/g2&gt;セキュリティ上の考慮事項&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;&lt;g2&gt;A. &lt;/g2&gt;Acknowledgements&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T212854Z" creationid="shira" creationdate="20240114T212854Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;A. &lt;/g2&gt;謝辞&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;&lt;g2&gt;F. &lt;/g2&gt;References&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T212946Z" creationid="shira" creationdate="20240114T212946Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;F. &lt;/g2&gt;参考文献&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;&lt;g2&gt;F.1 &lt;/g2&gt;Normative references&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T212957Z" creationid="shira" creationdate="20240114T212957Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;F.1 &lt;/g2&gt;引用規格&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;&lt;g2&gt;F.2 &lt;/g2&gt;Informative references&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T213007Z" creationid="shira" creationdate="20240114T213007Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;F.2 &lt;/g2&gt;参考規格&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;&lt;g2&gt;↑&lt;/g2&gt;&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240111T202900Z" creationid="shira" creationdate="20240111T202900Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;↑&lt;/g2&gt;&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;&lt;x2/&gt;&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240111T202936Z" creationid="shira" creationdate="20240111T202936Z">
+        <seg>&lt;g1&gt;&lt;x2/&gt;&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;Abstract&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240115T072646Z" creationid="shira" creationdate="20240115T072646Z">
+        <seg>要約</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;Collection&lt;/g1&gt; objects are a specialization of the base &lt;g2&gt;&lt;g3&gt;Object&lt;/g3&gt;&lt;/g2&gt; that serve as a container for other &lt;g4&gt;Objects&lt;/g4&gt; or &lt;g5&gt;Links&lt;/g5&gt;.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240115T054327Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>&lt;g1&gt;Collection&lt;/g1&gt; オブジェクトは、 他の &lt;g4&gt;Object&lt;/g4&gt; や &lt;g5&gt;Link&lt;/g5&gt; の コンテナとして動作する基底 &lt;g2&gt;&lt;g3&gt;Object&lt;/g3&gt;&lt;/g2&gt; の特化である。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;Example 10&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240111T202141Z" creationid="shira" creationdate="20240111T202141Z">
+        <seg>&lt;g1&gt;Example 10&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;Example 17&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240111T202314Z" creationid="shira" creationdate="20240111T202314Z">
+        <seg>&lt;g1&gt;Example 17&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;Example 1&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240111T203255Z" creationid="shira" creationdate="20240111T203255Z">
+        <seg>&lt;g1&gt;Example 1&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;Example 2&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240111T203257Z" creationid="shira" creationdate="20240111T203257Z">
+        <seg>&lt;g1&gt;Example 2&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;Example 3&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240111T203259Z" creationid="shira" creationdate="20240111T203259Z">
+        <seg>&lt;g1&gt;Example 3&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;Example 4&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240111T203300Z" creationid="shira" creationdate="20240111T203300Z">
+        <seg>&lt;g1&gt;Example 4&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;Example 5&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240111T203332Z" creationid="shira" creationdate="20240111T203332Z">
+        <seg>&lt;g1&gt;Example 5&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;Example 6&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240111T203334Z" creationid="shira" creationdate="20240111T203334Z">
+        <seg>&lt;g1&gt;Example 6&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;Example 7&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240111T203550Z" creationid="shira" creationdate="20240111T202027Z">
+        <seg>&lt;g1&gt;Example 7&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;Example 8&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240111T203540Z" creationid="shira" creationdate="20240111T202029Z">
+        <seg>&lt;g1&gt;Example 8&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;Example 9&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240111T202121Z" creationid="shira" creationdate="20240111T202121Z">
+        <seg>&lt;g1&gt;Example 9&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;Note&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240111T202115Z" creationid="shira" creationdate="20240111T202115Z">
+        <seg>&lt;g1&gt;Note&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;Table of Contents&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T194611Z" creationid="shira" creationdate="20240114T194611Z">
+        <seg>&lt;g1&gt;目次&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;This section describes the status of this document at the time of its publication.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240111T203054Z" creationid="shira" creationdate="20240111T203054Z">
+        <seg>&lt;g1&gt;この節は、発行時点でのこの文書の状態を説明している。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;This section is non-normative.&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240111T202329Z" creationid="shira" creationdate="20240111T202329Z">
+        <seg>&lt;g1&gt;この節は非規範的である。&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;W3C&lt;/g1&gt; Recommendation</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240111T202945Z" creationid="shira" creationdate="20240111T202945Z">
+        <seg>&lt;g1&gt;W3C&lt;/g1&gt; Recommendation</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g3&gt;W3C&lt;/g3&gt; maintains a &lt;g4&gt;public list of any patent disclosures&lt;/g4&gt; made in connection with the deliverables of the group; that page also includes instructions for disclosing a patent.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240112T115805Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g3&gt;W3C&lt;/g3&gt;は、グループの成果物に関連して作成された&lt;g4&gt;特許開示の公開リスト&lt;/g4&gt;を保守しており、そのページには特許を開示するための手順も含まれている。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g4&gt;W3C&lt;/g4&gt;'s role in making the Recommendation is to draw attention to the specification and to promote its widespread deployment.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240112T121043Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>この勧告を作成する上での&lt;g4&gt;W3C&lt;/g4&gt;の役割は、仕様に注意を喚起し、その広範な展開を促進することである。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;x1/&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240111T202940Z" creationid="shira" creationdate="20240111T202940Z">
+        <seg>&lt;x1/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A &lt;g1&gt;Link&lt;/g1&gt; describes a qualified, indirect reference to another resource that is closely related to the conceptual model of Links as established in [&lt;g2&gt;&lt;g3&gt;RFC5988&lt;/g3&gt;&lt;/g2&gt;].</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>&lt;g1&gt;Link&lt;/g1&gt; は、修飾された、他のリソースへの間接参照であり、 [&lt;g2&gt;&lt;g3&gt;RFC5988&lt;/g3&gt;&lt;/g2&gt;] で設定された Links の概念モデルと深く関係している。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A Collection can contain a large number of items.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>Collection は大量のアイテムを含むことができる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A JSON object in the Activity Streams 2.0 document is a &lt;g1&gt;&lt;g2&gt;Link&lt;/g2&gt;&lt;/g1&gt; if either:</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T201835Z" creationid="shira" creationdate="20240114T201835Z">
+        <seg>Activity Streams 2.0 文書の中の JSON オブジェクトは、次のどちらかの場合に
+&lt;g1&gt;&lt;g2&gt;Link&lt;/g2&gt;&lt;/g1&gt;である:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A JSON object in the Activity Streams 2.0 document is a &lt;g1&gt;&lt;g2&gt;Link&lt;/g2&gt;&lt;/g1&gt; if either: (a) the object contains a &lt;g3&gt;type&lt;/g3&gt; property whose value includes "&lt;g4&gt;Link&lt;/g4&gt;" or (b) any of the types included in the value of the &lt;g5&gt;type&lt;/g5&gt; property are defined as extensions of &lt;g6&gt;Link&lt;/g6&gt; (see &lt;g7&gt;Mention&lt;/g7&gt; for instance); otherwise the JSON object is considered an instance or extension of &lt;g8&gt;&lt;g9&gt;Object&lt;/g9&gt;&lt;/g8&gt;.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>Activity Streams 2.0 文書の中の JSON オブジェクトは、次のどちらかの場合に &lt;g1&gt;&lt;g2&gt;Link&lt;/g2&gt;&lt;/g1&gt; である: (a) 値が "&lt;g3&gt;Link&lt;/g3&gt;" である &lt;g4&gt;type&lt;/g4&gt; 属性を持つオブジェクト、 または (b) &lt;g5&gt;type&lt;/g5&gt; 属性の値が、&lt;g6&gt;Link&lt;/g6&gt; の拡張として定義されている型 (例えば、 &lt;g7&gt;Mention&lt;/g7&gt; を参照のこと); さもなければこの JSON オブジェクトは &lt;g8&gt;&lt;g9&gt;Object&lt;/g9&gt;&lt;/g8&gt; の実体または 拡張である。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A list of current &lt;g2&gt;W3C&lt;/g2&gt; publications and the latest revision of this technical report can be found in the &lt;g3&gt;&lt;g4&gt;W3C&lt;/g4&gt; technical reports index&lt;/g3&gt; at https://www.w3.org/TR/.&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240111T203150Z" creationid="shira" creationdate="20240111T203133Z">
+        <seg>現在の &lt;g2&gt;W3C&lt;/g2&gt; による発行物と この技術報告の最新版は https://www.w3.org/TR/ の &lt;g3&gt;&lt;g4&gt;W3C&lt;/g4&gt; technical reports index&lt;/g3&gt; にある。&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A page is identified using the &lt;g3&gt;&lt;g4&gt;CollectionPage&lt;/g4&gt;&lt;/g3&gt; type.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>ページは &lt;g3&gt;&lt;g4&gt;CollectionPage&lt;/g4&gt;&lt;/g3&gt; 型を使って識別される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Accordingly, in the JSON serialization, the terms " &lt;g8&gt;name&lt;/g8&gt;", "&lt;g9&gt;summary&lt;/g9&gt;", and "&lt;g10&gt;content&lt;/g10&gt;" represent the JSON string forms; and the terms " &lt;g11&gt;nameMap&lt;/g11&gt;", "&lt;g12&gt;summaryMap&lt;/g12&gt;", and " &lt;g13&gt;contentMap&lt;/g13&gt;" for represent the object forms.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240115T060206Z" creationid="shira" creationdate="20240115T060206Z">
+        <seg>それぞれ、JSON シリアル化では " &lt;g8&gt;name&lt;/g8&gt;", "&lt;g9&gt;summary&lt;/g9&gt;", and "&lt;g10&gt;content&lt;/g10&gt;" は JSON 文字列形式を表現する; "&lt;g11&gt;nameMap&lt;/g11&gt;", "&lt;g12&gt;summaryMap&lt;/g12&gt;", "&lt;g13&gt;contentMap&lt;/g13&gt;" は オブジェクト形式を表現する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Activity Streams 2.0 documents MUST be serialized using the UTF-8 character encoding.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>Activity Streams 2.0 文書は UTF-8 文字エンコーディングを使って 直列化しなければならない(MUST)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Activity Streams 2.0 is suitable as a social data syntax.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>Activity Streams 2.0 はソーシャルデータ文法に適している。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Activity Streams 2.0 publishers SHOULD explicitly mark the language of natural language properties if they are known, using either map properties or a default language tag.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>Activity Streams 2.0 発行者は、分かっている場合には、map 属性か デフォルト言語タグを使って、自然言語属性の言語を明示的に マークアップするべきである(SHOULD)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Activity Streams consumers often need a text representation of an Activity Streams object, e.g. for display in a Web browser or console interface.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>Activity Streams 消費者はしばしば、 例えば Web ブラウザやコンソールインターフェースに表示するために、 Activity Streams オブジェクトのテキスト表現を必要とする。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Activity objects are specializations of the base &lt;g1&gt;Object&lt;/g1&gt; type that provide information about actions that have either already occurred, are in the process of occurring, or may occur in the future.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>Activity オブジェクトは、既に起きた、今起きている途中、 将来起きるかもしれないアクションに関する情報を提供する、 基底 &lt;g1&gt;Object&lt;/g1&gt; 型の特化である。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Actor objects are specializations of the base &lt;g1&gt;Object&lt;/g1&gt; type that represent entities capable of carrying out an Activity.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>Actor オブジェクトは、 Activity を実行する能力を持つ実体を表現する、基底 &lt;g1&gt;Object&lt;/g1&gt; 型の特化である。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>All Actor objects are specializations of &lt;g1&gt;&lt;g2&gt;Object&lt;/g2&gt;&lt;/g1&gt; and inherit all of the core properties common to all Objects.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>全ての Actor オブジェクトは &lt;g1&gt;&lt;g2&gt;Object&lt;/g2&gt;&lt;/g1&gt; の特化であり、 全ての Object に共通の全てのコア属性を継承する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>All other types defined in the Activity Vocabulary, as well as all extension types, are derived from these two base types.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>Activity Vocabulary に定義されているそれ以外の型は、全ての拡張型を含めて、 これら二つの基底型の派生である。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>All properties are optional (including the &lt;g1&gt;id&lt;/g1&gt; and &lt;g2&gt;type&lt;/g2&gt;).</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>(&lt;g1&gt;id&lt;/g1&gt; と &lt;g2&gt;type&lt;/g2&gt; を含めて) 全ての属性は オプションである。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>All properties with date and time values MUST conform to the "date-time" production in [&lt;g1&gt;&lt;g2&gt;RFC3339&lt;/g2&gt;&lt;/g1&gt;] with the one exception that seconds MAY be omitted.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>全ての日付と時刻の属性は [&lt;g1&gt;&lt;g2&gt;RFC3339&lt;/g2&gt;&lt;/g1&gt;] の "date-time" 生成に従わなければならない(MUST); 但し例外として秒は省略しても良い(MAY)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>An &lt;g1&gt;Activity Streams Document&lt;/g1&gt; is a JSON document whose root value is an Activity Streams &lt;g2&gt;Object&lt;/g2&gt; of any type, including a &lt;g3&gt;Collection&lt;/g3&gt;, and whose MIME media type is " &lt;g4&gt;application/activity+json&lt;/g4&gt;".</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240115T051246Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>&lt;g1&gt;Activity Streams 文書&lt;/g1&gt; とは、ルート値が (&lt;g3&gt;Collection&lt;/g3&gt; を含む)任意の型の Activity Streams &lt;g2&gt;Object&lt;/g2&gt; で、 MIME メディアタイプが "&lt;g4&gt;application/activity+json&lt;/g4&gt;" である JSON 文書である。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>An implementation that wishes, for example, to use &lt;g1&gt;&lt;g2&gt;http://schema.org/LikeAction&lt;/g2&gt;&lt;/g1&gt; as an Activity MUST also identify that Object as being a &lt;g3&gt;&lt;g4&gt;Like&lt;/g4&gt;&lt;/g3&gt; as illustrated in the following:</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>An implementation that wishes, for example, to use &lt;g2&gt;&lt;g3&gt;http://schema.org/LikeAction&lt;/g3&gt;&lt;/g2&gt; as an Activity &lt;g4&gt;MUST&lt;/g4&gt; also identify that Object as being a &lt;g5&gt;&lt;g6&gt;Like&lt;/g6&gt;&lt;/g5&gt; as illustrated in the following:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>An implementation that wishes, for example, to use a &lt;g1&gt;&lt;g2&gt;http://purl.org/goodrelations/v1#Location&lt;/g2&gt;&lt;/g1&gt; as an object type MUST also identify the object as being a &lt;g3&gt;&lt;g4&gt;Place&lt;/g4&gt;&lt;/g3&gt; as illustrated in the following:</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T204140Z" creationid="shira" creationdate="20240114T204140Z">
+        <seg>例えば、&lt;g1&gt;&lt;g2&gt;http://purl.org/goodrelations/v1#Location&lt;/g2&gt;&lt;/g1&gt;をオブジェクト型として使用したい実装は、以下に示すように、そのオブジェクトを&lt;g3&gt;&lt;g4&gt;Place&lt;/g4&gt;&lt;/g3&gt;としても識別しなければならない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>An individual who has actual knowledge of a patent which the individual believes contains &lt;g5&gt;Essential Claim(s)&lt;/g5&gt; must disclose the information in accordance with &lt;g6&gt;section 6 of the &lt;g7&gt;W3C&lt;/g7&gt; Patent Policy&lt;/g6&gt;.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240113T200157Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g5&gt;Essential Claim(s)&lt;/g5&gt;を含むと信じる特許について実際の知識を有する者は、&lt;g6&gt;&lt;g7&gt;W3C&lt;/g7&gt; Patent Policy第6条&lt;/g6&gt;に従って情報を開示しなければならない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>An uppercase "T" character MUST be used to separate date and time, and an uppercase "Z" character MUST be used in the absence of a numeric time zone offset.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>日付と時刻を分けるために大文字の "T" を使わなければならず(MUST)、 タイムゾーンオフセット値がない場合は大文字の "Z" を 使わなければならない(MUST)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>As with &lt;g1&gt;Collection&lt;/g1&gt; objects, the items within a &lt;g2&gt;CollectionPage&lt;/g2&gt; might be ordered or unordered.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>&lt;g1&gt;Collection&lt;/g1&gt; オブジェクトと同様、 &lt;g2&gt;CollectionPage&lt;/g2&gt; の中のアイテムは順序ありと順序なしの場合がある。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Back to Top</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240103T164258Z" creationid="shira" creationdate="20240103T164258Z">
+        <seg>Back to Top</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Because Activity Streams 2.0 can be considered a restricted profile of JSON-LD, Implementations SHOULD consider the `application/ld+json; profile="https://www.w3.org/ns/activitystreams"` media type as being equivalent to `application/activity+json`.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>Activity Streams 2.0 は JSON-LD の制限されたプロファイルと考えることも 出来るため、実装は `application/ld+json; profile="https://www.w3.org/ns/activitystreams"` メディアタイプを `application/activity+json` と等価なものとして 扱うべきである(SHOULD)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Care should be taken to not unduly overlap with or duplicate the existing Activity types.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>Care should be taken to not unduly overlap with or duplicate the existing Activity types.MUST</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Care should be taken to not unduly overlap with or duplicate the existing Object types.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T203936Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>既存のObject型と過度に重なったり、重複したりしないように注意するべきである。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Certain properties defined by some External Vocabularies can overlap or duplicate those defined by the Activity Vocabulary.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>外部語彙で定義されている属性は、 Activity Vocabulary で定義されている属性と重複および複製できる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Compatibility with JSON-LD</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>JSON-LD との互換性</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Consistent collection and paging representation</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>一貫したコレクションとページング表現</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Consumer implementations SHOULD have fallback strategies for text representation of Objects in these cases.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>消費者実装はこれらの場合の Object のテキスト表現に対する フォールバック戦略を持つべきである(SHOULD)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Each example is shown using the normative JSON serialization defined by this specification.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>それぞれの例は、この仕様で定義されてい標準 JSON 直列化を使って示している。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Editors:</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>Editors:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>European Research Consortium for Informatics and Mathematics</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>European Research Consortium for Informatics and Mathematics</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Every JSON object in an Activity Streams 2.0 document is either an &lt;g1&gt;&lt;g2&gt;Object&lt;/g2&gt;&lt;/g1&gt; or a &lt;g3&gt;&lt;g4&gt;Link&lt;/g4&gt;&lt;/g3&gt;.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>Activity Streams 2.0 で定義されている全ての JSON オブジェクトは、 &lt;g1&gt;&lt;g2&gt;Object&lt;/g2&gt;&lt;/g1&gt; か &lt;g3&gt;&lt;g4&gt;Link&lt;/g4&gt;&lt;/g3&gt; である。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Every URI [&lt;g3&gt;&lt;g4&gt;RFC3986&lt;/g4&gt;&lt;/g3&gt;] is also an IRI, so a URI may be used wherever an IRI is named.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>全ての URI [&lt;g3&gt;&lt;g4&gt;RFC3986&lt;/g4&gt;&lt;/g3&gt;] は IRI でもあるので、IRI という名前が付いているところでは URL を使うことが出来る。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Every key in the object form MUST be a well-formed [&lt;g1&gt;&lt;g2&gt;BCP47&lt;/g2&gt;&lt;/g1&gt;] Language-Tag.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>オブジェクト形式の全てのキーは整形された [&lt;g1&gt;&lt;g2&gt;BCP47&lt;/g2&gt;&lt;/g1&gt;] Language-Tag でなければならない(MUST)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Everything else in this specification is normative.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>この仕様におけるその他の全ては規範的である。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Extensibility framework for other types and properties</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>他の型と属性のための拡張フレームワーク</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>External vocabularies can be used to express additional detail not covered by the Activity Vocabulary.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>外部語彙は Activity Vocabulary で触れられていない 追加の詳細を記述するために使われる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Figure &lt;g1&gt;10&lt;/g1&gt; &lt;g2&gt; A note with an automatically-generated summary &lt;/g2&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>Figure &lt;g1&gt;10&lt;/g1&gt; &lt;g2&gt; 自動生成された概要を持つメモ &lt;/g2&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Figure &lt;g1&gt;1&lt;/g1&gt; &lt;g2&gt; Document providing a context as a string.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>Figure &lt;g1&gt;1&lt;/g1&gt; &lt;g2&gt; コンテキストを文字列として提供している文書。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Figure &lt;g1&gt;23&lt;/g1&gt; &lt;g2&gt;A single name String value without language information:&lt;/g2&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>Figure &lt;g1&gt;23&lt;/g1&gt; &lt;g2&gt;言語情報のない単一の name String 値:&lt;/g2&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Figure &lt;g1&gt;24&lt;/g1&gt; &lt;g2&gt;Multiple, language-specific values:&lt;/g2&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>Figure &lt;g1&gt;24&lt;/g1&gt; &lt;g2&gt;複数の、言語指定された値:&lt;/g2&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Figure &lt;g1&gt;2&lt;/g1&gt; &lt;g2&gt; Document providing context as an object using the &lt;g3&gt;@vocab&lt;/g3&gt; keyword and a prefix for extension terms.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>Figure &lt;g1&gt;2&lt;/g1&gt; &lt;g2&gt; 拡張用語のために &lt;g3&gt;@vocab&lt;/g3&gt; キーワードと接頭辞を使ったオブジェクトで コンテキストを提供している文書。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Figure &lt;g1&gt;3&lt;/g1&gt; &lt;g2&gt; Document providing context as an array, and including an alias for an additional term.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>Figure &lt;g1&gt;3&lt;/g1&gt; &lt;g2&gt; 追加の用語のための別名を含む配列としてコンテキストを提供している文書。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Figure &lt;g1&gt;5&lt;/g1&gt; &lt;g2&gt; Expresses the statement "Martin Smith added an article to the blog 'Martin's Blog' at 3:04 PM UTC on February 10, 2015."</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>Figure &lt;g1&gt;5&lt;/g1&gt; &lt;g2&gt; 「Martin Smith が2015年2月10日の午後3:04(UTC)にブログ'Martin's Blog'に 記事を追加した」ことを表現する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Figure &lt;g1&gt;7&lt;/g1&gt; &lt;g2&gt; Following is an example Object that uses the &lt;g3&gt;id&lt;/g3&gt; and &lt;g4&gt;type&lt;/g4&gt; properties to express the global identifier and object type: &lt;/g2&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>Figure &lt;g1&gt;7&lt;/g1&gt; &lt;g2&gt; グローバルな識別子とオブジェクト型を表現するために &lt;g3&gt;id&lt;/g3&gt; と &lt;g4&gt;type&lt;/g4&gt; 属性を使った Object の例。&lt;/g2&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Figure &lt;g1&gt;8&lt;/g1&gt; &lt;g2&gt;An Object that is both a &lt;g3&gt;Place&lt;/g3&gt; and a &lt;g4&gt;gr:Location&lt;/g4&gt;:&lt;/g2&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>Figure &lt;g1&gt;8&lt;/g1&gt; &lt;g2&gt;&lt;g3&gt;Place&lt;/g3&gt; と &lt;g4&gt;gr:Location&lt;/g4&gt; の両方があるObject:&lt;/g2&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Figure &lt;g1&gt;9&lt;/g1&gt; &lt;g2&gt; A note with a name defined by the author &lt;/g2&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>Figure &lt;g1&gt;9&lt;/g1&gt; &lt;g2&gt; 作者によって定義された名前を持つメモ &lt;/g2&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Following are three examples of activities with varying degrees of detail.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>次に、様々な詳細度を持つ三つのアクティビティの例を挙げる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>For example, &lt;g4&gt;height&lt;/g4&gt; and &lt;g5&gt;width&lt;/g5&gt; might represent the desired rendered size of a referenced image, rather than the actual pixel dimensions of the referenced image.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>例えば、&lt;g4&gt;height&lt;/g4&gt; と &lt;g5&gt;width&lt;/g5&gt; は参照されたイメージの 実際のピクセル数ではなく、参照されたイメージが要求した 表示サイズかもしれない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>For example:</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>例:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>For instance, some vocabularies (e.g. Schema.org) define their own types for describing actions.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>For instance, some vocabularies (e.g.Schema.org) define their own types for describing actions.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>For instance, some vocabularies (e.g. The Good Relations Vocabulary) define their own types for describing locations.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T204105Z" creationid="shira" creationdate="20240114T204105Z">
+        <seg>例えば、いくつかの語彙(例えば、The Good Relations Vocabulary)は、位置を記述するための独自の型を定義する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Formalizing the namespace of the base vocabulary of object types and activity types</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>オブジェクト型とアクティビティ型の規定語彙の名前空間の形式化</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Furthermore, while implementations are free to introduce new types of Objects beyond those defined by the Activity Vocabulary, interoperability issues can arise when applications rely too much on extension types that are not recognized by other implementations.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T203927Z" creationid="shira" creationdate="20240114T203757Z">
+        <seg>さらに、実装はActivity Vocabularyによって定義されたものを超えた新しい型ののObjectを自由に導入することができるが、アプリケーションが他の実装によって認識されない拡張型に依存しすぎると、相互運用性の問題が発生する可能性がある。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If a property has an array value, the absence of any items in that array MUST be represented by omitting the property entirely or by setting the value to null.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>属性が配列を持つ場合、その配列に値が無い場合は、 属性全体を省略するか値に null を設定することで表現しなければならない(MUST)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If the pages of an &lt;g6&gt;OrderedCollection&lt;/g6&gt; are not instances of &lt;g7&gt;OrderedCollectionPage&lt;/g7&gt;, a consumer will have no reliable means of reconstructing the appropriate ordering of items.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>&lt;g6&gt;OrderedCollection&lt;/g6&gt; のページが &lt;g7&gt;OrderedCollectionPage&lt;/g7&gt; の実体でない場合、 消費者はアイテムの適切な順序を再構築するために信頼性のある手段はない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If there is no &lt;g3&gt;name&lt;/g3&gt; property, the &lt;g4&gt;summary&lt;/g4&gt; property SHOULD NOT include markup, and SHOULD be short enough to be used as a reasonable text representation of the object.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>&lt;g3&gt;name&lt;/g3&gt; 属性がない場合、 &lt;g4&gt;summary&lt;/g4&gt; 属性はマークアップを含むべきではなく(SHOULD NOT)、 オブジェクトの妥当なテキスト表現として使われるのに 十分短いものであるべきである(SHOULD)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Implementation report:</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>Implementation report:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Implementations MAY also use additional properties and values not defined in the JSON-LD @context with the understanding that any such properties will likely be unsupported and ignored by consuming implementations that use the standard JSON-LD algorithms.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>実装はまた、標準の JSON-LD アルゴリズムを使う消費者実装から 無視されるであろうことを理解した上で、JSON-LD @context に定義されていない 追加の属性と値を使ってもよい(MAY)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Implementations MAY augment the provided @context with additional @context definitions but MUST NOT override or change the normative context.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>実装は提供された @context を追加の @context で増加させてもよい(MAY)が、 規範的なコンテキストを上書きしたり変更してはならない (MUST NOT)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Implementations MAY use the alternative URL " &lt;g9&gt;http://www.w3.org/ns/activitystreams&lt;/g9&gt;" instead.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>実装は代わりに代替URL "&lt;g9&gt;http://www.w3.org/ns/activitystreams&lt;/g9&gt;" を 使うことができる(MAY)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Implementations producing Activity Streams 2.0 documents SHOULD include a &lt;g6&gt;@context&lt;/g6&gt; property with a value that includes a reference to the normative &lt;g7&gt;Activity Streams 2.0 JSON-LD @context definition&lt;/g7&gt; using the URL " &lt;g8&gt;https://www.w3.org/ns/activitystreams&lt;/g8&gt;".</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>Activity Streams 2.0 文書を生成する実装は、 URL "&lt;g6&gt;https://www.w3.org/ns/activitystreams&lt;/g6&gt;" を使って 標準の &lt;g7&gt;Activity Streams 2.0 JSON-LD @context 定義&lt;/g7&gt; への参照を含む値を &lt;g8&gt;@context&lt;/g8&gt; 属性に 指定するべきである(SHOULD)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Implementations that wish to reconstruct the appropriate complete ordering of member items in the logical collection should navigate to the first (or last) page in the sequence then recursively follow the &lt;g2&gt;next&lt;/g2&gt; (or &lt;g3&gt;prev&lt;/g3&gt;) link until all pages have been processed.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>論理的なコレクションのメンバアイテムを適切で完全な順序に再構築したい実装は、 並びの最初(または最後)のページに移動して、それから全てのページを処理するまで &lt;g2&gt;next&lt;/g2&gt; (または &lt;g3&gt;prev&lt;/g3&gt;) リンクを再帰的に 辿るべきである。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>In addition to common properties supported by all &lt;g1&gt;Object&lt;/g1&gt; instances, &lt;g2&gt;Activity&lt;/g2&gt; objects support the following additional properties defined by the &lt;g3&gt;Vocabulary&lt;/g3&gt;: &lt;g4&gt;&lt;g5&gt;actor&lt;/g5&gt;&lt;/g4&gt; | &lt;g6&gt;&lt;g7&gt;object&lt;/g7&gt;&lt;/g6&gt; | &lt;g8&gt;&lt;g9&gt;target&lt;/g9&gt;&lt;/g8&gt; | &lt;g10&gt;&lt;g11&gt;origin&lt;/g11&gt;&lt;/g10&gt; | &lt;g12&gt;&lt;g13&gt;result&lt;/g13&gt;&lt;/g12&gt; | &lt;g14&gt;&lt;g15&gt;instrument&lt;/g15&gt;&lt;/g14&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T204900Z" creationid="shira" creationdate="20240114T204900Z">
+        <seg>全ての &lt;g1&gt;Object&lt;/g1&gt; の実体で対応している一般的な属性に加えて、 &lt;g2&gt;Activity&lt;/g2&gt; オブジェクトは &lt;g3&gt;Vocabulary&lt;/g3&gt; で 定義されている次の追加の属性に対応している: &lt;g4&gt;&lt;g5&gt;actor&lt;/g5&gt;&lt;/g4&gt; | &lt;g6&gt;&lt;g7&gt;object&lt;/g7&gt;&lt;/g6&gt; | &lt;g8&gt;&lt;g9&gt;target&lt;/g9&gt;&lt;/g8&gt; | &lt;g10&gt;&lt;g11&gt;origin&lt;/g11&gt;&lt;/g10&gt; | &lt;g12&gt;&lt;g13&gt;result&lt;/g13&gt;&lt;/g12&gt; | &lt;g14&gt;&lt;g15&gt;instrument&lt;/g15&gt;&lt;/g14&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>In addition to having a global identifier (expressed as an absolute IRI using the &lt;g1&gt;id&lt;/g1&gt; property) and an "object type" (expressed using the &lt;g2&gt;type&lt;/g2&gt; property), all instances of the &lt;g3&gt;Object&lt;/g3&gt; type share a common set of properties normatively defined by the &lt;g4&gt;Activity Vocabulary&lt;/g4&gt;.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>(&lt;g1&gt;id&lt;/g1&gt; 属性を使った絶対 IRI で記述された)グローバル修飾子と(&lt;g2&gt;type&lt;/g2&gt; 属性を使って記述された)「オブジェクト型」に加えて、 &lt;g3&gt;Object&lt;/g3&gt; 型の全ての実体は、 &lt;g4&gt;Activity Vocabulary&lt;/g4&gt; で規定的に定義された属性の一般的な集合を共有する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>In addition to the base properties inherited by all &lt;g1&gt;&lt;g2&gt;Objects&lt;/g2&gt;&lt;/g1&gt;, all &lt;g3&gt;&lt;g4&gt;Collection&lt;/g4&gt;&lt;/g3&gt; types contain the additional properties: &lt;g5&gt; &lt;g6&gt;items&lt;/g6&gt; | &lt;g7&gt;totalItems&lt;/g7&gt; | &lt;g8&gt;first&lt;/g8&gt; | &lt;g9&gt;last&lt;/g9&gt; | &lt;g10&gt;current&lt;/g10&gt; &lt;/g5&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240115T054935Z" creationid="shira" creationdate="20240114T205733Z">
+        <seg>&lt;g3&gt;&lt;g4&gt;Collection&lt;/g4&gt;&lt;/g3&gt; 型は、 &lt;g1&gt;&lt;g2&gt;Objects&lt;/g2&gt;&lt;/g1&gt; から全て継承された 基底属性に加えて、追加の属性を含む: &lt;g5&gt; &lt;g6&gt;items&lt;/g6&gt; | &lt;g7&gt;totalItems&lt;/g7&gt; | &lt;g8&gt;first&lt;/g8&gt; | &lt;g9&gt;last&lt;/g9&gt; | &lt;g10&gt;current&lt;/g10&gt; &lt;/g5&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>In addition to the properties inherited from each of those, the &lt;g10&gt;OrderedCollectionPage&lt;/g10&gt; may contain an additional &lt;g11&gt;&lt;g12&gt;startIndex&lt;/g12&gt;&lt;/g11&gt; property whose value indicates the relative index position of the first item contained by the page within the &lt;g13&gt;OrderedCollection&lt;/g13&gt; to which the page belongs.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T212521Z" creationid="shira" creationdate="20240114T212521Z">
+        <seg>これらから継承した属性に加えて、 &lt;g10&gt;OrderedCollectionPage&lt;/g10&gt; は追加の &lt;g11&gt;&lt;g12&gt;startIndex&lt;/g12&gt;&lt;/g11&gt; 属性を持つ; この値は、このページが示す &lt;g13&gt;OrderedCollection&lt;/g13&gt; の中で、ページに含まれている最初のアイテムの相対インデックス位置を示す。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>In addition, all &lt;g3&gt;Link&lt;/g3&gt; instances share the following common set of optional properties as normatively defined by the &lt;g4&gt;Activity Vocabulary&lt;/g4&gt;: &lt;g5&gt;&lt;g6&gt;id&lt;/g6&gt;&lt;/g5&gt; | &lt;g7&gt;&lt;g8&gt;name&lt;/g8&gt;&lt;/g7&gt; | &lt;g9&gt;&lt;g10&gt;hreflang&lt;/g10&gt;&lt;/g9&gt; | &lt;g11&gt;&lt;g12&gt;mediaType&lt;/g12&gt;&lt;/g11&gt; | &lt;g13&gt;&lt;g14&gt;rel&lt;/g14&gt;&lt;/g13&gt; | &lt;g15&gt;&lt;g16&gt;height&lt;/g16&gt;&lt;/g15&gt; | &lt;g17&gt;&lt;g18&gt;width&lt;/g18&gt;&lt;/g17&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T204546Z" creationid="shira" creationdate="20240114T204546Z">
+        <seg>さらに、全ての &lt;g3&gt;Link&lt;/g3&gt; 実体は、 &lt;g4&gt;Activity Vocabulary&lt;/g4&gt; で規準的に定義されている、次のオプションの属性の一般的な集合を共有する: &lt;g5&gt;&lt;g6&gt;id&lt;/g6&gt;&lt;/g5&gt; | &lt;g7&gt;&lt;g8&gt;name&lt;/g8&gt;&lt;/g7&gt; | &lt;g9&gt;&lt;g10&gt;hreflang&lt;/g10&gt;&lt;/g9&gt; | &lt;g11&gt;&lt;g12&gt;mediaType&lt;/g12&gt;&lt;/g11&gt; | &lt;g13&gt;&lt;g14&gt;rel&lt;/g14&gt;&lt;/g13&gt; | &lt;g15&gt;&lt;g16&gt;height&lt;/g16&gt;&lt;/g15&gt; | &lt;g17&gt;&lt;g18&gt;width&lt;/g18&gt;&lt;/g17&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>In such cases, the items within a Collection can be divided into distinct subsets or "pages".</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>このような場合、Collection に含まれているアイテムは 相異なる部分集合、つまり「ページ」に分割できる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>In the JSON serialization, the unordered items of a Collection are represented using the &lt;g5&gt;items&lt;/g5&gt; property while ordered items are represented using the &lt;g6&gt;orderedItems&lt;/g6&gt; property.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>JSON シリアル化において、Collection の順序のないアイテムは &lt;g5&gt;items&lt;/g5&gt; 属性を使って表現される一方、 順序のあるアイテムは &lt;g6&gt;orderedItems&lt;/g6&gt; 属性を使って表現される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>In the most basic sense, an "Activity" is a semantic description of an action.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>最も基本的な感覚では 「アクティビティ」(Activity) は行動の意味論的な 記述である。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>In the serialized JSON, these two forms are differentiated using a simple property naming convention, for instance: "&lt;g4&gt;name&lt;/g4&gt;" identifies the JSON string form for the &lt;g5&gt;&lt;g6&gt;name&lt;/g6&gt;&lt;/g5&gt; property while "&lt;g7&gt;nameMap&lt;/g7&gt;" represents the object form.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>シリアル化された JSON において、これら二つの型式は単純な属性命名規則によって 区別される; 例えば: "&lt;g4&gt;name&lt;/g4&gt;" は &lt;g5&gt;&lt;g6&gt;name&lt;/g6&gt;&lt;/g5&gt; 属性の JSON 文字列形式を識別し、 一方 "&lt;g7&gt;nameMap&lt;/g7&gt;" はオブジェクト形式を表現する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Incorporation of audience targeting into the core spec</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>関係者指定のコア仕様への結合</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>IntransitiveActivity objects are specializations of the &lt;g1&gt;Activity&lt;/g1&gt; type that represent intransitive actions.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>IntransitiveActivity オブジェクトは、自動的なアクションを表現する &lt;g1&gt;Activity&lt;/g1&gt; 型の特化である。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>IntransitiveActivity objects do not have an &lt;g2&gt;&lt;g3&gt;object&lt;/g3&gt;&lt;/g2&gt; property.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>IntransitiveActivity オブジェクトは &lt;g2&gt;&lt;g3&gt;object&lt;/g3&gt;&lt;/g2&gt; 特性を持たない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Introduction of the Link type for richly-described links</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>リッチに表現されたリンクのための Link 型の導入</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>It contains a non-empty list of space-separated URIs (the profile URIs).</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>これは空白で区切られた URI (プロファイル URI) の空でないリストである。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>It forms part of the [&lt;g1&gt;&lt;g2&gt;SWP&lt;/g2&gt;&lt;/g1&gt;] suite of related standards.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>これは [&lt;g1&gt;&lt;g2&gt;SWP&lt;/g2&gt;&lt;/g1&gt;] スイートの一部を形成する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>It is a stable document and may be used as reference material or cited from another document.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240112T121007Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>これは安定した文書であり、参考資料として使用したり、他の文書から引用したりすることができる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>It is important to note that the `time-offset` component does not correlate to time-zones, and while times that include the `time-offset` component work well for timestamps, they cannot be reliably converted to and from local "wall times" without additional information and processing.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>`time-offset` 要素はタイムゾーンとは関係なく、 `time-offset` 要素を含む時刻はタイムスタンプとして上手く動作するが、 追加の情報と処理なしにこれとローカルの「壁時計時間」とを確実に変換することは できないということに注意することは重要である。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>It is the goal of this specification to provide a JSON-based syntax that is sufficient to express metadata about activities in a rich, human-friendly but machine-processable and extensible manner.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>この仕様のゴールは、アクティビティについて、 リッチで人間に優しいけれども、機械で処理可能かつ拡張可能な形で メタデータを記述するのに十分な JSON ベースの文法を提供することである。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>JSON-LD uses the special &lt;g1&gt;@context&lt;/g1&gt; property to define the &lt;g2&gt;processing context&lt;/g2&gt;.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T211036Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>JSON-LD は &lt;g2&gt;processing context&lt;/g2&gt; を 定義するために特別な &lt;g1&gt;@context&lt;/g1&gt; 属性を使う。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Latest editor's draft:</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>Latest editor's draft:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Latest published version:</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>Latest published version:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Massachusetts Institute of Technology</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>Massachusetts Institute of Technology</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Multi-lingual representation of activities</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>アクティビティの多言語表現</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Note that while the Activity Streams 2.0 format uses JSON-LD conventions, there are a number of constraints and additional requirements for Activity Streams 2.0 implementations that justify the use of a specific media type.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>Activity Streams 2.0 型式は JSON-LD 仕様を使う一方、 この特定のメディアタイプの使用を正当化する Activity Streams 2.0 実装のためには、多くの制限と追加の要求があることに 注意すること。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Often, it becomes impractical for an implementation to serialize every item contained by a Collection using the &lt;g1&gt;items&lt;/g1&gt; (or &lt;g2&gt;orderedItems&lt;/g2&gt;) property alone.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>しばしば、 &lt;g1&gt;items&lt;/g1&gt; (または &lt;g2&gt;orderedItems&lt;/g2&gt;) 属性だけを使って Collection に含まれている全てのアイテムをシリアル化するのは 実装上非実用的になる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Other documents may supersede this document.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>他の文書がこの文書に取って代わることがある。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Please check the &lt;g1&gt;&lt;g2&gt;errata&lt;/g2&gt;&lt;/g1&gt; for any errors or issues reported since publication.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>Please check the &lt;g1&gt;&lt;g2&gt;errata&lt;/g2&gt;&lt;/g1&gt; for any errors or issues reported since publication.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Please contact the &lt;g2&gt; GitHub repository &lt;/g2&gt; regarding this document.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240104T094055Z" creationid="shira" creationdate="20240104T094055Z">
+        <seg>この文書に関する連絡は&lt;g2&gt;GitHubリポジトリ&lt;/g2&gt;にお願いします。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Please see the Working Group's &lt;g1&gt;implementation report&lt;/g1&gt;.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>Working Group の &lt;g1&gt;implementation report&lt;/g1&gt; を参照のこと。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Previous version:</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>Previous version:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Relative IRI (and URL) references SHOULD NOT be used within an Activity Streams 2.0 document due to the fact that many JSON parser implementations are not capable of reliably preserving the base context necessary to properly resolve relative references.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>相対 IRI (及び URL) 参照は Activity Streams 2.0 文書の中で 使うべきではない(SHOULD NOT); 多くの JSON パーサ実装は、相対参照を適切に解決するために必要な 基底コンテキストを確実に保存する能力を持たないからである。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Removal of activity types and object types that weren't core to social use cases</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>ソーシャルなユースケースの中心でないアクティビティ型とオブジェクト型の削除</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Repository:</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>Repository:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>See the &lt;g4&gt;Extensibility&lt;/g4&gt; section for more information on handling extensions within Activity Streams 2.0 documents.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>Activity Streams 2.0 文書の中での拡張の扱いに関するさらなる情報については &lt;g4&gt;Extensibility&lt;/g4&gt; 節を参照のこと。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Separator for header</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>Separator for header</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Several properties defined by the &lt;g1&gt;Vocabulary&lt;/g1&gt; are defined as having natural language values.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>&lt;g1&gt;Vocabulary&lt;/g1&gt; で定義されている属性のいくつかは自然言語値を持つと定義されている。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Some additional details about the article, actor and target blog are given using properties defined by the &lt;g3&gt;Activity Streams 2.0 Vocabulary&lt;/g3&gt;.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>&lt;g3&gt;Activity Streams 2.0 Vocabulary&lt;/g3&gt; によって定義された属性を使って、 記事、アクター、ターゲットに関するいくつかの追加の詳細が与えられている。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Some of the issues that specifically motivated the evolution of Activity Streams 2.0 from Activity Streams 1.0 include:</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>特に Activity Streams 1.0 から Activity Streams 2.0 への進化の動機となった 問題は次のようなものである:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Test suite:</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>Test suite:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The "URI" in the above grammar refers to the "URI" as defined in Section 3 of [&lt;g1&gt;&lt;g2&gt;RFC3986&lt;/g2&gt;&lt;/g1&gt;].</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>上記の文法での "URI" は [&lt;g1&gt;&lt;g2&gt;RFC3986&lt;/g2&gt;&lt;/g1&gt;] の Section 3 で定義される "URI" を参照する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The "profile" media type parameter MUST be quoted.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>"profile" メディアタイプ引数はクォートされなければならない(MUST)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The "time-hour", "time-minute", "time-second", "time-secfrac", "time-offset" and "full-date" constructs are as defined in [ &lt;g3&gt;&lt;g4&gt;RFC3339&lt;/g4&gt;&lt;/g3&gt;].</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>"time-hour", "time-minute", "time-second", "time-secfrac", "time-offset", "full-date" 構造は [&lt;g3&gt;&lt;g4&gt;RFC3339&lt;/g4&gt;&lt;/g3&gt;] で定義される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The &lt;g1&gt;&lt;g2&gt;&lt;g3&gt;CollectionPage&lt;/g3&gt;&lt;/g2&gt; &lt;/g1&gt; type extends from the base &lt;g4&gt;&lt;g5&gt;Collection&lt;/g5&gt;&lt;/g4&gt; type and inherits all of it's properties.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;&lt;g3&gt;CollectionPage&lt;/g3&gt;&lt;/g2&gt;&lt;/g1&gt; 型は基底 &lt;g4&gt;&lt;g5&gt;Collection&lt;/g5&gt;&lt;/g4&gt; 型から拡張され、 その全ての属性を継承する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The &lt;g1&gt;&lt;g2&gt;&lt;g3&gt;OrderedCollectionPage&lt;/g3&gt;&lt;/g2&gt; &lt;/g1&gt; type extends from both &lt;g4&gt;&lt;g5&gt;&lt;g6&gt;CollectionPage&lt;/g6&gt;&lt;/g5&gt; &lt;/g4&gt; and &lt;g7&gt;&lt;g8&gt;&lt;g9&gt;OrderedCollection&lt;/g9&gt;&lt;/g8&gt; &lt;/g7&gt;.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;&lt;g3&gt;OrderedCollectionPage&lt;/g3&gt;&lt;/g2&gt; &lt;/g1&gt; 型は &lt;g4&gt;&lt;g5&gt;&lt;g6&gt;CollectionPage&lt;/g6&gt;&lt;/g5&gt; &lt;/g4&gt; と &lt;g7&gt;&lt;g8&gt;&lt;g9&gt;OrderedCollection&lt;/g9&gt;&lt;/g8&gt; &lt;/g7&gt; の両方を拡張する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The &lt;g1&gt;&lt;g2&gt;Object&lt;/g2&gt;&lt;/g1&gt; is the primary base type for the Activity Streams vocabulary.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;Object&lt;/g2&gt;&lt;/g1&gt;は Activity Streams vocabulary の基本基底クラスである。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The &lt;g1&gt;&lt;g2&gt;name&lt;/g2&gt;&lt;/g1&gt; property SHOULD be derived from input by the creator or another user.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;name&lt;/g2&gt;&lt;/g1&gt; 属性は 作成者または他のユーザーによる入力から生成されるべきである(SHOULD)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The &lt;g1&gt;&lt;g2&gt;summary&lt;/g2&gt;&lt;/g1&gt; property SHOULD be used as a fallback text representation, possibly automatically generated by the publisher.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;summary&lt;/g2&gt;&lt;/g1&gt; 属性は、おそらく発行者によって自動的に生成される、 フォールバックテキスト表現として使われるべきである(SHOULD)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The &lt;g1&gt;Activity Vocabulary&lt;/g1&gt; defines a range of &lt;g2&gt;Object&lt;/g2&gt; types that are common to many social Web applications.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>&lt;g1&gt;Activity Vocabulary&lt;/g1&gt; は 多くのソーシャル Web アプリケーションで一般的である、幅広い &lt;g2&gt;Object&lt;/g2&gt; 型を定義する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The &lt;g1&gt;Activity Vocabulary&lt;/g1&gt; defines a small number of &lt;g2&gt;Activity&lt;/g2&gt; types that are common to many social Web applications.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>&lt;g1&gt;Activity Vocabulary&lt;/g1&gt; は 多くのソーシャル Web アプリケーションで一般的である、少数の &lt;g2&gt;Activity&lt;/g2&gt; 型を定義する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The &lt;g1&gt;Activity Vocabulary&lt;/g1&gt; defines three properties that use natural language values: &lt;g2&gt;&lt;g3&gt;name&lt;/g3&gt;&lt;/g2&gt;, &lt;g4&gt;&lt;g5&gt;summary&lt;/g5&gt;&lt;/g4&gt;, and &lt;g6&gt;&lt;g7&gt;content&lt;/g7&gt;&lt;/g6&gt;.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>&lt;g1&gt;Activity Vocabulary&lt;/g1&gt; は 自然言語値を使う三つの属性を定義している: &lt;g2&gt;&lt;g3&gt;name&lt;/g3&gt;&lt;/g2&gt;, &lt;g4&gt;&lt;g5&gt;summary&lt;/g5&gt;&lt;/g4&gt;, &lt;g6&gt;&lt;g7&gt;content&lt;/g7&gt;&lt;/g6&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The &lt;g1&gt;Activity Vocabulary&lt;/g1&gt; normatively defines the core object types and properties for Activity Streams 2.0.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>&lt;g1&gt;Activity Vocabulary&lt;/g1&gt; は Activity Streams 2.0 のためのコアオブジェクトと属性を形式的に定義している。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The &lt;g1&gt;current&lt;/g1&gt; property identifies a page containing the subset of items in the &lt;g2&gt;Collection&lt;/g2&gt; that have been created or updated most recently.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>&lt;g1&gt;current&lt;/g1&gt; 属性は、&lt;g2&gt;Collection&lt;/g2&gt; の中で、 最も最近に作成または更新されたアイテムの部分集合を含むページを識別する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The &lt;g1&gt;first&lt;/g1&gt;, &lt;g2&gt;next&lt;/g2&gt;, &lt;g3&gt;prev&lt;/g3&gt;, &lt;g4&gt;last&lt;/g4&gt;, and &lt;g5&gt;current&lt;/g5&gt; properties are used to reference other &lt;g6&gt;&lt;g7&gt;&lt;g8&gt;CollectionPage&lt;/g8&gt;&lt;/g7&gt; &lt;/g6&gt; instances that contain additional subsets of items from the parent collection.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>&lt;g1&gt;first&lt;/g1&gt;, &lt;g2&gt;next&lt;/g2&gt;, &lt;g3&gt;prev&lt;/g3&gt;, &lt;g4&gt;last&lt;/g4&gt;, &lt;g5&gt;current&lt;/g5&gt; 属性は、 親コレクションからのアイテムの追加の部分集合を含む、他の &lt;g6&gt;&lt;g7&gt;&lt;g8&gt;CollectionPage&lt;/g8&gt;&lt;/g7&gt;&lt;/g6&gt; 実体を参照するために使われる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The &lt;g1&gt;name&lt;/g1&gt; and &lt;g2&gt;summary&lt;/g2&gt; MAY be absent, MAY lack explicit values in the end user's current language, and MAY be longer than appropriate for use as a text representation of the Object in the current language context.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>&lt;g1&gt;name&lt;/g1&gt; と &lt;g2&gt;summary&lt;/g2&gt; はなくてもよく(MAY)、 エンドユーザーの現在の言語での明示的な値がなくてもよく(MAY)、 現在の言語コンテキストでの Object のテキスト表現として使うのに 適切でないぐらい長くてもよい(MAY)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The &lt;g1&gt;partOf&lt;/g1&gt; property identifies the &lt;g2&gt;&lt;g3&gt;Collection&lt;/g3&gt;&lt;/g2&gt; to which the items contained by the &lt;g4&gt;CollectionPage&lt;/g4&gt; belong.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240115T055645Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>&lt;g1&gt;partOf&lt;/g1&gt; 属性は、 &lt;g4&gt;CollectionPage&lt;/g4&gt; に含まれているアイテムが属する &lt;g2&gt;&lt;g3&gt;Collection&lt;/g3&gt;&lt;/g2&gt; を識別する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The &lt;g1&gt;type&lt;/g1&gt; property is used to identify the type of action the Activity Statement represents.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>&lt;g1&gt;type&lt;/g1&gt; 属性は Activity Statement が表現するアクションの型を 識別するために使われる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The &lt;g2&gt;Activity Vocabulary&lt;/g2&gt; provides the normative definition of five specific types of Actors: &lt;g3&gt;&lt;g4&gt;Application&lt;/g4&gt; &lt;/g3&gt; | &lt;g5&gt;&lt;g6&gt;Group&lt;/g6&gt;&lt;/g5&gt; | &lt;g7&gt;&lt;g8&gt;Organization&lt;/g8&gt;&lt;/g7&gt; | &lt;g9&gt;&lt;g10&gt;Person&lt;/g10&gt;&lt;/g9&gt; | &lt;g11&gt;&lt;g12&gt;Service&lt;/g12&gt;&lt;/g11&gt;.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T204637Z" creationid="shira" creationdate="20240114T204637Z">
+        <seg>&lt;g2&gt;Activity Vocabulary&lt;/g2&gt; は Actor の 5 種類の特定の型の規定定義を提供する: &lt;g3&gt;&lt;g4&gt;Application&lt;/g4&gt; &lt;/g3&gt; | &lt;g5&gt;&lt;g6&gt;Group&lt;/g6&gt;&lt;/g5&gt; | &lt;g7&gt;&lt;g8&gt;Organization&lt;/g8&gt;&lt;/g7&gt; | &lt;g9&gt;&lt;g10&gt;Person&lt;/g10&gt;&lt;/g9&gt; | &lt;g11&gt;&lt;g12&gt;Service&lt;/g12&gt;&lt;/g11&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The &lt;g2&gt;first&lt;/g2&gt; property is used to identify the first page in this sequence, while the &lt;g3&gt;last&lt;/g3&gt; property is used to identify the final page in the sequence.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>&lt;g2&gt;first&lt;/g2&gt; 属性はこの並びの最初のページを識別するために使われ、 一方 &lt;g3&gt;last&lt;/g3&gt; 属性は並びの最後のページを識別するのに使われる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The &lt;g3&gt;&lt;g4&gt;OrderedCollection&lt;/g4&gt;&lt;/g3&gt; type MAY be used to identify a Collection whose items are always ordered.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>&lt;g3&gt;&lt;g4&gt;OrderedCollection&lt;/g4&gt;&lt;/g3&gt; 型は、 アイテムに常に順序がある Collection であることを識別するために使っても良い (MAY)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The &lt;g3&gt;&lt;g4&gt;OrderedCollectionPage&lt;/g4&gt;&lt;/g3&gt; type MAY be used to identify a page whose items are strictly ordered.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>&lt;g3&gt;&lt;g4&gt;OrderedCollectionPage&lt;/g4&gt;&lt;/g3&gt; 型は アイテムが順序ありのもののページを識別するために使われる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The &lt;g4&gt;prev&lt;/g4&gt; and &lt;g5&gt;next&lt;/g5&gt; properties identify the pages immediately before and immediately following, respectively.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>&lt;g4&gt;prev&lt;/g4&gt; と &lt;g5&gt;next&lt;/g5&gt; 属性はそれぞれ直前と直後のページを 識別する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The JSON Activity Streams 1.0 [&lt;g1&gt;&lt;g2&gt;AS1&lt;/g2&gt;&lt;/g1&gt;] specification was published in May of 2011 and provided a baseline extensible syntax for the expression of completed activities.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>JSON Activity Streams 1.0 [&lt;g1&gt;&lt;g2&gt;AS1&lt;/g2&gt;&lt;/g1&gt;] 仕様は 2011 年 5 月に発行され、 完全なアクティビティの表現のための、基準となる拡張可能な文法を提供した。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The appropriate interpretation of an omitted or explicitly null value is that no value has been assigned as opposed to the view that the given value is empty or nil.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>省略されたか明示的な null 値の適切な解釈は、 値が設定されなかったか、与えられた値が空または nil であったかということである。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The associated values MUST be strings.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>関連付けられた値は文字列でなければならない(MUST)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The core types include:</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>コア型は以下のものである:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The following additional properties can also be specified: &lt;g6&gt; &lt;g7&gt;partOf&lt;/g7&gt; | &lt;g8&gt;next&lt;/g8&gt; | &lt;g9&gt;prev&lt;/g9&gt; | &lt;/g6&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>以下の追加の属性も定義されている: &lt;g6&gt; &lt;g7&gt;partOf&lt;/g7&gt; | &lt;g8&gt;next&lt;/g8&gt; | &lt;g9&gt;prev&lt;/g9&gt; | &lt;/g6&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The generalized "Undo" activity type, so all activities can be undone</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>全てのアクティビティを取り消しできるようにするための一般化された "Undo" アクティビティ型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The items within a &lt;g1&gt;&lt;g2&gt;Collection&lt;/g2&gt;&lt;/g1&gt; can be ordered or unordered.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;Collection&lt;/g2&gt;&lt;/g1&gt; の中のアイテムは順序が ある場合とない場合がある。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", " SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [&lt;g1&gt;&lt;g2&gt;RFC2119&lt;/g2&gt;&lt;/g1&gt;].</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>この文書における次の各キーワード「しなければならない(MUST)」、 「してはならない(MUST NOT)」、 「要求されている(REQUIRED)」、 「することになる(SHALL)」、 「することはない(SHALL NOT)」、 「する必要がある(SHOULD)」、 「しないほうがよい(SHOULD NOT)」、 「推奨される(RECOMMENDED)」、 「してもよい(MAY)」、 「選択できる(OPTIONAL)」は、 [&lt;g1&gt;&lt;g2&gt;RFC2119&lt;/g2&gt;&lt;/g1&gt;] で述べられているように解釈されるべきものである。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The object types defined by the vocabulary are segmented into a set of eight core types and an extended set of Activity and Object types common to many social Web applications.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>語彙によって定義されたオブジェクト型は、八つのコア型と、 多くのソーシャル Web アプリケーションで共通に使われる Activity 型と Object 型の拡張集合に分けられる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The official document is an English version.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240104T094024Z" creationid="shira" creationdate="20240104T094024Z">
+        <seg>正式な文書は英語版です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The pages of an &lt;g4&gt;OrderedCollection&lt;/g4&gt; SHOULD be instances of &lt;g5&gt;OrderedCollectionPage&lt;/g5&gt;.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>ある &lt;g4&gt;OrderedCollection&lt;/g4&gt; のページは &lt;g5&gt;OrderedCollectionPage&lt;/g5&gt; の実体であるべきである(SHOULD)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The properties of the Link object are not the properties of the referenced resource, but are provided as hints for rendering agents to understand how to make use of the resource.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>Link オブジェクトの属性は参照されたリソースの属性ではなく、 表示するエージェントがそのリソースをどのように使うかを理解するための ヒントとして提供される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The serialized JSON form of an Activity Streams 2.0 document MUST be consistent with what would be produced by the standard JSON-LD 1.0 Processing Algorithms and API [&lt;g1&gt;&lt;g2&gt;JSON-LD-API&lt;/g2&gt;&lt;/g1&gt;] Compaction Algorithm using, at least, the normative JSON-LD @context definition provided &lt;g3&gt;here&lt;/g3&gt;.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T210753Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>Activity Streams 2.0 文書の直列化された JSON 形式は、 少なくとも、&lt;g3&gt;ここ&lt;/g3&gt; で提供されている規定の JSON-LD @context 定義を使って、 標準の JSON-LD 1.0 Processing Algorithms と API [&lt;g1&gt;&lt;g2&gt;JSON-LD-API&lt;/g2&gt;&lt;/g1&gt;] Compaction Algorithm で生成されるものと矛盾しないものでなければならない(MUST)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The special language tag &lt;g1&gt;"und"&lt;/g1&gt; can be used within the object form to explicitly identify a value whose language is unknown or undetermined.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>特別な言語タグ &lt;g1&gt;"und"&lt;/g1&gt; は、 言語が不明または未定義の値を明示的に識別するために オブジェクト形式の中で使用できる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The target URI of the Link is expressed using the required &lt;g1&gt;&lt;g2&gt;href&lt;/g2&gt;&lt;/g1&gt; property.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>Link のターゲット URI は必須の &lt;g1&gt;&lt;g2&gt;href&lt;/g2&gt;&lt;/g1&gt; 属性を使って表現される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The terms &lt;g1&gt;displayName&lt;/g1&gt;, &lt;g2&gt;verb&lt;/g2&gt;, &lt;g3&gt;title&lt;/g3&gt; and &lt;g4&gt;objectType&lt;/g4&gt; should be treated as reserved terms that SHOULD NOT be used within Activity Streams 2.0 documents.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>&lt;g1&gt;displayName&lt;/g1&gt;, &lt;g2&gt;verb&lt;/g2&gt;, &lt;g3&gt;title&lt;/g3&gt;, &lt;g4&gt;objectType&lt;/g4&gt; という用語は 予約語として扱われるべきであり、 Activity Streams 2.0 文書の中で使われるべきではない(SHOULD NOT)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The value of the &lt;g3&gt;@context&lt;/g3&gt; property is defined by the [&lt;g4&gt;&lt;g5&gt;JSON-LD&lt;/g5&gt;&lt;/g4&gt;] specification.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>&lt;g3&gt;@context&lt;/g3&gt; 属性の値は [&lt;g4&gt;&lt;g5&gt;JSON-LD&lt;/g5&gt;&lt;/g4&gt;] 仕様で定義されている。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The values for the &lt;g1&gt;first&lt;/g1&gt;, &lt;g2&gt;last&lt;/g2&gt;, &lt;g3&gt;next&lt;/g3&gt;, &lt;g4&gt;prev&lt;/g4&gt;, and &lt;g5&gt;current&lt;/g5&gt; properties can be either a single &lt;g6&gt;&lt;g7&gt;&lt;g8&gt;CollectionPage&lt;/g8&gt;&lt;/g7&gt; &lt;/g6&gt; or a &lt;g9&gt;&lt;g10&gt;Link&lt;/g10&gt;&lt;/g9&gt; referencing a separate resource containing a &lt;g11&gt;&lt;g12&gt;&lt;g13&gt;CollectionPage&lt;/g13&gt;&lt;/g12&gt; &lt;/g11&gt;.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240115T055955Z" creationid="shira" creationdate="20240115T055955Z">
+        <seg>&lt;g1&gt;first&lt;/g1&gt;, &lt;g2&gt;last&lt;/g2&gt;, &lt;g3&gt;next&lt;/g3&gt;, &lt;g4&gt;prev&lt;/g4&gt;, &lt;g5&gt;current&lt;/g5&gt; 属性は 単一の &lt;g6&gt;&lt;g7&gt;&lt;g8&gt;CollectionPage&lt;/g8&gt;&lt;/g7&gt;&lt;/g6&gt;、 または &lt;g11&gt;&lt;g12&gt;&lt;g13&gt;CollectionPage&lt;/g13&gt;&lt;/g12&gt;&lt;/g11&gt; を含む別のリソースを参照する &lt;g9&gt;&lt;g10&gt;Link&lt;/g10&gt;&lt;/g9&gt; である。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>There are two special considerations: (1) when an IRI that is not also a URI is given for dereferencing, it MUST be mapped to a URI using the steps in Section 3.1 of [&lt;g5&gt;&lt;g6&gt;RFC3987&lt;/g6&gt;&lt;/g5&gt;] and (2) when an IRI is serving as an "id" value, it MUST NOT be so mapped.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>特別に考慮することが二つある: (1) URI ではない IRI が逆参照として与えられた場合、 [&lt;g5&gt;&lt;g6&gt;RFC3987&lt;/g6&gt;&lt;/g5&gt;] の 3.1 節のステップを使って URI にマッピングしなければならず(MUST)、 (2) IRI が "id" 値として提供された場合、そのようにマッピングしてはならない(MUST NOT)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>These are human-readable strings using one or more languages.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>これは、複数の言語を使った人間可読の文字列である。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>These include: &lt;g5&gt; &lt;g6&gt;&lt;g7&gt;attachment&lt;/g7&gt;&lt;/g6&gt; | &lt;g8&gt;&lt;g9&gt;attributedTo&lt;/g9&gt;&lt;/g8&gt; | &lt;g10&gt;&lt;g11&gt;audience&lt;/g11&gt;&lt;/g10&gt; | &lt;g12&gt;&lt;g13&gt;content&lt;/g13&gt;&lt;/g12&gt; | &lt;g14&gt;&lt;g15&gt;context&lt;/g15&gt;&lt;/g14&gt; | &lt;g16&gt;&lt;g17&gt;contentMap&lt;/g17&gt;&lt;/g16&gt; | &lt;g18&gt;&lt;g19&gt;name&lt;/g19&gt;&lt;/g18&gt; | &lt;g20&gt;&lt;g21&gt;nameMap&lt;/g21&gt;&lt;/g20&gt; | &lt;g22&gt;&lt;g23&gt;endTime&lt;/g23&gt;&lt;/g22&gt; | &lt;g24&gt;&lt;g25&gt;generator&lt;/g25&gt;&lt;/g24&gt; | &lt;g26&gt;&lt;g27&gt;icon&lt;/g27&gt;&lt;/g26&gt; | &lt;g28&gt;&lt;g29&gt;image&lt;/g29&gt;&lt;/g28&gt; | &lt;g30&gt;&lt;g31&gt;inReplyTo&lt;/g31&gt;&lt;/g30&gt; | &lt;g32&gt;&lt;g33&gt;location&lt;/g33&gt;&lt;/g32&gt; | &lt;g34&gt;&lt;g35&gt;preview&lt;/g35&gt;&lt;/g34&gt; | &lt;g36&gt;&lt;g37&gt;published&lt;/g37&gt;&lt;/g36&gt; | &lt;g38&gt;&lt;g39&gt;replies&lt;/g39&gt;&lt;/g38&gt; | &lt;g40&gt;&lt;g41&gt;startTime&lt;/g41&gt;&lt;/g40&gt; | &lt;g42&gt;&lt;g43&gt;summary&lt;/g43&gt;&lt;/g42&gt; | &lt;g44&gt;&lt;g45&gt;summaryMap&lt;/g45&gt;&lt;/g44&gt; | &lt;g46&gt;&lt;g47&gt;tag&lt;/g47&gt;&lt;/g46&gt; | &lt;g48&gt;&lt;g49&gt;updated&lt;/g49&gt;&lt;/g48&gt; | &lt;g50&gt;&lt;g51&gt;url&lt;/g51&gt;&lt;/g50&gt; | &lt;g52&gt;&lt;g53&gt;to&lt;/g53&gt;&lt;/g52&gt; | &lt;g54&gt;&lt;g55&gt;bto&lt;/g55&gt;&lt;/g54&gt; | &lt;g56&gt;&lt;g57&gt;cc&lt;/g57&gt;&lt;/g56&gt; | &lt;g58&gt;&lt;g59&gt;bcc&lt;/g59&gt;&lt;/g58&gt; | &lt;g60&gt;&lt;g61&gt;mediaType&lt;/g61&gt;&lt;/g60&gt; | &lt;g62&gt;&lt;g63&gt;duration&lt;/g63&gt;&lt;/g62&gt; &lt;/g5&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T212144Z" creationid="shira" creationdate="20240114T212144Z">
+        <seg>これは次のものである: &lt;g5&gt; &lt;g6&gt;&lt;g7&gt;attachment&lt;/g7&gt;&lt;/g6&gt; | &lt;g8&gt;&lt;g9&gt;attributedTo&lt;/g9&gt;&lt;/g8&gt; | &lt;g10&gt;&lt;g11&gt;audience&lt;/g11&gt;&lt;/g10&gt; | &lt;g12&gt;&lt;g13&gt;content&lt;/g13&gt;&lt;/g12&gt; | &lt;g14&gt;&lt;g15&gt;context&lt;/g15&gt;&lt;/g14&gt; | &lt;g16&gt;&lt;g17&gt;contentMap&lt;/g17&gt;&lt;/g16&gt; | &lt;g18&gt;&lt;g19&gt;name&lt;/g19&gt;&lt;/g18&gt; | &lt;g20&gt;&lt;g21&gt;nameMap&lt;/g21&gt;&lt;/g20&gt; | &lt;g22&gt;&lt;g23&gt;endTime&lt;/g23&gt;&lt;/g22&gt; | &lt;g24&gt;&lt;g25&gt;generator&lt;/g25&gt;&lt;/g24&gt; | &lt;g26&gt;&lt;g27&gt;icon&lt;/g27&gt;&lt;/g26&gt; | &lt;g28&gt;&lt;g29&gt;image&lt;/g29&gt;&lt;/g28&gt; | &lt;g30&gt;&lt;g31&gt;inReplyTo&lt;/g31&gt;&lt;/g30&gt; | &lt;g32&gt;&lt;g33&gt;location&lt;/g33&gt;&lt;/g32&gt; | &lt;g34&gt;&lt;g35&gt;preview&lt;/g35&gt;&lt;/g34&gt; | &lt;g36&gt;&lt;g37&gt;published&lt;/g37&gt;&lt;/g36&gt; | &lt;g38&gt;&lt;g39&gt;replies&lt;/g39&gt;&lt;/g38&gt; | &lt;g40&gt;&lt;g41&gt;startTime&lt;/g41&gt;&lt;/g40&gt; | &lt;g42&gt;&lt;g43&gt;summary&lt;/g43&gt;&lt;/g42&gt; | &lt;g44&gt;&lt;g45&gt;summaryMap&lt;/g45&gt;&lt;/g44&gt; | &lt;g46&gt;&lt;g47&gt;tag&lt;/g47&gt;&lt;/g46&gt; | &lt;g48&gt;&lt;g49&gt;updated&lt;/g49&gt;&lt;/g48&gt; | &lt;g50&gt;&lt;g51&gt;url&lt;/g51&gt;&lt;/g50&gt; | &lt;g52&gt;&lt;g53&gt;to&lt;/g53&gt;&lt;/g52&gt; | &lt;g54&gt;&lt;g55&gt;bto&lt;/g55&gt;&lt;/g54&gt; | &lt;g56&gt;&lt;g57&gt;cc&lt;/g57&gt;&lt;/g56&gt; | &lt;g58&gt;&lt;g59&gt;bcc&lt;/g59&gt;&lt;/g58&gt; | &lt;g60&gt;&lt;g61&gt;mediaType&lt;/g61&gt;&lt;/g60&gt; | &lt;g62&gt;&lt;g63&gt;duration&lt;/g63&gt;&lt;/g62&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>These profile URIs have the identifier semantics defined in [&lt;g1&gt;&lt;g2&gt;RFC6906&lt;/g2&gt;&lt;/g1&gt;].</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>これらのプロファイル URI は [&lt;g1&gt;&lt;g2&gt;RFC6906&lt;/g2&gt;&lt;/g1&gt;] で定義された意味論を持つ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>These representations are semantically equivalent.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>これらの表現は意味論的に等価である。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This can be done using a string, object, or array.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>これは文字列、オブジェクト、配列を使って行える。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This can include constructing natural-language descriptions or visual representations about the activity, associating actionable information with various types of objects, communicating or recording activity logs, or delegation of potential actions to other applications.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>これには、アクティビティに関する自然言語記述やビジュアル表現の構築、 様々な型のオブジェクトと行動可能な情報の関連付け、 アクティビティログの通信や記録、 可能性のある行動の他のアプリケーションへの委譲を含む。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This document has been reviewed by &lt;g1&gt;W3C&lt;/g1&gt; Members, by software developers, and by other &lt;g2&gt;W3C&lt;/g2&gt; groups and interested parties, and is endorsed by the Director as a &lt;g3&gt;W3C&lt;/g3&gt; Recommendation.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240112T120852Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>この文書は、&lt;g1&gt;W3C&lt;/g1&gt;メンバー、ソフトウェア開発者、およびその他の&lt;g2&gt;W3C&lt;/g2&gt;グループと関係者によってレビューされ、&lt;g3&gt;W3C&lt;/g3&gt;勧告としてディレクターによって承認されています。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This document is governed by the &lt;g1&gt;1 March 2017 &lt;g2&gt;W3C&lt;/g2&gt; Process Document&lt;/g1&gt;.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240112T114907Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>この文書は、&lt;g1&gt;1 March 2017 &lt;g2&gt;W3C&lt;/g2&gt; Process Document&lt;/g1&gt;に準拠する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This document may contain errors due to translations.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240104T094034Z" creationid="shira" creationdate="20240104T094034Z">
+        <seg>この文書には翻訳による誤りが含まれることがあります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This document was published by the &lt;g1&gt;Social Web Working Group&lt;/g1&gt; as a Recommendation.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>この文書は &lt;g1&gt;Social Web Working Group&lt;/g1&gt; によって 勧告として発行された。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This enhances the functionality and interoperability of the Web.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240112T121120Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>これは、Webの機能性と相互運用性を向上させる。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This is a Japanese translation of &lt;g1&gt;Activity Streams 2.0&lt;/g1&gt;.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>これは&lt;g1&gt;Activity Streams 2.0&lt;/g1&gt;の参考日本語訳です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This is specified using the following [&lt;g1&gt;&lt;g2&gt;ABNF&lt;/g2&gt;&lt;/g1&gt;] syntax description.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>これは以下の [&lt;g1&gt;&lt;g2&gt;ABNF&lt;/g2&gt;&lt;/g1&gt;] 文法記述を使って指定される。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This mechanism may not be understood by implementations that do not choose to process Activity Streams 2.0 documents using JSON-LD.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>この機構は、JSON-LD を使って Activity Streams 2.0 文書を処理することを 選ばなかった実装によっては理解されないかもしれない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This specification describes a JSON-based [&lt;g1&gt;&lt;g2&gt;RFC7159&lt;/g2&gt;&lt;/g1&gt;] serialization syntax for the &lt;g3&gt;Activity Vocabulary&lt;/g3&gt; that conforms to a subset of [&lt;g4&gt;&lt;g5&gt;JSON-LD&lt;/g5&gt;&lt;/g4&gt;] syntax constraints but does not require JSON-LD processing.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240115T051113Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>この仕様は、[&lt;g4&gt;&lt;g5&gt;JSON-LD&lt;/g5&gt;&lt;/g4&gt;] 制限の部分集合に準拠するが JSON-LD 処理を要求しない &lt;g3&gt;Activity Vocabulary&lt;/g3&gt; のための JSON [&lt;g1&gt;&lt;g2&gt;RFC7159&lt;/g2&gt;&lt;/g1&gt;] ベースの直列化を記述する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This specification intentionally defines Actors in only the most generalized way, stopping short of defining semantically specific properties for each.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>この仕様書は意図的に Actor を最も一般的な形でのみ定義し、 それぞれについて意味論的に特定の属性を定義することまではしない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This specification registers the &lt;g1&gt;&lt;g2&gt;application/activity+json&lt;/g2&gt;&lt;/g1&gt; MIME Media Type specifically for identifying documents conforming to the Activity Streams 2.0 format.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>この仕様は、Activity Streams 2.0 型式に準拠した文書を識別するために &lt;g1&gt;&lt;g2&gt;application/activity+json&lt;/g2&gt;&lt;/g1&gt; MIME Media Type を 登録する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This specification stops short of defining semantically specific properties for most of these activities.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>この仕様は、これらのアクティビティのほとんどについて特定の属性を 意味論的に定義するには至っていない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This specification stops short of defining semantically specific properties for most of these objects.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>この仕様は、これらのアクティビティのほとんどについて特定の属性を 意味論的に定義するには至っていない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This specification uses IRIs [&lt;g1&gt;&lt;g2&gt;RFC3987&lt;/g2&gt;&lt;/g1&gt;].</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>この仕様は IRI [&lt;g1&gt;&lt;g2&gt;RFC3987&lt;/g2&gt;&lt;/g1&gt;] を 使っている。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This version:</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>This version:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Unification of "verb" and "objectType" to "type"</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>"verb" と "objectType" の "type" への統一</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Using paging with an &lt;g1&gt;OrderedCollection&lt;/g1&gt; can be tricky because there are no guarantees that implementations will process the sequence of pages in any predictable order.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>&lt;g1&gt;OrderedCollection&lt;/g1&gt; のページングはトリッキーな場合がある; 実装がページの並びを何らかの推測可能な順序で処理することが 保証されないからである。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>VCard [ &lt;g3&gt;&lt;g4&gt;vcard-rdf&lt;/g4&gt;&lt;/g3&gt;] SHOULD be used to provide additional metadata for &lt;g5&gt;Person&lt;/g5&gt;, &lt;g6&gt;Group&lt;/g6&gt;, and &lt;g7&gt;Organization&lt;/g7&gt; instances.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240115T052718Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>&lt;g5&gt;Person&lt;/g5&gt;, &lt;g6&gt;Group&lt;/g6&gt;, &lt;g7&gt;Organization&lt;/g7&gt; 実体の 追加メタデータとして提供するために VCard [[&lt;g3&gt;&lt;g4&gt;vcard-rdf&lt;/g4&gt;&lt;/g3&gt;]] が使われるべきである(SHOULD)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>W3C</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240103T190913Z" creationid="shira" creationdate="20240103T190913Z">
+        <seg>W3C</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>When a JSON-LD enabled Activity Streams 2.0 implementation encounters a JSON document identified using the " &lt;g1&gt;application/activity+json&lt;/g1&gt;" MIME media type, and that document does not contain a &lt;g2&gt;@context&lt;/g2&gt; property whose value includes a reference to the normative &lt;g3&gt;Activity Streams 2.0 JSON-LD @context definition&lt;/g3&gt;, the implementation MUST assume that the normative @context definition still applies.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T200713Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>JSON-LD を有効にした Activity Streams 2.0 実装が "&lt;g1&gt;application/activity+json&lt;/g1&gt;" MIME メディアタイプを使って 識別された JSON ドキュメントに遭遇し、 そのドキュメントに標準的な &lt;g3&gt;Activity Streams 2.0 JSON-LD @context definition&lt;/g3&gt; を参照する値を持つ &lt;g2&gt;@context&lt;/g2&gt; 属性がない場合、 実装はそれでも標準的な @context 定義があるものと仮定しなければならない(MUST)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>When an implementation uses an extension type that overlaps with a core vocabulary type, the implementation MUST also specify the core vocabulary type.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T212159Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>実装がコア語彙型と重複する拡張型を使用する場合、実装はコア語彙型も指定しなければならない(MUST)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>When encountered in an Activity Streams 2.0 document, they SHOULD be processed in accordance to the guidelines listed in &lt;g5&gt;&lt;g6&gt;B.&lt;/g6&gt; &lt;g7&gt;Deprecated Activity Streams 1.0 Syntax&lt;/g7&gt;&lt;/g5&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T200011Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>Activity Streams 2.0 文書でこれらに遭遇した場合、&lt;g5&gt;&lt;g6&gt;B.&lt;/g6&gt; &lt;g7&gt;Deprecated Activity Streams 1.0 Syntax&lt;/g7&gt;&lt;/g5&gt;に上げられているガイドラインに従って 処理されるべきである(SHOULD)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>When serialized, absent properties are represented by either (a) setting the property value to null, or (b) by omitting the property declaration altogether at the option of the publisher.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>直列化されるとき、値の無い属性は、 (a) 属性の値を null に設定するか、 (b) 属性宣言自体を省略するかで表現され、 これは発行者の選択である。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>When using [&lt;g1&gt;&lt;g2&gt;JSON-LD&lt;/g2&gt;&lt;/g1&gt;] mechanisms to produce or consume Activity Streams 2.0 documents, the &lt;g3&gt;@language&lt;/g3&gt; property MAY be used within a &lt;g4&gt;@context&lt;/g4&gt; to identify the default language.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>Activity Streams 2.0 文書を生成または処理するのに [&lt;g1&gt;&lt;g2&gt;JSON-LD&lt;/g2&gt;&lt;/g1&gt;] 機構を使う場合、 デフォルト言語を識別するために &lt;g3&gt;@context&lt;/g3&gt; の中で &lt;g4&gt;@language&lt;/g4&gt; 属性を使っても良い(MAY)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Where such overlap exists, for the sake of consistent interoperability, implementations MUST favor the use of properties defined by the Activity Vocabulary.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>そのような重なりが存在する場所では、一貫した相互運用性のために、 Activity Vocabulary て定義されている属性の仕様を 優先しなければならない(MUST)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Whether ordered or not, the pages of a &lt;g1&gt;Collection&lt;/g1&gt; are typically arranged in a sequence (either a singly or doubly-linked list).</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>順序付きでも順序なしでも、 &lt;g1&gt;Collection&lt;/g1&gt; のページは 並びに配置される (シングルリンクリストかダブルリンクリスト)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>While other serialization forms are possible, such alternatives are not discussed by this document.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>他の直列化形式も可能であるが、そのような選択肢はこの文書では議論しない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Within the JSON serialization, they are expressed as either (1) a single JSON string or (2) a JSON object mapping well-formed [&lt;g2&gt;&lt;g3&gt;BCP47&lt;/g3&gt;&lt;/g2&gt;] Language-Tags to localized, equivalent translations of the same string value.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>JSON シリアル化の中で、これらは以下のどちらかで表現される: (1) 単一の JSON 文字列、または (2) 同じ文字列値の地域化された等価な翻訳への整形された [&lt;g2&gt;&lt;g3&gt;BCP47&lt;/g3&gt;&lt;/g2&gt;] Language-Tags にマッピングされたJSONオブジェクト。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>World Wide Web Consortium</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>World Wide Web Consortium</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>or (b) any of the types included in the value of the &lt;g5&gt;type&lt;/g5&gt; property are defined as extensions of &lt;g6&gt;Link&lt;/g6&gt; (see &lt;g7&gt;Mention&lt;/g7&gt; for instance); otherwise the JSON object is considered an instance or extension of &lt;g8&gt;&lt;g9&gt;Object&lt;/g9&gt;&lt;/g8&gt;.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240114T202047Z" creationid="shira" creationdate="20240114T202047Z">
+        <seg>または (b) &lt;g5&gt;type&lt;/g5&gt; 属性の値が、&lt;g6&gt;Link&lt;/g6&gt; の拡張として定義されている型 (例えば、 &lt;g7&gt;Mention&lt;/g7&gt; を参照のこと); さもなければこの JSON オブジェクトは &lt;g8&gt;&lt;g9&gt;Object&lt;/g9&gt;&lt;/g8&gt; の実体または 拡張である。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>profile: The profile parameter for the application/activity+json media type allows one or more profile URIs to be specified.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
+        <seg>profile: application/activity+json メディアタイプの profile 引数は 一つ以上のプロファイル URI を指定できる。</seg>
+      </tuv>
+    </tu>
+<!-- Alternative translations -->
+  </body>
+</tmx>
