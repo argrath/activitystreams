@@ -1,0 +1,2523 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr" typeof="bibo:Document w3p:REC" prefix="bibo: http://purl.org/ontology/bibo/ w3p: http://www.w3.org/2001/02pd/rec54#">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta lang="" property="dc:language" content="en">
+  <style>
+    /*
+
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+
+    .hljs {
+      display: block;
+      overflow-x: auto;
+      padding: 0.5em;
+      color: #333;
+      background: #f8f8f8;
+    }
+
+    .hljs-comment,
+    .hljs-quote {
+      color: #998;
+      font-style: italic;
+    }
+
+    .hljs-keyword,
+    .hljs-selector-tag,
+    .hljs-subst {
+      color: #333;
+      font-weight: bold;
+    }
+
+    .hljs-number,
+    .hljs-literal,
+    .hljs-variable,
+    .hljs-template-variable,
+    .hljs-tag .hljs-attr {
+      color: #008080;
+    }
+
+    .hljs-string,
+    .hljs-doctag {
+      color: #d14;
+    }
+
+    .hljs-title,
+    .hljs-section,
+    .hljs-selector-id {
+      color: #900;
+      font-weight: bold;
+    }
+
+    .hljs-subst {
+      font-weight: normal;
+    }
+
+    .hljs-type,
+    .hljs-class .hljs-title {
+      color: #458;
+      font-weight: bold;
+    }
+
+    .hljs-tag,
+    .hljs-name,
+    .hljs-attribute {
+      color: #000080;
+      font-weight: normal;
+    }
+
+    .hljs-regexp,
+    .hljs-link {
+      color: #009926;
+    }
+
+    .hljs-symbol,
+    .hljs-bullet {
+      color: #990073;
+    }
+
+    .hljs-built_in,
+    .hljs-builtin-name {
+      color: #0086b3;
+    }
+
+    .hljs-meta {
+      color: #999;
+      font-weight: bold;
+    }
+
+    .hljs-deletion {
+      background: #fdd;
+    }
+
+    .hljs-addition {
+      background: #dfd;
+    }
+
+    .hljs-emphasis {
+      font-style: italic;
+    }
+
+    .hljs-strong {
+      font-weight: bold;
+    }
+  </style>
+  <style>
+    /* --- EXAMPLES --- */
+
+    div.example-title {
+      min-width: 7.5em;
+      color: #b9ab2d;
+    }
+
+    div.example-title span {
+      text-transform: uppercase;
+    }
+
+    aside.example,
+    div.example,
+    div.illegal-example {
+      padding: 0.5em;
+      margin: 1em 0;
+      position: relative;
+      clear: both;
+    }
+
+    div.illegal-example {
+      color: red
+    }
+
+    div.illegal-example p {
+      color: black
+    }
+
+    aside.example,
+    div.example {
+      padding: .5em;
+      border-left-width: .5em;
+      border-left-style: solid;
+      border-color: #e0cb52;
+      background: #fcfaee;
+    }
+
+    aside.example div.example {
+      border-left-width: .1em;
+      border-color: #999;
+      background: #fff;
+    }
+
+    aside.example div.example div.example-title {
+      color: #999;
+    }
+  </style>
+  <style>
+    /* --- ISSUES/NOTES --- */
+
+    div.issue-title,
+    div.note-title,
+    div.ednote-title,
+    div.warning-title {
+      padding-right: 1em;
+      min-width: 7.5em;
+      color: #b9ab2d;
+    }
+
+    div.issue-title {
+      color: #e05252;
+    }
+
+    div.note-title,
+    div.ednote-title {
+      color: #2b2;
+    }
+
+    div.warning-title {
+      color: #f22;
+    }
+
+    div.issue-title span,
+    div.note-title span,
+    div.ednote-title span,
+    div.warning-title span {
+      text-transform: uppercase;
+    }
+
+    div.note,
+    div.issue,
+    div.ednote,
+    div.warning {
+      margin-top: 1em;
+      margin-bottom: 1em;
+    }
+
+    .note>p:first-child,
+    .ednote>p:first-child,
+    .issue>p:first-child,
+    .warning>p:first-child {
+      margin-top: 0
+    }
+
+    .issue,
+    .note,
+    .ednote,
+    .warning {
+      padding: .5em;
+      border-left-width: .5em;
+      border-left-style: solid;
+    }
+
+    div.issue,
+    div.note,
+    div.ednote,
+    div.warning {
+      padding: 1em 1.2em 0.5em;
+      margin: 1em 0;
+      position: relative;
+      clear: both;
+    }
+
+    span.note,
+    span.ednote,
+    span.issue,
+    span.warning {
+      padding: .1em .5em .15em;
+    }
+
+    .issue {
+      border-color: #e05252;
+      background: #fbe9e9;
+    }
+
+    .note,
+    .ednote {
+      border-color: #52e052;
+      background: #e9fbe9;
+    }
+
+    .warning {
+      border-color: #f11;
+      border-width: .2em;
+      border-style: solid;
+      background: #fbe9e9;
+    }
+
+    .warning-title:before {
+      content: "⚠";
+      /*U+26A0 WARNING SIGN*/
+      font-size: 3em;
+      float: left;
+      height: 100%;
+      padding-right: .3em;
+      vertical-align: top;
+      margin-top: -0.5em;
+    }
+
+    li.task-list-item {
+      list-style: none;
+    }
+
+    input.task-list-item-checkbox {
+      margin: 0 0.35em 0.25em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <title>Activity Streams 2.0</title>
+
+
+
+  <style>
+    thead {
+      background: #005A9C;
+      color: white;
+    }
+
+    thead th {
+      font-weight: normal;
+    }
+
+    table,
+    td,
+    th {
+      border: 1px solid gray
+    }
+
+    table {
+      width: 100%;
+    }
+
+    td {
+      vertical-align: top;
+      padding: 5px;
+    }
+
+    .nanotabs>ul li {
+      float: left;
+      list-style: none;
+    }
+
+    .nanotabs>ul li a {
+      display: block;
+      padding: 4px 6px;
+      margin-right: 3px;
+      border-left: 1px solid #b9ab2d;
+      border-right: 1px solid #b9ab2d;
+      border-top: 1px solid #b9ab2d;
+      border-collapse: collapse;
+      background: #fcfaee;
+      color: #b9ab2d;
+      font-family: sans-serif;
+      text-decoration: none;
+    }
+
+    .nanotabs>ul li a:hover {
+      background: #FFFCE5;
+      color: #550;
+    }
+
+    .nanotabs>ul li a.selected {
+      background: #555;
+      color: #FFF;
+    }
+  </style>
+  <style id="respec-mainstyle">
+    /*****************************************************************
+ * ReSpec 3 CSS
+ * Robin Berjon - http://berjon.com/
+ *****************************************************************/
+    /* Override code highlighter background */
+
+    .hljs {
+      background: transparent !important;
+    }
+    /* --- INLINES --- */
+
+    em.rfc2119 {
+      text-transform: lowercase;
+      font-style: normal;
+      color: #900;
+    }
+
+    h1 abbr,
+    h2 abbr,
+    h3 abbr,
+    h4 abbr,
+    h5 abbr,
+    h6 abbr,
+    a abbr {
+      border: none;
+    }
+
+    dfn {
+      font-weight: bold;
+    }
+
+    a.internalDFN {
+      color: inherit;
+      border-bottom: 1px solid #99c;
+      text-decoration: none;
+    }
+
+    a.externalDFN {
+      color: inherit;
+      border-bottom: 1px dotted #ccc;
+      text-decoration: none;
+    }
+
+    a.bibref {
+      text-decoration: none;
+    }
+
+    cite .bibref {
+      font-style: normal;
+    }
+
+    code {
+      color: #C83500;
+    }
+
+    th code {
+      color: inherit;
+    }
+    /* --- TOC --- */
+
+    .toc a,
+    .tof a {
+      text-decoration: none;
+    }
+
+    a .secno,
+    a .figno {
+      color: #000;
+    }
+
+    ul.tof,
+    ol.tof {
+      list-style: none outside none;
+    }
+
+    .caption {
+      margin-top: 0.5em;
+      font-style: italic;
+    }
+    /* --- TABLE --- */
+
+    table.simple {
+      border-spacing: 0;
+      border-collapse: collapse;
+      border-bottom: 3px solid #005a9c;
+    }
+
+    .simple th {
+      background: #005a9c;
+      color: #fff;
+      padding: 3px 5px;
+      text-align: left;
+    }
+
+    .simple th[scope="row"] {
+      background: inherit;
+      color: inherit;
+      border-top: 1px solid #ddd;
+    }
+
+    .simple td {
+      padding: 3px 10px;
+      border-top: 1px solid #ddd;
+    }
+
+    .simple tr:nth-child(even) {
+      background: #f0f6ff;
+    }
+    /* --- DL --- */
+
+    .section dd>p:first-child {
+      margin-top: 0;
+    }
+
+    .section dd>p:last-child {
+      margin-bottom: 0;
+    }
+
+    .section dd {
+      margin-bottom: 1em;
+    }
+
+    .section dl.attrs dd,
+    .section dl.eldef dd {
+      margin-bottom: 0;
+    }
+
+    #issue-summary>ul,
+    .respec-dfn-list {
+      column-count: 2;
+    }
+
+    #issue-summary li,
+    .respec-dfn-list li {
+      list-style: none;
+    }
+
+    @media print {
+      .removeOnSave {
+        display: none;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-REC">
+  <link rel="canonical" href="https://www.w3.org/TR/activitystreams-core/">
+  <meta name="generator" content="ReSpec 12.0.6">
+  <script id="initialUserConfig" type="application/json">
+    {
+      "specStatus": "REC",
+      "prEnd": "2017-05-11",
+      "crEnd": "2017-01-12",
+      "publishDate": "2017-05-23",
+      "license": "w3c-software-doc",
+      "edDraftURI": "http://w3c.github.io/activitystreams/core/",
+      "testSuiteURI": "https://github.com/w3c/activitystreams/tree/master/test",
+      "implementationReportURI": "https://github.com/w3c/activitystreams/tree/master/implementation-reports",
+      "errata": "https://github.com/w3c/activitystreams/blob/master/ERRATA.md",
+      "shortName": "activitystreams-core",
+      "editors": [
+      {
+        "name": "James M Snell",
+        "url": "http://jasnell.me",
+        "company": "IBM",
+        "companyUrl": "http://ibm.com",
+        "w3cid": "26988"
+      },
+      {
+        "name": "Evan Prodromou",
+        "url": "https://fuzzy.ai/about",
+        "company": "Fuzzy.ai",
+        "companyUrl": "https://fuzzy.ai",
+        "w3cid": "43626"
+      }],
+      "maxTocLevel": 2,
+      "previousMaturity": "PR",
+      "previousPublishDate": "2017-04-13",
+      "wg": "Social Web Working Group",
+      "wgURI": "https://www.w3.org/Social/WG",
+      "wgPublicList": "public-socialweb",
+      "wgPatentURI": "https://www.w3.org/2004/01/pp-impl/72531/status",
+      "localBiblio":
+      {
+        "AS1":
+        {
+          "title": "JSON Activity Streams 1.0",
+          "href": "http://activitystrea.ms/specs/json/1.0/",
+          "authors": [
+            "J. Snell",
+            "M. Atkins",
+            "W. Norris",
+            "C. Messina",
+            "M. Wilkinson",
+            "R. Dolin"
+          ],
+          "status": "unofficial",
+          "publisher": "http://activitystrea.ms"
+        },
+        "SWP":
+        {
+          "title": "Social Web Protocols",
+          "href": "https://www.w3.org/TR/social-web-protocols/",
+          "authors": [
+            "A. Guy"
+          ]
+        }
+      },
+      "otherLinks": [
+      {
+        "key": "Repository",
+        "data": [
+        {
+          "value": "Github",
+          "href": "https://github.com/w3c/activitystreams"
+        },
+        {
+          "value": "Issues",
+          "href": "https://github.com/w3c/activitystreams/issues"
+        },
+        {
+          "value": "Commits",
+          "href": "https://github.com/w3c/activitystreams/commits/master"
+        }]
+      },
+      {
+        "key": "Test",
+        "data": [
+        {
+          "value": "Validator",
+          "href": "https://as2.rocks/"
+        }]
+      }]
+    }
+  </script>
+</head>
+<body aria-busy="false" class="h-entry" id="respecDocument">
+<aside>これは<a href="https://www.w3.org/TR/2017/REC-activitystreams-core-20170523/">Activity Streams 2.0</a>の参考日本語訳です。正式な文書は英語版です。この文書には翻訳による誤りが含まれることがあります。この文書に関する連絡は<a href = "https://github.com/argrath/activitystream">GitHubリポジトリ</a>にお願いします。</aside>
+<hr>
+  <div class="head" role="contentinfo" id="respecHeader">
+    <p>
+<a class="logo" href="https://www.w3.org/"><img width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt="W3C"></a>
+</p>
+    <h1 class="title p-name" id="title" property="dcterms:title">Activity Streams 2.0</h1>
+    <h2 id="w3c-recommendation-23-may-2017"><abbr title="World Wide Web Consortium">W3C</abbr> Recommendation<time property="dcterms:issued" class="dt-published" datetime="2017-05-23">23 May 2017</time></h2>
+    <dl>
+      <dt>This version:</dt>
+      <dd><a class="u-url" href="https://www.w3.org/TR/2017/REC-activitystreams-core-20170523/">https://www.w3.org/TR/2017/REC-activitystreams-core-20170523/</a></dd>
+      <dt>Latest published version:</dt>
+      <dd><a href="https://www.w3.org/TR/activitystreams-core/">https://www.w3.org/TR/activitystreams-core/</a></dd>
+      <dt>Latest editor's draft:</dt>
+      <dd><a href="http://w3c.github.io/activitystreams/core/">http://w3c.github.io/activitystreams/core/</a></dd>
+      <dt>Test suite:</dt>
+      <dd><a href="https://github.com/w3c/activitystreams/tree/master/test">https://github.com/w3c/activitystreams/tree/master/test</a></dd>
+      <dt>Implementation report:</dt>
+      <dd><a href="https://github.com/w3c/activitystreams/tree/master/implementation-reports">https://github.com/w3c/activitystreams/tree/master/implementation-reports</a></dd>
+      <dt>Previous version:</dt>
+      <dd><a rel="dcterms:replaces" href="https://www.w3.org/TR/2017/PR-activitystreams-core-20170413/">https://www.w3.org/TR/2017/PR-activitystreams-core-20170413/</a></dd>
+      <dt>Editors:</dt>
+      <dd class="p-author h-card vcard" property="bibo:editor" resource="_:editor0" data-editor-id="26988"><span property="rdf:first" typeof="foaf:Person"><meta property="foaf:name" content="James M Snell"><a class="u-url url p-name fn" property="foaf:homepage" href="http://jasnell.me">James M Snell</a>, IBM</span> <span property="rdf:rest" resource="_:editor1"></span></dd>
+      <dd class="p-author h-card vcard" resource="_:editor1" data-editor-id="43626"><span property="rdf:first" typeof="foaf:Person"><meta property="foaf:name" content="Evan Prodromou"><a class="u-url url p-name fn" property="foaf:homepage" href="https://fuzzy.ai/about">Evan Prodromou</a>, Fuzzy.ai</span> <span property="rdf:rest" resource="rdf:nil"></span></dd>
+
+      <dt>Repository:</dt>
+      <dd><a href="https://github.com/w3c/activitystreams"> Github </a></dd>
+      <dd><a href="https://github.com/w3c/activitystreams/issues"> Issues </a></dd>
+      <dd><a href="https://github.com/w3c/activitystreams/commits/master"> Commits </a></dd>
+      <dt>Test:</dt>
+      <dd><a href="https://as2.rocks/"> Validator </a></dd>
+    </dl>
+    <p>
+Please check the <a href="https://github.com/w3c/activitystreams/blob/master/ERRATA.md"><strong>errata</strong></a> for any errors or issues reported since publication.
+</p>
+    <p>
+The English version of this specification is the only normative version. Non-normative <a href="https://www.w3.org/2003/03/Translations/byTechnology?technology=https://www.w3.org/TR/activitystreams-vocabulary/">translations</a> may also be available.
+</p>
+    <p class="copyright"><a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2017 <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>). <abbr title="World Wide Web Consortium">W3C</abbr> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a> rules apply.
+</p>
+    <hr title="Separator for header">
+  </div>
+
+  <section id="abstract" class="introductory" property="dc:abstract">
+    <h2 id="h-abstract" resource="#h-abstract"><span property="xhv:role" resource="xhv:heading">要約</span></h2>
+    <p>
+This specification details a model for representing potential and completed activities using the JSON format. It is intended to be used with vocabularies that detail the structure of activities, and define specific types of activities.
+</p>
+
+    <section id="authorsnote" class="informative" typeof="bibo:Chapter" resource="#authorsnote" property="bibo:hasPart">
+      <h3 id="h-authorsnote" resource="#h-authorsnote"><span property="xhv:role" resource="xhv:heading">Author's Note</span></h3>
+      <p>
+<em>この節は非規範的である。</em>
+</p>
+      <p>
+This draft is heavily influenced by the JSON Activity Streams 1.0 specification originally co-authored by Martin Atkins, Will Norris, Chris Messina, Monica Wilkinson, Rob Dolin and James Snell. The author is very thankful for their significant contributions and gladly stands on their shoulders. Some portions of the original text of Activity Streams 1.0 are used in this document.
+</p>
+    </section>
+  </section>
+
+  <section id="sotd" class="introductory">
+    <h2 id="h-sotd" resource="#h-sotd"><span property="xhv:role" resource="xhv:heading">Status of This Document</span></h2>
+    <p>
+<em>この節は、発行時点でのこの文書の状態を説明している。他の文書がこの文書に取って代わることがある。現在の <abbr title="World Wide Web Consortium">W3C</abbr> による発行物と この技術報告の最新版は https://www.w3.org/TR/ の <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> にある。</em>
+</p>
+
+
+    <p>
+この文書は <a href="https://www.w3.org/Social/WG">Social Web Working Group</a> によって 勧告として発行された。この文書に関するコメントを歓迎する。<a href="mailto:public-socialweb@w3.org">public-socialweb@w3.org</a>(<a href="mailto:public-socialweb-request@w3.org?subject=subscribe">購読</a>,<a href="https://lists.w3.org/Archives/Public/public-socialweb/">アーカイブ</a>)に送ってほしい。
+</p>
+    <p>
+Working Group の <a href="https://github.com/w3c/activitystreams/tree/master/implementation-reports">implementation report</a> を参照のこと。
+</p>
+    <p>
+この文書は、<abbr title="World Wide Web Consortium">W3C</abbr>メンバー、ソフトウェア開発者、およびその他の<abbr title="World Wide Web Consortium">W3C</abbr>グループと関係者によってレビューされ、<abbr title="World Wide Web Consortium">W3C</abbr>勧告としてディレクターによって承認されています。これは安定した文書であり、参考資料として使用したり、他の文書から引用したりすることができる。この勧告を作成する上での<abbr title="World Wide Web Consortium">W3C</abbr>の役割は、仕様に注意を喚起し、その広範な展開を促進することである。これは、Webの機能性と相互運用性を向上させる。
+</p>
+    <p>
+この文書は、<a id="sotd_patent" property="w3p:patentRules" href="https://www.w3.org/Consortium/Patent-Policy-20040205/">5 February 2004 <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>の下で活動しているグループによって作成された。<abbr title="World Wide Web Consortium">W3C</abbr>は、グループの成果物に関連して作成された<a href="https://www.w3.org/2004/01/pp-impl/72531/status" rel="disclosure">特許開示の公開リスト</a>を保守しており、そのページには特許を開示するための手順も含まれている。<a href="https://www.w3.org/Consortium/Patent-Policy-20040205/#def-essential">Essential Claim(s)</a>を含むと信じる特許について実際の知識を有する者は、<a href="https://www.w3.org/Consortium/Patent-Policy-20040205/#sec-Disclosure"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy第6条</a>に従って情報を開示しなければならない。
+</p>
+    <p>
+この文書は、<a id="w3c_process_revision" href="https://www.w3.org/2017/Process-20170301/">1 March 2017 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>に準拠する。
+</p>
+
+  </section>
+  <nav id="toc">
+    <h2 class="introductory" id="table-of-contents" resource="#table-of-contents"><span property="xhv:role" resource="xhv:heading">目次</span></h2>
+    <ol class="toc" role="directory">
+      <li class="tocline"><a href="#introduction" class="tocxref"><span class="secno">1. </span>概要</a><ol class="toc">
+          <li class="tocline"><a href="#swp" class="tocxref"><span class="secno">1.1 </span>他のソーシャル標準との関係</a></li>
+          <li class="tocline"><a href="#activitystreams-1.0" class="tocxref"><span class="secno">1.2 </span>JSON Activity Streams 1.0 との関係</a></li>
+        </ol>
+      </li>
+      <li class="tocline"><a href="#syntaxconventions" class="tocxref"><span class="secno">2. </span>直列化</a><ol class="toc">
+          <li class="tocline"><a href="#jsonld" class="tocxref"><span class="secno">2.1 </span>JSON-LD</a><ol class="toc"></ol>
+          </li>
+          <li class="tocline"><a href="#urls" class="tocxref"><span class="secno">2.2 </span>IRI と URL</a></li>
+          <li class="tocline"><a href="#dates" class="tocxref"><span class="secno">2.3 </span>日付と時刻</a></li>
+        </ol>
+      </li>
+      <li class="tocline"><a href="#examples" class="tocxref"><span class="secno">3. </span>例</a><ol class="toc">
+          <li class="tocline"><a href="#example-1" class="tocxref"><span class="secno">3.1 </span>最小限のアクティビティ</a></li>
+          <li class="tocline"><a href="#example-2" class="tocxref"><span class="secno">3.2 </span>追加の詳細付きの基本的なアクティビティ</a></li>
+          <li class="tocline"><a href="#example-3" class="tocxref"><span class="secno">3.3 </span>拡張したアクティビティ</a></li>
+        </ol>
+      </li>
+      <li class="tocline"><a href="#model" class="tocxref"><span class="secno">4. </span>モデル</a><ol class="toc">
+          <li class="tocline"><a href="#object" class="tocxref"><span class="secno">4.1 </span><span data-dfn-type="dfn">Object</span></a><ol class="toc"></ol>
+          </li>
+          <li class="tocline"><a href="#link" class="tocxref"><span class="secno">4.2 </span><span data-dfn-type="dfn">Link</span></a></li>
+          <li class="tocline"><a href="#actors" class="tocxref"><span class="secno">4.3 </span><span data-dfn-type="dfn">Actor</span></a></li>
+          <li class="tocline"><a href="#activities" class="tocxref"><span class="secno">4.4 </span><span data-dfn-type="dfn">Activity</span></a></li>
+          <li class="tocline"><a href="#intransitiveactivities" class="tocxref"><span class="secno">4.5 </span><span data-dfn-type="dfn">IntransitiveActivity</span></a></li>
+          <li class="tocline"><a href="#collections" class="tocxref"><span class="secno">4.6 </span><span data-dfn-type="dfn">Collection</span></a><ol class="toc"></ol>
+          </li>
+          <li class="tocline"><a href="#naturalLanguageValues" class="tocxref"><span class="secno">4.7 </span>自然言語値</a><ol class="toc"></ol>
+          </li>
+          <li class="tocline"><a href="#marking-up-language" class="tocxref"><span class="secno">4.8 </span>言語のマークアップ</a></li>
+        </ol>
+      </li>
+      <li class="tocline"><a href="#extensibility" class="tocxref"><span class="secno">5  </span>拡張性</a><ol class="toc">
+          <li class="tocline"><a href="#compact-uris" class="tocxref"><span class="secno">5.1 </span>Support for Compact URIs</a></li>
+          <li class="tocline"><a href="#extension-round-trip" class="tocxref"><span class="secno">5.2 </span>Re-serialization of Extensions</a></li>
+        </ol>
+      </li>
+      <li class="tocline"><a href="#privacy" class="tocxref"><span class="secno">6. </span>Privacy Considerations</a></li>
+      <li class="tocline"><a href="#security-considerations" class="tocxref"><span class="secno">7  </span>セキュリティ上の考慮事項</a></li>
+      <li class="tocline"><a href="#iana" class="tocxref"><span class="secno">8. </span>IANA Considerations</a><ol class="toc">
+          <li class="tocline"><a href="#media-type" class="tocxref"><span class="secno">8.1 </span><code>application/activity+json</code> メディア型</a></li>
+        </ol>
+      </li>
+      <li class="tocline"><a href="#conformance" class="tocxref"><span class="secno">9. </span>適合性</a><ol class="toc">
+          <li class="tocline"><a href="#documents" class="tocxref"><span class="secno">9.1</span>文書</a></li>
+          <li class="tocline"><a href="#implementations" class="tocxref"><span class="secno">9.2 </span>実装</a><ol class="toc"></ol>
+          </li>
+        </ol>
+      </li>
+      <li class="tocline"><a href="#acknowledgements" class="tocxref"><span class="secno">A. </span>謝辞</a></li>
+      <li class="tocline"><a href="#activitystreams-1.0a" class="tocxref"><span class="secno">B. </span>Deprecated Activity Streams 1.0 Syntax</a></li>
+      <li class="tocline"><a href="#example-using-multiple-vocabularies" class="tocxref"><span class="secno">C. </span>Example using Multiple Vocabularies</a></li>
+      <li class="tocline"><a href="#changelog" class="tocxref"><span class="secno">D. </span>Changelog</a></li>
+      <li class="tocline"><a href="#tof" class="tocxref"><span class="secno">E. </span>Table of Figures</a></li>
+      <li class="tocline"><a href="#references" class="tocxref"><span class="secno">F. </span>参考文献</a><ol class="toc">
+          <li class="tocline"><a href="#normative-references" class="tocxref"><span class="secno">F.1 </span>引用規格</a></li>
+          <li class="tocline"><a href="#informative-references" class="tocxref"><span class="secno">F.2 </span>参考規格</a></li>
+        </ol>
+      </li>
+    </ol>
+  </nav>
+
+
+
+  <section id="introduction" typeof="bibo:Chapter" resource="#introduction" property="bibo:hasPart">
+    <!--OddPage-->
+    <h2 id="h-introduction" resource="#h-introduction"><span property="xhv:role" resource="xhv:heading"><span class="secno">1. </span>概要</span></h2>
+    <p>
+最も基本的な感覚では 「アクティビティ」(Activity) は行動の意味論的な 記述である。この仕様のゴールは、アクティビティについて、 リッチで人間に優しいけれども、機械で処理可能かつ拡張可能な形で メタデータを記述するのに十分な JSON ベースの文法を提供することである。これには、アクティビティに関する自然言語記述やビジュアル表現の構築、 様々な型のオブジェクトと行動可能な情報の関連付け、 アクティビティログの通信や記録、 可能性のある行動の他のアプリケーションへの委譲を含む。
+</p>
+
+    <p>
+この文書における次の各キーワード「しなければならない(MUST)」、 「してはならない(MUST NOT)」、 「要求されている(REQUIRED)」、 「することになる(SHALL)」、 「することはない(SHALL NOT)」、 「する必要がある(SHOULD)」、 「しないほうがよい(SHOULD NOT)」、 「推奨される(RECOMMENDED)」、 「してもよい(MAY)」、 「選択できる(OPTIONAL)」は、 [<cite><a class="bibref" href="#bib-RFC2119">RFC2119</a></cite>] で述べられているように解釈されるべきものである。
+</p>
+
+    <section id="swp" class="informative" typeof="bibo:Chapter" resource="#swp" property="bibo:hasPart">
+
+      <h3 id="h-swp" resource="#h-swp"><span property="xhv:role" resource="xhv:heading"><span class="secno">1.1 </span>他のソーシャル標準との関係</span></h3>
+      <p>
+<em>この節は非規範的である。</em>
+</p>
+
+      <p>
+Activity Streams 2.0 はソーシャルデータ文法に適している。これは [<cite><a class="bibref" href="#bib-SWP">SWP</a></cite>] スイートの一部を形成する。
+</p>
+
+    </section>
+
+    <section id="activitystreams-1.0" class="informative" typeof="bibo:Chapter" resource="#activitystreams-1.0" property="bibo:hasPart">
+
+      <h3 id="h-activitystreams-1.0" resource="#h-activitystreams-1.0"><span property="xhv:role" resource="xhv:heading"><span class="secno">1.2 </span>JSON Activity Streams 1.0 との関係</span></h3>
+      <p>
+<em>この節は非規範的である。</em>
+</p>
+
+      <p>
+JSON Activity Streams 1.0 [<cite><a class="bibref" href="#bib-AS1">AS1</a></cite>] 仕様は 2011 年 5 月に発行され、 完全なアクティビティの表現のための、基準となる拡張可能な文法を提供した。この仕様は、広範な実装、コミュニティのフィードバック、および他のさまざまなコミュニティからの関連する進行中の作業を通じて学んだ教訓を組み込むことによって、その初期の基盤の上に構築されている。
+</p>
+
+      <p>
+特に Activity Streams 1.0 から Activity Streams 2.0 への進化の動機となった 問題は次のようなものである:
+</p>
+
+      <ul>
+        <li>アクティビティの多言語表現</li>
+        <li>"verb" と "objectType" の "type" への統一</li>
+        <li>ソーシャルなユースケースの中心でないアクティビティ型とオブジェクト型の削除</li>
+        <li>リッチに表現されたリンクのための Link 型の導入</li>
+        <li>関係者指定のコア仕様への結合</li>
+        <li>全てのアクティビティを取り消しできるようにするための一般化された "Undo" アクティビティ型</li>
+        <li>一貫したコレクションとページング表現</li>
+        <li>オブジェクト型とアクティビティ型の規定語彙の名前空間の形式化</li>
+        <li>他の型と属性のための拡張フレームワーク</li>
+        <li>JSON-LD との互換性</li>
+      </ul>
+
+      <p>
+<code>displayName</code>, <code>verb</code>, <code>title</code>, <code>objectType</code> という用語は 予約語として扱われるべきであり、 Activity Streams 2.0 文書の中で使われるべきではない(SHOULD NOT)。Activity Streams 2.0 文書でこれらに遭遇した場合、<a href="#activitystreams-1.0a" class="sec-ref"><span class="secno">B.</span> <span class="sec-title">Deprecated Activity Streams 1.0 Syntax</span></a>に上げられているガイドラインに従って 処理されるべきである(SHOULD)。
+</p>
+
+    </section>
+
+  </section>
+
+  <section id="syntaxconventions" typeof="bibo:Chapter" resource="#syntaxconventions" property="bibo:hasPart">
+
+    <!--OddPage-->
+    <h2 id="h-syntaxconventions" resource="#h-syntaxconventions"><span property="xhv:role" resource="xhv:heading"><span class="secno">2. </span>直列化</span></h2>
+
+    <p>
+この仕様は、[<cite><a class="bibref" href="#bib-JSON-LD">JSON-LD</a></cite>] 制限の部分集合に準拠するが JSON-LD 処理を要求しない <a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity Vocabulary</a> のための JSON [<cite><a class="bibref" href="#bib-RFC7159">RFC7159</a></cite>] ベースの直列化を記述する。他の直列化形式も可能であるが、そのような選択肢はこの文書では議論しない。
+</p>
+
+    <p>
+直列化されるとき、値の無い属性は、 (a) 属性の値を null に設定するか、 (b) 属性宣言自体を省略するかで表現され、 これは発行者の選択である。これらの表現は意味論的に等価である。属性が配列を持つ場合、その配列に値が無い場合は、 属性全体を省略するか値に null を設定することで表現しなければならない(MUST)。省略されたか明示的な null 値の適切な解釈は、 値が設定されなかったか、与えられた値が空または nil であったかということである。
+</p>
+
+    <p>
+<dfn data-dfn-type="dfn" id="dfn-activity-streams-document">Activity Streams 文書</dfn> とは、ルート値が (<a href="#collection" class="internalDFN" data-link-type="dfn">Collection</a> を含む)任意の型の Activity Streams <a href="#asobject" class="internalDFN" data-link-type="dfn">Object</a> で、 MIME メディアタイプが "<code>application/activity+json</code>" である JSON 文書である。
+</p>
+
+    <p>
+Activity Streams 2.0 文書は UTF-8 文字エンコーディングを使って 直列化しなければならない(MUST)。
+</p>
+
+    <section id="jsonld" typeof="bibo:Chapter" resource="#jsonld" property="bibo:hasPart">
+      <h3 id="h-jsonld" resource="#h-jsonld"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.1 </span>JSON-LD</span></h3>
+
+      <p>
+Activity Streams 2.0 文書の直列化された JSON 形式は、 少なくとも、<a href="https://www.w3.org/ns/activitystreams">ここ</a> で提供されている規定の JSON-LD @context 定義を使って、 標準の JSON-LD 1.0 Processing Algorithms と API [<cite><a class="bibref" href="#bib-JSON-LD-API">JSON-LD-API</a></cite>] Compaction Algorithm で生成されるものと矛盾しないものでなければならない(MUST)。実装は提供された @context を追加の @context で増加させてもよい(MAY)が、 規範的なコンテキストを上書きしたり変更してはならない (MUST NOT)。実装はまた、標準の JSON-LD アルゴリズムを使う消費者実装から 無視されるであろうことを理解した上で、JSON-LD @context に定義されていない 追加の属性と値を使ってもよい(MAY)。Activity Streams 2.0 文書の中での拡張の扱いに関するさらなる情報については <a href="#extensibility">Extensibility</a> 節を参照のこと。
+</p>
+
+      <p>
+JSON-LD は <a href="http://www.w3.org/TR/json-ld/#the-context">processing context</a> を 定義するために特別な <code>@context</code> 属性を使う。<code>@context</code> 属性の値は [<cite><a class="bibref" href="#bib-JSON-LD">JSON-LD</a></cite>] 仕様で定義されている。Activity Streams 2.0 文書を生成する実装は、 URL "<code>https://www.w3.org/ns/activitystreams</code>" を使って 標準の <a href="https://www.w3.org/ns/activitystreams">Activity Streams 2.0 JSON-LD @context 定義</a> への参照を含む値を <code>@context</code> 属性に 指定するべきである(SHOULD)。実装は代わりに代替URL "<code>http://www.w3.org/ns/activitystreams</code>" を 使うことができる(MAY)。これは文字列、オブジェクト、配列を使って行える。
+</p>
+
+      <section id="example-1context" typeof="bibo:Chapter" resource="#example-1context" property="bibo:hasPart">
+        <h4 id="h-example-1context" resource="#h-example-1context"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.1.1 </span>文字列のコンテキスト</span></h4>
+
+        <figure id="fig-document-providing-a-context-as-a-string.x">
+          <figcaption>Figure <span class="figno">1</span> <span class="fig-title"> コンテキストを文字列として提供している文書。</span></figcaption>
+          <div id="ex1-context" style="display: block;">
+            <div class="example">
+              <div class="example-title marker"><span>Example 1</span></div>
+              <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+  <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"A note"</span>,
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Note"</span>,
+  <span class="hljs-attr">"content"</span>: <span class="hljs-string">"My dog has fleas."</span>
+}</pre>
+            </div>
+          </div>
+        </figure>
+      </section>
+
+      <section id="example-2context" typeof="bibo:Chapter" resource="#example-2context" property="bibo:hasPart">
+        <h4 id="h-example-2context" resource="#h-example-2context"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.1.2 </span>オブジェクトのコンテキスト</span></h4>
+
+        <figure id="fig-document-providing-context-as-an-object-using-the-vocab-keyword-and-a-prefix-for-extension-terms.x">
+          <figcaption>Figure <span class="figno">2</span> <span class="fig-title"> 拡張用語のために <code>@vocab</code> キーワードと接頭辞を使ったオブジェクトで コンテキストを提供している文書。</span></figcaption>
+          <div id="ex2-context" style="display: block;">
+            <div class="example">
+              <div class="example-title marker"><span>Example 2</span></div>
+              <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"@context"</span>: {
+     <span class="hljs-attr">"@vocab"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+     <span class="hljs-attr">"ext"</span>: <span class="hljs-string">"https://canine-extension.example/terms/"</span>,
+     <span class="hljs-attr">"@language"</span>: <span class="hljs-string">"en"</span>
+  },
+  <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"A note"</span>,
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Note"</span>,
+  <span class="hljs-attr">"content"</span>: <span class="hljs-string">"My dog has fleas."</span>,
+  <span class="hljs-attr">"ext:nose"</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-attr">"ext:smell"</span>: <span class="hljs-string">"terrible"</span>
+}</pre>
+            </div>
+          </div>
+        </figure>
+      </section>
+
+      <section id="example-3context" typeof="bibo:Chapter" resource="#example-3context" property="bibo:hasPart">
+        <h4 id="h-example-3context" resource="#h-example-3context"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.1.3 </span>配列のコンテキスト</span></h4>
+
+        <figure id="fig-document-providing-context-as-an-array-and-including-an-alias-for-an-additional-term.x">
+          <figcaption>Figure <span class="figno">3</span> <span class="fig-title"> 追加の用語のための別名を含む配列としてコンテキストを提供している文書。</span></figcaption>
+          <div id="ex3-context" style="display: block;">
+            <div class="example">
+              <div class="example-title marker"><span>Example 3</span></div>
+              <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"@context"</span>: [
+     <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+     {
+      <span class="hljs-attr">"css"</span>: <span class="hljs-string">"http://www.w3.org/ns/oa#styledBy"</span>
+     }
+  ],
+  <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"A note"</span>,
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Note"</span>,
+  <span class="hljs-attr">"content"</span>: <span class="hljs-string">"My dog has fleas."</span>,
+  <span class="hljs-attr">"css"</span>: <span class="hljs-string">"http://www.csszengarden.com/217/217.css?v=8may2013"</span>
+}</pre>
+            </div>
+          </div>
+        </figure>
+      </section>
+
+      <p>
+JSON-LD を有効にした Activity Streams 2.0 実装が "<code>application/activity+json</code>" MIME メディアタイプを使って 識別された JSON ドキュメントに遭遇し、 そのドキュメントに標準的な <a href="https://www.w3.org/ns/activitystreams">Activity Streams 2.0 JSON-LD @context definition</a> を参照する値を持つ <code>@context</code> 属性がない場合、 実装はそれでも標準的な @context 定義があるものと仮定しなければならない(MUST)。
+</p>
+    </section>
+
+    <section id="urls" typeof="bibo:Chapter" resource="#urls" property="bibo:hasPart">
+      <h3 id="h-urls" resource="#h-urls"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.2 </span>IRI と URL</span></h3>
+
+      <p>
+この仕様は IRI [<cite><a class="bibref" href="#bib-RFC3987">RFC3987</a></cite>] を 使っている。全ての URI [<cite><a class="bibref" href="#bib-RFC3986">RFC3986</a></cite>] は IRI でもあるので、IRI という名前が付いているところでは URL を使うことが出来る。特別に考慮することが二つある: (1) URI ではない IRI が逆参照として与えられた場合、 [<cite><a class="bibref" href="#bib-RFC3987">RFC3987</a></cite>] の 3.1 節のステップを使って URI にマッピングしなければならず(MUST)、 (2) IRI が "id" 値として提供された場合、そのようにマッピングしてはならない(MUST NOT)。
+</p>
+
+      <p>
+相対 IRI (及び URL) 参照は Activity Streams 2.0 文書の中で 使うべきではない(SHOULD NOT); 多くの JSON パーサ実装は、相対参照を適切に解決するために必要な 基底コンテキストを確実に保存する能力を持たないからである。
+</p>
+    </section>
+
+    <section id="dates" typeof="bibo:Chapter" resource="#dates" property="bibo:hasPart">
+      <h3 id="h-dates" resource="#h-dates"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3 </span>日付と時刻</span></h3>
+      <p>
+全ての日付と時刻の属性は [<cite><a class="bibref" href="#bib-RFC3339">RFC3339</a></cite>] の "date-time" 生成に従わなければならない(MUST); 但し例外として秒は省略しても良い(MAY)。日付と時刻を分けるために大文字の "T" を使わなければならず(MUST)、 タイムゾーンオフセット値がない場合は大文字の "Z" を 使わなければならない(MUST)。
+</p>
+      <p>
+これは以下の [<cite><a class="bibref" href="#bib-ABNF">ABNF</a></cite>] 文法記述を使って指定される。"time-hour", "time-minute", "time-second", "time-secfrac", "time-offset", "full-date" 構造は [<cite><a class="bibref" href="#bib-RFC3339">RFC3339</a></cite>] で定義される。
+</p>
+      <pre aria-busy="false" aria-live="polite" class="hljs javascript">as2-partial-time = time-hour <span class="hljs-string">":"</span> time-minute [<span class="hljs-string">":"</span> time-second]
+                   [time-secfrac]
+as2-full-time    = as2-partial-time time-offset
+as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
+</pre>
+
+      <p>
+`time-offset` 要素はタイムゾーンとは関係なく、 `time-offset` 要素を含む時刻はタイムスタンプとして上手く動作するが、 追加の情報と処理なしにこれとローカルの「壁時計時間」とを確実に変換することは できないということに注意することは重要である。
+</p>
+
+    </section>
+
+  </section>
+
+  <section id="examples" class="informative" typeof="bibo:Chapter" resource="#examples" property="bibo:hasPart">
+    <!--OddPage-->
+    <h2 id="h-examples" resource="#h-examples"><span property="xhv:role" resource="xhv:heading"><span class="secno">3. </span>例</span></h2>
+    <p>
+<em>この節は非規範的である。</em>
+</p>
+
+    <p>
+次に、様々な詳細度を持つ三つのアクティビティの例を挙げる。
+</p>
+
+    <p>
+それぞれの例は、この仕様で定義されてい標準 JSON 直列化を使って示している。
+</p>
+
+    <section id="example-1" typeof="bibo:Chapter" resource="#example-1" property="bibo:hasPart">
+      <h3 id="h-example-1" resource="#h-example-1"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.1 </span>最小限のアクティビティ</span></h3>
+
+      <figure id="fig-expresses-the-statement-http-www.test.example-martin-created-http-example.org-foo.jpg-.-no-additional-detail-is-given.x">
+        <figcaption>Figure <span class="figno">4</span> <span class="fig-title"> Expresses the statement <code>'http://www.test.example/martin' created 'http://example.org/foo.jpg'</code>. No additional detail is given. </span></figcaption>
+        <div id="ex1-jsonld" style="display: block;">
+          <div class="example">
+            <div class="example-title marker"><span>Example 4</span></div>
+            <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+  <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Martin created an image"</span>,
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Create"</span>,
+  <span class="hljs-attr">"actor"</span>: <span class="hljs-string">"http://www.test.example/martin"</span>,
+  <span class="hljs-attr">"object"</span>: <span class="hljs-string">"http://example.org/foo.jpg"</span>
+}</pre>
+          </div>
+        </div>
+      </figure>
+    </section>
+
+    <section id="example-2" typeof="bibo:Chapter" resource="#example-2" property="bibo:hasPart">
+      <h3 id="h-example-2" resource="#h-example-2"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.2 </span>追加の詳細付きの基本的なアクティビティ</span></h3>
+
+      <figure id="fig-expresses-the-statement-martin-smith-added-an-article-to-the-blog-martin-s-blog-at-3-04-pm-utc-on-february-10-2015.-some-additional-details-about-the-article-actor-and-target-blog-are-given-using-properties-defined-by-the-activity-streams-2.0-vocabulary.x">
+        <figcaption>Figure <span class="figno">5</span> <span class="fig-title"> 「Martin Smith が2015年2月10日の午後3:04(UTC)にブログ'Martin's Blog'に 記事を追加した」ことを表現する。<a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity Streams 2.0 Vocabulary</a> によって定義された属性を使って、 記事、アクター、ターゲットに関するいくつかの追加の詳細が与えられている。</span></figcaption>
+        <div id="ex2-jsonld" style="display: block;">
+          <div class="example">
+            <div class="example-title marker"><span>Example 5</span></div>
+            <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+  <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Martin added an article to his blog"</span>,
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Add"</span>,
+  <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2015-02-10T15:04:55Z"</span>,
+  <span class="hljs-attr">"actor"</span>: {
+   <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Person"</span>,
+   <span class="hljs-attr">"id"</span>: <span class="hljs-string">"http://www.test.example/martin"</span>,
+   <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Martin Smith"</span>,
+   <span class="hljs-attr">"url"</span>: <span class="hljs-string">"http://example.org/martin"</span>,
+   <span class="hljs-attr">"image"</span>: {
+     <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Link"</span>,
+     <span class="hljs-attr">"href"</span>: <span class="hljs-string">"http://example.org/martin/image.jpg"</span>,
+     <span class="hljs-attr">"mediaType"</span>: <span class="hljs-string">"image/jpeg"</span>
+   }
+  },
+  <span class="hljs-attr">"object"</span> : {
+   <span class="hljs-attr">"id"</span>: <span class="hljs-string">"http://www.test.example/blog/abc123/xyz"</span>,
+   <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Article"</span>,
+   <span class="hljs-attr">"url"</span>: <span class="hljs-string">"http://example.org/blog/2011/02/entry"</span>,
+   <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Why I love Activity Streams"</span>
+  },
+  <span class="hljs-attr">"target"</span> : {
+   <span class="hljs-attr">"id"</span>: <span class="hljs-string">"http://example.org/blog/"</span>,
+   <span class="hljs-attr">"type"</span>: <span class="hljs-string">"OrderedCollection"</span>,
+   <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Martin's Blog"</span>
+  }
+}</pre>
+          </div>
+        </div>
+      </figure>
+
+    </section>
+
+    <section id="example-3" typeof="bibo:Chapter" resource="#example-3" property="bibo:hasPart">
+
+      <h3 id="h-example-3" resource="#h-example-3"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.3 </span>拡張したアクティビティ</span></h3>
+
+      <figure id="fig-a-more-extensive-single-entry-activity-stream-follows.x">
+        <figcaption>Figure <span class="figno">6</span> <span class="fig-title"> A more extensive, single-entry "Activity Stream" follows. </span></figcaption>
+
+        <div id="ex3-jsonld" style="display: block;">
+          <div class="example">
+            <div class="example-title marker"><span>Example 6</span></div>
+            <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+  <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Martin's recent activities"</span>,
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Collection"</span>,
+  <span class="hljs-attr">"totalItems"</span>: <span class="hljs-number">1</span>,
+  <span class="hljs-attr">"items"</span> : [
+    {
+      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Add"</span>,
+      <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2011-02-10T15:04:55Z"</span>,
+      <span class="hljs-attr">"generator"</span>: <span class="hljs-string">"http://example.org/activities-app"</span>,
+      <span class="hljs-attr">"nameMap"</span>: {
+        <span class="hljs-attr">"en"</span>: <span class="hljs-string">"Martin added a new image to his album."</span>,
+        <span class="hljs-attr">"ga"</span>: <span class="hljs-string">"Martin phost le fisean nua a albam."</span>
+      },
+      <span class="hljs-attr">"actor"</span>: {
+        <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Person"</span>,
+        <span class="hljs-attr">"id"</span>: <span class="hljs-string">"http://www.test.example/martin"</span>,
+        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Martin Smith"</span>,
+        <span class="hljs-attr">"url"</span>: <span class="hljs-string">"http://example.org/martin"</span>,
+        <span class="hljs-attr">"image"</span>: {
+          <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Link"</span>,
+          <span class="hljs-attr">"href"</span>: <span class="hljs-string">"http://example.org/martin/image"</span>,
+          <span class="hljs-attr">"mediaType"</span>: <span class="hljs-string">"image/jpeg"</span>,
+          <span class="hljs-attr">"width"</span>: <span class="hljs-number">250</span>,
+          <span class="hljs-attr">"height"</span>: <span class="hljs-number">250</span>
+        }
+      },
+      <span class="hljs-attr">"object"</span> : {
+        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"My fluffy cat"</span>,
+        <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Image"</span>,
+        <span class="hljs-attr">"id"</span>: <span class="hljs-string">"http://example.org/album/máiréad.jpg"</span>,
+        <span class="hljs-attr">"preview"</span>: {
+          <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Link"</span>,
+          <span class="hljs-attr">"href"</span>: <span class="hljs-string">"http://example.org/album/máiréad.jpg"</span>,
+          <span class="hljs-attr">"mediaType"</span>: <span class="hljs-string">"image/jpeg"</span>
+        },
+        <span class="hljs-attr">"url"</span>: [
+          {
+            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Link"</span>,
+            <span class="hljs-attr">"href"</span>: <span class="hljs-string">"http://example.org/album/máiréad.jpg"</span>,
+            <span class="hljs-attr">"mediaType"</span>: <span class="hljs-string">"image/jpeg"</span>
+          },
+          {
+            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Link"</span>,
+            <span class="hljs-attr">"href"</span>: <span class="hljs-string">"http://example.org/album/máiréad.png"</span>,
+            <span class="hljs-attr">"mediaType"</span>: <span class="hljs-string">"image/png"</span>
+          }
+        ]
+      },
+      <span class="hljs-attr">"target"</span>: {
+        <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Collection"</span>,
+        <span class="hljs-attr">"id"</span>: <span class="hljs-string">"http://example.org/album/"</span>,
+        <span class="hljs-attr">"nameMap"</span>: {
+          <span class="hljs-attr">"en"</span>: <span class="hljs-string">"Martin's Photo Album"</span>,
+          <span class="hljs-attr">"ga"</span>: <span class="hljs-string">"Grianghraif Mairtin"</span>
+        },
+        <span class="hljs-attr">"image"</span>: {
+          <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Link"</span>,
+          <span class="hljs-attr">"href"</span>: <span class="hljs-string">"http://example.org/album/thumbnail.jpg"</span>,
+          <span class="hljs-attr">"mediaType"</span>: <span class="hljs-string">"image/jpeg"</span>
+        }
+      }
+    }
+  ]
+}</pre>
+          </div>
+        </div>
+      </figure>
+    </section>
+  </section>
+
+  <section id="model" typeof="bibo:Chapter" resource="#model" property="bibo:hasPart">
+    <!--OddPage-->
+    <h2 id="h-model" resource="#h-model"><span property="xhv:role" resource="xhv:heading"><span class="secno">4. </span>モデル</span></h2>
+
+    <p>
+<a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity Vocabulary</a> は Activity Streams 2.0 のためのコアオブジェクトと属性を形式的に定義している。
+</p>
+
+    <p>
+語彙によって定義されたオブジェクト型は、八つのコア型と、 多くのソーシャル Web アプリケーションで共通に使われる Activity 型と Object 型の拡張集合に分けられる。コア型は以下のものである:
+</p>
+    <ul>
+      <li><a href="#asobject" class="internalDFN" data-link-type="dfn">Object</a>,</li>
+      <li><a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a>,</li>
+      <li><a href="#activity" class="internalDFN" data-link-type="dfn">Activity</a>,</li>
+      <li><a href="#intransitiveactivity" class="internalDFN" data-link-type="dfn">IntransitiveActivity</a>,</li>
+      <li><a href="#collection" class="internalDFN" data-link-type="dfn">Collection</a>,</li>
+      <li><a href="#dfn-orderedcollection" class="internalDFN" data-link-type="dfn"><code>OrderedCollection</code></a>,</li>
+      <li><a href="#dfn-collectionpage" class="internalDFN" data-link-type="dfn"><code>CollectionPage</code></a>, and</li>
+      <li><a href="#dfn-orderedcollectionpage" class="internalDFN" data-link-type="dfn"><code>OrderedCollectionPage</code></a>.</li>
+    </ul>
+    <p>
+
+</p>
+
+    <p>
+Activity Streams 2.0 で定義されている全ての JSON オブジェクトは、 <code><a href="#asobject" class="internalDFN" data-link-type="dfn">Object</a></code> か <code><a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a></code> である。Activity Vocabulary に定義されているそれ以外の型は、全ての拡張型を含めて、 これら二つの基底型の派生である。
+</p>
+
+    <p>
+Activity Streams 2.0 文書の中の JSON オブジェクトは、次のどちらかの場合に
+<code><a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a></code>である:(a) 値が "<code>Link</code>" である <code>type</code> 属性を持つオブジェクト、 または (b) <code>type</code> 属性の値が、<a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a> の拡張として定義されている型 (例えば、 <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-mention">Mention</a> を参照のこと); さもなければこの JSON オブジェクトは <code><a href="#asobject" class="internalDFN" data-link-type="dfn">Object</a></code> の実体または 拡張である。
+</p>
+
+    <section id="object" typeof="bibo:Chapter" resource="#object" property="bibo:hasPart">
+      <h3 id="h-object" resource="#h-object"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.1 </span><dfn id="asobject" data-dfn-type="dfn">Object</dfn></span></h3>
+
+      <p>
+<code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object">Object</a></code>は Activity Streams vocabulary の基本基底クラスである。
+</p>
+
+      <p>
+(<code>id</code> 属性を使った絶対 IRI で記述された)グローバル修飾子と(<code>type</code> 属性を使って記述された)「オブジェクト型」に加えて、 <code>Object</code> 型の全ての実体は、 <a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity Vocabulary</a> で規定的に定義された属性の一般的な集合を共有する。これは次のものである: <code> <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-attachment">attachment</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-attributedto">attributedTo</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-audience">audience</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-content">content</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-context">context</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-content">contentMap</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-name">name</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-name">nameMap</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-endtime">endTime</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-generator">generator</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-icon">icon</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-image-term">image</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-inreplyto">inReplyTo</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-location">location</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-preview">preview</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-published">published</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-replies">replies</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-starttime">startTime</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-summary">summary</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-summary">summaryMap</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-tag">tag</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-updated">updated</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-url">url</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-to">to</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-bto">bto</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-cc">cc</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-bcc">bcc</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-mediatype">mediaType</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-duration">duration</a></code></code>
+</p>
+
+      <p>
+(<code>id</code> と <code>type</code> を含めて) 全ての属性は オプションである。
+</p>
+
+      <figure id="fig-following-is-an-example-object-that-uses-the-id-and-type-properties-to-express-the-global-identifier-and-object-type">
+        <figcaption>Figure <span class="figno">7</span> <span class="fig-title"> グローバルな識別子とオブジェクト型を表現するために <code>id</code> と <code>type</code> 属性を使った Object の例。</span></figcaption>
+
+        <div id="ex4-jsonld" style="display: block;">
+          <div class="example">
+            <div class="example-title marker"><span>Example 7</span></div>
+            <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"http://example.org/foo"</span>,
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Note"</span>,
+  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"My favourite stew recipe"</span>,
+  <span class="hljs-attr">"attributedTo"</span>: {
+    <span class="hljs-attr">"id"</span>: <span class="hljs-string">"http://joe.website.example/"</span>,
+    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Person"</span>,
+    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Joe Smith"</span>
+  },
+  <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2014-08-21T12:34:56Z"</span>
+}</pre>
+          </div>
+        </div>
+      </figure>
+
+      <p>
+<a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity Vocabulary</a> は 多くのソーシャル Web アプリケーションで一般的である、幅広い <code>Object</code> 型を定義する。この仕様は、これらのアクティビティのほとんどについて特定の属性を 意味論的に定義するには至っていない。外部語彙は Activity Vocabulary で触れられていない 追加の詳細を記述するために使われる。
+</p>
+
+      <p>
+さらに、実装はActivity Vocabularyによって定義されたものを超えた新しい型ののObjectを自由に導入することができるが、アプリケーションが他の実装によって認識されない拡張型に依存しすぎると、相互運用性の問題が発生する可能性がある。既存のObject型と過度に重なったり、重複したりしないように注意するべきである。
+</p>
+      <p>
+実装がコア語彙型と重複する拡張型を使用する場合、実装はコア語彙型も指定しなければならない(MUST)。例えば、いくつかの語彙(例えば、The Good Relations Vocabulary)は、位置を記述するための独自の型を定義する。例えば、<code><a href="http://www.heppnetz.de/ontologies/goodrelations/v1.html#Location">http://purl.org/goodrelations/v1#Location</a></code>をオブジェクト型として使用したい実装は、以下に示すように、そのオブジェクトを<code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-place">Place</a></code>としても識別しなければならない。
+</p>
+
+      <figure id="fig-an-object-that-is-both-a-place-and-a-gr-location">
+        <figcaption>Figure <span class="figno">8</span> <span class="fig-title"><code>Place</code> と <code>gr:Location</code> の両方があるObject:</span></figcaption>
+        <div id="ex6-jsonld" style="display: block;">
+          <div class="example">
+            <div class="example-title marker"><span>Example 8</span></div>
+            <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"@context"</span>: [
+    <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+    {
+      <span class="hljs-attr">"gr"</span>: <span class="hljs-string">"http://purl.org/goodrelations/v1#"</span>
+    }
+  ],
+  <span class="hljs-attr">"type"</span>: [<span class="hljs-string">"Place"</span>, <span class="hljs-string">"gr:Location"</span>],
+  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Sally's Restaurant"</span>,
+  <span class="hljs-attr">"longitude"</span>: <span class="hljs-number">12.34</span>,
+  <span class="hljs-attr">"latitude"</span>: <span class="hljs-number">56.78</span>,
+  <span class="hljs-attr">"gr:category"</span>: <span class="hljs-string">"restaurants/french_restaurants"</span>
+}</pre>
+          </div>
+        </div>
+      </figure>
+
+      <p>
+外部語彙で定義されている属性は、 Activity Vocabulary で定義されている属性と重複および複製できる。そのような重なりが存在する場所では、一貫した相互運用性のために、 Activity Vocabulary て定義されている属性の仕様を 優先しなければならない(MUST)。
+</p>
+
+      <section id="text-representations" typeof="bibo:Chapter" resource="#text-representations" property="bibo:hasPart">
+        <h4 id="h-text-representations" resource="#h-text-representations"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.1.1 </span>オブジェクト型のテキスト表現</span></h4>
+
+        <p>
+Activity Streams 消費者はしばしば、 例えば Web ブラウザやコンソールインターフェースに表示するために、 Activity Streams オブジェクトのテキスト表現を必要とする。
+</p>
+
+        <p>
+<code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-name">name</a></code> 属性は 作成者または他のユーザーによる入力から生成されるべきである(SHOULD)。
+</p>
+
+        <p>
+<code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-summary">summary</a></code> 属性は、おそらく発行者によって自動的に生成される、 フォールバックテキスト表現として使われるべきである(SHOULD)。<code>name</code> 属性がない場合、 <code>summary</code> 属性はマークアップを含むべきではなく(SHOULD NOT)、 オブジェクトの妥当なテキスト表現として使われるのに 十分短いものであるべきである(SHOULD)。
+</p>
+
+        <figure id="fig-a-note-with-a-name-defined-by-the-author">
+          <figcaption>Figure <span class="figno">9</span> <span class="fig-title"> 作者によって定義された名前を持つメモ </span></figcaption>
+          <div id="ex11e-jsonld" style="display: block;">
+            <div class="example">
+              <div class="example-title marker"><span>Example 9</span></div>
+              <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Note"</span>,
+  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"http://example.org/note/123"</span>,
+  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Our Weather Is Fine"</span>,
+  <span class="hljs-attr">"content"</span>: <span class="hljs-string">"I feel that the weather is appropriate to our season and location."</span>
+}</pre>
+            </div>
+          </div>
+        </figure>
+
+        <figure id="fig-a-note-with-an-automatically-generated-summary">
+          <figcaption>Figure <span class="figno">10</span> <span class="fig-title"> 自動生成された概要を持つメモ </span></figcaption>
+          <div id="ex11f-jsonld" style="display: block;">
+            <div class="example">
+              <div class="example-title marker"><span>Example 10</span></div>
+              <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Note"</span>,
+  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"http://example.org/note/124"</span>,
+  <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"A note by Sally"</span>,
+  <span class="hljs-attr">"content"</span>: <span class="hljs-string">"Everything is OK here."</span>
+}</pre>
+            </div>
+          </div>
+        </figure>
+
+        <p>
+<code>name</code> と <code>summary</code> はなくてもよく(MAY)、 エンドユーザーの現在の言語での明示的な値がなくてもよく(MAY)、 現在の言語コンテキストでの Object のテキスト表現として使うのに 適切でないぐらい長くてもよい(MAY)。消費者実装はこれらの場合の Object のテキスト表現に対する フォールバック戦略を持つべきである(SHOULD)。
+</p>
+
+      </section>
+
+    </section>
+
+    <section id="link" typeof="bibo:Chapter" resource="#link" property="bibo:hasPart">
+      <h3 id="h-link" resource="#h-link"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.2 </span><dfn data-dfn-type="dfn" id="dfn-link">Link</dfn></span></h3>
+
+      <p>
+<code>Link</code> は、修飾された、他のリソースへの間接参照であり、 [<cite><a class="bibref" href="#bib-RFC5988">RFC5988</a></cite>] で設定された Links の概念モデルと深く関係している。Link オブジェクトの属性は参照されたリソースの属性ではなく、 表示するエージェントがそのリソースをどのように使うかを理解するための ヒントとして提供される。例えば、<code>height</code> と <code>width</code> は参照されたイメージの 実際のピクセル数ではなく、参照されたイメージが要求した 表示サイズかもしれない。
+</p>
+
+      <p>
+Link のターゲット URI は必須の <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-href">href</a></code> 属性を使って表現される。さらに、全ての <code>Link</code> 実体は、 <a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity Vocabulary</a> で規準的に定義されている、次のオプションの属性の一般的な集合を共有する: <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-id">id</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-name">name</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-hreflang">hreflang</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-mediatype">mediaType</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-rel">rel</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-height">height</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-width">width</a></code>
+</p>
+
+      <p>
+For example, all <a data-lt="Object" href="#asobject" class="internalDFN" data-link-type="dfn">Objects</a> can contain an <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-image-term">image</a></code> property whose value describes a graphical representation of the containing object. This property will typically be used to provide the URL to an image (e.g. JPEG, GIF or PNG) resource that can be displayed to the user. Any given object might have multiple such visual representations -- multiple screenshots, for instance, or the same image at different resolutions. In Activity Streams 2.0, there are essentially three ways of describing such references.
+</p>
+
+      <figure id="fig-to-reference-a-single-image-without-any-additional-metadata-a-direct-association-can-be-expressed-as-a-json-string-containing-an-absolute-iri.x">
+        <figcaption>Figure <span class="figno">11</span> <span class="fig-title">To reference a single image without any additional metadata, a direct association can be expressed as a JSON string containing an absolute IRI.</span></figcaption>
+        <div id="ex12-jsonld" style="display: block;">
+          <div class="example">
+            <div class="example-title marker"><span>Example 11</span></div>
+            <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Application"</span>,
+  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"http://example.org/application/123"</span>,
+  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Exampletron 3000"</span>,
+  <span class="hljs-attr">"image"</span>: <span class="hljs-string">"http://example.org/application/123.png"</span>
+}</pre>
+          </div>
+        </div>
+      </figure>
+
+      <figure id="fig-alternatively-if-additional-metadata-is-required-such-as-the-mime-content-type-of-the-referenced-resource-a-link-can-be-used">
+        <figcaption>Figure <span class="figno">12</span> <span class="fig-title"> Alternatively, if additional metadata is required (such as the MIME content type of the referenced resource) a <a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a> can be used: </span></figcaption>
+        <div id="ex13-jsonld" style="display: block;">
+          <div class="example">
+            <div class="example-title marker"><span>Example 12</span></div>
+            <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Application"</span>,
+  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"http://example.org/application/123"</span>,
+  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Exampletron 3000"</span>,
+  <span class="hljs-attr">"image"</span>: {
+    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Link"</span>,
+    <span class="hljs-attr">"href"</span>: <span class="hljs-string">"http://example.org/application/123.png"</span>,
+    <span class="hljs-attr">"mediaType"</span>: <span class="hljs-string">"image/png"</span>
+  }
+}</pre>
+          </div>
+        </div>
+      </figure>
+
+      <p>
+Formally, the former example establishes an unqualified direct relationship with the image resource while the latter creates a <a href="http://patterns.dataincubator.org/book/qualified-relation.html">qualified, indirect relationship</a> that allows additional properties about the relationship to be specified.
+</p>
+
+      <figure id="fig-if-more-than-one-value-is-to-be-expressed-a-json-array-with-a-mix-of-strings-and-links-can-be-used">
+        <figcaption>Figure <span class="figno">13</span> <span class="fig-title"> If more than one value is to be expressed, A JSON Array with a mix of strings and <a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a>s can be used: </span></figcaption>
+        <div id="ex14-jsonld" style="display: block;">
+          <div class="example">
+            <div class="example-title marker"><span>Example 13</span></div>
+            <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Application"</span>,
+  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"http://example.org/application/123"</span>,
+  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Exampletron 3000"</span>,
+  <span class="hljs-attr">"image"</span>: [
+    <span class="hljs-string">"http://example.org/application/abc.gif"</span>,
+    {
+      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Link"</span>,
+      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"http://example.org/application/123.png"</span>,
+      <span class="hljs-attr">"mediaType"</span>: <span class="hljs-string">"image/png"</span>
+    }
+  ]
+}</pre>
+          </div>
+        </div>
+      </figure>
+
+      <p>
+Individual items contained in such an array are independent of one another and no significance is given to the ordering.
+</p>
+
+      <p>
+RFC 5988 defines that all Links have a "link relation" that describes the contextual purpose of the link. Within a <a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a>, the <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-rel">rel</a></code> property provides the link relation value. If no <code>rel</code> property is specified, the link relation is considered to be unspecified. Any given Link can have multiple link relation values. In the JSON serialization, a single link relation is expressed as a single JSON string. Multiple link relations are expressed as an array of JSON strings.
+</p>
+
+      <p>
+The scope of the link relation is the object in which the <a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a> is an immediate child.
+</p>
+
+      <p>
+In the following example, two separate references are provided. The link relation of the first is unspecified, while the link relation of the second is "<code>thumbnail</code>".
+</p>
+
+      <figure id="fig-example-14-context-https-www.w3.org-ns-activitystreams-type-application-id-http-example.org-application-123-name-exampletron-3000-image-http-example.org-application-abc.gif-type-link-href-http-example.org-application-123.png-mediatype-image-png-rel-thumbnail">
+        <figcaption>Figure <span class="figno">14</span> <span class="fig-title"></span></figcaption>
+        <div id="ex15-jsonld" style="display: block;">
+          <div class="example">
+            <div class="example-title marker"><span>Example 14</span></div>
+            <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Application"</span>,
+  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"http://example.org/application/123"</span>,
+  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Exampletron 3000"</span>,
+  <span class="hljs-attr">"image"</span>: [
+    <span class="hljs-string">"http://example.org/application/abc.gif"</span>,
+    {
+      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Link"</span>,
+      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"http://example.org/application/123.png"</span>,
+      <span class="hljs-attr">"mediaType"</span>: <span class="hljs-string">"image/png"</span>,
+      <span class="hljs-attr">"rel"</span>: <span class="hljs-string">"thumbnail"</span>
+    }
+  ]
+}</pre>
+          </div>
+        </div>
+      </figure>
+
+      <p>
+It ought to be noted that the [<cite><a class="bibref" href="#bib-HTML5">HTML5</a></cite>] specification provides its own alternative definition of a "link relation" that differs slightly from the [<cite><a class="bibref" href="#bib-RFC5988">RFC5988</a></cite>] definition. In the HTML5 definition, any string that does not contain the "space" U+0020, "tab" (U+0009), "LF" (U+000A), "FF" (U+000C), "CR" (U+000D) or "," (U+002C) characters can be used as a valid link relation. To promote interoperability, Activity Streams 2.0 implementations MUST only use link relations that are syntactically valid in terms of both the [<cite><a class="bibref" href="#bib-RFC5988">RFC5988</a></cite>] and [<cite><a class="bibref" href="#bib-HTML5">HTML5</a></cite>] definitions. Implementations MAY use link relation values that are not registered.
+</p>
+
+      <p>
+Note that the <a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a> and <a href="#asobject" class="internalDFN" data-link-type="dfn">Object</a> types are disjoint from one another. That is, any given <a href="#asobject" class="internalDFN" data-link-type="dfn">Object</a> cannot also be a <a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a>.
+</p>
+
+    </section>
+
+    <section id="actors" typeof="bibo:Chapter" resource="#actors" property="bibo:hasPart">
+      <h3 id="h-actors" resource="#h-actors"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.3 </span><dfn id="actor" data-dfn-type="dfn">Actor</dfn></span></h3>
+
+      <p>
+Actor オブジェクトは、 Activity を実行する能力を持つ実体を表現する、基底 <a href="#asobject" class="internalDFN" data-link-type="dfn">Object</a> 型の特化である。<a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity Vocabulary</a> は Actor の 5 種類の特定の型の規定定義を提供する: <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-application">Application</a> </code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-group">Group</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-organization">Organization</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-person">Person</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-service">Service</a></code>.
+</p>
+
+      <p>
+この仕様書は意図的に Actor を最も一般的な形でのみ定義し、 それぞれについて意味論的に特定の属性を定義することまではしない。全ての Actor オブジェクトは <code><a href="#asobject" class="internalDFN" data-link-type="dfn">Object</a></code> の特化であり、 全ての Object に共通の全てのコア属性を継承する。外部語彙は Activity Vocabulary で触れられていない 追加の詳細を記述するために使われる。<a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-person">Person</a>, <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-group">Group</a>, <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-organization">Organization</a> 実体の 追加メタデータとして提供するために VCard [[<cite><a class="bibref" href="#bib-vcard-rdf">vcard-rdf</a></cite>]] が使われるべきである(SHOULD)。
+</p>
+
+      <figure id="fig-an-activity-with-a-person-actor-extended-with-vcard-properties">
+        <figcaption>Figure <span class="figno">15</span> <span class="fig-title">An Activity with a Person actor extended with VCard properties:</span></figcaption>
+        <div id="ex17-jsonld" style="display: block;">
+          <div class="example">
+            <div class="example-title marker"><span>Example 15</span></div>
+            <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"@context"</span>: [
+    <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+    {<span class="hljs-attr">"vcard"</span>: <span class="hljs-string">"http://www.w3.org/2006/vcard/ns#"</span>}
+  ],
+  <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Sally created a note"</span>,
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Create"</span>,
+  <span class="hljs-attr">"actor"</span>: {
+    <span class="hljs-attr">"type"</span>: [<span class="hljs-string">"Person"</span>, <span class="hljs-string">"vcard:Individual"</span>],
+    <span class="hljs-attr">"id"</span>: <span class="hljs-string">"http://sally.example.org"</span>,
+    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Sally Smith"</span>,
+    <span class="hljs-attr">"vcard:given-name"</span>: <span class="hljs-string">"Sally"</span>,
+    <span class="hljs-attr">"vcard:family-name"</span>: <span class="hljs-string">"Smith"</span>
+  },
+  <span class="hljs-attr">"object"</span>: {
+    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Note"</span>,
+    <span class="hljs-attr">"content"</span>: <span class="hljs-string">"This is a simple note"</span>
+  }
+}</pre>
+          </div>
+        </div>
+      </figure>
+
+      <p>
+While implementations are free to introduce new types of Actors beyond those defined by the Activity Vocabulary, interoperability issues can arise when applications rely too much on extension types that are not recognized by other implementations. Care should be taken to not unduly overlap with or duplicate the existing Actor types.
+</p>
+      <p>
+実装がコア語彙型と重複する拡張型を使用する場合、実装はコア語彙型も指定しなければならない(MUST)。For instance, some vocabularies (e.g. VCard) define their own types for describing people. An implementation that wishes, for example, to use a <code>vcard:Individual</code> as an Actor MUST also identify that Actor as a <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-person">Person</a></code> as illustrated in the previous example.
+</p>
+
+    </section>
+
+    <section id="activities" typeof="bibo:Chapter" resource="#activities" property="bibo:hasPart">
+      <h3 id="h-activities" resource="#h-activities"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.4 </span><dfn id="activity" data-dfn-type="dfn">Activity</dfn></span></h3>
+
+      <p>
+Activity オブジェクトは、既に起きた、今起きている途中、 将来起きるかもしれないアクションに関する情報を提供する、 基底 <a href="#asobject" class="internalDFN" data-link-type="dfn">Object</a> 型の特化である。
+</p>
+
+      <p>
+全ての <a href="#asobject" class="internalDFN" data-link-type="dfn">Object</a> の実体で対応している一般的な属性に加えて、 <code>Activity</code> オブジェクトは <a href="https://www.w3.org/TR/activitystreams-vocabulary/">Vocabulary</a> で 定義されている次の追加の属性に対応している: <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-actor">actor</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object-term">object</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-target">target</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-origin">origin</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-result">result</a></code> | <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-instrument">instrument</a></code>
+</p>
+
+      <p>
+<code>type</code> 属性は Activity Statement が表現するアクションの型を 識別するために使われる。
+</p>
+
+      <figure id="fig-the-following-example-illustrates-a-simple-activity">
+        <figcaption>Figure <span class="figno">16</span> <span class="fig-title">The following example illustrates a simple Activity:</span></figcaption>
+        <div id="ex19-jsonld" style="display: block;">
+          <div class="example">
+            <div class="example-title marker"><span>Example 16</span></div>
+            <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+  <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Joe liked a note"</span>,
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Like"</span>,
+  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"http://www.test.example/activity/1"</span>,
+  <span class="hljs-attr">"actor"</span>: <span class="hljs-string">"http://example.org/profiles/joe"</span>,
+  <span class="hljs-attr">"object"</span>: <span class="hljs-string">"http://example.com/notes/1"</span>,
+  <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2014-09-30T12:34:56Z"</span>
+}
+</pre>
+          </div>
+        </div>
+      </figure>
+
+      <p>
+<a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity Vocabulary</a> は 多くのソーシャル Web アプリケーションで一般的である、少数の <code>Activity</code> 型を定義する。この仕様は、これらのアクティビティのほとんどについて特定の属性を 意味論的に定義するには至っていない。外部語彙は Activity Vocabulary で触れられていない 追加の詳細を記述するために使われる。
+</p>
+
+      <p>
+While implementations are free to introduce new types of Activites beyond those defined by the Activity Vocabulary, interoperability issues can arise when applications rely too much on extension types that are not recognized by other implementations. Care should be taken to not unduly overlap with or duplicate the existing Activity types.MUST
+</p>
+      <p>
+実装がコア語彙型と重複する拡張型を使用する場合、実装はコア語彙型も指定しなければならない(MUST)。For instance, some vocabularies (e.g.Schema.org) define their own types for describing actions. An implementation that wishes, for example, to use <a href="http://schema.org/LikeAction"><code>http://schema.org/LikeAction</code></a> as an Activity <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-like">MUST</a> also identify that Object as being a <g5><g6>Like</g6></g5> as illustrated in the following:
+</p>
+
+      <figure id="fig-an-activity-that-is-both-a-like-and-a-http-schema.org-likeaction">
+        <figcaption>Figure <span class="figno">17</span> <span class="fig-title">An Activity that is both a <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-like">Like</a></code> and a <code>http://schema.org/LikeAction</code>:</span></figcaption>
+        <div id="ex20-jsonld" style="display: block;">
+          <div class="example">
+            <div class="example-title marker"><span>Example 17</span></div>
+            <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+  <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Joe liked a note"</span>,
+  <span class="hljs-attr">"type"</span>: [<span class="hljs-string">"Like"</span>, <span class="hljs-string">"http://schema.org/LikeAction"</span>],
+  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"http://www.test.example/activity/1"</span>,
+  <span class="hljs-attr">"actor"</span>: <span class="hljs-string">"http://example.org/profiles/joe"</span>,
+  <span class="hljs-attr">"object"</span>: <span class="hljs-string">"http://example.com/notes/1"</span>,
+  <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2014-09-30T12:34:56Z"</span>
+}</pre>
+          </div>
+        </div>
+      </figure>
+
+      <p>
+Implementations are free to use Activity objects in both passive and imperative operations. In the passive sense, the Activity is used to record that an activity has or is occurring. In the imperative sense, the Activity can be used as a form of command, instructing an application to modify state in some manner consistent with the action being described. However, because this specification does not define a normative processing model that constrains how applications make use of the format, the distinction about whether an Activity statement is to be interpreted as a passive notification or as an imperative command can vary across implementations.
+</p>
+
+    </section>
+
+    <section id="intransitiveactivities" typeof="bibo:Chapter" resource="#intransitiveactivities" property="bibo:hasPart">
+      <h3 id="h-intransitiveactivities" resource="#h-intransitiveactivities"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.5 </span><dfn id="intransitiveactivity" data-dfn-type="dfn">IntransitiveActivity</dfn></span></h3>
+
+      <p>
+IntransitiveActivity オブジェクトは、自動的なアクションを表現する <a href="#activity" class="internalDFN" data-link-type="dfn">Activity</a> 型の特化である。IntransitiveActivity オブジェクトは <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object-term">object</a></code> 特性を持たない。
+</p>
+    </section>
+
+    <section id="collections" typeof="bibo:Chapter" resource="#collections" property="bibo:hasPart">
+      <h3 id="h-collections" resource="#h-collections"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.6 </span><dfn id="collection" data-dfn-type="dfn">Collection</dfn></span></h3>
+
+      <p>
+<code>Collection</code> オブジェクトは、 他の <a data-lt="Object" href="#asobject" class="internalDFN" data-link-type="dfn">Object</a> や <a data-lt="Link" href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a> の コンテナとして動作する基底 <code><a href="#asobject" class="internalDFN" data-link-type="dfn">Object</a></code> の特化である。
+</p>
+
+      <p>
+<code><a href="#collection" class="internalDFN" data-link-type="dfn">Collection</a></code> 型は、 <code><a data-lt="Object" href="#asobject" class="internalDFN" data-link-type="dfn">Objects</a></code> から全て継承された 基底属性に加えて、追加の属性を含む: <code> <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-items">items</a> | <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-totalitems">totalItems</a> | <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-first">first</a> | <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-last">last</a> | <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-current">current</a> </code>
+</p>
+
+      <p>
+<code><a href="#collection" class="internalDFN" data-link-type="dfn">Collection</a></code> の中のアイテムは順序が ある場合とない場合がある。<code><dfn data-dfn-type="dfn" id="dfn-orderedcollection">OrderedCollection</dfn></code> 型は、 アイテムに常に順序がある Collection であることを識別するために使っても良い (MAY)。JSON シリアル化において、Collection の順序のないアイテムは <code>items</code> 属性を使って表現される一方、 順序のあるアイテムは <code>orderedItems</code> 属性を使って表現される。
+</p>
+
+      <figure id="fig-the-following-is-a-simple-unordered-collection">
+        <figcaption>Figure <span class="figno">18</span> <span class="fig-title"> The following is a simple unordered collection: </span></figcaption>
+        <div id="ex21-jsonld" style="display: block;">
+          <div class="example">
+            <div class="example-title marker"><span>Example 18</span></div>
+            <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+  <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Object history"</span>,
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Collection"</span>,
+  <span class="hljs-attr">"totalItems"</span>: <span class="hljs-number">2</span>,
+  <span class="hljs-attr">"items"</span>: [
+    {
+      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Create"</span>,
+      <span class="hljs-attr">"actor"</span>: <span class="hljs-string">"http://www.test.example/sally"</span>,
+      <span class="hljs-attr">"object"</span>: <span class="hljs-string">"http://example.org/foo"</span>
+    },
+    {
+      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Like"</span>,
+      <span class="hljs-attr">"actor"</span>: <span class="hljs-string">"http://www.test.example/joe"</span>,
+      <span class="hljs-attr">"object"</span>: <span class="hljs-string">"http://example.org/foo"</span>
+    }
+  ]
+}</pre>
+          </div>
+        </div>
+      </figure>
+
+      <figure id="fig-the-following-is-a-simple-ordered-collection">
+        <figcaption>Figure <span class="figno">19</span> <span class="fig-title"> The following is a simple ordered collection: </span></figcaption>
+        <div id="ex22-jsonld" style="display: block;">
+          <div class="example">
+            <div class="example-title marker"><span>Example 19</span></div>
+            <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+  <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Object history"</span>,
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"OrderedCollection"</span>,
+  <span class="hljs-attr">"totalItems"</span>: <span class="hljs-number">2</span>,
+  <span class="hljs-attr">"orderedItems"</span>: [
+    {
+      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Create"</span>,
+      <span class="hljs-attr">"actor"</span>: <span class="hljs-string">"http://www.test.example/sally"</span>,
+      <span class="hljs-attr">"object"</span>: <span class="hljs-string">"http://example.org/foo"</span>
+    },
+    {
+      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Like"</span>,
+      <span class="hljs-attr">"actor"</span>: <span class="hljs-string">"http://www.test.example/joe"</span>,
+      <span class="hljs-attr">"object"</span>: <span class="hljs-string">"http://example.org/foo"</span>
+    }
+  ]
+}</pre>
+          </div>
+        </div>
+      </figure>
+
+      <section id="paging" typeof="bibo:Chapter" resource="#paging" property="bibo:hasPart">
+        <h4 id="h-paging" resource="#h-paging"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.6.1 </span>Collection Paging</span></h4>
+
+        <p>
+Collection は大量のアイテムを含むことができる。しばしば、 <code>items</code> (または <code>orderedItems</code>) 属性だけを使って Collection に含まれている全てのアイテムをシリアル化するのは 実装上非実用的になる。このような場合、Collection に含まれているアイテムは 相異なる部分集合、つまり「ページ」に分割できる。ページは <code><dfn data-dfn-type="dfn" id="dfn-collectionpage">CollectionPage</dfn></code> 型を使って識別される。
+</p>
+
+        <p>
+<code><a href="#dfn-collectionpage" class="internalDFN" data-link-type="dfn"><code>CollectionPage</code></a></code> 型は基底 <code><a href="#collection" class="internalDFN" data-link-type="dfn">Collection</a></code> 型から拡張され、 その全ての属性を継承する。以下の追加の属性も定義されている: <code> <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-partof">partOf</a> | <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-next">next</a> | <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-prev">prev</a> | </code>
+</p>
+
+        <p>
+<code>partOf</code> 属性は、 <code>CollectionPage</code> に含まれているアイテムが属する <code><a href="#collection" class="internalDFN" data-link-type="dfn">Collection</a></code> を識別する。
+</p>
+
+        <p>
+<code>first</code>, <code>next</code>, <code>prev</code>, <code>last</code>, <code>current</code> 属性は、 親コレクションからのアイテムの追加の部分集合を含む、他の <code><a href="#dfn-collectionpage" class="internalDFN" data-link-type="dfn"><code>CollectionPage</code></a></code> 実体を参照するために使われる。
+</p>
+
+        <p>
+<code>Collection</code> オブジェクトと同様、 <code>CollectionPage</code> の中のアイテムは順序ありと順序なしの場合がある。<code><dfn data-dfn-type="dfn" id="dfn-orderedcollectionpage">OrderedCollectionPage</dfn></code> 型は アイテムが順序ありのもののページを識別するために使われる。
+</p>
+
+        <p>
+<code><a href="#dfn-orderedcollectionpage" class="internalDFN" data-link-type="dfn"><code>OrderedCollectionPage</code></a> </code> 型は <code><a href="#dfn-collectionpage" class="internalDFN" data-link-type="dfn"><code>CollectionPage</code></a> </code> と <code><a href="#dfn-orderedcollection" class="internalDFN" data-link-type="dfn"><code>OrderedCollection</code></a> </code> の両方を拡張する。これらから継承した属性に加えて、 <code>OrderedCollectionPage</code> は追加の <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-startindex">startIndex</a></code> 属性を持つ; この値は、このページが示す <code>OrderedCollection</code> の中で、ページに含まれている最初のアイテムの相対インデックス位置を示す。
+</p>
+
+        <figure id="fig-an-illustration-of-the-relationship-between-collection-orderedcollection-collectionpage-and-orderedcollectionpage">
+          <figcaption>Figure <span class="figno">20</span> <span class="fig-title"> An illustration of the relationship between <code>Collection</code>, <code>OrderedCollection</code>, <code>CollectionPage</code>, and <code>OrderedCollectionPage</code>: </span></figcaption><img src="paging2.png" alt="Collection type Model"></figure>
+
+        <p>
+順序付きでも順序なしでも、 <code>Collection</code> のページは 並びに配置される (シングルリンクリストかダブルリンクリスト)。<code>first</code> 属性はこの並びの最初のページを識別するために使われ、 一方 <code>last</code> 属性は並びの最後のページを識別するのに使われる。<code>prev</code> と <code>next</code> 属性はそれぞれ直前と直後のページを 識別する。
+</p>
+
+        <figure id="fig-a-visualization-of-the-collection-paging-model">
+          <figcaption>Figure <span class="figno">21</span> <span class="fig-title"> A visualization of the Collection paging model: </span></figcaption><img src="paging.png" alt="The Paging Model"></figure>
+
+        <p>
+<code>current</code> 属性は、<code>Collection</code> の中で、 最も最近に作成または更新されたアイテムの部分集合を含むページを識別する。
+</p>
+
+        <p>
+<code>first</code>, <code>last</code>, <code>next</code>, <code>prev</code>, <code>current</code> 属性は 単一の <code><a href="#dfn-collectionpage" class="internalDFN" data-link-type="dfn"><code>CollectionPage</code></a></code>、 または <code><a href="#dfn-collectionpage" class="internalDFN" data-link-type="dfn"><code>CollectionPage</code></a></code> を含む別のリソースを参照する <code><a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a></code> である。
+</p>
+
+        <figure id="fig-the-following-is-a-simple-unordered-collection-with-paging">
+          <figcaption>Figure <span class="figno">22</span> <span class="fig-title"> The following is a simple unordered collection with paging: </span></figcaption>
+          <div id="ex21b-jsonld" style="display: block;">
+            <div class="example">
+              <div class="example-title marker"><span>Example 20</span></div>
+              <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+  <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Sally's recent activities"</span>,
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Collection"</span>,
+  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"http://example.org/foo"</span>,
+  <span class="hljs-attr">"totalItems"</span>: <span class="hljs-number">10</span>,
+  <span class="hljs-attr">"first"</span>: {
+    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"CollectionPage"</span>,
+    <span class="hljs-attr">"id"</span>: <span class="hljs-string">"http://example.org/foo?page=1"</span>,
+    <span class="hljs-attr">"partOf"</span>: <span class="hljs-string">"http://example.org/foo"</span>,
+    <span class="hljs-attr">"next"</span>: <span class="hljs-string">"http://example.org/foo?page=2"</span>,
+    <span class="hljs-attr">"items"</span>: [
+      {
+        <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Create"</span>,
+        <span class="hljs-attr">"actor"</span>: <span class="hljs-string">"http://www.test.example/sally"</span>,
+        <span class="hljs-attr">"object"</span>: <span class="hljs-string">"http://example.org/foo"</span>
+      }
+    ]
+  }
+}</pre>
+            </div>
+          </div>
+        </figure>
+
+        <p>
+<code>OrderedCollection</code> のページングはトリッキーな場合がある; 実装がページの並びを何らかの推測可能な順序で処理することが 保証されないからである。論理的なコレクションのメンバアイテムを適切で完全な順序に再構築したい実装は、 並びの最初(または最後)のページに移動して、それから全てのページを処理するまで <code>next</code> (または <code>prev</code>) リンクを再帰的に 辿るべきである。ある <code>OrderedCollection</code> のページは <code>OrderedCollectionPage</code> の実体であるべきである(SHOULD)。<code>OrderedCollection</code> のページが <code>OrderedCollectionPage</code> の実体でない場合、 消費者はアイテムの適切な順序を再構築するために信頼性のある手段はない。
+</p>
+
+      </section>
+
+    </section>
+
+    <section id="naturalLanguageValues" typeof="bibo:Chapter" resource="#naturalLanguageValues" property="bibo:hasPart">
+
+      <h3 id="h-naturallanguagevalues" resource="#h-naturallanguagevalues"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.7 </span>自然言語値</span></h3>
+
+      <p>
+<a href="https://www.w3.org/TR/activitystreams-vocabulary/">Vocabulary</a> で定義されている属性のいくつかは自然言語値を持つと定義されている。これは、複数の言語を使った人間可読の文字列である。JSON シリアル化の中で、これらは以下のどちらかで表現される: (1) 単一の JSON 文字列、または (2) 同じ文字列値の地域化された等価な翻訳への整形された [<cite><a class="bibref" href="#bib-BCP47">BCP47</a></cite>] Language-Tags にマッピングされたJSONオブジェクト。シリアル化された JSON において、これら二つの型式は単純な属性命名規則によって 区別される; 例えば: "<code>name</code>" は <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-name">name</a></code> 属性の JSON 文字列形式を識別し、 一方 "<code>nameMap</code>" はオブジェクト形式を表現する。
+</p>
+
+      <figure id="fig-a-single-name-string-value-without-language-information">
+        <figcaption>Figure <span class="figno">23</span> <span class="fig-title">言語情報のない単一の name String 値:</span></figcaption>
+        <div id="ex7-jsonld" style="display: block;">
+          <div class="example">
+            <div class="example-title marker"><span>Example 21</span></div>
+            <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Object"</span>,
+  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"This is the title"</span>
+}</pre>
+          </div>
+        </div>
+      </figure>
+
+      <figure id="fig-multiple-language-specific-values">
+        <figcaption>Figure <span class="figno">24</span> <span class="fig-title">複数の、言語指定された値:</span></figcaption>
+        <div id="ex8-jsonld" style="display: block;">
+          <div class="example">
+            <div class="example-title marker"><span>Example 22</span></div>
+            <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Object"</span>,
+  <span class="hljs-attr">"nameMap"</span>: {
+    <span class="hljs-attr">"en"</span>: <span class="hljs-string">"This is the title"</span>,
+    <span class="hljs-attr">"fr"</span>: <span class="hljs-string">"C'est le titre"</span>,
+    <span class="hljs-attr">"es"</span>: <span class="hljs-string">"Este es el título"</span>
+  }
+}</pre>
+          </div>
+        </div>
+      </figure>
+
+      <p>
+オブジェクト形式の全てのキーは整形された [<cite><a class="bibref" href="#bib-BCP47">BCP47</a></cite>] Language-Tag でなければならない(MUST)。関連付けられた値は文字列でなければならない(MUST)。
+</p>
+
+      <p>
+<a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity Vocabulary</a> は 自然言語値を使う三つの属性を定義している: <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-name">name</a></code>, <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-summary">summary</a></code>, <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-content">content</a></code>. それぞれ、JSON シリアル化では " <code>name</code>", "<code>summary</code>", and "<code>content</code>" は JSON 文字列形式を表現する; "<code>nameMap</code>", "<code>summaryMap</code>", "<code>contentMap</code>" は オブジェクト形式を表現する。
+</p>
+
+      <p>
+特別な言語タグ <code>"und"</code> は、 言語が不明または未定義の値を明示的に識別するために オブジェクト形式の中で使用できる。
+</p>
+
+      <figure id="fig-using-the-und-language-tag">
+        <figcaption>Figure <span class="figno">25</span> <span class="fig-title">Using the <code>"und"</code> language tag:</span></figcaption>
+        <div id="ex11b-jsonld" style="display: block;">
+          <div class="example">
+            <div class="example-title marker"><span>Example 23</span></div>
+            <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Object"</span>,
+  <span class="hljs-attr">"nameMap"</span>: {
+    <span class="hljs-attr">"und"</span>: <span class="hljs-string">"This is the title"</span>
+  }
+}</pre>
+          </div>
+        </div>
+      </figure>
+
+      <section id="defaultlangcontext" typeof="bibo:Chapter" resource="#defaultlangcontext" property="bibo:hasPart">
+        <h4 id="h-defaultlangcontext" resource="#h-defaultlangcontext"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.7.1 </span>Default Language Context</span></h4>
+
+        <p>
+Activity Streams 2.0 文書を生成または処理するのに [<cite><a class="bibref" href="#bib-JSON-LD">JSON-LD</a></cite>] 機構を使う場合、 デフォルト言語を識別するために <code>@context</code> の中で <code>@language</code> 属性を使っても良い(MAY)。この機構は、JSON-LD を使って Activity Streams 2.0 文書を処理することを 選ばなかった実装によっては理解されないかもしれない。
+</p>
+
+        <figure id="fig-specifying-the-default-language-within-the-json-ld-context">
+          <figcaption>Figure <span class="figno">26</span> <span class="fig-title"> Specifying the default <code>"@language"</code> within the JSON-LD <code>@context</code>: </span></figcaption>
+          <div id="ex11c-jsonld" style="display: block;">
+            <div class="example">
+              <div class="example-title marker"><span>Example 24</span></div>
+              <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"@context"</span>: [
+    <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+    {
+      <span class="hljs-attr">"@language"</span>: <span class="hljs-string">"en"</span>
+    }],
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Object"</span>,
+  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"This is the title"</span>
+}</pre>
+            </div>
+          </div>
+        </figure>
+
+      </section>
+
+      <section id="biditext" typeof="bibo:Chapter" resource="#biditext" property="bibo:hasPart">
+        <h4 id="h-biditext" resource="#h-biditext"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.7.2 </span>Bidirectional Text</span></h4>
+
+        <p>
+Natural language values within an Activity Streams 2.0 document MAY contain bidirectional text. The default base direction of an Activity Streams 2.0 document is Left-to-Right. The base direction of individual natural language values MAY be modified as described below.
+</p>
+
+        <p>
+When specifying bidirectional text for a natural language value, and the base direction of the text cannot be correctly identified by the first strong directional character of that text, publishers SHOULD explicitly identify the default direction either by prefixing the value with an appropriate Unicode bidirectional control character, or by using HTML directional markup where permitted.
+</p>
+
+        <p>
+Consumers of Activity Streams 2.0 documents that contain bidirectional text SHOULD identify the base direction of any given natural language value by either scanning the text for the first strong directional character not contained within a markup tag; or by utilizing directional markup where provided. Once the base direction has been identified, consumers MUST determine the appropriate rendering and display of natural language values, according to the Unicode Bidirectional Algorithm [<cite><a class="bibref" href="#bib-BIDI">BIDI</a></cite>]. This may necessitate wrapping additional control characters or markup around the string prior to display, in order to apply the base direction.
+</p>
+
+        <table>
+          <tbody>
+            <tr>
+              <th>Property</th>
+              <th>Value</th>
+              <th>Direction</th>
+              <th>Method</th>
+            </tr>
+            <tr>
+              <td><code>name</code></td>
+              <td><code>"פעילות הבינאום, <abbr title="World Wide Web Consortium">W3C</abbr>"</code></td>
+              <td>Right-to-Left</td>
+              <td>First strong directional character</td>
+            </tr>
+            <tr>
+              <td><code>name</code></td>
+              <td><code> "The document was titled, '\u2067פעילות הבינאום, <abbr title="World Wide Web Consortium">W3C</abbr>\u2069'" </code></td>
+              <td>Left-to-Right</td>
+              <td>First strong directional character</td>
+            </tr>
+            <tr>
+              <td><code>name</code></td>
+              <td><code>"\u200FHTML היא שפת סימון"</code></td>
+              <td>Right-to-Left</td>
+              <td>Bidi Control Character</td>
+            </tr>
+            <tr>
+              <td><code>name</code></td>
+              <td><code>"\u200E'سلام' is hello in Persian."</code></td>
+              <td>Left-to-Right</td>
+              <td>Bidi Control Character</td>
+            </tr>
+            <tr>
+              <td><code>summary</code></td>
+              <td><code>&lt;p dir=\"rtl\">HTML היא שפת סימון>/p></code></td>
+              <td>Right-to-Left</td>
+              <td>HTML Markup</td>
+            </tr>
+            <tr>
+              <td><code>summary</code></td>
+              <td><code>&lt;p>פעילות הבינאום, <abbr title="World Wide Web Consortium">W3C</abbr>&lt;/p></code></td>
+              <td>Right-to-Left</td>
+              <td>First strong directional character (ignoring markup)</td>
+            </tr>
+            <tr>
+              <td><code>summary</code></td>
+              <td><code>&lt;p title="سلام">Hello&lt;/p></code></td>
+              <td>Left-to-Right</td>
+              <td>First strong directional character (ignoring markup)</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </section>
+
+    </section>
+
+    <section id="marking-up-language" typeof="bibo:Chapter" resource="#marking-up-language" property="bibo:hasPart">
+      <h3 id="h-marking-up-language" resource="#h-marking-up-language"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.8 </span>言語のマークアップ</span></h3>
+      <p>
+Activity Streams 2.0 発行者は、分かっている場合には、map 属性か デフォルト言語タグを使って、自然言語属性の言語を明示的に マークアップするべきである(SHOULD)。
+</p>
+      <div class="note">
+        <div class="note-title marker" aria-level="4" role="heading" id="h-note1"><span>Note</span><span style="text-transform: none">: Examples</span></div>
+        <p class="">Not all examples in this specification explicitly mark the language of natural language properties. This is intentional. The authors and the working group wished to avoid having implementers cut-and-paste examples from the document with explicit language markup as a template for new documents, which would consequently have inaccurate language markup.
+</p>
+      </div>
+    </section>
+  </section>
+
+  <section id="extensibility" typeof="bibo:Chapter" resource="#extensibility" property="bibo:hasPart">
+
+    <!--OddPage-->
+    <h2 id="h-extensibility" resource="#h-extensibility"><span property="xhv:role" resource="xhv:heading"><span class="secno">5  </span>拡張性</span></h2>
+
+    <p>
+In Activity Streams 2.0, an "extension" is any property, activity, actor or object type not defined by the <a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity Vocabulary</a>. Consuming implementations that encounter unfamiliar extensions MUST NOT stop processing or signal an error and MUST continue processing the items as if those properties were not present. Note that support for extensions can vary across implementations and no normative processing model for extensions is defined. Accordingly, implementations that rely too heavily on the use of extensions may experience reduced interoperability with other implementations.
+</p>
+
+    <p>
+For extensions, [<cite><a class="bibref" href="#bib-JSON-LD">JSON-LD</a></cite>] is used as the primary mechanism for defining and disambiguating extensions. Implementations that wish to fully support extensions SHOULD use [<cite><a class="bibref" href="#bib-JSON-LD">JSON-LD</a></cite>] mechanisms.
+</p>
+
+    <p>
+Some popular extensions are included in the Activity Streams 2.0 namespace document, and can be reviewed at <a href="https://www.w3.org/ns/activitystreams#extensions">https://www.w3.org/ns/activitystreams#extensions</a>. The <a href="https://www.w3.org/community/swicg/">Social Web Incubator Community Group</a> maintains a wiki page on <a href="https://www.w3.org/wiki/Activity_Streams_extensions">Activity Streams extensions</a>.
+</p>
+
+    <p>
+It is important to note that the JSON-LD Processing Algorithms [ <cite><a class="bibref" href="#bib-JSON-LD-API">JSON-LD-API</a></cite>], as currently defined, will silently ignore any property not defined in a JSON-LD @context. Implementations that publish Activity Streams 2.0 documents containing extension properties SHOULD provide a @context definition for all extensions.
+</p>
+
+    <p>
+It is also important to note that there are valid JSON constructs which cannot be used within a JSON-LD document. For instance, JSON-LD forbids "arrays of arrays" as used, for example, by the popular <a href="http://geojson.org/">GeoJSON</a> specification. While implementations are free to use such constructs as extensions within an Activity Streams 2.0 document, consumers that use the standard JSON-LD Processing Algorithms will be required to either ignore such extensions or map those to alternative compatible constructs prior to applying the JSON-LD algorithms. Simple GeoJSON Points, for instance, can be mapped to <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-place">Place</a></code> objects, while more complex geometries can be converted to <a href="http://www.opengeospatial.org/standards/geosparql">GeoSparql</a> "Well-Known Text" representations as illustrated in the non-normative examples below:
+</p>
+
+    <figure id="fig-geojson-point-coordinates">
+      <figcaption>Figure <span class="figno">27</span> <span class="fig-title">GeoJSON Point Coordinates:</span></figcaption>
+      <div class="example">
+        <div class="example-title marker"><span>Example 25</span></div>
+        <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Point"</span>,
+  <span class="hljs-attr">"coordinates"</span>: [<span class="hljs-number">36.74</span>, <span class="hljs-number">-119.77</span>]
+}</pre>
+      </div>
+    </figure>
+
+    <figure id="fig-the-equivalent-place-alternative">
+      <figcaption>Figure <span class="figno">28</span> <span class="fig-title">The Equivalent <code>Place</code> alternative:</span></figcaption>
+      <div id="ex23-jsonld" style="display: block;">
+        <div class="example">
+          <div class="example-title marker"><span>Example 26</span></div>
+          <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Fresno, California"</span>,
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Place"</span>,
+  <span class="hljs-attr">"latitude"</span>: <span class="hljs-number">36.74</span>,
+  <span class="hljs-attr">"longitude"</span>: <span class="hljs-number">-119.77</span>
+}</pre>
+        </div>
+      </div>
+    </figure>
+
+    <figure id="fig-geojson-polygon-coordinates">
+      <figcaption>Figure <span class="figno">29</span> <span class="fig-title">GeoJSON Polygon Coordinates:</span></figcaption>
+      <div class="example">
+        <div class="example-title marker"><span>Example 27</span></div>
+        <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Polygon"</span>,
+  <span class="hljs-attr">"coordinates"</span>: [
+    [
+      [<span class="hljs-number">100.0</span>, <span class="hljs-number">0.0</span>],
+      [<span class="hljs-number">101.0</span>, <span class="hljs-number">0.0</span>],
+      [<span class="hljs-number">101.0</span>, <span class="hljs-number">1.0</span>],
+      [<span class="hljs-number">100.0</span>, <span class="hljs-number">1.0</span>],
+      [<span class="hljs-number">100.0</span>, <span class="hljs-number">0.0</span>]
+    ]
+  ]
+}</pre>
+      </div>
+    </figure>
+
+    <figure id="fig-the-equivalent-geosparql-well-known-text-alternative">
+      <figcaption>Figure <span class="figno">30</span> <span class="fig-title">The Equivalent GeoSparql Well-Known-Text alternative:</span></figcaption>
+      <div id="ex24-jsonld" style="display: block;">
+        <div class="example">
+          <div class="example-title marker"><span>Example 28</span></div>
+          <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"@context"</span>: [
+    <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+    {<span class="hljs-attr">"gsp"</span>: <span class="hljs-string">"http://www.opengis.net/ont/geosparql"</span>}
+  ],
+  <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"A polygon"</span>,
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"gsp:Geometry"</span>,
+  <span class="hljs-attr">"gsp:asWKT"</span>: <span class="hljs-string">"Polygon((100.0, 0.0, 101.0, 0.0, 101.0, 1.0, 100.0, 1.0, 100.0, 0.0))"</span>
+}</pre>
+        </div>
+      </div>
+    </figure>
+
+    <section id="compact-uris" typeof="bibo:Chapter" resource="#compact-uris" property="bibo:hasPart">
+      <h3 id="h-compact-uris" resource="#h-compact-uris"><span property="xhv:role" resource="xhv:heading"><span class="secno">5.1 </span>Support for Compact URIs</span></h3>
+
+      <p>
+The JSON-LD syntax supports the use of "Compact URIs". A "Compact URI" is an alternative encoding of a URI that uses a defined prefix to simplify serialization. For instance, the URI <code>http://example.org/term</code> can be represented as <code>ex:term</code> by assigning the <code>ex:</code> prefix the value of <code>http://example.org/</code>
+</p>
+
+      <p>
+Within JSON-LD, Compact URI prefixes are defined within the JSON-LD <code>@context</code> definition. 例:
+</p>
+
+      <figure id="fig-a-json-ld-compact-uri-definition">
+        <figcaption>Figure <span class="figno">31</span> <span class="fig-title">A JSON-LD Compact URI definition</span></figcaption>
+        <div class="example">
+          <div class="example-title marker"><span>Example 29</span></div>
+          <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
+<span class="hljs-attr">"@context"</span>: {
+<span class="hljs-attr">"ex"</span>: <span class="hljs-string">"http://example.org/"</span>,
+<span class="hljs-attr">"term"</span>: {
+  <span class="hljs-attr">"@type"</span>: <span class="hljs-string">"id"</span>,
+  <span class="hljs-attr">"@id"</span>: <span class="hljs-string">"ex:term"</span>
+}
+},
+<span class="hljs-attr">"term"</span>: <span class="hljs-string">"ex:Foo"</span>
+}</pre>
+        </div>
+      </figure>
+
+      <p>
+In this example, both the property name <code>term</code> and the value <code>ex:Foo</code> are Compact URIs. The property name <code>term</code> expands to <code>http://example.org/term</code> and the value <code>ex:Foo</code> expands to <code>http://example.org/Foo</code>
+</p>
+
+      <p>
+In JSON-LD, Compact URI expansion of <em>values</em> applies to properties explicitly defined as <code>"type": "id"</code> in the <code>@context</code> definition. Specifically, Compact URIs can be used anywhere an IRI (or URI) value is expected.
+</p>
+
+      <p>
+Activity Streams 2.0 implementations that wish to fully support extensions MUST support Compact URI expansion as defined by the JSON-LD specification. Such expansion applies to all property names as well as all property values explicitly defined as type <code>@id</code> in the JSON-LD @context.
+</p>
+
+      <p>
+Over reliance on the Compact URI form can lead to ambiguity and interoperability issues between implementations. Therefore, Compact URI use SHOULD be avoided in all cases other than property names and the value(s) of the <code>type</code> property.
+</p>
+
+    </section>
+
+    <section id="extension-round-trip" typeof="bibo:Chapter" resource="#extension-round-trip" property="bibo:hasPart">
+
+      <h3 id="h-extension-round-trip" resource="#h-extension-round-trip"><span property="xhv:role" resource="xhv:heading"><span class="secno">5.2 </span>Re-serialization of Extensions</span></h3>
+
+      <p>
+Implementations that use JSON-LD mechanisms to parse and then reserialize Activity Streams 2.0 documents that contain extension properties SHOULD take sufficient care to ensure that extension properties used within the original document are preserved and serialized appropriately.
+</p>
+
+      <p>
+For instance, consider the following simple Activity Stream object containing hypothetical <code>foo</code> and <code>bar</code> extension properties. The <code>foo</code> extension is defined within the JSON-LD <code>@context</code> while the <code>bar</code> extension property is not.
+</p>
+
+      <figure id="fig-a-simple-extended-object">
+        <figcaption>Figure <span class="figno">32</span> <span class="fig-title">A simple extended Object</span></figcaption>
+        <div class="example">
+          <div class="example-title marker"><span>Example 30</span></div>
+          <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"@context"</span>: [
+    <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+    {<span class="hljs-attr">"foo"</span>: <span class="hljs-string">"http://example.org/foo"</span>}
+  ],
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Note"</span>,
+  <span class="hljs-attr">"content"</span>: <span class="hljs-string">"This is a simple note"</span>,
+  <span class="hljs-attr">"foo"</span>: <span class="hljs-number">123</span>,
+  <span class="hljs-attr">"bar"</span>: <span class="hljs-number">321</span>
+}</pre>
+        </div>
+      </figure>
+
+      <p>
+An implementation that receives this Note object can choose to parse the object as an ordinary JSON object or it can use the standard JSON-LD Expansion algorithm.
+</p>
+
+      <p>
+If the implementation chooses to parse the object as ordinary JSON and then reserializes the object (e.g. for storage or redistribution), then it would simply preserve the values of the <code>@context</code>, <code>foo</code> and <code>bar</code> properties as they are and include those in the reserialized output.
+</p>
+
+      <p>
+However, if the implementation chooses to use the JSON-LD expansion algorithm, the <code>@context</code> will be removed from the expanded result and the <code>bar</code> property will be mapped to the "blank node" <code>_:bar</code>. If this document is then reserialized using the normative Activity Streams 2.0 context, the JSON-LD compacted form would be:
+</p>
+
+      <figure id="fig-the-reserialized-compacted-form">
+        <figcaption>Figure <span class="figno">33</span> <span class="fig-title">The reserialized compacted form:</span></figcaption>
+        <div class="example">
+          <div class="example-title marker"><span>Example 31</span></div>
+          <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Note"</span>,
+  <span class="hljs-attr">"content"</span>: <span class="hljs-string">"This is a simple note"</span>,
+  <span class="hljs-attr">"http://example.org/foo"</span>: <span class="hljs-number">123</span>,
+  <span class="hljs-attr">"bar"</span>: <span class="hljs-number">321</span>
+}</pre>
+        </div>
+      </figure>
+
+      <p>
+While this is close to the original, the use of fully expanded URI label for the <code>foo</code> property is not ideal. To ensure that the reserialized object is serialized correctly, implementations that perform JSON-LD expansion of received documents SHOULD preserve the original <code>@context</code> used when performing the JSON-LD expansion, then reuse that when reserializing the object into the JSON-LD compacted form.
+</p>
+
+    </section>
+
+  </section>
+
+  <section id="privacy" typeof="bibo:Chapter" resource="#privacy" property="bibo:hasPart">
+    <!--OddPage-->
+    <h2 id="h-privacy" resource="#h-privacy"><span property="xhv:role" resource="xhv:heading"><span class="secno">6. </span>Privacy Considerations</span></h2>
+
+    <p>
+Activity Streams 2.0 documents can (and likely will) contain potentially sensitive personal information such as identity, contact information, physical location, physical characteristics, and so forth. Furthermore, Activity data, in general, can be analyzed to generate profiles of the behavior of individual or groups of Actors.
+</p>
+
+    <p>
+Implementations that produce or consume Activity Streams 2.0 documents MUST take steps to openly and publicly document and communicate to all potential users: (a) the kinds of potentially sensitive personal information published, consumed or collected by the implementation, (b) the reasons for publishing, consuming and collecting that information, (c) the manner in which that information is being used, (d) the identity of any other party with whom that information is being shared, and (e) the reason the information is being shared with other parties.
+</p>
+
+    <p>
+Implementations that publish Activity Streams 2.0 documents SHOULD assume a default position of limiting both the kind and amount of sensitive personal information included in the document unless users have "opted in" to sharing additional detail.
+</p>
+
+    <p>
+Implementations that consume Activity Streams 2.0 documents SHOULD NOT, by default, store or share sensitive personal information included within consumed documents unless users have "opted in" to allowing that information to be stored or shared.
+</p>
+
+    <p>
+In this context, "opting in" does not necessarily require explicit action on the part of the user. If, for instance, the use of certain sensitive personal information is clearly implicit in the use of an implementation (a location tracking service, for example), then any use of that implementation can be considered an implicit acknowledgement that the sensitive personal information will be used and shared so long as the documentation guidelines listed above are followed.
+</p>
+
+  </section>
+
+  <section id="security-considerations" typeof="bibo:Chapter" resource="#security-considerations" property="bibo:hasPart">
+
+    <!--OddPage-->
+    <h2 id="h-security-considerations" resource="#h-security-considerations"><span property="xhv:role" resource="xhv:heading"><span class="secno">7  </span>セキュリティ上の考慮事項</span></h2>
+
+    <p>
+Publishers or Consumers implementing Activity Streams as a stream of public data may also want to consider the potential for unsolicited commercial or malicious content and should take preventative measures to recognize such content and either identify it or not include it in their implementations.
+</p>
+
+    <p>
+Publishers should take reasonable measures to ensure potentially malicious user input such as cross-site scripting attacks are not included in the Activity Streams data they publish.
+</p>
+
+    <p>
+Consumers that re-emit ingested content to end-users MUST take reasonable measures if emitting ingested content to make sure potentially malicious ingested input is not re-emitted.
+</p>
+
+    <p>
+Consumers that re-emit ingested content for crawling by search engines should take reasonable measures to limit any use of their site as a Search Engine Optimization loophole. This may include converting untrusted hyperlinks to text or including a rel="nofollow" attribute.
+</p>
+
+    <p>
+Consumers should be aware of the potential for spoofing attacks where the attacker publishes activities or objects with falsified property values with the intent of injecting malicious content, hiding or corrupting legitimate content, or misleading users.
+</p>
+
+    <p>
+Activity Streams are JSON Documents and are subject to the same security considerations described in [<cite><a class="bibref" href="#bib-RFC7159">RFC7159</a></cite>].
+</p>
+
+    <p>
+Activity Streams implementations handle URIs. See Section 7 of [ <cite><a class="bibref" href="#bib-RFC3986">RFC3986</a></cite>].
+</p>
+
+    <p>
+Activity Streams implementations handle IRIs. See Section 8 of [ <cite><a class="bibref" href="#bib-RFC3987">RFC3987</a></cite>].
+</p>
+
+  </section>
+
+  <section id="iana" typeof="bibo:Chapter" resource="#iana" property="bibo:hasPart">
+
+    <!--OddPage-->
+    <h2 id="h-iana" resource="#h-iana"><span property="xhv:role" resource="xhv:heading"><span class="secno">8. </span>IANA Considerations</span></h2>
+
+    <section id="media-type" typeof="bibo:Chapter" resource="#media-type" property="bibo:hasPart">
+      <h3 id="h-media-type" resource="#h-media-type"><span property="xhv:role" resource="xhv:heading"><span class="secno">8.1 </span><code>application/activity+json</code> メディア型</span></h3>
+
+      <p>
+この仕様は、Activity Streams 2.0 型式に準拠した文書を識別するために <code><dfn data-dfn-type="dfn" id="dfn-application-activity-json">application/activity+json</dfn></code> MIME Media Type を 登録する。
+</p>
+
+      <table>
+        <tbody>
+          <tr>
+            <td>Type name:</td>
+            <td>application</td>
+          </tr>
+          <tr>
+            <td>Subtype name:</td>
+            <td>activity+json</td>
+          </tr>
+          <tr>
+            <td>Required parameters:</td>
+            <td>None</td>
+          </tr>
+          <tr>
+            <td>Optional parameters:</td>
+            <td>profile: application/activity+json メディアタイプの profile 引数は 一つ以上のプロファイル URI を指定できる。これらのプロファイル URI は [<cite><a class="bibref" href="#bib-RFC6906">RFC6906</a></cite>] で定義された意味論を持つ。"profile" メディアタイプ引数はクォートされなければならない(MUST)。これは空白で区切られた URI (プロファイル URI) の空でないリストである。<pre aria-busy="false" aria-live="polite" class="hljs javascript">profile-param = <span class="hljs-string">"profile="</span> profile-value
+profile-value = <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">"</span>&gt;</span> profile-URI 0*( 1*SP profile-URI ) <span class="hljs-tag">&lt;<span class="hljs-name">"</span>&gt;</span>
+profile-URI   = URI</span></pre>上記の文法での "URI" は [<cite><a class="bibref" href="#bib-RFC3986">RFC3986</a></cite>] の Section 3 で定義される "URI" を参照する。</td>
+          </tr>
+          <tr>
+            <td>Encoding considerations:</td>
+            <td>Resources that use the "<code>application/activity+json</code>" Media Type are required to conform to all of the requirements for the "<code>application/json</code>" Media Type and are therefore subject to the same encoding considerations specified in Section 11 of [<cite><a class="bibref" href="#bib-RFC7159">RFC7159</a></cite>].</td>
+          </tr>
+          <tr>
+            <td>Security considerations:</td>
+            <td>As defined in this specification.</td>
+          </tr>
+          <tr>
+            <td>Contact:</td>
+            <td>James M Snell &lt;<a href="mailto:jasnell@gmail.com">jasnell@gmail.com</a>></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+Activity Streams 2.0 型式は JSON-LD 仕様を使う一方、 この特定のメディアタイプの使用を正当化する Activity Streams 2.0 実装のためには、多くの制限と追加の要求があることに 注意すること。
+</p>
+
+      <p>
+Activity Streams 2.0 は JSON-LD の制限されたプロファイルと考えることも 出来るため、実装は `application/ld+json; profile="https://www.w3.org/ns/activitystreams"` メディアタイプを `application/activity+json` と等価なものとして 扱うべきである(SHOULD)。
+</p>
+
+    </section>
+
+  </section>
+
+  <section id="conformance" typeof="bibo:Chapter" resource="#conformance" property="bibo:hasPart">
+
+    <!--OddPage-->
+    <h2 id="h-conformance" resource="#h-conformance"><span property="xhv:role" resource="xhv:heading"><span class="secno">9. </span>適合性</span></h2>
+
+    <p>
+All diagrams, examples, and notes in this specification are non-normative, as are all sections explicitly marked non-normative. この仕様におけるその他の全ては規範的である。
+</p>
+
+    <section id="documents" typeof="bibo:Chapter" resource="#documents" property="bibo:hasPart">
+
+      <h3 id="h-documents" resource="#h-documents"><span property="xhv:role" resource="xhv:heading"><span class="secno">9.1</span>文書</span></h3>
+
+      <p>
+Conforming documents are those that comply with all the conformance criteria for documents. For readability, some of these conformance requirements are phrased as conformance requirements on publishers; such requirements are implicitly requirements on documents: by definition, all documents are assumed to have a publisher.
+</p>
+
+      <p>
+Conforming documents must not include deprecated or obsolete syntax from Activity Streams 1.0. Conforming documents must include properties and types from the Activity Vocabulary. Conforming documents that use other vocabularies must also include equivalent Activity Vocabulary properties and types as illustrated in Section C. Conforming documents must not use features of JSON-LD or other serialization features disallowed in this specification, as in Section 2. Conforming documents that include types or properties beyond those defined in the Activity Streams 2.0 Vocabulary must use the extensibility features defined in section 5.
+</p>
+
+      <p>
+A non-exhaustive list of examples of documents includes:
+</p>
+      <ul>
+        <li>A document representing an actor</li>
+        <li>A document representing an object</li>
+        <li>A document representing an activity</li>
+        <li>A document representing a collection of the activities done by an actor</li>
+        <li>A document representing a collection of the activities done to an object</li>
+        <li>A document representing a collection of the activities addressed to an actor or object</li>
+
+      </ul>
+
+      <p>
+
+</p>
+
+    </section>
+
+    <section id="implementations" typeof="bibo:Chapter" resource="#implementations" property="bibo:hasPart">
+
+      <h3 id="h-implementations" resource="#h-implementations"><span property="xhv:role" resource="xhv:heading"><span class="secno">9.2 </span>実装</span></h3>
+
+      <p>
+Conforming implementations are software that publish, store, analyze, consume or otherwise process conforming documents. The two main kinds of implementations are publishers and consumers.
+</p>
+
+      <section id="publishers" typeof="bibo:Chapter" resource="#publishers" property="bibo:hasPart">
+
+        <h4 id="h-publishers" resource="#h-publishers"><span property="xhv:role" resource="xhv:heading"><span class="secno">9.2.1 </span>Publishers</span></h4>
+
+        <p>
+Conforming publishers are implementations that create and publish conforming documents. Conforming publishers must make conforming documents available according to the serialization requirements of section 2. Conforming publishers must consider privacy as described in section 6. Conforming publishers must consider security as described in section 7.
+</p>
+
+        <p>
+A non-exhaustive list of example publishers includes:
+</p>
+        <ul>
+          <li>A social network</li>
+          <li>A personal web site</li>
+          <li>A document publishing system</li>
+          <li>A bridge from a non-conforming social network</li>
+          <li>A document converter from similar document types such as RSS or Atom</li>
+        </ul>
+        <p>
+
+</p>
+
+      </section>
+
+      <section id="consumers" typeof="bibo:Chapter" resource="#consumers" property="bibo:hasPart">
+
+        <h4 id="h-consumers" resource="#h-consumers"><span property="xhv:role" resource="xhv:heading"><span class="secno">9.2.2 </span>Consumers</span></h4>
+
+        <p>
+Conforming consumers are implementations that read and analyze conforming documents. Conforming consumers must tolerate deprecated or obsolete properties or types from Activity Streams 1.0. Conforming consumers must ignore properties or types that are not applicable to their application domain.
+</p>
+
+        <p>
+Conforming consumers may re-publish conforming documents in other other data formats. Conforming consumers may present conforming documents to a user on screen, in print, in audio format, or using other presentation mechanisms. Conforming consumers must faithfully translate the information represented in conforming documents into these other formats or media. Conforming consumers that re-publish conforming documents must consider privacy as described in section 6 and security as described in section 7.
+</p>
+
+        <p>
+A non-exhaustive list of example consumers includes:
+</p>
+        <ul>
+          <li>A social network</li>
+          <li>A search engine</li>
+          <li>A feed reader</li>
+          <li>A document validator</li>
+          <li>A feed aggregator</li>
+          <li>A statistical analyzer</li>
+        </ul>
+
+        <p>
+
+</p>
+
+      </section>
+
+    </section>
+
+  </section>
+
+  <section class="appendix" id="acknowledgements" typeof="bibo:Chapter" resource="#acknowledgements" property="bibo:hasPart">
+
+    <!--OddPage-->
+    <h2 id="h-acknowledgements" resource="#h-acknowledgements"><span property="xhv:role" resource="xhv:heading"><span class="secno">A. </span>謝辞</span></h2>
+
+    <p>
+The Activity Streams 2.0 specification is a product of the <abbr title="World Wide Web Consortium">W3C</abbr> Social Web Working Group. The editors thank all of the Working Group members who contributed to the conversations, issues and testing that helped shape the current specification.
+</p>
+
+    <p>
+The editor's also wish to thank all of those who contributed to Activity Streams prior to the specification being picked up as a contribution to the <abbr title="World Wide Web Consortium">W3C</abbr> Social Web Working Group. Activity Streams 1.0 was a community driven effort and the specification would not be where it is today without the earlier contributions from the community, including, but not limited to: Abdul Qabiz, Adina Levin, Adrian Chan, Adriana Javier, Alan Hoffman, Alex Kessinger, Alexander Ovchinnikov, Alexander Zhuravlev, Alexandre Loureiro Solleiro, Amy Walgenbach, Andres Vidal, Angel Robert Marquez, Ari Steinberg, Arjan Scherpenisse, Arne Roomann-Kurrik, Beau Lebens, Ben Hedrington, Ben Metcalfe, Ben Werdmuller, Benjamin Goering, Bill de hOra, Bo Xing, Bob Aman, Bob Wyman, Brett Slatkin, Brian Walsh, Brynn Evans, Charlie Cauthen, Chris Chabot, Chris Messina, Chris Toomey, Christian Crumlish, Dan Brickley, Dan Scott, Daniel Chapman, Danny Ayers, Dare Obasanjo, Darren Bounds, David Cramer, David Nelson, David Recordon, DeWitt Clinton, Douglas Pearce, Ed Summers, Elias Bizannes, Elisabeth Norris, Eric Marcoullier, Eric Woods, Evan Prodromou, Gee-Hsien Chuang, Greg Biggers, Gregory Foster, Henry Saputra, Hillary Madsen, Howard Liptzin, Hung Tran, Ian Kennedy, Ian Mulvany, Ivan Pulleyn, Jacob Kim, James Falkner, James Pike, James Walker, Jason Kahn, Jason Kantz, Jeff Kunins, Jeff Martin, Jian Lin, Johannes Ernst, John Panzer, Jon Lebkowsky, Jon Paul Davies, Jonathan Coffman, Jonathan Dugan, Joseph Boyle, Joseph Holsten, Joseph Smarr, Josh Brewer, Jud Valeski, Julien Chaumond, Julien Genestoux, Jyri Engestroem, Kaliya Hamlin, Kevin Marks, Laurent Eschenauer, Laurie Voss, Leah Culver, Libby Miller, Manu Mukerji, Mark Weitzel, Marko Degenkolb, Marshall Kirkpatrick, Martin Atkins, Martin Svensson, Marty Alchin, Mary Hoder, Matt Leventi, Matt Wilkinson, Matthias Mueller-Prove, Max Engel, Max Wegmueller, Melvin Carvalho, Michael Buckbee, Michael Chan, Michael Richardson, Michael Sullivan, Mike Macgirvin, Mislav Marohnić, Mo Jangda, Monica Wilkinson, Nate Benes, NeilFred Picciotto, Nick Howard, Nick Lothian, Nissan Dookeran, Nitya Narasimhan, Pablo Martin, Padraic Brady, Pat Cappelaere, Patrick Aljord, Peter Ferne, Peter Reiser, Peter Saint-Andre, Phil Wolff, Philip (flip) Kromer, Richard Cunningham, Richard Zhao, Rick Severson, Robert Hall, Robert Langbert, Robert Dolin, Robin Cover, Ryan Boyd, Sam Sethi, Scott Raymond, Scott Seely, Simon Grant, Simon Wistow, Stephen Garcia, Stephen Sisk, Stephen Paul Weber, Steve Ivy, Steve Midgley, Steven Livingstone-Perez, Sylvain Carle, Sylvain Hellegouarch, Tantek Çelik, Tatu Saloranta, Tim Moore, Timothy Young, Todd Barnard, Tosh Meston, Tyler Gillies, Will Norris, Zach Copley, Laurent-Walter Goix, Matthew Marum, Andy Smith, and Zach Shepherd.
+</p>
+
+  </section>
+
+  <section id="activitystreams-1.0a" class="appendix informative" typeof="bibo:Chapter" resource="#activitystreams-1.0a" property="bibo:hasPart">
+
+    <!--OddPage-->
+    <h2 id="h-activitystreams-1.0a" resource="#h-activitystreams-1.0a"><span property="xhv:role" resource="xhv:heading"><span class="secno">B. </span>Deprecated Activity Streams 1.0 Syntax</span></h2>
+    <p>
+<em>この節は非規範的である。</em>
+</p>
+
+    <p>
+Note: While this appendix sections is non-normative, it uses normative terms such as MUST. Where used, the meaning is to indicate what would be required to properly implement the Activity Streams 1.0 backwards compatibility model described in this appendix if an implementer chose to do so.
+</p>
+    <p>
+
+</p>
+    <p>
+While the syntax defined by this specification diverges from that defined by JSON Activity Streams 1.0, the fundamental model defined by that original specification remains intact. Specific processing rules are defined by this specification that allow existing Activity Streams 1.0 documents to be mapped to and processed as an Activity Streams 2.0 document.
+</p>
+
+    <p>
+The JSON syntax defined by this specification differs somewhat from that defined in the original JSON Activity Streams 1.0 [ <cite><a class="bibref" href="#bib-AS1">AS1</a></cite>] specification in ways that are not backwards compatible. Implementations can choose to continue supporting the JSON Activity Streams 1.0 syntax but ought consider it to be deprecated. This means that while implementations can continue to consume the 1.0 syntax, they should not output the 1.0 syntax unless specifically interacting with older non-2.0 compliant implementations.
+</p>
+
+    <p>
+Specifically:
+</p>
+
+    <ol>
+      <li>Implementations can use the "<code>application/stream+json</code>" MIME media type when producing a JSON serialization using the Activity Streams 1.0 syntax, and "<code>application/activity+json</code>" when producing a serialization conforming to the 2.0 syntax.</li>
+      <li>Implementations that process serializations identified using either the "<code>application/stream+json</code>" or the more generic "<code>application/json</code>" MIME media type MUST follow the syntax and processing rules set by [<cite><a class="bibref" href="#bib-AS1">AS1</a></cite>]. The 2.0 syntax and processing rules apply only when handling serializations using the "<code>application/activity+json</code>" media type.</li>
+      <li>When processing Activity Streams 1.0 documents using a JSON-LD processing model, implementations can use the special AS 1.0 to AS 2.0 expansion @context definition provided <a href="https://www.w3.org/ns/activitystreams1-context.jsonld">here</a> to produce the JSON-LD expanded representation. Refer to the <a href="http://www.w3.org/TR/json-ld-api/#expansion-algorithms">JSON-LD Processing Algorithms and API</a> for details.</li>
+      <li>When processing Activity Streams 1.0 documents and converting those to 2.0, implementations ought to treat <code>id</code> as an alias for the JSON-LD <code>@id</code> key word; and the <code>objectType</code> and <code>verb</code> properties as aliases for the JSON-LD <code>@type</code> keyword.</li>
+      <li>Activity Streams 1.0 uses the <code>displayName</code> property which has been renamed to <code>name</code> in Activity Streams 2.0. Implementations ought to treat <code>displayName</code> as an alias for <code>name</code>.</li>
+      <li>Activity Streams 1.0 uses the <code>title</code> property which has been dropped from Activity Streams 2.0. Implementations processing Activity Streams 1.0 documents as Activity Streams 2.0 ought to treat instances of the <code>title</code> property as an extension.</li>
+      <li>This document redefines the <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-content">content</a></code> and <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-summary">summary</a></code> properties as natural language values which means their values can be expressed as either a string or an object mapping language tags to string values. In the 1.0 syntax, these are expressed solely as String values. Because the 1.0 values are a valid subset allowed by this specification, implementations are not required to take any specific action to continue supporting those values.</li>
+      <li>This document redefines a large number of common properties defined originally as Objects in 1.0 as either <a data-lt="Object" href="#asobject" class="internalDFN" data-link-type="dfn">Objects</a> or <a data-lt="Link" href="#dfn-link" class="internalDFN" data-link-type="dfn">Links</a>. The JSON-LD serialization allows such property values to be expressed as either an IRI String, an JSON object, or an Array of IRI Strings and JSON objects. Because the 1.0 values are a valid subset allowed by this specification, existing implementations are not required to take any specific action to continue supporting those values.</li>
+      <li>This specification deprecates the <code>upstreamDuplicates</code> and <code>downstreamDuplicates</code> properties defined by Activity Streams 1.0 and does not provide a replacement. This is due largely to lack of any reasonable implementation evidence. While the <code>upstreamDuplicates</code> and <code>downstreamDuplicates</code> properties MAY continue to be used, implementations SHOULD avoid them.</li>
+      <li>In Activity Streams 1.0, the "<code>post</code>" verb was defined to describe the action of both creating an object and "posting" or uploading it to a service. This specification replaces the "<code>post</code>" verb with separate <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-create">Create</a></code> and <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-add">Add</a></code> Activity types. When processing Activity Streams 1.0 documents and converting those into 2.0, implementations SHOULD treat instances of the " <code>post</code>" verb as equivalent to <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-create">Create</a></code> <i>if there is no <code>target</code> property specified</i>; and equivalent to <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-add">Add</a></code> <i>if there is a <code>target</code> property specified</i>.</li>
+    </ol>
+
+    <p>
+By following these guidelines, all JSON Activity Streams 1.0 serializations can be processed successfully by 2.0 implementations.
+</p>
+
+  </section>
+
+  <section class="appendix informative" id="example-using-multiple-vocabularies" typeof="bibo:Chapter" resource="#example-using-multiple-vocabularies" property="bibo:hasPart">
+    <!--OddPage-->
+    <h2 id="h-example-using-multiple-vocabularies" resource="#h-example-using-multiple-vocabularies"><span property="xhv:role" resource="xhv:heading"><span class="secno">C. </span>Example using Multiple Vocabularies</span></h2>
+    <p>
+<em>この節は非規範的である。</em>
+</p>
+
+    <p>
+It is possible use multiple vocabularies to cover particular characteristics of the activities like data provenance and annotations, which can compliment the Activity Vocabulary. For example: Eric writes a short note to be shared with his followers. After posting the note, he notices a spelling error. He edits the note and re-posts it. Later, Eric decides that the information in the note is incorrect. He deletes the note.
+</p>
+
+    <figure id="fig-a-series-of-activities-creating-editing-and-deleting-a-note.x">
+      <figcaption>Figure <span class="figno">34</span> <span class="fig-title">A series of activities; creating, editing, and deleting a note.</span></figcaption>
+      <div id="ex27-jsonld" style="display: block;">
+        <div class="example">
+          <div class="example-title marker"><span>Example 32</span></div>
+          <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"@context"</span>: [
+    <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+    {
+      <span class="hljs-attr">"oa"</span>: <span class="hljs-string">"http://www.w3.org/ns/oa#"</span>,
+      <span class="hljs-attr">"prov"</span>: <span class="hljs-string">"http://www.w3.org/ns/prov#"</span>,
+      <span class="hljs-attr">"dcterms"</span>: <span class="hljs-string">"http://purl.org/dc/terms/"</span>,
+      <span class="hljs-attr">"dcterms:created"</span>: {
+        <span class="hljs-attr">"@id"</span>: <span class="hljs-string">"dcterms:created"</span>,
+        <span class="hljs-attr">"@type"</span>: <span class="hljs-string">"xsd:dateTime"</span>
+      }
+    }
+  ],
+  <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Editing history of a note"</span>,
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Collection"</span>,
+  <span class="hljs-attr">"items"</span>: [
+    {
+      <span class="hljs-attr">"id"</span>: <span class="hljs-string">"http://example.org/activity/20150101000000"</span>,
+      <span class="hljs-attr">"type"</span>: [ <span class="hljs-string">"Create"</span>, <span class="hljs-string">"prov:Activity"</span> ],
+      <span class="hljs-attr">"actor"</span>: {
+        <span class="hljs-attr">"id"</span>: <span class="hljs-string">"http://example.org/#eric"</span>,
+        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Eric"</span>
+      },
+      <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Eric wrote a note."</span>,
+      <span class="hljs-attr">"object"</span>: {
+        <span class="hljs-attr">"id"</span>: <span class="hljs-string">"http://example.org/entry/20150101000000"</span>,
+        <span class="hljs-attr">"type"</span>: [ <span class="hljs-string">"Note"</span>, <span class="hljs-string">"prov:Entity"</span> ],
+        <span class="hljs-attr">"attributedTo"</span>: <span class="hljs-string">"http://example.org/#eric"</span>,
+        <span class="hljs-attr">"content"</span>: <span class="hljs-string">"Remember... all I'm offering is the trooth. Nothing more."</span>
+      },
+      <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2015-01-01T00:00:00Z"</span>
+    },
+    {
+      <span class="hljs-attr">"id"</span>: <span class="hljs-string">"http://example.org/activity/20150101000059"</span>,
+      <span class="hljs-attr">"type"</span>: [ <span class="hljs-string">"Update"</span>, <span class="hljs-string">"prov:Activity"</span>, <span class="hljs-string">"oa:Annotation"</span> ],
+      <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Eric edited a note."</span>,
+      <span class="hljs-attr">"dcterms:created"</span>: <span class="hljs-string">"2015-01-01T00:00:59Z"</span>,
+      <span class="hljs-attr">"dcterms:creator"</span>: { <span class="hljs-attr">"@id"</span>: <span class="hljs-string">"http://example.org/#eric"</span> },
+      <span class="hljs-attr">"oa:hasBody"</span>: {
+        <span class="hljs-attr">"id"</span>: <span class="hljs-string">"http://example.org/entry/20150101000059"</span>,
+        <span class="hljs-attr">"type"</span>: [ <span class="hljs-string">"Note"</span>, <span class="hljs-string">"prov:Entity"</span> ],
+        <span class="hljs-attr">"content"</span>: <span class="hljs-string">"Remember... all I'm offering is the truth. Nothing more."</span>,
+        <span class="hljs-attr">"prov:wasAttributedTo"</span>: { <span class="hljs-attr">"@id"</span>: <span class="hljs-string">"http://example.org/#eric"</span> },
+        <span class="hljs-attr">"prov:wasRevisionOf"</span>: { <span class="hljs-attr">"@id"</span>: <span class="hljs-string">"http://example.org/entry/20150101000000"</span> }
+      },
+      <span class="hljs-attr">"oa:hasTarget"</span>: { <span class="hljs-attr">"@id"</span>: <span class="hljs-string">"http://example.org/entry/20150101000000"</span> },
+      <span class="hljs-attr">"oa:motivatedBy"</span>: { <span class="hljs-attr">"@id"</span>: <span class="hljs-string">"oa:editing"</span> },
+      <span class="hljs-attr">"prov:generated"</span>: { <span class="hljs-attr">"@id"</span>: <span class="hljs-string">"http://example.org/entry/20150101000059"</span> },
+      <span class="hljs-attr">"prov:wasInformedBy"</span>: { <span class="hljs-attr">"@id"</span>: <span class="hljs-string">"http://example.org/activity/20150101000000"</span> }
+    },
+    {
+      <span class="hljs-attr">"id"</span>: <span class="hljs-string">"http://example.org/activity/20150101010101"</span>,
+      <span class="hljs-attr">"type"</span>: [ <span class="hljs-string">"Delete"</span>, <span class="hljs-string">"prov:Activity"</span> ],
+      <span class="hljs-attr">"actor"</span>: <span class="hljs-string">"http://example.org/#eric"</span>,
+      <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Eric deleted a note."</span>,
+      <span class="hljs-attr">"object"</span>: <span class="hljs-string">"http://example.org/entry/20150101000059"</span>,
+      <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2015-01-01T01:01:01Z"</span>
+    }
+  ]
+}</pre>
+        </div>
+      </div>
+    </figure>
+  </section>
+
+  <section class="appendix informative" id="changelog" typeof="bibo:Chapter" resource="#changelog" property="bibo:hasPart">
+
+    <!--OddPage-->
+    <h2 id="h-changelog" resource="#h-changelog"><span property="xhv:role" resource="xhv:heading"><span class="secno">D. </span>Changelog</span></h2>
+    <p>
+<em>この節は非規範的である。</em>
+</p>
+
+    <p>
+The following notable changes have been made to this document since the previous candidate recommendation of <a href="https://www.w3.org/TR/2016/CR-activitystreams-core-20161215/#changelog">2016-12-15</a>.
+</p>
+
+    <ul>
+      <li>Removed process sections, especially those noting exit criteria and at-risk features.</li>
+      <li>Updated Collection Paging to clarify additional <code><a href="#dfn-collectionpage" class="internalDFN" data-link-type="dfn"><code>CollectionPage</code></a> </code> properties.</li>
+      <li>Used better wording for summary as text representation.</li>
+      <li>Updated context examples to include more realistic complex contexts.</li>
+    </ul>
+
+  </section>
+
+  <section id="tof" typeof="bibo:Chapter" resource="#tof" property="bibo:hasPart">
+    <!--OddPage-->
+    <h2 id="h-tof" resource="#h-tof"><span property="xhv:role" resource="xhv:heading"><span class="secno">E. </span>Table of Figures</span></h2>
+    <ul class="tof">
+      <li class="tofline"><a class="tocxref" href="#fig-document-providing-a-context-as-a-string.x">Figure <span class="figno">1</span> <span class="fig-title"> Document providing a context as a string. </span></a></li>
+      <li class="tofline"><a class="tocxref" href="#fig-document-providing-context-as-an-object-using-the-vocab-keyword-and-a-prefix-for-extension-terms.x">Figure <span class="figno">2</span> <span class="fig-title"> Document providing context as an object using the <code>@vocab</code> keyword and a prefix for extension terms. </span></a></li>
+      <li class="tofline"><a class="tocxref" href="#fig-document-providing-context-as-an-array-and-including-an-alias-for-an-additional-term.x">Figure <span class="figno">3</span> <span class="fig-title"> Document providing context as an array, and including an alias for an additional term. </span></a></li>
+      <li class="tofline"><a class="tocxref" href="#fig-expresses-the-statement-http-www.test.example-martin-created-http-example.org-foo.jpg-.-no-additional-detail-is-given.x">Figure <span class="figno">4</span> <span class="fig-title"> Expresses the statement <code>'http://www.test.example/martin' created 'http://example.org/foo.jpg'</code>. No additional detail is given. </span></a></li>
+      <li class="tofline"><a class="tocxref" href="#fig-expresses-the-statement-martin-smith-added-an-article-to-the-blog-martin-s-blog-at-3-04-pm-utc-on-february-10-2015.-some-additional-details-about-the-article-actor-and-target-blog-are-given-using-properties-defined-by-the-activity-streams-2.0-vocabulary.x">Figure <span class="figno">5</span> <span class="fig-title"> Expresses the statement "Martin Smith added an article to the blog 'Martin's Blog' at 3:04 PM UTC on February 10, 2015." Some additional details about the article, actor and target blog are given using properties defined by the <span>Activity Streams 2.0 Vocabulary</span>. </span></a></li>
+      <li class="tofline"><a class="tocxref" href="#fig-a-more-extensive-single-entry-activity-stream-follows.x">Figure <span class="figno">6</span> <span class="fig-title"> A more extensive, single-entry "Activity Stream" follows. </span></a></li>
+      <li class="tofline"><a class="tocxref" href="#fig-following-is-an-example-object-that-uses-the-id-and-type-properties-to-express-the-global-identifier-and-object-type">Figure <span class="figno">7</span> <span class="fig-title"> Following is an example Object that uses the <code>id</code> and <code>type</code> properties to express the global identifier and object type: </span></a></li>
+      <li class="tofline"><a class="tocxref" href="#fig-an-object-that-is-both-a-place-and-a-gr-location">Figure <span class="figno">8</span> <span class="fig-title">An Object that is both a <code>Place</code> and a <code>gr:Location</code>:</span></a></li>
+      <li class="tofline"><a class="tocxref" href="#fig-a-note-with-a-name-defined-by-the-author">Figure <span class="figno">9</span> <span class="fig-title"> A note with a name defined by the author </span></a></li>
+      <li class="tofline"><a class="tocxref" href="#fig-a-note-with-an-automatically-generated-summary">Figure <span class="figno">10</span> <span class="fig-title"> A note with an automatically-generated summary </span></a></li>
+      <li class="tofline"><a class="tocxref" href="#fig-to-reference-a-single-image-without-any-additional-metadata-a-direct-association-can-be-expressed-as-a-json-string-containing-an-absolute-iri.x">Figure <span class="figno">11</span> <span class="fig-title">To reference a single image without any additional metadata, a direct association can be expressed as a JSON string containing an absolute IRI.</span></a></li>
+      <li class="tofline"><a class="tocxref" href="#fig-alternatively-if-additional-metadata-is-required-such-as-the-mime-content-type-of-the-referenced-resource-a-link-can-be-used">Figure <span class="figno">12</span> <span class="fig-title"> Alternatively, if additional metadata is required (such as the MIME content type of the referenced resource) a <span>Link</span> can be used: </span></a></li>
+      <li class="tofline"><a class="tocxref" href="#fig-if-more-than-one-value-is-to-be-expressed-a-json-array-with-a-mix-of-strings-and-links-can-be-used">Figure <span class="figno">13</span> <span class="fig-title"> If more than one value is to be expressed, A JSON Array with a mix of strings and <span>Link</span>s can be used: </span></a></li>
+      <li class="tofline"><a class="tocxref" href="#fig-example-14-context-https-www.w3.org-ns-activitystreams-type-application-id-http-example.org-application-123-name-exampletron-3000-image-http-example.org-application-abc.gif-type-link-href-http-example.org-application-123.png-mediatype-image-png-rel-thumbnail">Figure <span class="figno">14</span> <span class="fig-title"></span></a></li>
+      <li class="tofline"><a class="tocxref" href="#fig-an-activity-with-a-person-actor-extended-with-vcard-properties">Figure <span class="figno">15</span> <span class="fig-title">An Activity with a Person actor extended with VCard properties:</span></a></li>
+      <li class="tofline"><a class="tocxref" href="#fig-the-following-example-illustrates-a-simple-activity">Figure <span class="figno">16</span> <span class="fig-title">The following example illustrates a simple Activity:</span></a></li>
+      <li class="tofline"><a class="tocxref" href="#fig-an-activity-that-is-both-a-like-and-a-http-schema.org-likeaction">Figure <span class="figno">17</span> <span class="fig-title">An Activity that is both a <code><span>Like</span></code> and a <code>http://schema.org/LikeAction</code>:</span></a></li>
+      <li class="tofline"><a class="tocxref" href="#fig-the-following-is-a-simple-unordered-collection">Figure <span class="figno">18</span> <span class="fig-title"> The following is a simple unordered collection: </span></a></li>
+      <li class="tofline"><a class="tocxref" href="#fig-the-following-is-a-simple-ordered-collection">Figure <span class="figno">19</span> <span class="fig-title"> The following is a simple ordered collection: </span></a></li>
+      <li class="tofline"><a class="tocxref" href="#fig-an-illustration-of-the-relationship-between-collection-orderedcollection-collectionpage-and-orderedcollectionpage">Figure <span class="figno">20</span> <span class="fig-title"> An illustration of the relationship between <code>Collection</code>, <code>OrderedCollection</code>, <code>CollectionPage</code>, and <code>OrderedCollectionPage</code>: </span></a></li>
+      <li class="tofline"><a class="tocxref" href="#fig-a-visualization-of-the-collection-paging-model">Figure <span class="figno">21</span> <span class="fig-title"> A visualization of the Collection paging model: </span></a></li>
+      <li class="tofline"><a class="tocxref" href="#fig-the-following-is-a-simple-unordered-collection-with-paging">Figure <span class="figno">22</span> <span class="fig-title"> The following is a simple unordered collection with paging: </span></a></li>
+      <li class="tofline"><a class="tocxref" href="#fig-a-single-name-string-value-without-language-information">Figure <span class="figno">23</span> <span class="fig-title">A single name String value without language information:</span></a></li>
+      <li class="tofline"><a class="tocxref" href="#fig-multiple-language-specific-values">Figure <span class="figno">24</span> <span class="fig-title">Multiple, language-specific values:</span></a></li>
+      <li class="tofline"><a class="tocxref" href="#fig-using-the-und-language-tag">Figure <span class="figno">25</span> <span class="fig-title">Using the <code>"und"</code> language tag:</span></a></li>
+      <li class="tofline"><a class="tocxref" href="#fig-specifying-the-default-language-within-the-json-ld-context">Figure <span class="figno">26</span> <span class="fig-title"> Specifying the default <code>"@language"</code> within the JSON-LD <code>@context</code>: </span></a></li>
+      <li class="tofline"><a class="tocxref" href="#fig-geojson-point-coordinates">Figure <span class="figno">27</span> <span class="fig-title">GeoJSON Point Coordinates:</span></a></li>
+      <li class="tofline"><a class="tocxref" href="#fig-the-equivalent-place-alternative">Figure <span class="figno">28</span> <span class="fig-title">The Equivalent <code>Place</code> alternative:</span></a></li>
+      <li class="tofline"><a class="tocxref" href="#fig-geojson-polygon-coordinates">Figure <span class="figno">29</span> <span class="fig-title">GeoJSON Polygon Coordinates:</span></a></li>
+      <li class="tofline"><a class="tocxref" href="#fig-the-equivalent-geosparql-well-known-text-alternative">Figure <span class="figno">30</span> <span class="fig-title">The Equivalent GeoSparql Well-Known-Text alternative:</span></a></li>
+      <li class="tofline"><a class="tocxref" href="#fig-a-json-ld-compact-uri-definition">Figure <span class="figno">31</span> <span class="fig-title">A JSON-LD Compact URI definition</span></a></li>
+      <li class="tofline"><a class="tocxref" href="#fig-a-simple-extended-object">Figure <span class="figno">32</span> <span class="fig-title">A simple extended Object</span></a></li>
+      <li class="tofline"><a class="tocxref" href="#fig-the-reserialized-compacted-form">Figure <span class="figno">33</span> <span class="fig-title">The reserialized compacted form:</span></a></li>
+      <li class="tofline"><a class="tocxref" href="#fig-a-series-of-activities-creating-editing-and-deleting-a-note.x">Figure <span class="figno">34</span> <span class="fig-title">A series of activities; creating, editing, and deleting a note.</span></a></li>
+    </ul>
+  </section>
+
+  <script type="text/javascript" src="http://www.w3.org/scripts/nanotabs/0.9/nanotabs.js">
+  </script>
+  <script type="text/javascript">
+    nanotabs(
+    {
+      c: "cell",
+      e: "click",
+      d: -1,
+      f: function()
+      {
+        return false;
+      }
+    });
+    nanotabs(
+    {
+      c: "cell",
+      e: "mouseover",
+      s: "active"
+    });
+  </script>
+
+
+
+  <section id="references" class="appendix" typeof="bibo:Chapter" resource="#references" property="bibo:hasPart">
+    <!--OddPage-->
+    <h2 id="h-references" resource="#h-references"><span property="xhv:role" resource="xhv:heading"><span class="secno">F. </span>参考文献</span></h2>
+
+    <section id="normative-references" typeof="bibo:Chapter" resource="#normative-references" property="bibo:hasPart">
+      <h3 id="h-normative-references" resource="#h-normative-references"><span property="xhv:role" resource="xhv:heading"><span class="secno">F.1 </span>引用規格</span></h3>
+      <dl class="bibliography" resource=""><dt id="bib-BCP47">[BCP47]</dt>
+        <dd><a href="https://tools.ietf.org/html/bcp47" property="dc:requires"><cite>Tags for Identifying Languages</cite></a>. A. Phillips; M. Davis. IETF. September 2009. IETF Best Current Practice. URL: <a href="https://tools.ietf.org/html/bcp47" property="dc:requires">https://tools.ietf.org/html/bcp47</a>
+        </dd><dt id="bib-BIDI">[BIDI]</dt>
+        <dd><a href="http://www.unicode.org/reports/tr9/tr9-35.html" property="dc:requires"><cite>Unicode Bidirectional Algorithm</cite></a>. Mark Davis; Aharon Lanin; Andrew Glass. Unicode Consortium. 18 May 2016. Unicode Standard Annex #9. URL: <a href="http://www.unicode.org/reports/tr9/tr9-35.html" property="dc:requires">http://www.unicode.org/reports/tr9/tr9-35.html</a>
+        </dd><dt id="bib-HTML5">[HTML5]</dt>
+        <dd><a href="https://www.w3.org/TR/html5/" property="dc:requires"><cite>HTML5</cite></a>. Ian Hickson; Robin Berjon; Steve Faulkner; Travis Leithead; Erika Doyle Navara; Theresa O'Connor; Silvia Pfeiffer. W3C. 28 October 2014. W3C Recommendation. URL: <a href="https://www.w3.org/TR/html5/" property="dc:requires">https://www.w3.org/TR/html5/</a>
+        </dd><dt id="bib-JSON-LD">[JSON-LD]</dt>
+        <dd><a href="https://www.w3.org/TR/json-ld/" property="dc:requires"><cite>JSON-LD 1.0</cite></a>. Manu Sporny; Gregg Kellogg; Markus Lanthaler. W3C. 16 January 2014. W3C Recommendation. URL: <a href="https://www.w3.org/TR/json-ld/" property="dc:requires">https://www.w3.org/TR/json-ld/</a>
+        </dd><dt id="bib-JSON-LD-API">[JSON-LD-API]</dt>
+        <dd><a href="https://www.w3.org/TR/json-ld-api/" property="dc:requires"><cite>JSON-LD 1.0 Processing Algorithms and API</cite></a>. Markus Lanthaler; Gregg Kellogg; Manu Sporny. W3C. 16 January 2014. W3C Recommendation. URL: <a href="https://www.w3.org/TR/json-ld-api/" property="dc:requires">https://www.w3.org/TR/json-ld-api/</a>
+        </dd><dt id="bib-RFC2119">[RFC2119]</dt>
+        <dd><a href="https://tools.ietf.org/html/rfc2119" property="dc:requires"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. S. Bradner. IETF. March 1997. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc2119" property="dc:requires">https://tools.ietf.org/html/rfc2119</a>
+        </dd><dt id="bib-RFC3339">[RFC3339]</dt>
+        <dd><a href="https://tools.ietf.org/html/rfc3339" property="dc:requires"><cite>Date and Time on the Internet: Timestamps</cite></a>. G. Klyne; C. Newman. IETF. July 2002. Proposed Standard. URL: <a href="https://tools.ietf.org/html/rfc3339" property="dc:requires">https://tools.ietf.org/html/rfc3339</a>
+        </dd><dt id="bib-RFC3986">[RFC3986]</dt>
+        <dd><a href="https://tools.ietf.org/html/rfc3986" property="dc:requires"><cite>Uniform Resource Identifier (URI): Generic Syntax</cite></a>. T. Berners-Lee; R. Fielding; L. Masinter. IETF. January 2005. Internet Standard. URL: <a href="https://tools.ietf.org/html/rfc3986" property="dc:requires">https://tools.ietf.org/html/rfc3986</a>
+        </dd><dt id="bib-RFC3987">[RFC3987]</dt>
+        <dd><a href="https://tools.ietf.org/html/rfc3987" property="dc:requires"><cite>Internationalized Resource Identifiers (IRIs)</cite></a>. M. Duerst; M. Suignard. IETF. January 2005. Proposed Standard. URL: <a href="https://tools.ietf.org/html/rfc3987" property="dc:requires">https://tools.ietf.org/html/rfc3987</a>
+        </dd><dt id="bib-RFC5988">[RFC5988]</dt>
+        <dd><a href="https://tools.ietf.org/html/rfc5988" property="dc:requires"><cite>Web Linking</cite></a>. M. Nottingham. IETF. October 2010. Proposed Standard. URL: <a href="https://tools.ietf.org/html/rfc5988" property="dc:requires">https://tools.ietf.org/html/rfc5988</a>
+        </dd><dt id="bib-RFC6906">[RFC6906]</dt>
+        <dd><a href="https://tools.ietf.org/html/rfc6906" property="dc:requires"><cite>The 'profile' Link Relation Type</cite></a>. E. Wilde. IETF. March 2013. Informational. URL: <a href="https://tools.ietf.org/html/rfc6906" property="dc:requires">https://tools.ietf.org/html/rfc6906</a>
+        </dd><dt id="bib-RFC7159">[RFC7159]</dt>
+        <dd><a href="https://tools.ietf.org/html/rfc7159" property="dc:requires"><cite>The JavaScript Object Notation (JSON) Data Interchange Format</cite></a>. T. Bray, Ed.. IETF. March 2014. Proposed Standard. URL: <a href="https://tools.ietf.org/html/rfc7159" property="dc:requires">https://tools.ietf.org/html/rfc7159</a>
+        </dd>
+      </dl>
+    </section>
+
+    <section id="informative-references" typeof="bibo:Chapter" resource="#informative-references" property="bibo:hasPart">
+      <h3 id="h-informative-references" resource="#h-informative-references"><span property="xhv:role" resource="xhv:heading"><span class="secno">F.2 </span>参考規格</span></h3>
+      <dl class="bibliography" resource=""><dt id="bib-ABNF">[ABNF]</dt>
+        <dd><a href="https://tools.ietf.org/html/rfc5234" property="dc:references"><cite>Augmented BNF for Syntax Specifications: ABNF</cite></a>. D. Crocker, Ed.; P. Overell. IETF. January 2008. Internet Standard. URL: <a href="https://tools.ietf.org/html/rfc5234" property="dc:references">https://tools.ietf.org/html/rfc5234</a>
+        </dd><dt id="bib-AS1">[AS1]</dt>
+        <dd><a href="http://activitystrea.ms/specs/json/1.0/" property="dc:references"><cite>JSON Activity Streams 1.0</cite></a>. J. Snell; M. Atkins; W. Norris; C. Messina; M. Wilkinson; R. Dolin. http://activitystrea.ms. unofficial. URL: <a href="http://activitystrea.ms/specs/json/1.0/" property="dc:references">http://activitystrea.ms/specs/json/1.0/</a>
+        </dd><dt id="bib-SWP">[SWP]</dt>
+        <dd><a href="https://www.w3.org/TR/social-web-protocols/" property="dc:references"><cite>Social Web Protocols</cite></a>. A. Guy.URL: <a href="https://www.w3.org/TR/social-web-protocols/" property="dc:references">https://www.w3.org/TR/social-web-protocols/</a>
+        </dd><dt id="bib-vcard-rdf">[vcard-rdf]</dt>
+        <dd><a href="https://www.w3.org/TR/vcard-rdf/" property="dc:references"><cite>vCard Ontology - for describing People and Organizations</cite></a>. Renato Iannella; James McKinney. W3C. 22 May 2014. W3C Note. URL: <a href="https://www.w3.org/TR/vcard-rdf/" property="dc:references">https://www.w3.org/TR/vcard-rdf/</a>
+        </dd>
+      </dl>
+    </section>
+  </section>
+  <p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a>
+</p>
+  <script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script>
+</body>
+</html>
