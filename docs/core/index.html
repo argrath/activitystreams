@@ -565,7 +565,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 <a class="logo" href="https://www.w3.org/"><img width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt="W3C"></a>
 </p>
     <h1 class="title p-name" id="title" property="dcterms:title">Activity Streams 2.0</h1>
-    <h2 id="w3c-recommendation-23-may-2017"><abbr title="World Wide Web Consortium">W3C</abbr> Recommendation<time property="dcterms:issued" class="dt-published" datetime="2017-05-23">23 May 2017</time></h2>
+    <h2 id="w3c-recommendation-23-may-2017"><abbr title="World Wide Web Consortium">W3C</abbr> Recommendation <time property="dcterms:issued" class="dt-published" datetime="2017-05-23">23 May 2017</time></h2>
     <dl>
       <dt>This version:</dt>
       <dd><a class="u-url" href="https://www.w3.org/TR/2017/REC-activitystreams-core-20170523/">https://www.w3.org/TR/2017/REC-activitystreams-core-20170523/</a></dd>
@@ -596,7 +596,7 @@ Please check the <a href="https://github.com/w3c/activitystreams/blob/master/ERR
     <p>
 The English version of this specification is the only normative version. Non-normative <a href="https://www.w3.org/2003/03/Translations/byTechnology?technology=https://www.w3.org/TR/activitystreams-vocabulary/">translations</a> may also be available.
 </p>
-    <p class="copyright"><a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2017 <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>). <abbr title="World Wide Web Consortium">W3C</abbr> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a> rules apply.
+    <p class="copyright"><a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2018 <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>). <abbr title="World Wide Web Consortium">W3C</abbr> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a> rules apply.
 </p>
     <hr title="Separator for header">
   </div>
@@ -604,22 +604,22 @@ The English version of this specification is the only normative version. Non-nor
   <section id="abstract" class="introductory" property="dc:abstract">
     <h2 id="h-abstract" resource="#h-abstract"><span property="xhv:role" resource="xhv:heading">要約</span></h2>
     <p>
-This specification details a model for representing potential and completed activities using the JSON format. It is intended to be used with vocabularies that detail the structure of activities, and define specific types of activities.
+この仕様では、JSON形式を使って、潜在的なアクティビティと完了したアクティビティを表現するためのモデルについて詳しく説明する。これは、アクティビティの構造を詳細に記述し、特定の型のアクティビティを定義する語彙とともに使うを目的とする。
 </p>
 
     <section id="authorsnote" class="informative" typeof="bibo:Chapter" resource="#authorsnote" property="bibo:hasPart">
-      <h3 id="h-authorsnote" resource="#h-authorsnote"><span property="xhv:role" resource="xhv:heading">Author's Note</span></h3>
+      <h3 id="h-authorsnote" resource="#h-authorsnote"><span property="xhv:role" resource="xhv:heading">著者のメモ</span></h3>
       <p>
 <em>この節は非規範的である。</em>
 </p>
       <p>
-This draft is heavily influenced by the JSON Activity Streams 1.0 specification originally co-authored by Martin Atkins, Will Norris, Chris Messina, Monica Wilkinson, Rob Dolin and James Snell. The author is very thankful for their significant contributions and gladly stands on their shoulders. Some portions of the original text of Activity Streams 1.0 are used in this document.
+この草稿は、Martin Atkins、Will Norris、Chris Messina、Monica Wilkinson、Rob Dolin、James Snellの共著によるJSON Activity Streams 1.0仕様の影響を強く受けている。著者は彼らの多大な貢献に非常に感謝しており、喜んで彼らの肩の上に立っている。この文書では、Activity Streams 1.0の原文の一部を使用している。
 </p>
     </section>
   </section>
 
   <section id="sotd" class="introductory">
-    <h2 id="h-sotd" resource="#h-sotd"><span property="xhv:role" resource="xhv:heading">Status of This Document</span></h2>
+    <h2 id="h-sotd" resource="#h-sotd"><span property="xhv:role" resource="xhv:heading">この文書の状態</span></h2>
     <p>
 <em>この節は、発行時点でのこの文書の状態を説明している。他の文書がこの文書に取って代わることがある。現在の <abbr title="World Wide Web Consortium">W3C</abbr> による発行物と この技術報告の最新版は https://www.w3.org/TR/ の <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> にある。</em>
 </p>
@@ -678,13 +678,13 @@ Working Group の <a href="https://github.com/w3c/activitystreams/tree/master/im
         </ol>
       </li>
       <li class="tocline"><a href="#extensibility" class="tocxref"><span class="secno">5  </span>拡張性</a><ol class="toc">
-          <li class="tocline"><a href="#compact-uris" class="tocxref"><span class="secno">5.1 </span>Support for Compact URIs</a></li>
-          <li class="tocline"><a href="#extension-round-trip" class="tocxref"><span class="secno">5.2 </span>Re-serialization of Extensions</a></li>
+          <li class="tocline"><a href="#compact-uris" class="tocxref"><span class="secno">5.1 </span>Compact URI対応</a></li>
+          <li class="tocline"><a href="#extension-round-trip" class="tocxref"><span class="secno">5.2 </span>拡張の再直列化</a></li>
         </ol>
       </li>
-      <li class="tocline"><a href="#privacy" class="tocxref"><span class="secno">6. </span>Privacy Considerations</a></li>
-      <li class="tocline"><a href="#security-considerations" class="tocxref"><span class="secno">7  </span>セキュリティ上の考慮事項</a></li>
-      <li class="tocline"><a href="#iana" class="tocxref"><span class="secno">8. </span>IANA Considerations</a><ol class="toc">
+      <li class="tocline"><a href="#privacy" class="tocxref"><span class="secno">6. </span>プライバシー上の考慮事項</a></li>
+      <li class="tocline"><a href="#security-considerations" class="tocxref"><span class="secno">7. </span>セキュリティ上の考慮事項</a></li>
+      <li class="tocline"><a href="#iana" class="tocxref"><span class="secno">8. </span>IANAの考慮事項</a><ol class="toc">
           <li class="tocline"><a href="#media-type" class="tocxref"><span class="secno">8.1 </span><code>application/activity+json</code> メディア型</a></li>
         </ol>
       </li>
@@ -695,10 +695,10 @@ Working Group の <a href="https://github.com/w3c/activitystreams/tree/master/im
         </ol>
       </li>
       <li class="tocline"><a href="#acknowledgements" class="tocxref"><span class="secno">A. </span>謝辞</a></li>
-      <li class="tocline"><a href="#activitystreams-1.0a" class="tocxref"><span class="secno">B. </span>Deprecated Activity Streams 1.0 Syntax</a></li>
-      <li class="tocline"><a href="#example-using-multiple-vocabularies" class="tocxref"><span class="secno">C. </span>Example using Multiple Vocabularies</a></li>
-      <li class="tocline"><a href="#changelog" class="tocxref"><span class="secno">D. </span>Changelog</a></li>
-      <li class="tocline"><a href="#tof" class="tocxref"><span class="secno">E. </span>Table of Figures</a></li>
+      <li class="tocline"><a href="#activitystreams-1.0a" class="tocxref"><span class="secno">B. </span>廃止されたActivity Streams 1.0文法</a></li>
+      <li class="tocline"><a href="#example-using-multiple-vocabularies" class="tocxref"><span class="secno">C. </span>複数の語彙を使った例</a></li>
+      <li class="tocline"><a href="#changelog" class="tocxref"><span class="secno">D. </span>変更履歴</a></li>
+      <li class="tocline"><a href="#tof" class="tocxref"><span class="secno">E. </span>図の一覧</a></li>
       <li class="tocline"><a href="#references" class="tocxref"><span class="secno">F. </span>参考文献</a><ol class="toc">
           <li class="tocline"><a href="#normative-references" class="tocxref"><span class="secno">F.1 </span>引用規格</a></li>
           <li class="tocline"><a href="#informative-references" class="tocxref"><span class="secno">F.2 </span>参考規格</a></li>
@@ -805,7 +805,7 @@ JSON-LD は <a href="http://www.w3.org/TR/json-ld/#the-context">processing conte
         <h4 id="h-example-1context" resource="#h-example-1context"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.1.1 </span>文字列のコンテキスト</span></h4>
 
         <figure id="fig-document-providing-a-context-as-a-string.x">
-          <figcaption>Figure <span class="figno">1</span> <span class="fig-title"> コンテキストを文字列として提供している文書。</span></figcaption>
+          <figcaption>Figure <span class="figno">1</span> <span class="fig-title"> コンテキストを文字列として提供している文書:</span></figcaption>
           <div id="ex1-context" style="display: block;">
             <div class="example">
               <div class="example-title marker"><span>Example 1</span></div>
@@ -824,7 +824,7 @@ JSON-LD は <a href="http://www.w3.org/TR/json-ld/#the-context">processing conte
         <h4 id="h-example-2context" resource="#h-example-2context"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.1.2 </span>オブジェクトのコンテキスト</span></h4>
 
         <figure id="fig-document-providing-context-as-an-object-using-the-vocab-keyword-and-a-prefix-for-extension-terms.x">
-          <figcaption>Figure <span class="figno">2</span> <span class="fig-title"> 拡張用語のために <code>@vocab</code> キーワードと接頭辞を使ったオブジェクトで コンテキストを提供している文書。</span></figcaption>
+          <figcaption>Figure <span class="figno">2</span> <span class="fig-title"> 拡張用語のために <code>@vocab</code> キーワードと接頭辞を使ったオブジェクトで コンテキストを提供している文書:</span></figcaption>
           <div id="ex2-context" style="display: block;">
             <div class="example">
               <div class="example-title marker"><span>Example 2</span></div>
@@ -849,7 +849,7 @@ JSON-LD は <a href="http://www.w3.org/TR/json-ld/#the-context">processing conte
         <h4 id="h-example-3context" resource="#h-example-3context"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.1.3 </span>配列のコンテキスト</span></h4>
 
         <figure id="fig-document-providing-context-as-an-array-and-including-an-alias-for-an-additional-term.x">
-          <figcaption>Figure <span class="figno">3</span> <span class="fig-title"> 追加の用語のための別名を含む配列としてコンテキストを提供している文書。</span></figcaption>
+          <figcaption>Figure <span class="figno">3</span> <span class="fig-title"> 追加の用語のための別名を含む配列としてコンテキストを提供している文書:</span></figcaption>
           <div id="ex3-context" style="display: block;">
             <div class="example">
               <div class="example-title marker"><span>Example 3</span></div>
@@ -928,7 +928,7 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
       <h3 id="h-example-1" resource="#h-example-1"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.1 </span>最小限のアクティビティ</span></h3>
 
       <figure id="fig-expresses-the-statement-http-www.test.example-martin-created-http-example.org-foo.jpg-.-no-additional-detail-is-given.x">
-        <figcaption>Figure <span class="figno">4</span> <span class="fig-title"> Expresses the statement <code>'http://www.test.example/martin' created 'http://example.org/foo.jpg'</code>. No additional detail is given. </span></figcaption>
+        <figcaption>Figure <span class="figno">4</span> <span class="fig-title"> Expresses the statement <code>'http://www.test.example/martin' が 'http://example.org/foo.jpg' を作った</code>という声明を表現する。追加の詳細はなし:</figcaption>
         <div id="ex1-jsonld" style="display: block;">
           <div class="example">
             <div class="example-title marker"><span>Example 4</span></div>
@@ -948,7 +948,7 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
       <h3 id="h-example-2" resource="#h-example-2"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.2 </span>追加の詳細付きの基本的なアクティビティ</span></h3>
 
       <figure id="fig-expresses-the-statement-martin-smith-added-an-article-to-the-blog-martin-s-blog-at-3-04-pm-utc-on-february-10-2015.-some-additional-details-about-the-article-actor-and-target-blog-are-given-using-properties-defined-by-the-activity-streams-2.0-vocabulary.x">
-        <figcaption>Figure <span class="figno">5</span> <span class="fig-title"> 「Martin Smith が2015年2月10日の午後3:04(UTC)にブログ'Martin's Blog'に 記事を追加した」ことを表現する。<a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity Streams 2.0 Vocabulary</a> によって定義された属性を使って、 記事、アクター、ターゲットに関するいくつかの追加の詳細が与えられている。</span></figcaption>
+        <figcaption>Figure <span class="figno">5</span> <span class="fig-title"> 「Martin Smith が2015年2月10日の午後3:04(UTC)にブログ'Martin's Blog'に 記事を追加した」ことを表現する。<a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity Streams 2.0 Vocabulary</a> によって定義された属性を使って、 記事、アクター、ターゲットに関するいくつかの追加の詳細が与えられている:</span></figcaption>
         <div id="ex2-jsonld" style="display: block;">
           <div class="example">
             <div class="example-title marker"><span>Example 5</span></div>
@@ -991,7 +991,7 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
       <h3 id="h-example-3" resource="#h-example-3"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.3 </span>拡張したアクティビティ</span></h3>
 
       <figure id="fig-a-more-extensive-single-entry-activity-stream-follows.x">
-        <figcaption>Figure <span class="figno">6</span> <span class="fig-title"> A more extensive, single-entry "Activity Stream" follows. </span></figcaption>
+        <figcaption>Figure <span class="figno">6</span> <span class="fig-title"> より広範な、単一のエントリの "Activity Stream":</span></figcaption>
 
         <div id="ex3-jsonld" style="display: block;">
           <div class="example">
@@ -1085,8 +1085,8 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
       <li><a href="#intransitiveactivity" class="internalDFN" data-link-type="dfn">IntransitiveActivity</a>,</li>
       <li><a href="#collection" class="internalDFN" data-link-type="dfn">Collection</a>,</li>
       <li><a href="#dfn-orderedcollection" class="internalDFN" data-link-type="dfn"><code>OrderedCollection</code></a>,</li>
-      <li><a href="#dfn-collectionpage" class="internalDFN" data-link-type="dfn"><code>CollectionPage</code></a>, and</li>
-      <li><a href="#dfn-orderedcollectionpage" class="internalDFN" data-link-type="dfn"><code>OrderedCollectionPage</code></a>.</li>
+      <li><a href="#dfn-collectionpage" class="internalDFN" data-link-type="dfn"><code>CollectionPage</code></a>,</li>
+      <li><a href="#dfn-orderedcollectionpage" class="internalDFN" data-link-type="dfn"><code>OrderedCollectionPage</code></a></li>
     </ul>
     <p>
 
@@ -1242,7 +1242,7 @@ Link のターゲット URI は必須の <code><a href="https://www.w3.org/TR/ac
 </p>
 
       <p>
-For example, all <a data-lt="Object" href="#asobject" class="internalDFN" data-link-type="dfn">Objects</a> can contain an <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-image-term">image</a></code> property whose value describes a graphical representation of the containing object. This property will typically be used to provide the URL to an image (e.g. JPEG, GIF or PNG) resource that can be displayed to the user. Any given object might have multiple such visual representations -- multiple screenshots, for instance, or the same image at different resolutions. In Activity Streams 2.0, there are essentially three ways of describing such references.
+例えば、すべての<a data-lt="Object" href="#asobject" class="internalDFN" data-link-type="dfn">Object</a>には、含まれるオブジェクトのグラフィカル表現を表す<code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-image-term">image</a></code>属性を含めることができる。この属性は通常、ユーザに表示可能なイメージ(JPEG、GIF、PNGなど)リソースへのURLを提供するために使われる。任意のオブジェクトは、複数のそのような視覚的表現、例えば、複数のスクリーンショット、または異なる解像度での同じ画像を保持することができる。Activity Streams 2.0には、このような参照を記述する方法が基本的に3種類ある。
 </p>
 
       <figure id="fig-to-reference-a-single-image-without-any-additional-metadata-a-direct-association-can-be-expressed-as-a-json-string-containing-an-absolute-iri.x">
@@ -1282,7 +1282,7 @@ For example, all <a data-lt="Object" href="#asobject" class="internalDFN" data-l
       </figure>
 
       <p>
-Formally, the former example establishes an unqualified direct relationship with the image resource while the latter creates a <a href="http://patterns.dataincubator.org/book/qualified-relation.html">qualified, indirect relationship</a> that allows additional properties about the relationship to be specified.
+正式には、前者の例はイメージリソースとの非修飾直接関係を確立し、後者は<a href="http://patterns.dataincubator.org/book/qualified-relation.html">修飾された間接関係</a>を作成して、関係に関する追加の属性を指定できるようにする。
 </p>
 
       <figure id="fig-if-more-than-one-value-is-to-be-expressed-a-json-array-with-a-mix-of-strings-and-links-can-be-used">
@@ -1309,19 +1309,19 @@ Formally, the former example establishes an unqualified direct relationship with
       </figure>
 
       <p>
-Individual items contained in such an array are independent of one another and no significance is given to the ordering.
+このような配列に含まれる個々の項目は互いに独立しており、順序に意味はない。
 </p>
 
       <p>
-RFC 5988 defines that all Links have a "link relation" that describes the contextual purpose of the link. Within a <a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a>, the <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-rel">rel</a></code> property provides the link relation value. If no <code>rel</code> property is specified, the link relation is considered to be unspecified. Any given Link can have multiple link relation values. In the JSON serialization, a single link relation is expressed as a single JSON string. Multiple link relations are expressed as an array of JSON strings.
+RFC 5988では、すべての"Link"には、リンクのコンテキスト目的を記述する「リンク関係」があると定義される。<a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a>内では、<code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-rel">rel</a></code>属性がリンク関係の値を提供する。<code>rel</code>属性が指定されていない場合、リンク関係は未指定と見なされる。任意のLinkは、複数のリンク関係値を持つことができる。JSON直列化では、単一のリンク関係が単一のJSON文字列として表現される。複数のリンク関係は、JSON文字列の配列として表現される。
 </p>
 
       <p>
-The scope of the link relation is the object in which the <a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a> is an immediate child.
+リンク関係のスコープは、<a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a>が直接の子であるオブジェクトである。
 </p>
 
       <p>
-In the following example, two separate references are provided. The link relation of the first is unspecified, while the link relation of the second is "<code>thumbnail</code>".
+次の例では、二つの別々の参照が提供される。第1のリンク関係は未指定であり、第2のリンク関係は"<code>thumbnail</code>"である。
 </p>
 
       <figure id="fig-example-14-context-https-www.w3.org-ns-activitystreams-type-application-id-http-example.org-application-123-name-exampletron-3000-image-http-example.org-application-abc.gif-type-link-href-http-example.org-application-123.png-mediatype-image-png-rel-thumbnail">
@@ -1349,11 +1349,11 @@ In the following example, two separate references are provided. The link relatio
       </figure>
 
       <p>
-It ought to be noted that the [<cite><a class="bibref" href="#bib-HTML5">HTML5</a></cite>] specification provides its own alternative definition of a "link relation" that differs slightly from the [<cite><a class="bibref" href="#bib-RFC5988">RFC5988</a></cite>] definition. In the HTML5 definition, any string that does not contain the "space" U+0020, "tab" (U+0009), "LF" (U+000A), "FF" (U+000C), "CR" (U+000D) or "," (U+002C) characters can be used as a valid link relation. To promote interoperability, Activity Streams 2.0 implementations MUST only use link relations that are syntactically valid in terms of both the [<cite><a class="bibref" href="#bib-RFC5988">RFC5988</a></cite>] and [<cite><a class="bibref" href="#bib-HTML5">HTML5</a></cite>] definitions. Implementations MAY use link relation values that are not registered.
+[<cite><a class="bibref" href="#bib-HTML5">HTML5</a></cite>]仕様は、[<cite><a class="bibref" href="#bib-RFC5988">RFC5988</a></cite>]定義とわずかに異なる「リンク関係」の独自の代替定義を提供していることに注意すべきである。HTML5の定義では、「スペース」U+0020、「タブ」(U+0009)、「LF」(U+000A)、「FF」(U+000C)、「CR」(U+000D)、「,」(U+002C)文字を含まない任意の文字列を有効なリンク関係として使える。相互運用性を促進するために、Activity Streams 2.0実装は、[<cite><a class="bibref" href="#bib-RFC5988">RFC5988</a></cite>]と[<cite><a class="bibref" href="#bib-HTML5">HTML5</a></cite>]の両方の定義に関して構文的に有効なリンク関係のみを使わなければならない。実装は、登録されていないリンク関係値を使っても良い。(MAY)
 </p>
 
       <p>
-Note that the <a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a> and <a href="#asobject" class="internalDFN" data-link-type="dfn">Object</a> types are disjoint from one another. That is, any given <a href="#asobject" class="internalDFN" data-link-type="dfn">Object</a> cannot also be a <a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a>.
+<a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a>型と<a href="#asobject" class="internalDFN" data-link-type="dfn">Object</a>型は排他であることに注意すること。つまり、任意の<a href="#asobject" class="internalDFN" data-link-type="dfn">Object</a>は<a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a>になることはできない。
 </p>
 
     </section>
@@ -1370,7 +1370,7 @@ Actor オブジェクトは、 Activity を実行する能力を持つ実体を�
 </p>
 
       <figure id="fig-an-activity-with-a-person-actor-extended-with-vcard-properties">
-        <figcaption>Figure <span class="figno">15</span> <span class="fig-title">An Activity with a Person actor extended with VCard properties:</span></figcaption>
+        <figcaption>Figure <span class="figno">15</span> <span class="fig-title">VCard属性で拡張したPersonアクターのActivity:</span></figcaption>
         <div id="ex17-jsonld" style="display: block;">
           <div class="example">
             <div class="example-title marker"><span>Example 15</span></div>
@@ -1398,10 +1398,10 @@ Actor オブジェクトは、 Activity を実行する能力を持つ実体を�
       </figure>
 
       <p>
-While implementations are free to introduce new types of Actors beyond those defined by the Activity Vocabulary, interoperability issues can arise when applications rely too much on extension types that are not recognized by other implementations. Care should be taken to not unduly overlap with or duplicate the existing Actor types.
+実装は、Activity Vocabularyによって定義されたものを超えて新しいタイプのアクターを自由に導入することができるが、アプリケーションが他の実装によって認識されない拡張タイプに過度に依存する場合、相互運用性の問題が生じる可能性がある。既存のアクター型と過度に重なったり、複製したりしないように注意すること。
 </p>
       <p>
-実装がコア語彙型と重複する拡張型を使用する場合、実装はコア語彙型も指定しなければならない(MUST)。For instance, some vocabularies (e.g. VCard) define their own types for describing people. An implementation that wishes, for example, to use a <code>vcard:Individual</code> as an Actor MUST also identify that Actor as a <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-person">Person</a></code> as illustrated in the previous example.
+実装がコア語彙型と重複する拡張型を使用する場合、実装はコア語彙型も指定しなければならない(MUST)。例えば、いくつかの語彙(例えばVCard)は、人を記述するために独自の型を定義する。例えば、<code>vcard:Individual</code>をアクターとして使いたい実装は、前の例で説明したように、そのアクターを<code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-person">Person</a></code>としても識別しなければならない。
 </p>
 
     </section>
@@ -1422,7 +1422,7 @@ Activity オブジェクトは、既に起きた、今起きている途中、 �
 </p>
 
       <figure id="fig-the-following-example-illustrates-a-simple-activity">
-        <figcaption>Figure <span class="figno">16</span> <span class="fig-title">The following example illustrates a simple Activity:</span></figcaption>
+        <figcaption>Figure <span class="figno">16</span> <span class="fig-title">単純なActivityを示す例:</span></figcaption>
         <div id="ex19-jsonld" style="display: block;">
           <div class="example">
             <div class="example-title marker"><span>Example 16</span></div>
@@ -1445,14 +1445,14 @@ Activity オブジェクトは、既に起きた、今起きている途中、 �
 </p>
 
       <p>
-While implementations are free to introduce new types of Activites beyond those defined by the Activity Vocabulary, interoperability issues can arise when applications rely too much on extension types that are not recognized by other implementations. Care should be taken to not unduly overlap with or duplicate the existing Activity types.MUST
+実装は、Activity Vocabularyによって定義されたものを超えた新しい型のActivityを自由に導入することができるが、アプリケーションが他の実装によって認識されない拡張型に過度に依存する場合、相互運用性の問題が生じる可能性がある。既存のアクティビティ型と過度に重なったり、複製したりしないように注意すること。
 </p>
       <p>
 実装がコア語彙型と重複する拡張型を使用する場合、実装はコア語彙型も指定しなければならない(MUST)。For instance, some vocabularies (e.g.Schema.org) define their own types for describing actions. An implementation that wishes, for example, to use <a href="http://schema.org/LikeAction"><code>http://schema.org/LikeAction</code></a> as an Activity <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-like">MUST</a> also identify that Object as being a <g5><g6>Like</g6></g5> as illustrated in the following:
 </p>
 
       <figure id="fig-an-activity-that-is-both-a-like-and-a-http-schema.org-likeaction">
-        <figcaption>Figure <span class="figno">17</span> <span class="fig-title">An Activity that is both a <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-like">Like</a></code> and a <code>http://schema.org/LikeAction</code>:</span></figcaption>
+        <figcaption>Figure <span class="figno">17</span> <span class="fig-title"><code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-like">Like</a></code>と<code>http://schema.org/LikeAction</code>の両方であるActivity:</span></figcaption>
         <div id="ex20-jsonld" style="display: block;">
           <div class="example">
             <div class="example-title marker"><span>Example 17</span></div>
@@ -1499,7 +1499,7 @@ IntransitiveActivity オブジェクトは、自動的なアクションを表�
 </p>
 
       <figure id="fig-the-following-is-a-simple-unordered-collection">
-        <figcaption>Figure <span class="figno">18</span> <span class="fig-title"> The following is a simple unordered collection: </span></figcaption>
+        <figcaption>Figure <span class="figno">18</span> <span class="fig-title"> 単純な順序のないコレクション: </span></figcaption>
         <div id="ex21-jsonld" style="display: block;">
           <div class="example">
             <div class="example-title marker"><span>Example 18</span></div>
@@ -1526,7 +1526,7 @@ IntransitiveActivity オブジェクトは、自動的なアクションを表�
       </figure>
 
       <figure id="fig-the-following-is-a-simple-ordered-collection">
-        <figcaption>Figure <span class="figno">19</span> <span class="fig-title"> The following is a simple ordered collection: </span></figcaption>
+        <figcaption>Figure <span class="figno">19</span> <span class="fig-title"> 単純な順序のあるコレクション: </span></figcaption>
         <div id="ex22-jsonld" style="display: block;">
           <div class="example">
             <div class="example-title marker"><span>Example 19</span></div>
@@ -1553,7 +1553,7 @@ IntransitiveActivity オブジェクトは、自動的なアクションを表�
       </figure>
 
       <section id="paging" typeof="bibo:Chapter" resource="#paging" property="bibo:hasPart">
-        <h4 id="h-paging" resource="#h-paging"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.6.1 </span>Collection Paging</span></h4>
+        <h4 id="h-paging" resource="#h-paging"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.6.1 </span>コレクションのページング</span></h4>
 
         <p>
 Collection は大量のアイテムを含むことができる。しばしば、 <code>items</code> (または <code>orderedItems</code>) 属性だけを使って Collection に含まれている全てのアイテムをシリアル化するのは 実装上非実用的になる。このような場合、Collection に含まれているアイテムは 相異なる部分集合、つまり「ページ」に分割できる。ページは <code><dfn data-dfn-type="dfn" id="dfn-collectionpage">CollectionPage</dfn></code> 型を使って識別される。
@@ -1580,14 +1580,14 @@ Collection は大量のアイテムを含むことができる。しばしば、
 </p>
 
         <figure id="fig-an-illustration-of-the-relationship-between-collection-orderedcollection-collectionpage-and-orderedcollectionpage">
-          <figcaption>Figure <span class="figno">20</span> <span class="fig-title"> An illustration of the relationship between <code>Collection</code>, <code>OrderedCollection</code>, <code>CollectionPage</code>, and <code>OrderedCollectionPage</code>: </span></figcaption><img src="paging2.png" alt="Collection type Model"></figure>
+          <figcaption>Figure <span class="figno">20</span> <span class="fig-title"> <code>Collection</code>, <code>OrderedCollection</code>, <code>CollectionPage</code>, <code>OrderedCollectionPage</code> の関係の図: </span></figcaption><img src="paging2.png" alt="Collection type Model"></figure>
 
         <p>
 順序付きでも順序なしでも、 <code>Collection</code> のページは 並びに配置される (シングルリンクリストかダブルリンクリスト)。<code>first</code> 属性はこの並びの最初のページを識別するために使われ、 一方 <code>last</code> 属性は並びの最後のページを識別するのに使われる。<code>prev</code> と <code>next</code> 属性はそれぞれ直前と直後のページを 識別する。
 </p>
 
         <figure id="fig-a-visualization-of-the-collection-paging-model">
-          <figcaption>Figure <span class="figno">21</span> <span class="fig-title"> A visualization of the Collection paging model: </span></figcaption><img src="paging.png" alt="The Paging Model"></figure>
+          <figcaption>Figure <span class="figno">21</span> <span class="fig-title"> Collection ページングモデルの図: </span></figcaption><img src="paging.png" alt="The Paging Model"></figure>
 
         <p>
 <code>current</code> 属性は、<code>Collection</code> の中で、 最も最近に作成または更新されたアイテムの部分集合を含むページを識別する。
@@ -1598,7 +1598,7 @@ Collection は大量のアイテムを含むことができる。しばしば、
 </p>
 
         <figure id="fig-the-following-is-a-simple-unordered-collection-with-paging">
-          <figcaption>Figure <span class="figno">22</span> <span class="fig-title"> The following is a simple unordered collection with paging: </span></figcaption>
+          <figcaption>Figure <span class="figno">22</span> <span class="fig-title"> 単純な、ページング付きの順序のないコレクション: </span></figcaption>
           <div id="ex21b-jsonld" style="display: block;">
             <div class="example">
               <div class="example-title marker"><span>Example 20</span></div>
@@ -1687,7 +1687,7 @@ Collection は大量のアイテムを含むことができる。しばしば、
 </p>
 
       <figure id="fig-using-the-und-language-tag">
-        <figcaption>Figure <span class="figno">25</span> <span class="fig-title">Using the <code>"und"</code> language tag:</span></figcaption>
+        <figcaption>図<span class="figno">25</span> <span class="fig-title"><code>"und"</code>言語タグの使用:</span></figcaption>
         <div id="ex11b-jsonld" style="display: block;">
           <div class="example">
             <div class="example-title marker"><span>Example 23</span></div>
@@ -1703,14 +1703,14 @@ Collection は大量のアイテムを含むことができる。しばしば、
       </figure>
 
       <section id="defaultlangcontext" typeof="bibo:Chapter" resource="#defaultlangcontext" property="bibo:hasPart">
-        <h4 id="h-defaultlangcontext" resource="#h-defaultlangcontext"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.7.1 </span>Default Language Context</span></h4>
+        <h4 id="h-defaultlangcontext" resource="#h-defaultlangcontext"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.7.1 </span>デフォルト言語コンテキスト</span></h4>
 
         <p>
 Activity Streams 2.0 文書を生成または処理するのに [<cite><a class="bibref" href="#bib-JSON-LD">JSON-LD</a></cite>] 機構を使う場合、 デフォルト言語を識別するために <code>@context</code> の中で <code>@language</code> 属性を使っても良い(MAY)。この機構は、JSON-LD を使って Activity Streams 2.0 文書を処理することを 選ばなかった実装によっては理解されないかもしれない。
 </p>
 
         <figure id="fig-specifying-the-default-language-within-the-json-ld-context">
-          <figcaption>Figure <span class="figno">26</span> <span class="fig-title"> Specifying the default <code>"@language"</code> within the JSON-LD <code>@context</code>: </span></figcaption>
+          <figcaption>Figure <span class="figno">26</span> <span class="fig-title">JSON-LDの<code>@context</code>の中でデフォルトの<code>"@language"</code>を指定する: </span></figcaption>
           <div id="ex11c-jsonld" style="display: block;">
             <div class="example">
               <div class="example-title marker"><span>Example 24</span></div>
@@ -1730,10 +1730,10 @@ Activity Streams 2.0 文書を生成または処理するのに [<cite><a class=
       </section>
 
       <section id="biditext" typeof="bibo:Chapter" resource="#biditext" property="bibo:hasPart">
-        <h4 id="h-biditext" resource="#h-biditext"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.7.2 </span>Bidirectional Text</span></h4>
+        <h4 id="h-biditext" resource="#h-biditext"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.7.2 </span>双方向テキスト</span></h4>
 
         <p>
-Natural language values within an Activity Streams 2.0 document MAY contain bidirectional text. The default base direction of an Activity Streams 2.0 document is Left-to-Right. The base direction of individual natural language values MAY be modified as described below.
+Activity Streams 2.0文書内の自然言語値は、双方向テキストを含んでもよい(MAY)。Activity Streams 2.0 文書のデフォルト基本方向は左から右である。個々の自然言語値の基本方向は後述のようにして修正してもよい(MAY)。
 </p>
 
         <p>
@@ -1747,10 +1747,10 @@ Consumers of Activity Streams 2.0 documents that contain bidirectional text SHOU
         <table>
           <tbody>
             <tr>
-              <th>Property</th>
-              <th>Value</th>
-              <th>Direction</th>
-              <th>Method</th>
+              <th>属性</th>
+              <th>値</th>
+              <th>方向</th>
+              <th>手法</th>
             </tr>
             <tr>
               <td><code>name</code></td>
@@ -1807,8 +1807,8 @@ Consumers of Activity Streams 2.0 documents that contain bidirectional text SHOU
 Activity Streams 2.0 発行者は、分かっている場合には、map 属性か デフォルト言語タグを使って、自然言語属性の言語を明示的に マークアップするべきである(SHOULD)。
 </p>
       <div class="note">
-        <div class="note-title marker" aria-level="4" role="heading" id="h-note1"><span>Note</span><span style="text-transform: none">: Examples</span></div>
-        <p class="">Not all examples in this specification explicitly mark the language of natural language properties. This is intentional. The authors and the working group wished to avoid having implementers cut-and-paste examples from the document with explicit language markup as a template for new documents, which would consequently have inaccurate language markup.
+        <div class="note-title marker" aria-level="4" role="heading" id="h-note1"><span>注</span><span style="text-transform: none">: 例</span></div>
+        <p class="">この仕様のすべての例が、自然言語属性の言語を明示的に示しているわけではない。これは意図的である。著者とワーキンググループは、実装者が新しい文書のテンプレートとして明示的な言語マークアップを持つ文書から例をカットアンドペーストし、その結果、不正確な言語マークアップが含まれることになることを避けたいと望んだ。
 </p>
       </div>
     </section>
@@ -1820,27 +1820,27 @@ Activity Streams 2.0 発行者は、分かっている場合には、map 属性�
     <h2 id="h-extensibility" resource="#h-extensibility"><span property="xhv:role" resource="xhv:heading"><span class="secno">5  </span>拡張性</span></h2>
 
     <p>
-In Activity Streams 2.0, an "extension" is any property, activity, actor or object type not defined by the <a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity Vocabulary</a>. Consuming implementations that encounter unfamiliar extensions MUST NOT stop processing or signal an error and MUST continue processing the items as if those properties were not present. Note that support for extensions can vary across implementations and no normative processing model for extensions is defined. Accordingly, implementations that rely too heavily on the use of extensions may experience reduced interoperability with other implementations.
+Activity Streams 2.0では、「拡張」は、<a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity Vocabulary</a>によって定義されていない任意の属性、アクティビティ、アクター、またはオブジェクト型である。未知の拡張に遭遇した消費実装は、処理を停止したりエラーを通知したりしてはならず(MUST NOT)、それらの属性が存在しないかのようにアイテムの処理を継続しなければならない(MUST)。拡張の対応は実装によって異なる可能性があり、拡張の標準的な処理モデルは定義されていないことに注意すること。したがって、拡張の使用に過度に依存する実装は、他の実装との相互運用性の低下を経験する可能性がある。
 </p>
 
     <p>
-For extensions, [<cite><a class="bibref" href="#bib-JSON-LD">JSON-LD</a></cite>] is used as the primary mechanism for defining and disambiguating extensions. Implementations that wish to fully support extensions SHOULD use [<cite><a class="bibref" href="#bib-JSON-LD">JSON-LD</a></cite>] mechanisms.
+拡張については、拡張を定義し、明確にするための主要な機構として[<cite><a class="bibref" href="#bib-JSON-LD">JSON-LD</a></cite>]が使われる。拡張を完全にサポートしたい実装は、[<cite><a class="bibref" href="#bib-JSON-LD">JSON-LD</a></cite>]機構を使用すべきである。
 </p>
 
     <p>
-Some popular extensions are included in the Activity Streams 2.0 namespace document, and can be reviewed at <a href="https://www.w3.org/ns/activitystreams#extensions">https://www.w3.org/ns/activitystreams#extensions</a>. The <a href="https://www.w3.org/community/swicg/">Social Web Incubator Community Group</a> maintains a wiki page on <a href="https://www.w3.org/wiki/Activity_Streams_extensions">Activity Streams extensions</a>.
+いくつかの一般的な拡張機能は、Activity Streams 2.0名前空間文書に含まれており、<a href="https://www.w3.org/ns/activitystreams#extensions">https://www.w3.org/ns/activitystreams#extensions</a>で確認できる。<a href="https://www.w3.org/community/swicg/">Social Web Incubator Community Group</a>は、<a href="https://www.w3.org/wiki/Activity_Streams_extensions">Activity Streams Extensions</a>のwikiページを保守している。
 </p>
 
     <p>
-It is important to note that the JSON-LD Processing Algorithms [ <cite><a class="bibref" href="#bib-JSON-LD-API">JSON-LD-API</a></cite>], as currently defined, will silently ignore any property not defined in a JSON-LD @context. Implementations that publish Activity Streams 2.0 documents containing extension properties SHOULD provide a @context definition for all extensions.
+JSON-LD Processing Algorithms[<cite><a class="bibref" href="#bib-JSON-LD-API">JSON-LD-API</a></cite>]は、現在定義されているように、JSON-LD @contextで定義されていない属性を暗黙に無視することに注意することは重要である。拡張属性を含むActivity Streams 2.0文書を公開する実装は、すべての拡張に対して@context定義を提供すべきである(SHOULD)。
 </p>
 
     <p>
-It is also important to note that there are valid JSON constructs which cannot be used within a JSON-LD document. For instance, JSON-LD forbids "arrays of arrays" as used, for example, by the popular <a href="http://geojson.org/">GeoJSON</a> specification. While implementations are free to use such constructs as extensions within an Activity Streams 2.0 document, consumers that use the standard JSON-LD Processing Algorithms will be required to either ignore such extensions or map those to alternative compatible constructs prior to applying the JSON-LD algorithms. Simple GeoJSON Points, for instance, can be mapped to <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-place">Place</a></code> objects, while more complex geometries can be converted to <a href="http://www.opengeospatial.org/standards/geosparql">GeoSparql</a> "Well-Known Text" representations as illustrated in the non-normative examples below:
+また、JSON-LD文書内では使用できない、妥当なJSON構造体があることに注意することも重要である。例として、JSON-LDは、例えば一般的な<a href="http://geojson.org/">GeoJSON</a>仕様で使用されている「配列の配列」を禁止している。実装はActivity Streams 2.0文書内の拡張としてこのような構造体を自由に使用できるが、標準のJSON-LD処理アルゴリズムを使用する消費者は、JSON-LDアルゴリズムを適用する前に、このような拡張を無視するか、互換性のある別の構造体にマッピングする必要がある。例えば、単純なGeoJSONポイントは<code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-place">Place</a></code>オブジェクトにマップすることができ、より複雑なジオメトリは<a href="http://www.opengeospatial.org/standards/geosparql">GeoSparql</a>の"Well-Known Text"表現に変換できる。
 </p>
 
     <figure id="fig-geojson-point-coordinates">
-      <figcaption>Figure <span class="figno">27</span> <span class="fig-title">GeoJSON Point Coordinates:</span></figcaption>
+      <figcaption>Figure <span class="figno">27</span> <span class="fig-title">GeoJSONの位置座標:</span></figcaption>
       <div class="example">
         <div class="example-title marker"><span>Example 25</span></div>
         <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
@@ -1851,7 +1851,7 @@ It is also important to note that there are valid JSON constructs which cannot b
     </figure>
 
     <figure id="fig-the-equivalent-place-alternative">
-      <figcaption>Figure <span class="figno">28</span> <span class="fig-title">The Equivalent <code>Place</code> alternative:</span></figcaption>
+      <figcaption>Figure <span class="figno">28</span> <span class="fig-title">等価な<code>Place</code>の代替物:</span></figcaption>
       <div id="ex23-jsonld" style="display: block;">
         <div class="example">
           <div class="example-title marker"><span>Example 26</span></div>
@@ -1867,7 +1867,7 @@ It is also important to note that there are valid JSON constructs which cannot b
     </figure>
 
     <figure id="fig-geojson-polygon-coordinates">
-      <figcaption>Figure <span class="figno">29</span> <span class="fig-title">GeoJSON Polygon Coordinates:</span></figcaption>
+      <figcaption>Figure <span class="figno">29</span> <span class="fig-title">GeoJSONの多角形座標:</span></figcaption>
       <div class="example">
         <div class="example-title marker"><span>Example 27</span></div>
         <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
@@ -1886,7 +1886,7 @@ It is also important to note that there are valid JSON constructs which cannot b
     </figure>
 
     <figure id="fig-the-equivalent-geosparql-well-known-text-alternative">
-      <figcaption>Figure <span class="figno">30</span> <span class="fig-title">The Equivalent GeoSparql Well-Known-Text alternative:</span></figcaption>
+      <figcaption>Figure <span class="figno">30</span> <span class="fig-title">等価なGeoSparqlのWell-Known-Textの代替物:</span></figcaption>
       <div id="ex24-jsonld" style="display: block;">
         <div class="example">
           <div class="example-title marker"><span>Example 28</span></div>
@@ -1904,18 +1904,18 @@ It is also important to note that there are valid JSON constructs which cannot b
     </figure>
 
     <section id="compact-uris" typeof="bibo:Chapter" resource="#compact-uris" property="bibo:hasPart">
-      <h3 id="h-compact-uris" resource="#h-compact-uris"><span property="xhv:role" resource="xhv:heading"><span class="secno">5.1 </span>Support for Compact URIs</span></h3>
+      <h3 id="h-compact-uris" resource="#h-compact-uris"><span property="xhv:role" resource="xhv:heading"><span class="secno">5.1 </span>Compact URI対応</span></h3>
 
       <p>
-The JSON-LD syntax supports the use of "Compact URIs". A "Compact URI" is an alternative encoding of a URI that uses a defined prefix to simplify serialization. For instance, the URI <code>http://example.org/term</code> can be represented as <code>ex:term</code> by assigning the <code>ex:</code> prefix the value of <code>http://example.org/</code>
+JSON-LD文法は、"Compact URI"に対応している。"Compact URI"は、直列化を単純化するために定義された接頭辞を使用するURIの代替エンコーディングである。例えば、URI<code>http://example.org/term</code>は、<code>ex:</code>接頭辞に<code>http://example.org/</code>の値を割り当てることで、<code>ex:term</code>として表すことができる。
 </p>
 
       <p>
-Within JSON-LD, Compact URI prefixes are defined within the JSON-LD <code>@context</code> definition. 例:
+JSON-LD内では、Compact URI接頭辞はJSON-LD<code>@context</code>定義内で定義される。例:
 </p>
 
       <figure id="fig-a-json-ld-compact-uri-definition">
-        <figcaption>Figure <span class="figno">31</span> <span class="fig-title">A JSON-LD Compact URI definition</span></figcaption>
+        <figcaption>Figure <span class="figno">31</span> <span class="fig-title">あるJSON-LD Compact URI定義</span></figcaption>
         <div class="example">
           <div class="example-title marker"><span>Example 29</span></div>
           <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
@@ -1932,37 +1932,37 @@ Within JSON-LD, Compact URI prefixes are defined within the JSON-LD <code>@conte
       </figure>
 
       <p>
-In this example, both the property name <code>term</code> and the value <code>ex:Foo</code> are Compact URIs. The property name <code>term</code> expands to <code>http://example.org/term</code> and the value <code>ex:Foo</code> expands to <code>http://example.org/Foo</code>
+この例では、属性名<code>term</code>と値<code>ex:Foo</code>の両方がCompact URIである。属性名<code>term</code>が<code>http://example.org/term</code>に展開され、値<code>ex:Foo</code>が<code>http://example.org/Foo</code>に展開される。
 </p>
 
       <p>
-In JSON-LD, Compact URI expansion of <em>values</em> applies to properties explicitly defined as <code>"type": "id"</code> in the <code>@context</code> definition. Specifically, Compact URIs can be used anywhere an IRI (or URI) value is expected.
+JSON-LDでは、<em>values</em>のCompact URI展開は<code>@context</code>定義の中で<code>"type": "id"</code>として明示的に定義された属性に適用される。特に、Compact URIはIRI(またはURI)値が想定されるどこでも使われる可能性がある。
 </p>
 
       <p>
-Activity Streams 2.0 implementations that wish to fully support extensions MUST support Compact URI expansion as defined by the JSON-LD specification. Such expansion applies to all property names as well as all property values explicitly defined as type <code>@id</code> in the JSON-LD @context.
+拡張に完全に対応することを望むActivity Streams 2.0実装は、JSON-LD仕様で定義されているCompact URI展開に対応しなければならない(MUST)。このような展開は、JSON-LDの@contextで<code>@id</code>型として明示的に定義されている全ての属性名および属性値に適用される。
 </p>
 
       <p>
-Over reliance on the Compact URI form can lead to ambiguity and interoperability issues between implementations. Therefore, Compact URI use SHOULD be avoided in all cases other than property names and the value(s) of the <code>type</code> property.
+Compact URI形式に過度に依存することは、実装間の曖昧さと相互運用性の問題を引き起こす可能性がある。従って、Compact URIの使用は、属性名と<code>type</code>属性の値以外の全ての場合で避けるべきである(SHOULD)。
 </p>
 
     </section>
 
     <section id="extension-round-trip" typeof="bibo:Chapter" resource="#extension-round-trip" property="bibo:hasPart">
 
-      <h3 id="h-extension-round-trip" resource="#h-extension-round-trip"><span property="xhv:role" resource="xhv:heading"><span class="secno">5.2 </span>Re-serialization of Extensions</span></h3>
+      <h3 id="h-extension-round-trip" resource="#h-extension-round-trip"><span property="xhv:role" resource="xhv:heading"><span class="secno">5.2 </span>拡張の再直列化</span></h3>
 
       <p>
-Implementations that use JSON-LD mechanisms to parse and then reserialize Activity Streams 2.0 documents that contain extension properties SHOULD take sufficient care to ensure that extension properties used within the original document are preserved and serialized appropriately.
+パースにJSON-LD機構を使い、それから拡張属性を含むActivity Streams 2.0文書を再直列化する実装は、元の文書にある拡張属性が保存され、適切に直列化されるように十分な注意をするべきである(SHOULD)。
 </p>
 
       <p>
-For instance, consider the following simple Activity Stream object containing hypothetical <code>foo</code> and <code>bar</code> extension properties. The <code>foo</code> extension is defined within the JSON-LD <code>@context</code> while the <code>bar</code> extension property is not.
+例えば次の、架空の<code>foo</code>と<code>bar</code>拡張属性を含む単純なActivity Streamを考える。<code>foo</code>拡張はJSON-LD <code>@context</code>の中で定義されているが、<code>bar</code>拡張属性は定義されていない。
 </p>
 
       <figure id="fig-a-simple-extended-object">
-        <figcaption>Figure <span class="figno">32</span> <span class="fig-title">A simple extended Object</span></figcaption>
+        <figcaption>Figure <span class="figno">32</span> <span class="fig-title">単純な、拡張されたObject</span></figcaption>
         <div class="example">
           <div class="example-title marker"><span>Example 30</span></div>
           <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
@@ -1991,7 +1991,7 @@ However, if the implementation chooses to use the JSON-LD expansion algorithm, t
 </p>
 
       <figure id="fig-the-reserialized-compacted-form">
-        <figcaption>Figure <span class="figno">33</span> <span class="fig-title">The reserialized compacted form:</span></figcaption>
+        <figcaption>Figure <span class="figno">33</span> <span class="fig-title">再直列化されたコンパクト化形式:</span></figcaption>
         <div class="example">
           <div class="example-title marker"><span>Example 31</span></div>
           <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
@@ -2005,7 +2005,7 @@ However, if the implementation chooses to use the JSON-LD expansion algorithm, t
       </figure>
 
       <p>
-While this is close to the original, the use of fully expanded URI label for the <code>foo</code> property is not ideal. To ensure that the reserialized object is serialized correctly, implementations that perform JSON-LD expansion of received documents SHOULD preserve the original <code>@context</code> used when performing the JSON-LD expansion, then reuse that when reserializing the object into the JSON-LD compacted form.
+これはオリジナルに近いが、<code>foo</code>属性に完全に展開されたURIラベルを使用するのは同一ではない。To ensure that the reserialized object is serialized correctly, implementations that perform JSON-LD expansion of received documents SHOULD preserve the original <code>@context</code> used when performing the JSON-LD expansion, then reuse that when reserializing the object into the JSON-LD compacted form.
 </p>
 
     </section>
@@ -2014,7 +2014,7 @@ While this is close to the original, the use of fully expanded URI label for the
 
   <section id="privacy" typeof="bibo:Chapter" resource="#privacy" property="bibo:hasPart">
     <!--OddPage-->
-    <h2 id="h-privacy" resource="#h-privacy"><span property="xhv:role" resource="xhv:heading"><span class="secno">6. </span>Privacy Considerations</span></h2>
+    <h2 id="h-privacy" resource="#h-privacy"><span property="xhv:role" resource="xhv:heading"><span class="secno">6. </span>プライバシー上の考慮事項</span></h2>
 
     <p>
 Activity Streams 2.0 documents can (and likely will) contain potentially sensitive personal information such as identity, contact information, physical location, physical characteristics, and so forth. Furthermore, Activity data, in general, can be analyzed to generate profiles of the behavior of individual or groups of Actors.
@@ -2041,7 +2041,7 @@ In this context, "opting in" does not necessarily require explicit action on the
   <section id="security-considerations" typeof="bibo:Chapter" resource="#security-considerations" property="bibo:hasPart">
 
     <!--OddPage-->
-    <h2 id="h-security-considerations" resource="#h-security-considerations"><span property="xhv:role" resource="xhv:heading"><span class="secno">7  </span>セキュリティ上の考慮事項</span></h2>
+    <h2 id="h-security-considerations" resource="#h-security-considerations"><span property="xhv:role" resource="xhv:heading"><span class="secno">7. </span>セキュリティ上の考慮事項</span></h2>
 
     <p>
 Publishers or Consumers implementing Activity Streams as a stream of public data may also want to consider the potential for unsolicited commercial or malicious content and should take preventative measures to recognize such content and either identify it or not include it in their implementations.
@@ -2064,15 +2064,15 @@ Consumers should be aware of the potential for spoofing attacks where the attack
 </p>
 
     <p>
-Activity Streams are JSON Documents and are subject to the same security considerations described in [<cite><a class="bibref" href="#bib-RFC7159">RFC7159</a></cite>].
+Activity StreamsはJSON文書であり、[<cite><a class="bibref" href="#bib-RFC7159">RFC7159</a></cite>]で説明されているのと同じセキュリティ上の考慮事項に従う。
 </p>
 
     <p>
-Activity Streams implementations handle URIs. See Section 7 of [ <cite><a class="bibref" href="#bib-RFC3986">RFC3986</a></cite>].
+Activity Streamsの実装はURIを扱う。[<cite><a class="bibref" href="#bib-RFC3986">RFC3986</a></cite>]の7章を参照のこと。
 </p>
 
     <p>
-Activity Streams implementations handle IRIs. See Section 8 of [ <cite><a class="bibref" href="#bib-RFC3987">RFC3987</a></cite>].
+Activity Streamsの実装はIRIを扱う。[<cite><a class="bibref" href="#bib-RFC3987">RFC3987</a></cite>]の8章を参照のこと。
 </p>
 
   </section>
@@ -2080,7 +2080,7 @@ Activity Streams implementations handle IRIs. See Section 8 of [ <cite><a class=
   <section id="iana" typeof="bibo:Chapter" resource="#iana" property="bibo:hasPart">
 
     <!--OddPage-->
-    <h2 id="h-iana" resource="#h-iana"><span property="xhv:role" resource="xhv:heading"><span class="secno">8. </span>IANA Considerations</span></h2>
+    <h2 id="h-iana" resource="#h-iana"><span property="xhv:role" resource="xhv:heading"><span class="secno">8. </span>IANAの考慮事項</span></h2>
 
     <section id="media-type" typeof="bibo:Chapter" resource="#media-type" property="bibo:hasPart">
       <h3 id="h-media-type" resource="#h-media-type"><span property="xhv:role" resource="xhv:heading"><span class="secno">8.1 </span><code>application/activity+json</code> メディア型</span></h3>
@@ -2111,11 +2111,11 @@ profile-URI   = URI</span></pre>上記の文法での "URI" は [<cite><a class=
           </tr>
           <tr>
             <td>Encoding considerations:</td>
-            <td>Resources that use the "<code>application/activity+json</code>" Media Type are required to conform to all of the requirements for the "<code>application/json</code>" Media Type and are therefore subject to the same encoding considerations specified in Section 11 of [<cite><a class="bibref" href="#bib-RFC7159">RFC7159</a></cite>].</td>
+            <td>"<code>application/activity+json</code>"メディア型を使用するリソースは、"<code>application/json</code>"メディア型のすべての要件に準拠する必要があるため、[<cite><a class="bibref" href="#bib-RFC7159">RFC7159</a></cite>]の11章で指定されているのと同じエンコーディングの考慮事項に従う。</td>
           </tr>
           <tr>
             <td>Security considerations:</td>
-            <td>As defined in this specification.</td>
+            <td>この仕様で定義している通り。</td>
           </tr>
           <tr>
             <td>Contact:</td>
@@ -2142,7 +2142,7 @@ Activity Streams 2.0 は JSON-LD の制限されたプロファイルと考え�
     <h2 id="h-conformance" resource="#h-conformance"><span property="xhv:role" resource="xhv:heading"><span class="secno">9. </span>適合性</span></h2>
 
     <p>
-All diagrams, examples, and notes in this specification are non-normative, as are all sections explicitly marked non-normative. この仕様におけるその他の全ては規範的である。
+この仕様における、非規範的とされている節および、全ての図、例、注記は非規範的である。この仕様におけるその他の全ては規範的である。
 </p>
 
     <section id="documents" typeof="bibo:Chapter" resource="#documents" property="bibo:hasPart">
@@ -2150,7 +2150,7 @@ All diagrams, examples, and notes in this specification are non-normative, as ar
       <h3 id="h-documents" resource="#h-documents"><span property="xhv:role" resource="xhv:heading"><span class="secno">9.1</span>文書</span></h3>
 
       <p>
-Conforming documents are those that comply with all the conformance criteria for documents. For readability, some of these conformance requirements are phrased as conformance requirements on publishers; such requirements are implicitly requirements on documents: by definition, all documents are assumed to have a publisher.
+適合文書とは、文書のすべての適合基準に適合する文書である。For readability, some of these conformance requirements are phrased as conformance requirements on publishers; such requirements are implicitly requirements on documents: by definition, all documents are assumed to have a publisher.
 </p>
 
       <p>
@@ -2158,15 +2158,15 @@ Conforming documents must not include deprecated or obsolete syntax from Activit
 </p>
 
       <p>
-A non-exhaustive list of examples of documents includes:
+文書の例の非網羅的なリストには、以下が含まれる:
 </p>
       <ul>
-        <li>A document representing an actor</li>
-        <li>A document representing an object</li>
-        <li>A document representing an activity</li>
-        <li>A document representing a collection of the activities done by an actor</li>
-        <li>A document representing a collection of the activities done to an object</li>
-        <li>A document representing a collection of the activities addressed to an actor or object</li>
+        <li>アクターを表現する文書</li>
+        <li>オブジェクトを表現する文書</li>
+        <li>アクティビティを表現する文書</li>
+        <li>アクターによって行われたアクティビティのコレクションを表現する文書</li>
+        <li>オブジェクトに行われたアクティビティのコレクションを表現する文書</li>
+        <li>アクターまたはオブジェクトにアドレス指定されたアクティビティのコレクションを表す文書</li>
 
       </ul>
 
@@ -2186,21 +2186,21 @@ Conforming implementations are software that publish, store, analyze, consume or
 
       <section id="publishers" typeof="bibo:Chapter" resource="#publishers" property="bibo:hasPart">
 
-        <h4 id="h-publishers" resource="#h-publishers"><span property="xhv:role" resource="xhv:heading"><span class="secno">9.2.1 </span>Publishers</span></h4>
+        <h4 id="h-publishers" resource="#h-publishers"><span property="xhv:role" resource="xhv:heading"><span class="secno">9.2.1 </span>発行者</span></h4>
 
         <p>
 Conforming publishers are implementations that create and publish conforming documents. Conforming publishers must make conforming documents available according to the serialization requirements of section 2. Conforming publishers must consider privacy as described in section 6. Conforming publishers must consider security as described in section 7.
 </p>
 
         <p>
-A non-exhaustive list of example publishers includes:
+発行者の例の非網羅的なリストには、以下が含まれる:
 </p>
         <ul>
-          <li>A social network</li>
-          <li>A personal web site</li>
-          <li>A document publishing system</li>
-          <li>A bridge from a non-conforming social network</li>
-          <li>A document converter from similar document types such as RSS or Atom</li>
+          <li>ソーシャルネットワーク</li>
+          <li>個人的なwebサイト</li>
+          <li>文書発行システム</li>
+          <li>非適合ソーシャルネットワークからのブリッジ</li>
+          <li>RSSやAtomのような似たような文書型からの文書コンバータ</li>
         </ul>
         <p>
 
@@ -2210,7 +2210,7 @@ A non-exhaustive list of example publishers includes:
 
       <section id="consumers" typeof="bibo:Chapter" resource="#consumers" property="bibo:hasPart">
 
-        <h4 id="h-consumers" resource="#h-consumers"><span property="xhv:role" resource="xhv:heading"><span class="secno">9.2.2 </span>Consumers</span></h4>
+        <h4 id="h-consumers" resource="#h-consumers"><span property="xhv:role" resource="xhv:heading"><span class="secno">9.2.2 </span>消費者</span></h4>
 
         <p>
 Conforming consumers are implementations that read and analyze conforming documents. Conforming consumers must tolerate deprecated or obsolete properties or types from Activity Streams 1.0. Conforming consumers must ignore properties or types that are not applicable to their application domain.
@@ -2221,15 +2221,15 @@ Conforming consumers may re-publish conforming documents in other other data for
 </p>
 
         <p>
-A non-exhaustive list of example consumers includes:
+消費者の例の非網羅的なリストには、以下が含まれる:
 </p>
         <ul>
-          <li>A social network</li>
-          <li>A search engine</li>
-          <li>A feed reader</li>
-          <li>A document validator</li>
-          <li>A feed aggregator</li>
-          <li>A statistical analyzer</li>
+          <li>ソーシャルネットワーク</li>
+          <li>検索エンジン</li>
+          <li>フィードリーダ</li>
+          <li>文書バリデータ</li>
+          <li>フィードアグリゲータ</li>
+          <li>静的アナライザ</li>
         </ul>
 
         <p>
@@ -2248,11 +2248,11 @@ A non-exhaustive list of example consumers includes:
     <h2 id="h-acknowledgements" resource="#h-acknowledgements"><span property="xhv:role" resource="xhv:heading"><span class="secno">A. </span>謝辞</span></h2>
 
     <p>
-The Activity Streams 2.0 specification is a product of the <abbr title="World Wide Web Consortium">W3C</abbr> Social Web Working Group. The editors thank all of the Working Group members who contributed to the conversations, issues and testing that helped shape the current specification.
+Activity Streams 2.0仕様は、<abbr title="World Wide Web Consortium">W3C</abbr>Social Web Working Groupの成果物である。編集者は、現在の仕様を形成するのに役立った会話、問題、テストに貢献したすべてのワーキンググループメンバーに感謝する。
 </p>
 
     <p>
-The editor's also wish to thank all of those who contributed to Activity Streams prior to the specification being picked up as a contribution to the <abbr title="World Wide Web Consortium">W3C</abbr> Social Web Working Group. Activity Streams 1.0 was a community driven effort and the specification would not be where it is today without the earlier contributions from the community, including, but not limited to: Abdul Qabiz, Adina Levin, Adrian Chan, Adriana Javier, Alan Hoffman, Alex Kessinger, Alexander Ovchinnikov, Alexander Zhuravlev, Alexandre Loureiro Solleiro, Amy Walgenbach, Andres Vidal, Angel Robert Marquez, Ari Steinberg, Arjan Scherpenisse, Arne Roomann-Kurrik, Beau Lebens, Ben Hedrington, Ben Metcalfe, Ben Werdmuller, Benjamin Goering, Bill de hOra, Bo Xing, Bob Aman, Bob Wyman, Brett Slatkin, Brian Walsh, Brynn Evans, Charlie Cauthen, Chris Chabot, Chris Messina, Chris Toomey, Christian Crumlish, Dan Brickley, Dan Scott, Daniel Chapman, Danny Ayers, Dare Obasanjo, Darren Bounds, David Cramer, David Nelson, David Recordon, DeWitt Clinton, Douglas Pearce, Ed Summers, Elias Bizannes, Elisabeth Norris, Eric Marcoullier, Eric Woods, Evan Prodromou, Gee-Hsien Chuang, Greg Biggers, Gregory Foster, Henry Saputra, Hillary Madsen, Howard Liptzin, Hung Tran, Ian Kennedy, Ian Mulvany, Ivan Pulleyn, Jacob Kim, James Falkner, James Pike, James Walker, Jason Kahn, Jason Kantz, Jeff Kunins, Jeff Martin, Jian Lin, Johannes Ernst, John Panzer, Jon Lebkowsky, Jon Paul Davies, Jonathan Coffman, Jonathan Dugan, Joseph Boyle, Joseph Holsten, Joseph Smarr, Josh Brewer, Jud Valeski, Julien Chaumond, Julien Genestoux, Jyri Engestroem, Kaliya Hamlin, Kevin Marks, Laurent Eschenauer, Laurie Voss, Leah Culver, Libby Miller, Manu Mukerji, Mark Weitzel, Marko Degenkolb, Marshall Kirkpatrick, Martin Atkins, Martin Svensson, Marty Alchin, Mary Hoder, Matt Leventi, Matt Wilkinson, Matthias Mueller-Prove, Max Engel, Max Wegmueller, Melvin Carvalho, Michael Buckbee, Michael Chan, Michael Richardson, Michael Sullivan, Mike Macgirvin, Mislav Marohnić, Mo Jangda, Monica Wilkinson, Nate Benes, NeilFred Picciotto, Nick Howard, Nick Lothian, Nissan Dookeran, Nitya Narasimhan, Pablo Martin, Padraic Brady, Pat Cappelaere, Patrick Aljord, Peter Ferne, Peter Reiser, Peter Saint-Andre, Phil Wolff, Philip (flip) Kromer, Richard Cunningham, Richard Zhao, Rick Severson, Robert Hall, Robert Langbert, Robert Dolin, Robin Cover, Ryan Boyd, Sam Sethi, Scott Raymond, Scott Seely, Simon Grant, Simon Wistow, Stephen Garcia, Stephen Sisk, Stephen Paul Weber, Steve Ivy, Steve Midgley, Steven Livingstone-Perez, Sylvain Carle, Sylvain Hellegouarch, Tantek Çelik, Tatu Saloranta, Tim Moore, Timothy Young, Todd Barnard, Tosh Meston, Tyler Gillies, Will Norris, Zach Copley, Laurent-Walter Goix, Matthew Marum, Andy Smith, and Zach Shepherd.
+編集者はまた、<abbr title="World Wide Web Consortium">W3C</abbr>Social Web Working Groupへの貢献として仕様が取り上げられる前にActivity Streamsに貢献したすべての人々に感謝したい。Activity Streams 1.0はコミュニティ主導の活動であり、次の方々を含む(しかしそれに限定されない)コミュニティからの初期の貢献がなければ、仕様は現在のような形にはならなかった: Abdul Qabiz, Adina Levin, Adrian Chan, Adriana Javier, Alan Hoffman, Alex Kessinger, Alexander Ovchinnikov, Alexander Zhuravlev, Alexandre Loureiro Solleiro, Amy Walgenbach, Andres Vidal, Angel Robert Marquez, Ari Steinberg, Arjan Scherpenisse, Arne Roomann-Kurrik, Beau Lebens, Ben Hedrington, Ben Metcalfe, Ben Werdmuller, Benjamin Goering, Bill de hOra, Bo Xing, Bob Aman, Bob Wyman, Brett Slatkin, Brian Walsh, Brynn Evans, Charlie Cauthen, Chris Chabot, Chris Messina, Chris Toomey, Christian Crumlish, Dan Brickley, Dan Scott, Daniel Chapman, Danny Ayers, Dare Obasanjo, Darren Bounds, David Cramer, David Nelson, David Recordon, DeWitt Clinton, Douglas Pearce, Ed Summers, Elias Bizannes, Elisabeth Norris, Eric Marcoullier, Eric Woods, Evan Prodromou, Gee-Hsien Chuang, Greg Biggers, Gregory Foster, Henry Saputra, Hillary Madsen, Howard Liptzin, Hung Tran, Ian Kennedy, Ian Mulvany, Ivan Pulleyn, Jacob Kim, James Falkner, James Pike, James Walker, Jason Kahn, Jason Kantz, Jeff Kunins, Jeff Martin, Jian Lin, Johannes Ernst, John Panzer, Jon Lebkowsky, Jon Paul Davies, Jonathan Coffman, Jonathan Dugan, Joseph Boyle, Joseph Holsten, Joseph Smarr, Josh Brewer, Jud Valeski, Julien Chaumond, Julien Genestoux, Jyri Engestroem, Kaliya Hamlin, Kevin Marks, Laurent Eschenauer, Laurie Voss, Leah Culver, Libby Miller, Manu Mukerji, Mark Weitzel, Marko Degenkolb, Marshall Kirkpatrick, Martin Atkins, Martin Svensson, Marty Alchin, Mary Hoder, Matt Leventi, Matt Wilkinson, Matthias Mueller-Prove, Max Engel, Max Wegmueller, Melvin Carvalho, Michael Buckbee, Michael Chan, Michael Richardson, Michael Sullivan, Mike Macgirvin, Mislav Marohnić, Mo Jangda, Monica Wilkinson, Nate Benes, NeilFred Picciotto, Nick Howard, Nick Lothian, Nissan Dookeran, Nitya Narasimhan, Pablo Martin, Padraic Brady, Pat Cappelaere, Patrick Aljord, Peter Ferne, Peter Reiser, Peter Saint-Andre, Phil Wolff, Philip (flip) Kromer, Richard Cunningham, Richard Zhao, Rick Severson, Robert Hall, Robert Langbert, Robert Dolin, Robin Cover, Ryan Boyd, Sam Sethi, Scott Raymond, Scott Seely, Simon Grant, Simon Wistow, Stephen Garcia, Stephen Sisk, Stephen Paul Weber, Steve Ivy, Steve Midgley, Steven Livingstone-Perez, Sylvain Carle, Sylvain Hellegouarch, Tantek Çelik, Tatu Saloranta, Tim Moore, Timothy Young, Todd Barnard, Tosh Meston, Tyler Gillies, Will Norris, Zach Copley, Laurent-Walter Goix, Matthew Marum, Andy Smith, Zach Shepherd。
 </p>
 
   </section>
@@ -2260,13 +2260,13 @@ The editor's also wish to thank all of those who contributed to Activity Streams
   <section id="activitystreams-1.0a" class="appendix informative" typeof="bibo:Chapter" resource="#activitystreams-1.0a" property="bibo:hasPart">
 
     <!--OddPage-->
-    <h2 id="h-activitystreams-1.0a" resource="#h-activitystreams-1.0a"><span property="xhv:role" resource="xhv:heading"><span class="secno">B. </span>Deprecated Activity Streams 1.0 Syntax</span></h2>
+    <h2 id="h-activitystreams-1.0a" resource="#h-activitystreams-1.0a"><span property="xhv:role" resource="xhv:heading"><span class="secno">B. </span>廃止されたActivity Streams 1.0文法</span></h2>
     <p>
 <em>この節は非規範的である。</em>
 </p>
 
     <p>
-Note: While this appendix sections is non-normative, it uses normative terms such as MUST. Where used, the meaning is to indicate what would be required to properly implement the Activity Streams 1.0 backwards compatibility model described in this appendix if an implementer chose to do so.
+注意: この付録は非規範的であるが、MUSTのような規範的用語を使う。Where used, the meaning is to indicate what would be required to properly implement the Activity Streams 1.0 backwards compatibility model described in this appendix if an implementer chose to do so.
 </p>
     <p>
 
@@ -2304,7 +2304,7 @@ By following these guidelines, all JSON Activity Streams 1.0 serializations can 
 
   <section class="appendix informative" id="example-using-multiple-vocabularies" typeof="bibo:Chapter" resource="#example-using-multiple-vocabularies" property="bibo:hasPart">
     <!--OddPage-->
-    <h2 id="h-example-using-multiple-vocabularies" resource="#h-example-using-multiple-vocabularies"><span property="xhv:role" resource="xhv:heading"><span class="secno">C. </span>Example using Multiple Vocabularies</span></h2>
+    <h2 id="h-example-using-multiple-vocabularies" resource="#h-example-using-multiple-vocabularies"><span property="xhv:role" resource="xhv:heading"><span class="secno">C. </span>複数の語彙を使った例</span></h2>
     <p>
 <em>この節は非規範的である。</em>
 </p>
@@ -2386,17 +2386,17 @@ It is possible use multiple vocabularies to cover particular characteristics of 
   <section class="appendix informative" id="changelog" typeof="bibo:Chapter" resource="#changelog" property="bibo:hasPart">
 
     <!--OddPage-->
-    <h2 id="h-changelog" resource="#h-changelog"><span property="xhv:role" resource="xhv:heading"><span class="secno">D. </span>Changelog</span></h2>
+    <h2 id="h-changelog" resource="#h-changelog"><span property="xhv:role" resource="xhv:heading"><span class="secno">D. </span>変更履歴</span></h2>
     <p>
 <em>この節は非規範的である。</em>
 </p>
 
     <p>
-The following notable changes have been made to this document since the previous candidate recommendation of <a href="https://www.w3.org/TR/2016/CR-activitystreams-core-20161215/#changelog">2016-12-15</a>.
+前回の候補勧告<a href="https://www.w3.org/TR/2016/CR-activitystreams-core-20161215/#changelog">2016-12-15</a>以降、以下の注目すべき変更が本文書に加えられた。
 </p>
 
     <ul>
-      <li>Removed process sections, especially those noting exit criteria and at-risk features.</li>
+      <li>処理の節、特に終了基準とリスクのある機能に言及している部分を削除した。</li>
       <li>Updated Collection Paging to clarify additional <code><a href="#dfn-collectionpage" class="internalDFN" data-link-type="dfn"><code>CollectionPage</code></a> </code> properties.</li>
       <li>Used better wording for summary as text representation.</li>
       <li>Updated context examples to include more realistic complex contexts.</li>
@@ -2406,7 +2406,7 @@ The following notable changes have been made to this document since the previous
 
   <section id="tof" typeof="bibo:Chapter" resource="#tof" property="bibo:hasPart">
     <!--OddPage-->
-    <h2 id="h-tof" resource="#h-tof"><span property="xhv:role" resource="xhv:heading"><span class="secno">E. </span>Table of Figures</span></h2>
+    <h2 id="h-tof" resource="#h-tof"><span property="xhv:role" resource="xhv:heading"><span class="secno">E. </span>図の一覧</span></h2>
     <ul class="tof">
       <li class="tofline"><a class="tocxref" href="#fig-document-providing-a-context-as-a-string.x">Figure <span class="figno">1</span> <span class="fig-title"> Document providing a context as a string. </span></a></li>
       <li class="tofline"><a class="tocxref" href="#fig-document-providing-context-as-an-object-using-the-vocab-keyword-and-a-prefix-for-extension-terms.x">Figure <span class="figno">2</span> <span class="fig-title"> Document providing context as an object using the <code>@vocab</code> keyword and a prefix for extension terms. </span></a></li>
