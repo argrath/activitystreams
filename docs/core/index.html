@@ -928,7 +928,7 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
       <h3 id="h-example-1" resource="#h-example-1"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.1 </span>最小限のアクティビティ</span></h3>
 
       <figure id="fig-expresses-the-statement-http-www.test.example-martin-created-http-example.org-foo.jpg-.-no-additional-detail-is-given.x">
-        <figcaption>Figure <span class="figno">4</span> <span class="fig-title"> Expresses the statement <code>'http://www.test.example/martin' が 'http://example.org/foo.jpg' を作った</code>という声明を表現する。追加の詳細はなし:</figcaption>
+        <figcaption>Figure <span class="figno">4</span> <span class="fig-title"><code>'http://www.test.example/martin' が 'http://example.org/foo.jpg' を作った</code>という声明を表現する。追加の詳細はなし:</span></figcaption>
         <div id="ex1-jsonld" style="display: block;">
           <div class="example">
             <div class="example-title marker"><span>Example 4</span></div>
@@ -1194,7 +1194,7 @@ Activity Streams 消費者はしばしば、 例えば Web ブラウザやコン
           <figcaption>Figure <span class="figno">9</span> <span class="fig-title"> 作者によって定義された名前を持つメモ </span></figcaption>
           <div id="ex11e-jsonld" style="display: block;">
             <div class="example">
-              <div class="example-title marker"><span>Example 9</span></div>
+              <div class="example-title marker"><span>例9</span></div>
               <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
   <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
   <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Note"</span>,
@@ -1210,7 +1210,7 @@ Activity Streams 消費者はしばしば、 例えば Web ブラウザやコン
           <figcaption>Figure <span class="figno">10</span> <span class="fig-title"> 自動生成された概要を持つメモ </span></figcaption>
           <div id="ex11f-jsonld" style="display: block;">
             <div class="example">
-              <div class="example-title marker"><span>Example 10</span></div>
+              <div class="example-title marker"><span>例10</span></div>
               <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
   <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
   <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Note"</span>,
@@ -1246,10 +1246,10 @@ Link のターゲット URI は必須の <code><a href="https://www.w3.org/TR/ac
 </p>
 
       <figure id="fig-to-reference-a-single-image-without-any-additional-metadata-a-direct-association-can-be-expressed-as-a-json-string-containing-an-absolute-iri.x">
-        <figcaption>Figure <span class="figno">11</span> <span class="fig-title">To reference a single image without any additional metadata, a direct association can be expressed as a JSON string containing an absolute IRI.</span></figcaption>
+        <figcaption>図<span class="figno">11</span> <span class="fig-title">追加のメタデータなしで単一の画像を参照するために、直接の関連付けは絶対IRIを含むJSON文字列として表現できる。</span></figcaption>
         <div id="ex12-jsonld" style="display: block;">
           <div class="example">
-            <div class="example-title marker"><span>Example 11</span></div>
+            <div class="example-title marker"><span>例11</span></div>
             <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
   <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
   <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Application"</span>,
@@ -1262,10 +1262,10 @@ Link のターゲット URI は必須の <code><a href="https://www.w3.org/TR/ac
       </figure>
 
       <figure id="fig-alternatively-if-additional-metadata-is-required-such-as-the-mime-content-type-of-the-referenced-resource-a-link-can-be-used">
-        <figcaption>Figure <span class="figno">12</span> <span class="fig-title"> Alternatively, if additional metadata is required (such as the MIME content type of the referenced resource) a <a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a> can be used: </span></figcaption>
+        <figcaption>図<span class="figno">12</span> <span class="fig-title">または、(参照されるリソースのMIMEコンテンツタイプなど)追加のメタデータが必要な場合、<a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a>を使える:</span></figcaption>
         <div id="ex13-jsonld" style="display: block;">
           <div class="example">
-            <div class="example-title marker"><span>Example 12</span></div>
+            <div class="example-title marker"><span>例12</span></div>
             <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
   <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
   <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Application"</span>,
@@ -1289,7 +1289,7 @@ Link のターゲット URI は必須の <code><a href="https://www.w3.org/TR/ac
         <figcaption>Figure <span class="figno">13</span> <span class="fig-title"> If more than one value is to be expressed, A JSON Array with a mix of strings and <a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a>s can be used: </span></figcaption>
         <div id="ex14-jsonld" style="display: block;">
           <div class="example">
-            <div class="example-title marker"><span>Example 13</span></div>
+            <div class="example-title marker"><span>例13</span></div>
             <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
   <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
   <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Application"</span>,
@@ -1328,7 +1328,7 @@ RFC 5988では、すべての"Link"には、リンクのコンテキスト目的
         <figcaption>Figure <span class="figno">14</span> <span class="fig-title"></span></figcaption>
         <div id="ex15-jsonld" style="display: block;">
           <div class="example">
-            <div class="example-title marker"><span>Example 14</span></div>
+            <div class="example-title marker"><span>例14</span></div>
             <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
   <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
   <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Application"</span>,
@@ -1373,7 +1373,7 @@ Actor オブジェクトは、 Activity を実行する能力を持つ実体を�
         <figcaption>Figure <span class="figno">15</span> <span class="fig-title">VCard属性で拡張したPersonアクターのActivity:</span></figcaption>
         <div id="ex17-jsonld" style="display: block;">
           <div class="example">
-            <div class="example-title marker"><span>Example 15</span></div>
+            <div class="example-title marker"><span>例15</span></div>
             <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
   <span class="hljs-attr">"@context"</span>: [
     <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
@@ -1425,7 +1425,7 @@ Activity オブジェクトは、既に起きた、今起きている途中、 �
         <figcaption>Figure <span class="figno">16</span> <span class="fig-title">単純なActivityを示す例:</span></figcaption>
         <div id="ex19-jsonld" style="display: block;">
           <div class="example">
-            <div class="example-title marker"><span>Example 16</span></div>
+            <div class="example-title marker"><span>例16</span></div>
             <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
   <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
   <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Joe liked a note"</span>,
@@ -1455,7 +1455,7 @@ Activity オブジェクトは、既に起きた、今起きている途中、 �
         <figcaption>Figure <span class="figno">17</span> <span class="fig-title"><code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-like">Like</a></code>と<code>http://schema.org/LikeAction</code>の両方であるActivity:</span></figcaption>
         <div id="ex20-jsonld" style="display: block;">
           <div class="example">
-            <div class="example-title marker"><span>Example 17</span></div>
+            <div class="example-title marker"><span>例17</span></div>
             <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
   <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
   <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Joe liked a note"</span>,
@@ -1502,7 +1502,7 @@ IntransitiveActivity オブジェクトは、自動的なアクションを表�
         <figcaption>Figure <span class="figno">18</span> <span class="fig-title"> 単純な順序のないコレクション: </span></figcaption>
         <div id="ex21-jsonld" style="display: block;">
           <div class="example">
-            <div class="example-title marker"><span>Example 18</span></div>
+            <div class="example-title marker"><span>例18</span></div>
             <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
   <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
   <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Object history"</span>,
@@ -1529,7 +1529,7 @@ IntransitiveActivity オブジェクトは、自動的なアクションを表�
         <figcaption>Figure <span class="figno">19</span> <span class="fig-title"> 単純な順序のあるコレクション: </span></figcaption>
         <div id="ex22-jsonld" style="display: block;">
           <div class="example">
-            <div class="example-title marker"><span>Example 19</span></div>
+            <div class="example-title marker"><span>例19</span></div>
             <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
   <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
   <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Object history"</span>,
@@ -1580,14 +1580,14 @@ Collection は大量のアイテムを含むことができる。しばしば、
 </p>
 
         <figure id="fig-an-illustration-of-the-relationship-between-collection-orderedcollection-collectionpage-and-orderedcollectionpage">
-          <figcaption>Figure <span class="figno">20</span> <span class="fig-title"> <code>Collection</code>, <code>OrderedCollection</code>, <code>CollectionPage</code>, <code>OrderedCollectionPage</code> の関係の図: </span></figcaption><img src="paging2.png" alt="Collection type Model"></figure>
+          <figcaption>Figure <span class="figno">20</span> <span class="fig-title"> <code>Collection</code>, <code>OrderedCollection</code>, <code>CollectionPage</code>, <code>OrderedCollectionPage</code> の関係の図: </span></figcaption><img src="paging2.png" alt="Collection型のモデル"></figure>
 
         <p>
 順序付きでも順序なしでも、 <code>Collection</code> のページは 並びに配置される (シングルリンクリストかダブルリンクリスト)。<code>first</code> 属性はこの並びの最初のページを識別するために使われ、 一方 <code>last</code> 属性は並びの最後のページを識別するのに使われる。<code>prev</code> と <code>next</code> 属性はそれぞれ直前と直後のページを 識別する。
 </p>
 
         <figure id="fig-a-visualization-of-the-collection-paging-model">
-          <figcaption>Figure <span class="figno">21</span> <span class="fig-title"> Collection ページングモデルの図: </span></figcaption><img src="paging.png" alt="The Paging Model"></figure>
+          <figcaption>Figure <span class="figno">21</span> <span class="fig-title"> Collection ページングモデルの図: </span></figcaption><img src="paging.png" alt="ページングのモデル"></figure>
 
         <p>
 <code>current</code> 属性は、<code>Collection</code> の中で、 最も最近に作成または更新されたアイテムの部分集合を含むページを識別する。
@@ -1601,7 +1601,7 @@ Collection は大量のアイテムを含むことができる。しばしば、
           <figcaption>Figure <span class="figno">22</span> <span class="fig-title"> 単純な、ページング付きの順序のないコレクション: </span></figcaption>
           <div id="ex21b-jsonld" style="display: block;">
             <div class="example">
-              <div class="example-title marker"><span>Example 20</span></div>
+              <div class="example-title marker"><span>例20</span></div>
               <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
   <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
   <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Sally's recent activities"</span>,
@@ -1646,7 +1646,7 @@ Collection は大量のアイテムを含むことができる。しばしば、
         <figcaption>Figure <span class="figno">23</span> <span class="fig-title">言語情報のない単一の name String 値:</span></figcaption>
         <div id="ex7-jsonld" style="display: block;">
           <div class="example">
-            <div class="example-title marker"><span>Example 21</span></div>
+            <div class="example-title marker"><span>例21</span></div>
             <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
   <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
   <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Object"</span>,
@@ -1660,7 +1660,7 @@ Collection は大量のアイテムを含むことができる。しばしば、
         <figcaption>Figure <span class="figno">24</span> <span class="fig-title">複数の、言語指定された値:</span></figcaption>
         <div id="ex8-jsonld" style="display: block;">
           <div class="example">
-            <div class="example-title marker"><span>Example 22</span></div>
+            <div class="example-title marker"><span>例22</span></div>
             <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
   <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
   <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Object"</span>,
