@@ -54,6 +54,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;g1&gt; "The document was titled, '\u2067פעילות הבינאום, &lt;g2&gt;W3C&lt;/g2&gt;\u2069'" &lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T113220Z" creationid="shira" creationdate="20241031T113220Z">
+        <seg>&lt;g1&gt; "The document was titled, '\u2067פעילות הבינאום, &lt;g2&gt;W3C&lt;/g2&gt;\u2069'" &lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;g1&gt; Commits &lt;/g1&gt;</seg>
       </tuv>
       <tuv lang="ja" changeid="shira" changedate="20240111T203013Z" creationid="shira" creationdate="20240111T203013Z">
@@ -82,6 +90,30 @@
       </tuv>
       <tuv lang="ja" changeid="shira" changedate="20240225T201339Z" creationid="shira" creationdate="20240225T201339Z">
         <seg>&lt;g1&gt; Validator &lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;"\u200E'سلام' is hello in Persian."&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T112816Z" creationid="shira" creationdate="20241031T112816Z">
+        <seg>&lt;g1&gt;"\u200E'سلام' is hello in Persian."&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;"\u200FHTML היא שפת סימון"&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T112807Z" creationid="shira" creationdate="20241031T112807Z">
+        <seg>&lt;g1&gt;"\u200FHTML היא שפת סימון"&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;"פעילות הבינאום, &lt;g2&gt;W3C&lt;/g2&gt;"&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T112755Z" creationid="shira" creationdate="20241031T112755Z">
+        <seg>&lt;g1&gt;"פעילות הבינאום, &lt;g2&gt;W3C&lt;/g2&gt;"&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -1086,6 +1118,30 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;g1&gt;&lt;p dir=\"rtl\"&gt;HTML היא שפת סימון&gt;/p&gt;&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T112826Z" creationid="shira" creationdate="20241031T112826Z">
+        <seg>&lt;g1&gt;&lt;p dir=\"rtl\"&gt;HTML היא שפת סימון&gt;/p&gt;&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;&lt;p title="سلام"&gt;Hello&lt;/p&gt;&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T112845Z" creationid="shira" creationdate="20241031T112845Z">
+        <seg>&lt;g1&gt;&lt;p title="سلام"&gt;Hello&lt;/p&gt;&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;&lt;p&gt;פעילות הבינאום, &lt;g2&gt;W3C&lt;/g2&gt;&lt;/p&gt;&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T112836Z" creationid="shira" creationdate="20241031T112836Z">
+        <seg>&lt;g1&gt;&lt;p&gt;פעילות הבינאום, &lt;g2&gt;W3C&lt;/g2&gt;&lt;/p&gt;&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;g1&gt;&lt;x2/&gt;&lt;/g1&gt;</seg>
       </tuv>
       <tuv lang="ja" changeid="shira" changedate="20240111T202936Z" creationid="shira" creationdate="20240111T202936Z">
@@ -1158,6 +1214,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;g1&gt;Arrive&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T113748Z" creationid="shira" creationdate="20241031T113748Z">
+        <seg>&lt;g1&gt;Arrive&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;g1&gt;Article&lt;/g1&gt;</seg>
       </tuv>
       <tuv lang="ja" changeid="shira" changedate="20240225T204218Z" creationid="shira" creationdate="20240225T204218Z">
@@ -1226,6 +1290,22 @@
       </tuv>
       <tuv lang="ja" changeid="shira" changedate="20240225T201415Z" creationid="shira" creationdate="20240225T201415Z">
         <seg>&lt;g1&gt;Copyright&lt;/g1&gt; © 2017 Activity Streams Working Group,IBM &amp; &lt;g2&gt;&lt;g3&gt;W3C&lt;/g3&gt;&lt;/g2&gt;&lt;g4&gt;®&lt;/g4&gt; (&lt;g5&gt;&lt;g6&gt;MIT&lt;/g6&gt;&lt;/g5&gt;, &lt;g7&gt;&lt;g8&gt;ERCIM&lt;/g8&gt;&lt;/g7&gt;, &lt;g9&gt;Keio&lt;/g9&gt;, &lt;g10&gt;Beihang&lt;/g10&gt;).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;Create&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T113810Z" creationid="shira" creationdate="20241031T113810Z">
+        <seg>&lt;g1&gt;Create&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;Delete&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T113837Z" creationid="shira" creationdate="20241031T113837Z">
+        <seg>&lt;g1&gt;Delete&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -1374,6 +1454,46 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;g1&gt;Example 24&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T091307Z" creationid="shira" creationdate="20241031T091307Z">
+        <seg>&lt;g1&gt;例24&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;Example 25&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T112915Z" creationid="shira" creationdate="20241031T112915Z">
+        <seg>&lt;g1&gt;例25&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;Example 26&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T112923Z" creationid="shira" creationdate="20241031T112923Z">
+        <seg>&lt;g1&gt;例26&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;Example 27&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T112931Z" creationid="shira" creationdate="20241031T112931Z">
+        <seg>&lt;g1&gt;例27&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;Example 28&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T112938Z" creationid="shira" creationdate="20241031T112938Z">
+        <seg>&lt;g1&gt;例28&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;g1&gt;Example 29&lt;/g1&gt;</seg>
       </tuv>
       <tuv lang="ja" changeid="shira" changedate="20240226T080937Z" creationid="shira" creationdate="20240226T080937Z">
@@ -1386,6 +1506,30 @@
       </tuv>
       <tuv lang="ja" changeid="shira" changedate="20240111T203257Z" creationid="shira" creationdate="20240111T203257Z">
         <seg>&lt;g1&gt;Example 2&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;Example 30&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T114120Z" creationid="shira" creationdate="20241031T114120Z">
+        <seg>&lt;g1&gt;例30&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;Example 31&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T113319Z" creationid="shira" creationdate="20241031T113319Z">
+        <seg>&lt;g1&gt;例31&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;Example 32&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T113457Z" creationid="shira" creationdate="20241031T113457Z">
+        <seg>&lt;g1&gt;例32&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -1510,10 +1654,26 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;g1&gt;Follow&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T113846Z" creationid="shira" creationdate="20241031T113846Z">
+        <seg>&lt;g1&gt;Follow&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;g1&gt;Group&lt;/g1&gt;</seg>
       </tuv>
       <tuv lang="ja" changeid="shira" changedate="20240803T125359Z" creationid="shira" creationdate="20240803T125359Z">
         <seg>&lt;g1&gt;Group&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;Ignore&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T113923Z" creationid="shira" creationdate="20241031T113923Z">
+        <seg>&lt;g1&gt;Ignore&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -1542,10 +1702,42 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;g1&gt;Invite&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T114021Z" creationid="shira" creationdate="20241031T114021Z">
+        <seg>&lt;g1&gt;Invite&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;g1&gt;James M Snell&lt;/g1&gt;, IBM&lt;e3/&gt; &lt;g2&gt;&lt;/g2&gt;</seg>
       </tuv>
       <tuv lang="ja" changeid="shira" changedate="20240225T201309Z" creationid="shira" creationdate="20240225T201309Z">
         <seg>&lt;g1&gt;James M Snell&lt;/g1&gt;, IBM&lt;e3/&gt; &lt;g2&gt;&lt;/g2&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;Join&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T113937Z" creationid="shira" creationdate="20241031T113937Z">
+        <seg>&lt;g1&gt;Join&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;Leave&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T113950Z" creationid="shira" creationdate="20241031T113950Z">
+        <seg>&lt;g1&gt;Leave&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;Like&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T114000Z" creationid="shira" creationdate="20241031T114000Z">
+        <seg>&lt;g1&gt;Like&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -1614,6 +1806,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;g1&gt;Offer&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T114011Z" creationid="shira" creationdate="20241031T114011Z">
+        <seg>&lt;g1&gt;Offer&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;g1&gt;OrderedCollection&lt;/g1&gt;</seg>
       </tuv>
       <tuv lang="ja" changeid="shira" changedate="20240225T194646Z" creationid="shira" creationdate="20240225T194646Z">
@@ -1670,10 +1870,26 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;g1&gt;Reject&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T114029Z" creationid="shira" creationdate="20241031T114029Z">
+        <seg>&lt;g1&gt;Reject&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;g1&gt;Relationship&lt;/g1&gt;</seg>
       </tuv>
       <tuv lang="ja" changeid="shira" changedate="20240225T204241Z" creationid="shira" creationdate="20240225T204241Z">
         <seg>&lt;g1&gt;Relationship&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;Remove&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T114046Z" creationid="shira" creationdate="20241031T114046Z">
+        <seg>&lt;g1&gt;Remove&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -1710,6 +1926,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;g1&gt;TentativeReject&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T114038Z" creationid="shira" creationdate="20241031T114038Z">
+        <seg>&lt;g1&gt;TentativeReject&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;g1&gt;The Activity Streams 2.0 Core Syntax&lt;/g1&gt; defines the JSON syntax for Activity Streams.</seg>
       </tuv>
       <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240115T131957Z" creationid="OmegaT Aligner" creationdate="20240115T131957Z">
@@ -1734,10 +1958,34 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;g1&gt;Undo&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T114055Z" creationid="shira" creationdate="20241031T114055Z">
+        <seg>&lt;g1&gt;Undo&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;Update&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T114110Z" creationid="shira" creationdate="20241031T114110Z">
+        <seg>&lt;g1&gt;Update&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;g1&gt;Video&lt;/g1&gt;</seg>
       </tuv>
       <tuv lang="ja" changeid="shira" changedate="20240225T204145Z" creationid="shira" creationdate="20240225T204145Z">
         <seg>&lt;g1&gt;Video&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;View&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T114140Z" creationid="shira" creationdate="20241031T114140Z">
+        <seg>&lt;g1&gt;View&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -1870,6 +2118,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#Arrive&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T113756Z" creationid="shira" creationdate="20241031T113756Z">
+        <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#Arrive&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#Article&lt;/g1&gt;</seg>
       </tuv>
       <tuv lang="ja" changeid="shira" changedate="20240225T203614Z" creationid="shira" creationdate="20240225T203614Z">
@@ -1902,6 +2158,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#Create&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T113821Z" creationid="shira" creationdate="20241031T113821Z">
+        <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#Create&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#Delete&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T113840Z" creationid="shira" creationdate="20241031T113840Z">
+        <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#Delete&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#Document&lt;/g1&gt;</seg>
       </tuv>
       <tuv lang="ja" changeid="shira" changedate="20240225T203603Z" creationid="shira" creationdate="20240225T203603Z">
@@ -1918,10 +2190,26 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#Follow&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T113848Z" creationid="shira" creationdate="20241031T113848Z">
+        <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#Follow&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#Group&lt;/g1&gt;</seg>
       </tuv>
       <tuv lang="ja" changeid="shira" changedate="20240803T125406Z" creationid="shira" creationdate="20240803T125406Z">
         <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#Group&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#Ignore&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T113929Z" creationid="shira" creationdate="20241031T113929Z">
+        <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#Ignore&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -1938,6 +2226,38 @@
       </tuv>
       <tuv lang="ja" changeid="shira" changedate="20240115T174437Z" creationid="shira" creationdate="20240115T174437Z">
         <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#IntransitiveActivity&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#Invite&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T114024Z" creationid="shira" creationdate="20241031T114024Z">
+        <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#Invite&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#Join&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T113942Z" creationid="shira" creationdate="20241031T113942Z">
+        <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#Join&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#Leave&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T113955Z" creationid="shira" creationdate="20241031T113955Z">
+        <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#Leave&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#Like&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T114003Z" creationid="shira" creationdate="20241031T114003Z">
+        <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#Like&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -1970,6 +2290,14 @@
       </tuv>
       <tuv lang="ja" changeid="shira" changedate="20240115T174322Z" creationid="shira" creationdate="20240115T174322Z">
         <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#Object&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#Offer&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T114015Z" creationid="shira" creationdate="20241031T114015Z">
+        <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#Offer&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -2030,10 +2358,26 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#Reject&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T114033Z" creationid="shira" creationdate="20241031T114033Z">
+        <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#Reject&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#Relationship&lt;/g1&gt;</seg>
       </tuv>
       <tuv lang="ja" changeid="shira" changedate="20240225T203624Z" creationid="shira" creationdate="20240225T203624Z">
         <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#Relationship&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#Remove&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T114050Z" creationid="shira" creationdate="20241031T114050Z">
+        <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#Remove&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -2054,6 +2398,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#TentativeReject&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T114043Z" creationid="shira" creationdate="20241031T114043Z">
+        <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#TentativeReject&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#Tombstone&lt;/g1&gt;</seg>
       </tuv>
       <tuv lang="ja" changeid="shira" changedate="20240225T203936Z" creationid="shira" creationdate="20240225T203936Z">
@@ -2062,10 +2414,34 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#Undo&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T114103Z" creationid="shira" creationdate="20241031T114103Z">
+        <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#Undo&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#Update&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T114112Z" creationid="shira" creationdate="20241031T114112Z">
+        <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#Update&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#Video&lt;/g1&gt;</seg>
       </tuv>
       <tuv lang="ja" changeid="shira" changedate="20240225T203758Z" creationid="shira" creationdate="20240225T203758Z">
         <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#Video&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#View&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T114147Z" creationid="shira" creationdate="20241031T114147Z">
+        <seg>&lt;g1&gt;https://www.w3.org/ns/activitystreams#View&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -2495,6 +2871,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Activity Vocabulary</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T114352Z" creationid="shira" creationdate="20241031T114352Z">
+        <seg>Activity Vocabulary</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Activity objects are specializations of the base &lt;g1&gt;Object&lt;/g1&gt; type that provide information about actions that have either already occurred, are in the process of occurring, or may occur in the future.</seg>
       </tuv>
       <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
@@ -2703,6 +3087,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Bidi Control Character</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241111T190018Z" creationid="shira" creationdate="20241111T190018Z">
+        <seg>Bidi Control Character</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>By default, the value of &lt;g1&gt;content&lt;/g1&gt; is HTML.</seg>
       </tuv>
       <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240115T131957Z" creationid="OmegaT Aligner" creationdate="20240115T131957Z">
@@ -2887,6 +3279,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Encoding considerations:</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T113409Z" creationid="shira" creationdate="20241031T113409Z">
+        <seg>エンコーディングの考慮事項:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>European Research Consortium for Informatics and Mathematics</seg>
       </tuv>
       <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
@@ -2979,6 +3379,14 @@
       </tuv>
       <tuv lang="ja" changeid="shira" changedate="20240803T182010Z" creationid="shira" creationdate="20240803T182010Z">
         <seg>図&lt;g1&gt;12&lt;/g1&gt; &lt;g2&gt;または、(参照されるリソースのMIMEコンテンツタイプなど)追加のメタデータが必要な場合、&lt;g3&gt;Link&lt;/g3&gt;を使える:&lt;/g2&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Figure &lt;g1&gt;13&lt;/g1&gt; &lt;g2&gt; If more than one value is to be expressed, A JSON Array with a mix of strings and &lt;g3&gt;Link&lt;/g3&gt;s can be used: &lt;/g2&gt;</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T090654Z" creationid="shira" creationdate="20241031T090654Z">
+        <seg>図&lt;g1&gt;13&lt;/g1&gt; &lt;g2&gt;複数の値を表現する場合は、文字列と&lt;g3&gt;Link&lt;/g3&gt;を組み合わせた一つのJSON配列を使用できる:&lt;/g2&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -3239,6 +3647,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>First strong directional character</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241111T190008Z" creationid="shira" creationdate="20241111T190008Z">
+        <seg>First strong directional character</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed a typo in &lt;g1&gt;&lt;g2&gt;deleted&lt;/g2&gt;&lt;/g1&gt; range.</seg>
       </tuv>
       <tuv lang="ja" changeid="shira" changedate="20240225T200726Z" creationid="shira" creationdate="20240225T200726Z">
@@ -3391,6 +3807,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>However, because this specification does not define a normative processing model that constrains how applications make use of the format, the distinction about whether an Activity statement is to be interpreted as a passive notification or as an imperative command can vary across implementations.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T091129Z" creationid="shira" creationdate="20241031T091129Z">
+        <seg>しかし、この仕様は、アプリケーションがフォーマットを利用する方法を制約する規範的な処理モデルを定義しないので、アクティビティ文が受動的な通知として解釈されるか、命令的なコマンドとして解釈されるかについての区別は、実装によって異なる可能性がある。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Identifies a resource attached or related to an object that potentially requires special handling.</seg>
       </tuv>
       <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240115T131957Z" creationid="OmegaT Aligner" creationdate="20240115T131957Z">
@@ -3515,6 +3939,14 @@
       </tuv>
       <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
         <seg>実装は代わりに代替URL "&lt;g9&gt;http://www.w3.org/ns/activitystreams&lt;/g9&gt;" を 使うことができる(MAY)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Implementations are free to use Activity objects in both passive and imperative operations.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T090823Z" creationid="shira" creationdate="20241031T090823Z">
+        <seg>実装は、受動的操作と命令的操作の両方でActivityオブジェクトを自由に使用できる。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3663,10 +4095,26 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>In the imperative sense, the Activity can be used as a form of command, instructing an application to modify state in some manner consistent with the action being described.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T091137Z" creationid="shira" creationdate="20241031T090957Z">
+        <seg>命令的な意味では、アクティビティはコマンドの形として使用でき、記述されているアクションと一致する何らかの方法で状態を変更するようにアプリケーションに指示する。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>In the most basic sense, an "Activity" is a semantic description of an action.</seg>
       </tuv>
       <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240114T182216Z" creationid="OmegaT Aligner" creationdate="20240114T182216Z">
         <seg>最も基本的な感覚では 「アクティビティ」(Activity) は行動の意味論的な 記述である。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>In the passive sense, the Activity is used to record that an activity has or is occurring.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T090852Z" creationid="shira" creationdate="20241031T090852Z">
+        <seg>受動的な意味では、アクティビティは、アクティビティが発生した、または発生していることを記録するために使用される。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3971,6 +4419,14 @@
       </tuv>
       <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
         <seg>Latest published version:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Left-to-Right</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T112659Z" creationid="shira" creationdate="20241031T112659Z">
+        <seg>左から右</seg>
       </tuv>
     </tu>
     <tu>
@@ -4363,6 +4819,14 @@
       </tuv>
       <tuv lang="ja" changeid="shira" changedate="20240225T130629Z" creationid="shira" creationdate="20240225T130629Z">
         <seg>"&lt;g1&gt;application/activity+json&lt;/g1&gt;"メディア型を使用するリソースは、"&lt;g2&gt;application/json&lt;/g2&gt;"メディア型のすべての要件に準拠する必要があるため、[&lt;g3&gt;&lt;g4&gt;RFC7159&lt;/g4&gt;&lt;/g3&gt;]の11章で指定されているのと同じエンコーディングの考慮事項に従う。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Right-to-Left</seg>
+      </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20241031T112625Z" creationid="shira" creationdate="20241031T112625Z">
+        <seg>右から左</seg>
       </tuv>
     </tu>
     <tu>

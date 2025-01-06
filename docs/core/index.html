@@ -1286,7 +1286,7 @@ Link のターゲット URI は必須の <code><a href="https://www.w3.org/TR/ac
 </p>
 
       <figure id="fig-if-more-than-one-value-is-to-be-expressed-a-json-array-with-a-mix-of-strings-and-links-can-be-used">
-        <figcaption>Figure <span class="figno">13</span> <span class="fig-title"> If more than one value is to be expressed, A JSON Array with a mix of strings and <a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a>s can be used: </span></figcaption>
+        <figcaption>図<span class="figno">13</span> <span class="fig-title">複数の値を表現する場合は、文字列と<a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a>を組み合わせた一つのJSON配列を使用できる:</span></figcaption>
         <div id="ex14-jsonld" style="display: block;">
           <div class="example">
             <div class="example-title marker"><span>例13</span></div>
@@ -1470,7 +1470,7 @@ Activity オブジェクトは、既に起きた、今起きている途中、 �
       </figure>
 
       <p>
-Implementations are free to use Activity objects in both passive and imperative operations. In the passive sense, the Activity is used to record that an activity has or is occurring. In the imperative sense, the Activity can be used as a form of command, instructing an application to modify state in some manner consistent with the action being described. However, because this specification does not define a normative processing model that constrains how applications make use of the format, the distinction about whether an Activity statement is to be interpreted as a passive notification or as an imperative command can vary across implementations.
+実装は、受動的操作と命令的操作の両方でActivityオブジェクトを自由に使用できる。受動的な意味では、アクティビティは、アクティビティが発生した、または発生していることを記録するために使用される。命令的な意味では、アクティビティはコマンドの形として使用でき、記述されているアクションと一致する何らかの方法で状態を変更するようにアプリケーションに指示する。しかし、この仕様は、アプリケーションがフォーマットを利用する方法を制約する規範的な処理モデルを定義しないので、アクティビティ文が受動的な通知として解釈されるか、命令的なコマンドとして解釈されるかについての区別は、実装によって異なる可能性がある。
 </p>
 
     </section>
@@ -1713,7 +1713,7 @@ Activity Streams 2.0 文書を生成または処理するのに [<cite><a class=
           <figcaption>Figure <span class="figno">26</span> <span class="fig-title">JSON-LDの<code>@context</code>の中でデフォルトの<code>"@language"</code>を指定する: </span></figcaption>
           <div id="ex11c-jsonld" style="display: block;">
             <div class="example">
-              <div class="example-title marker"><span>Example 24</span></div>
+              <div class="example-title marker"><span>例24</span></div>
               <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
   <span class="hljs-attr">"@context"</span>: [
     <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
@@ -1755,43 +1755,43 @@ Consumers of Activity Streams 2.0 documents that contain bidirectional text SHOU
             <tr>
               <td><code>name</code></td>
               <td><code>"פעילות הבינאום, <abbr title="World Wide Web Consortium">W3C</abbr>"</code></td>
-              <td>Right-to-Left</td>
+              <td>右から左</td>
               <td>First strong directional character</td>
             </tr>
             <tr>
               <td><code>name</code></td>
               <td><code> "The document was titled, '\u2067פעילות הבינאום, <abbr title="World Wide Web Consortium">W3C</abbr>\u2069'" </code></td>
-              <td>Left-to-Right</td>
+              <td>左から右</td>
               <td>First strong directional character</td>
             </tr>
             <tr>
               <td><code>name</code></td>
               <td><code>"\u200FHTML היא שפת סימון"</code></td>
-              <td>Right-to-Left</td>
+              <td>右から左</td>
               <td>Bidi Control Character</td>
             </tr>
             <tr>
               <td><code>name</code></td>
               <td><code>"\u200E'سلام' is hello in Persian."</code></td>
-              <td>Left-to-Right</td>
+              <td>左から右</td>
               <td>Bidi Control Character</td>
             </tr>
             <tr>
               <td><code>summary</code></td>
               <td><code>&lt;p dir=\"rtl\">HTML היא שפת סימון>/p></code></td>
-              <td>Right-to-Left</td>
+              <td>右から左</td>
               <td>HTML Markup</td>
             </tr>
             <tr>
               <td><code>summary</code></td>
               <td><code>&lt;p>פעילות הבינאום, <abbr title="World Wide Web Consortium">W3C</abbr>&lt;/p></code></td>
-              <td>Right-to-Left</td>
+              <td>右から左</td>
               <td>First strong directional character (ignoring markup)</td>
             </tr>
             <tr>
               <td><code>summary</code></td>
               <td><code>&lt;p title="سلام">Hello&lt;/p></code></td>
-              <td>Left-to-Right</td>
+              <td>左から右</td>
               <td>First strong directional character (ignoring markup)</td>
             </tr>
           </tbody>
@@ -1842,7 +1842,7 @@ JSON-LD Processing Algorithms[<cite><a class="bibref" href="#bib-JSON-LD-API">JS
     <figure id="fig-geojson-point-coordinates">
       <figcaption>Figure <span class="figno">27</span> <span class="fig-title">GeoJSONの位置座標:</span></figcaption>
       <div class="example">
-        <div class="example-title marker"><span>Example 25</span></div>
+        <div class="example-title marker"><span>例25</span></div>
         <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
   <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Point"</span>,
   <span class="hljs-attr">"coordinates"</span>: [<span class="hljs-number">36.74</span>, <span class="hljs-number">-119.77</span>]
@@ -1854,7 +1854,7 @@ JSON-LD Processing Algorithms[<cite><a class="bibref" href="#bib-JSON-LD-API">JS
       <figcaption>Figure <span class="figno">28</span> <span class="fig-title">等価な<code>Place</code>の代替物:</span></figcaption>
       <div id="ex23-jsonld" style="display: block;">
         <div class="example">
-          <div class="example-title marker"><span>Example 26</span></div>
+          <div class="example-title marker"><span>例26</span></div>
           <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
   <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
   <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Fresno, California"</span>,
@@ -1869,7 +1869,7 @@ JSON-LD Processing Algorithms[<cite><a class="bibref" href="#bib-JSON-LD-API">JS
     <figure id="fig-geojson-polygon-coordinates">
       <figcaption>Figure <span class="figno">29</span> <span class="fig-title">GeoJSONの多角形座標:</span></figcaption>
       <div class="example">
-        <div class="example-title marker"><span>Example 27</span></div>
+        <div class="example-title marker"><span>例27</span></div>
         <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
   <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Polygon"</span>,
   <span class="hljs-attr">"coordinates"</span>: [
@@ -1889,7 +1889,7 @@ JSON-LD Processing Algorithms[<cite><a class="bibref" href="#bib-JSON-LD-API">JS
       <figcaption>Figure <span class="figno">30</span> <span class="fig-title">等価なGeoSparqlのWell-Known-Textの代替物:</span></figcaption>
       <div id="ex24-jsonld" style="display: block;">
         <div class="example">
-          <div class="example-title marker"><span>Example 28</span></div>
+          <div class="example-title marker"><span>例28</span></div>
           <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
   <span class="hljs-attr">"@context"</span>: [
     <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
@@ -1964,7 +1964,7 @@ Compact URI形式に過度に依存することは、実装間の曖昧さと相
       <figure id="fig-a-simple-extended-object">
         <figcaption>Figure <span class="figno">32</span> <span class="fig-title">単純な、拡張されたObject</span></figcaption>
         <div class="example">
-          <div class="example-title marker"><span>Example 30</span></div>
+          <div class="example-title marker"><span>例30</span></div>
           <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
   <span class="hljs-attr">"@context"</span>: [
     <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
@@ -1993,7 +1993,7 @@ However, if the implementation chooses to use the JSON-LD expansion algorithm, t
       <figure id="fig-the-reserialized-compacted-form">
         <figcaption>Figure <span class="figno">33</span> <span class="fig-title">再直列化されたコンパクト化形式:</span></figcaption>
         <div class="example">
-          <div class="example-title marker"><span>Example 31</span></div>
+          <div class="example-title marker"><span>例31</span></div>
           <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
   <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
   <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Note"</span>,
@@ -2110,7 +2110,7 @@ profile-value = <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-n
 profile-URI   = URI</span></pre>上記の文法での "URI" は [<cite><a class="bibref" href="#bib-RFC3986">RFC3986</a></cite>] の Section 3 で定義される "URI" を参照する。</td>
           </tr>
           <tr>
-            <td>Encoding considerations:</td>
+            <td>エンコーディングの考慮事項:</td>
             <td>"<code>application/activity+json</code>"メディア型を使用するリソースは、"<code>application/json</code>"メディア型のすべての要件に準拠する必要があるため、[<cite><a class="bibref" href="#bib-RFC7159">RFC7159</a></cite>]の11章で指定されているのと同じエンコーディングの考慮事項に従う。</td>
           </tr>
           <tr>
@@ -2317,7 +2317,7 @@ It is possible use multiple vocabularies to cover particular characteristics of 
       <figcaption>Figure <span class="figno">34</span> <span class="fig-title">A series of activities; creating, editing, and deleting a note.</span></figcaption>
       <div id="ex27-jsonld" style="display: block;">
         <div class="example">
-          <div class="example-title marker"><span>Example 32</span></div>
+          <div class="example-title marker"><span>例32</span></div>
           <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
   <span class="hljs-attr">"@context"</span>: [
     <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
