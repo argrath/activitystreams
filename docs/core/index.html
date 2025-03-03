@@ -1737,11 +1737,11 @@ Activity Streams 2.0文書内の自然言語値は、双方向テキストを含
 </p>
 
         <p>
-When specifying bidirectional text for a natural language value, and the base direction of the text cannot be correctly identified by the first strong directional character of that text, publishers SHOULD explicitly identify the default direction either by prefixing the value with an appropriate Unicode bidirectional control character, or by using HTML directional markup where permitted.
+自然言語値に対して双方向テキストを指定する場合、およびテキストの基本方向がそのテキストの最初の強い方向文字によって正しく識別できない場合、発行者は、適切なUnicode双方向制御文字を値の前に付けるか、または許可されている場合はHTML方向マークアップを使うことによって、デフォルト方向を明示的に識別すべきである(SHOULD)。
 </p>
 
         <p>
-Consumers of Activity Streams 2.0 documents that contain bidirectional text SHOULD identify the base direction of any given natural language value by either scanning the text for the first strong directional character not contained within a markup tag; or by utilizing directional markup where provided. Once the base direction has been identified, consumers MUST determine the appropriate rendering and display of natural language values, according to the Unicode Bidirectional Algorithm [<cite><a class="bibref" href="#bib-BIDI">BIDI</a></cite>]. This may necessitate wrapping additional control characters or markup around the string prior to display, in order to apply the base direction.
+双方向テキストを含むActivity Streams 2.0文書の消費者は、テキストをスキャンしてマークアップタグ内に含まれていない最初の強い方向文字を探すか、または提供されている場合は方向マークアップを利用することによって、任意の指定された自然言語値の基本方向を識別すべきである(SHOULD)。基本方向が識別されたら、消費者は、Unicode双方向アルゴリズム[<cite><a class="bibref" href="#bib-BIDI">BIDI</a></cite>]に従って、自然言語値の適切な表現と表示を決定しなければならない(MUST)。これにより、ベース方向を適用するために、表示前に文字列の周囲に追加の制御文字またはマークアップをラップする必要がある場合がある。
 </p>
 
         <table>
@@ -1756,43 +1756,43 @@ Consumers of Activity Streams 2.0 documents that contain bidirectional text SHOU
               <td><code>name</code></td>
               <td><code>"פעילות הבינאום, <abbr title="World Wide Web Consortium">W3C</abbr>"</code></td>
               <td>右から左</td>
-              <td>First strong directional character</td>
+              <td>最初の強い方向文字</td>
             </tr>
             <tr>
               <td><code>name</code></td>
               <td><code> "The document was titled, '\u2067פעילות הבינאום, <abbr title="World Wide Web Consortium">W3C</abbr>\u2069'" </code></td>
               <td>左から右</td>
-              <td>First strong directional character</td>
+              <td>最初の強い方向文字</td>
             </tr>
             <tr>
               <td><code>name</code></td>
               <td><code>"\u200FHTML היא שפת סימון"</code></td>
               <td>右から左</td>
-              <td>Bidi Control Character</td>
+              <td>双方向制御文字</td>
             </tr>
             <tr>
               <td><code>name</code></td>
               <td><code>"\u200E'سلام' is hello in Persian."</code></td>
               <td>左から右</td>
-              <td>Bidi Control Character</td>
+              <td>双方向制御文字</td>
             </tr>
             <tr>
               <td><code>summary</code></td>
               <td><code>&lt;p dir=\"rtl\">HTML היא שפת סימון>/p></code></td>
               <td>右から左</td>
-              <td>HTML Markup</td>
+              <td>HTML マークアップ</td>
             </tr>
             <tr>
               <td><code>summary</code></td>
               <td><code>&lt;p>פעילות הבינאום, <abbr title="World Wide Web Consortium">W3C</abbr>&lt;/p></code></td>
               <td>右から左</td>
-              <td>First strong directional character (ignoring markup)</td>
+              <td>最初の強い方向文字 (マークアップを無視)</td>
             </tr>
             <tr>
               <td><code>summary</code></td>
               <td><code>&lt;p title="سلام">Hello&lt;/p></code></td>
               <td>左から右</td>
-              <td>First strong directional character (ignoring markup)</td>
+              <td>最初の強い方向文字 (マークアップを無視)</td>
             </tr>
           </tbody>
         </table>
@@ -1917,7 +1917,7 @@ JSON-LD内では、Compact URI接頭辞はJSON-LD<code>@context</code>定義内�
       <figure id="fig-a-json-ld-compact-uri-definition">
         <figcaption>Figure <span class="figno">31</span> <span class="fig-title">あるJSON-LD Compact URI定義</span></figcaption>
         <div class="example">
-          <div class="example-title marker"><span>Example 29</span></div>
+          <div class="example-title marker"><span>例29</span></div>
           <pre class="highlight json hljs" aria-busy="false" aria-live="polite">{
 <span class="hljs-attr">"@context"</span>: {
 <span class="hljs-attr">"ex"</span>: <span class="hljs-string">"http://example.org/"</span>,
@@ -1979,15 +1979,15 @@ Compact URI形式に過度に依存することは、実装間の曖昧さと相
       </figure>
 
       <p>
-An implementation that receives this Note object can choose to parse the object as an ordinary JSON object or it can use the standard JSON-LD Expansion algorithm.
+このNoteオブジェクトを受け取る実装は、オブジェクトを通常のJSONオブジェクトとして解析するか、標準のJSON-LD拡張アルゴリズムを使用するかを選択できる。
 </p>
 
       <p>
-If the implementation chooses to parse the object as ordinary JSON and then reserializes the object (e.g. for storage or redistribution), then it would simply preserve the values of the <code>@context</code>, <code>foo</code> and <code>bar</code> properties as they are and include those in the reserialized output.
+実装がオブジェクトを通常のJSONとしてパースし、(保管や再配布のために)オブジェクトを再直列化することを選択した場合、<code>@context</code>、<code>foo</code>、<code>bar</code>属性の値をそのまま保持し、それらを再直列化された出力に含める。
 </p>
 
       <p>
-However, if the implementation chooses to use the JSON-LD expansion algorithm, the <code>@context</code> will be removed from the expanded result and the <code>bar</code> property will be mapped to the "blank node" <code>_:bar</code>. If this document is then reserialized using the normative Activity Streams 2.0 context, the JSON-LD compacted form would be:
+しかし、実装がJSON-LD展開アルゴリズムを使用することを選択した場合、<code>@context</code>は展開された結果から削除され、<code>bar</code>属性は「空白ノード」<code>_:bar</code>にマッピングされる。この文書が規範的なActivity Streams 2.0コンテキストを使用して再直列化される場合、JSON-LDの圧縮形式は次のようになる:
 </p>
 
       <figure id="fig-the-reserialized-compacted-form">
@@ -2181,7 +2181,7 @@ Conforming documents must not include deprecated or obsolete syntax from Activit
       <h3 id="h-implementations" resource="#h-implementations"><span property="xhv:role" resource="xhv:heading"><span class="secno">9.2 </span>実装</span></h3>
 
       <p>
-Conforming implementations are software that publish, store, analyze, consume or otherwise process conforming documents. The two main kinds of implementations are publishers and consumers.
+適合実装とは、適合文書を発行、保存、分析、消費、またはその他の方法で処理するソフトウェアである。実装の二つの主な種類は、発行者と消費者である。
 </p>
 
       <section id="publishers" typeof="bibo:Chapter" resource="#publishers" property="bibo:hasPart">
@@ -2189,7 +2189,7 @@ Conforming implementations are software that publish, store, analyze, consume or
         <h4 id="h-publishers" resource="#h-publishers"><span property="xhv:role" resource="xhv:heading"><span class="secno">9.2.1 </span>発行者</span></h4>
 
         <p>
-Conforming publishers are implementations that create and publish conforming documents. Conforming publishers must make conforming documents available according to the serialization requirements of section 2. Conforming publishers must consider privacy as described in section 6. Conforming publishers must consider security as described in section 7.
+適合発行者とは、適合文書を作成して発行する実装である。適合発行者は、第2節の直列化要件に従って、適合文書を利用可能にしなければならない。適合発行者は、第6節に記述されているように、プライバシーを考慮しなければならない。適合発行者は、第7節に記述されているように、セキュリティを考慮しなければならない。
 </p>
 
         <p>
@@ -2310,7 +2310,7 @@ By following these guidelines, all JSON Activity Streams 1.0 serializations can 
 </p>
 
     <p>
-It is possible use multiple vocabularies to cover particular characteristics of the activities like data provenance and annotations, which can compliment the Activity Vocabulary. For example: Eric writes a short note to be shared with his followers. After posting the note, he notices a spelling error. He edits the note and re-posts it. Later, Eric decides that the information in the note is incorrect. He deletes the note.
+It is possible use multiple vocabularies to cover particular characteristics of the activities like data provenance and annotations, which can compliment the Activity Vocabulary. 例: エリックはフォロワーと共有するために短いメモを書いた。メモを投稿した後、彼はスペルミスに気づいた。彼はメモを編集し、再投稿した。その後、エリックはメモ内の情報が間違っていると判断した。彼はメモを削除した。
 </p>
 
     <figure id="fig-a-series-of-activities-creating-editing-and-deleting-a-note.x">
@@ -2397,7 +2397,7 @@ It is possible use multiple vocabularies to cover particular characteristics of 
 
     <ul>
       <li>処理の節、特に終了基準とリスクのある機能に言及している部分を削除した。</li>
-      <li>Updated Collection Paging to clarify additional <code><a href="#dfn-collectionpage" class="internalDFN" data-link-type="dfn"><code>CollectionPage</code></a> </code> properties.</li>
+      <li>追加の<code><a href="#dfn-collectionpage" class="internalDFN" data-link-type="dfn"><code>CollectionPage</code></a></code>属性を明確にするためにCollection Pagingが更新された。</li>
       <li>Used better wording for summary as text representation.</li>
       <li>Updated context examples to include more realistic complex contexts.</li>
     </ul>
